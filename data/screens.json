@@ -5,8 +5,9 @@
       "background": "res://generated images/doomdance impound wakeup.png",
       "overlays": ["rain", "lamp_buzz", "puddle_shimmer"],
       "lamp_spots": [
-        {"rect": [0.03, 0.05, 0.18, 0.24]},
-        {"rect": [0.63, 0.06, 0.15, 0.20]}
+        {"center": [0.56, 0.1], "radius": 0.042, "kind": "street"},
+        {"center": [0.795, 0.285], "radius": 0.024, "kind": "bulb"},
+        {"center": [0.828, 0.36], "radius": 0.018, "kind": "window", "color": [1.0, 0.82, 0.52, 1.0]}
       ],
       "hotspots": [
         {
@@ -32,7 +33,7 @@
       "background": "res://generated images/night time alley 1.png",
       "overlays": ["rain", "lamp_buzz"],
       "lamp_spots": [
-        {"rect": [0.38, 0.06, 0.14, 0.30]}
+        {"center": [0.41, 0.075], "radius": 0.038, "kind": "street"}
       ],
       "hotspots": []
     },

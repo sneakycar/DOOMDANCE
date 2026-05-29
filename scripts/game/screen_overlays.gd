@@ -152,28 +152,57 @@ static func _lamp_buzz(size: Vector2, spots: Array) -> Control:
 	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	if spots.is_empty():
 		spots = [
-			{"rect": [0.04, 0.06, 0.16, 0.22]},
-			{"rect": [0.64, 0.06, 0.14, 0.18]},
+			{"center": [0.56, 0.1], "radius": 0.045, "kind": "street"},
+			{"center": [0.79, 0.29], "radius": 0.028, "kind": "bulb"},
 		]
 	var flicker_script: Script = load("res://scripts/game/lamp_flicker.gd")
+	var unit := minf(size.x, size.y)
 	for i in spots.size():
 		var spot: Dictionary = spots[i]
-		var rect_norm: Array = spot.get("rect", [0.0, 0.0, 0.1, 0.1])
-		var glow := ColorRect.new()
+		var center_norm: Vector2 = _spot_center(spot)
+		var radius_norm: float = float(spot.get("radius", 0.04))
+		var center_px := center_norm * size
+		var diameter := radius_norm * unit * 2.0
+		var glow := Control.new()
 		glow.set_script(flicker_script)
-		glow.set("buzz_seed", float(i) * 0.37)
+		glow.set("buzz_seed", float(i) * 0.37 + radius_norm * 3.0)
+		glow.set("glow_kind", _spot_kind(spot.get("kind", "street")))
+		glow.set("base_color", _spot_color(spot))
 		glow.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		glow.position = Vector2(rect_norm[0], rect_norm[1]) * size
-		glow.size = Vector2(rect_norm[2], rect_norm[3]) * size
-		var tint: Variant = spot.get("color", Color(1.0, 0.78, 0.42, 0.34))
-		if tint is Array and tint.size() >= 4:
-			glow.color = Color(float(tint[0]), float(tint[1]), float(tint[2]), float(tint[3]))
-		elif tint is Color:
-			glow.color = tint
-		else:
-			glow.color = Color(1.0, 0.78, 0.42, 0.34)
+		glow.position = center_px - Vector2(diameter, diameter) * 0.5
+		glow.size = Vector2(diameter, diameter)
 		root.add_child(glow)
 	return root
+
+static func _spot_center(spot: Dictionary) -> Vector2:
+	if spot.has("center"):
+		var c: Array = spot.get("center", [0.5, 0.1])
+		return Vector2(float(c[0]), float(c[1]))
+	var rect_norm: Array = spot.get("rect", [0.0, 0.0, 0.1, 0.1])
+	return Vector2(
+		float(rect_norm[0]) + float(rect_norm[2]) * 0.5,
+		float(rect_norm[1]) + float(rect_norm[3]) * 0.5
+	)
+
+static func _spot_kind(name: String) -> int:
+	match str(name).to_lower():
+		"bulb", "porch":
+			return 1 # LampFlicker.Kind.BULB
+		"window", "interior":
+			return 2 # LampFlicker.Kind.WINDOW
+		_:
+			return 0 # LampFlicker.Kind.STREET
+
+static func _spot_color(spot: Dictionary) -> Color:
+	var tint: Variant = spot.get("color", Color(1.0, 0.74, 0.38, 1.0))
+	if tint is Array and tint.size() >= 3:
+		var alpha := 1.0
+		if tint.size() >= 4:
+			alpha = float(tint[3])
+		return Color(float(tint[0]), float(tint[1]), float(tint[2]), alpha)
+	if tint is Color:
+		return tint
+	return Color(1.0, 0.74, 0.38, 1.0)
 
 static func _train_flash(size: Vector2) -> ColorRect:
 	var rect := ColorRect.new()
