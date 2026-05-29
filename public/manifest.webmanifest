@@ -1,0 +1,11 @@
+{
+  "name": "DOOM DANCE",
+  "short_name": "DOOM DANCE",
+  "description": "DOOM DANCE — static-screen exploration",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#06070a",
+  "theme_color": "#06070a",
+  "start_url": "./index.html",
+  "icons": []
+}
