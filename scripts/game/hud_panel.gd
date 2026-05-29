@@ -7,6 +7,7 @@ const OVERFLOW_THRESHOLD := 5
 
 @onready var _money: Label = %MoneyLabel
 @onready var _time: Label = %TimeLabel
+@onready var _panhandle: Label = %PanhandleLabel
 @onready var _xp: Label = %XpLabel
 @onready var _inv_btn: Button = %InventoryButton
 @onready var _preview: VBoxContainer = %InventoryPreview
@@ -20,16 +21,21 @@ func _ready() -> void:
 	_apply_typography()
 	_inv_btn.pressed.connect(func() -> void: inventory_requested.emit())
 	_collections_btn.pressed.connect(func() -> void: collections_requested.emit())
+	_collections_btn.visible = false
 	GameState.money_changed.connect(func(_v) -> void: _refresh_money())
 	GameState.time_changed.connect(func(_v) -> void: _refresh_time())
 	GameState.inventory_changed.connect(func(_v) -> void: _refresh_inventory())
 	GameState.xp_changed.connect(func(_v) -> void: _refresh_xp())
+	GameState.panhandle_changed.connect(func() -> void: _refresh_panhandle())
+	GameState.concert_changed.connect(func() -> void: _refresh_panhandle())
 	resized.connect(_clamp_width)
 	get_viewport().size_changed.connect(_clamp_width)
 	_refresh_all()
 
 func _process(_delta: float) -> void:
 	_refresh_xp()
+	if GameState.is_panhandling_active() or GameState.is_concert_active():
+		_refresh_panhandle()
 
 func _apply_style() -> void:
 	var panel := StyleBoxFlat.new()
@@ -44,6 +50,7 @@ func _apply_style() -> void:
 func _apply_typography() -> void:
 	DoomTypography.stamp_mono(_money, 12)
 	DoomTypography.stamp_mono(_time, 11, true)
+	DoomTypography.stamp_mono(_panhandle, 11)
 	DoomTypography.stamp_mono(_xp, 11, true)
 	for btn in [_inv_btn, _collections_btn]:
 		btn.add_theme_font_override("font", DoomTypography.game)
@@ -69,8 +76,14 @@ func _clamp_width() -> void:
 func _refresh_all() -> void:
 	_refresh_money()
 	_refresh_time()
+	_refresh_panhandle()
 	_refresh_xp()
 	_refresh_inventory()
+
+func _refresh_panhandle() -> void:
+	var line := GameState.activity_hud_line()
+	_panhandle.visible = not line.is_empty()
+	_panhandle.text = line
 
 func _refresh_money() -> void:
 	_money.text = GameState.money_display()
@@ -96,6 +109,9 @@ func _refresh_inventory() -> void:
 		_preview.add_child(_item_label(str(items[i])))
 	if overflow > 0:
 		_preview.add_child(_item_label("+%d MORE" % overflow, true))
+
+func set_collections_unlocked(unlocked: bool) -> void:
+	_collections_btn.visible = unlocked
 
 func _item_label(text: String, dimmed: bool = false) -> Label:
 	var lbl := Label.new()

@@ -1,0 +1,15 @@
+{
+  "header": "SIGNAL STATIC",
+  "subtitle": "vinyl · buy retail · sell back at a loss",
+  "buys": [
+    { "collectible_id": "vinyl_punk_7", "cost": 12, "label": "punk 7-inch" },
+    { "collectible_id": "vinyl_hardcore_lp", "cost": 18, "label": "hardcore lp" },
+    { "collectible_id": "vinyl_jazz", "cost": 16, "label": "jazz reissue" },
+    { "collectible_id": "vinyl_soul", "cost": 14, "label": "philly soul" },
+    { "collectible_id": "vinyl_infest", "cost": 42, "label": "infest lp" },
+    { "collectible_id": "vinyl_integrity", "cost": 38, "label": "integrity lp" },
+    { "collectible_id": "vinyl_japan_doll", "cost": 55, "label": "japan doll demo" },
+    { "collectible_id": "vinyl_minor_threat", "cost": 45, "label": "minor threat 7" }
+  ],
+  "sell_rate": 0.55
+}

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cphillymaingame01"]
+[gd_scene load_steps=15 format=3 uid="uid://cphillymaingame01"]
 
 [ext_resource type="Script" path="res://scripts/game/game_main.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/game/hud_panel.gd" id="2"]
@@ -9,6 +9,16 @@
 [ext_resource type="Script" path="res://scripts/game/fragment_bar.gd" id="7"]
 [ext_resource type="Script" path="res://scripts/game/archive_page.gd" id="8"]
 [ext_resource type="PackedScene" uid="uid://dstatusstrip01" path="res://scenes/game/status_strip.tscn" id="9"]
+[ext_resource type="PackedScene" uid="uid://dosreaderpanel01" path="res://scenes/game/dos_reader.tscn" id="10"]
+[ext_resource type="PackedScene" uid="uid://transitpicker01" path="res://scenes/game/transit_picker.tscn" id="11"]
+[ext_resource type="PackedScene" uid="uid://sellpicker01" path="res://scenes/game/sell_picker.tscn" id="14"]
+[ext_resource type="Shader" path="res://shaders/grayscale_screen.gdshader" id="12"]
+[ext_resource type="Script" path="res://scripts/game/grayscale_post.gd" id="13"]
+[ext_resource type="Texture2D" path="res://assets/splash_screen.png" id="15_splash"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_grayscale"]
+shader = ExtResource("12")
+shader_parameter/contrast = 1.08
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -51,24 +61,74 @@ anchor_right = 1.0
 offset_bottom = 28.0
 grow_horizontal = 2
 
-[node name="TransitionLabel" type="Label" parent="HUD"]
+[node name="SplashLayer" type="Control" parent="HUD"]
+unique_name_in_owner = true
+z_index = 90
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="SplashBackdrop" type="ColorRect" parent="HUD/SplashLayer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SplashImage" type="TextureRect" parent="HUD/SplashLayer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("15_splash")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TransitionLabel" type="Label" parent="HUD/SplashLayer"]
 unique_name_in_owner = true
 visible = false
-z_index = 100
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -260.0
-offset_top = -44.0
+offset_top = -72.0
 offset_right = 260.0
-offset_bottom = 44.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="HUD/SplashLayer"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 0
+text = "PLAY"
 
 [node name="MuteButton" type="Button" parent="HUD"]
 unique_name_in_owner = true
@@ -76,10 +136,10 @@ z_index = 200
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -52.0
-offset_top = 6.0
-offset_right = -6.0
-offset_bottom = 22.0
+offset_left = -44.0
+offset_top = 32.0
+offset_right = -8.0
+offset_bottom = 56.0
 grow_horizontal = 0
 focus_mode = 0
 text = "sound"
@@ -177,6 +237,12 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "11:00 PM"
 
+[node name="PanhandleLabel" type="Label" parent="HUD/HudPanel/VBox"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "PANHANDLE 00:00"
+
 [node name="XpLabel" type="Label" parent="HUD/HudPanel/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -224,3 +290,31 @@ visible = false
 [node name="InventoryPanel" parent="HUD" instance=ExtResource("5")]
 unique_name_in_owner = true
 visible = false
+
+[node name="DosReader" parent="HUD" instance=ExtResource("10")]
+unique_name_in_owner = true
+
+[node name="TransitPicker" parent="HUD" instance=ExtResource("11")]
+unique_name_in_owner = true
+z_index = 120
+
+[node name="SellPicker" parent="HUD" instance=ExtResource("14")]
+unique_name_in_owner = true
+z_index = 121
+
+[node name="GrayscalePost" type="CanvasLayer" parent="."]
+layer = 11
+visible = false
+script = ExtResource("13")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="GrayscalePost"]
+copy_mode = 2
+
+[node name="Pass" type="ColorRect" parent="GrayscalePost"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+material = SubResource("ShaderMaterial_grayscale")

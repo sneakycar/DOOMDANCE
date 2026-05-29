@@ -54,9 +54,9 @@ func _build_body() -> String:
 			lines.append("pockets:")
 			for item in GameState.inventory:
 				lines.append("  · %s" % str(item).to_lower())
-		if GameState.discovered_collectibles.size() > 0:
+		if GameState.seen_collectibles.size() > 0:
 			lines.append("")
-			lines.append("logged: %d things" % GameState.discovered_collectibles.size())
+			lines.append("logged: %d things" % GameState.seen_collectibles.size())
 	lines.append("")
 	lines.append("<!-- last seen: %s -->" % _time_stamp())
 	lines.append("</body></html>")

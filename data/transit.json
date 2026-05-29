@@ -1,0 +1,232 @@
+{
+  "header": "SEPTA · ALLEGHENY",
+  "subtitle": "eastbound departures · cash only",
+  "routes": [
+    {
+      "id": "to_yard",
+      "label": "Kensington Salvage",
+      "note": "local",
+      "target": "impound_lot",
+      "target_type": "location",
+      "cost": 2,
+      "hour_start": 5,
+      "hour_end": 24
+    },
+    {
+      "id": "to_liquor",
+      "label": "Kensington Liquors",
+      "note": "local · neon corner",
+      "target": "liquor_store",
+      "target_type": "location",
+      "cost": 2,
+      "hour_start": 8,
+      "hour_end": 24
+    },
+    {
+      "id": "to_lot",
+      "label": "Vacant Lot",
+      "note": "local · frankford",
+      "target": "mattress_lot",
+      "target_type": "location",
+      "cost": 2,
+      "hour_start": 0,
+      "hour_end": 24
+    },
+    {
+      "id": "to_bar",
+      "label": "El Bar",
+      "note": "night line · est. 1963",
+      "target": "el_bar",
+      "target_type": "location",
+      "cost": 3,
+      "night_only": true
+    },
+    {
+      "id": "to_theater",
+      "label": "The Abyss Theater",
+      "note": "express · no refunds",
+      "target": "movie_theater",
+      "target_type": "location",
+      "cost": 4,
+      "hour_start": 14,
+      "hour_end": 24
+    },
+    {
+      "id": "to_underpass",
+      "label": "Kensington Underpass",
+      "note": "local · stay in lane",
+      "target": "underpass",
+      "target_type": "location",
+      "cost": 2,
+      "hour_start": 0,
+      "hour_end": 24
+    },
+    {
+      "id": "to_pawn",
+      "label": "Kensington Pawn",
+      "note": "local · cash loans gold",
+      "target": "pawn_shop",
+      "target_type": "location",
+      "cost": 2,
+      "hour_start": 9,
+      "hour_end": 23
+    },
+    {
+      "id": "to_curb",
+      "label": "Frankford Curb",
+      "note": "panhandle · sit and ask",
+      "target": "panhandle",
+      "target_type": "location",
+      "cost": 1,
+      "hour_start": 6,
+      "hour_end": 22
+    },
+    {
+      "id": "to_lost",
+      "label": "Lost Directory",
+      "note": "archive · misfiled index",
+      "target": "lost",
+      "target_type": "maze",
+      "cost": 3,
+      "hour_start": 0,
+      "hour_end": 24
+    },
+    {
+      "id": "to_feed",
+      "label": "Dead Feed",
+      "note": "archive · crawl stream",
+      "target": "feed",
+      "target_type": "maze",
+      "cost": 5,
+      "hour_start": 0,
+      "hour_end": 24
+    },
+    {
+      "id": "to_supermarket",
+      "label": "Supermarket",
+      "note": "day trip · they never returned",
+      "target": "supermarket",
+      "target_type": "maze",
+      "cost": 4,
+      "day_only": true,
+      "hour_start": 9,
+      "hour_end": 18
+    },
+    {
+      "id": "to_gerald",
+      "label": "Where Have Gerald Go?",
+      "note": "night · fishing trip",
+      "target": "gerald",
+      "target_type": "maze",
+      "cost": 8,
+      "night_only": true
+    },
+    {
+      "id": "to_tv_alley",
+      "label": "TV Alley",
+      "note": "night · static line",
+      "target": "tv_alley",
+      "target_type": "location",
+      "cost": 6,
+      "night_only": true
+    },
+    {
+      "id": "to_news",
+      "label": "Make Awesome News",
+      "note": "local · march 14",
+      "target": "make_awesome_news",
+      "target_type": "location",
+      "cost": 3,
+      "hour_start": 7,
+      "hour_end": 22
+    },
+    {
+      "id": "to_ozzy",
+      "label": "Ozzy's Basement",
+      "note": "yard back way · damp",
+      "target": "ozzy_basement",
+      "target_type": "location",
+      "cost": 5,
+      "hour_start": 10,
+      "hour_end": 24
+    },
+    {
+      "id": "to_tv_heaven",
+      "label": "TV Heaven",
+      "note": "limited · basement arrow",
+      "target": "tv_heaven",
+      "target_type": "location",
+      "cost": 12,
+      "night_only": true
+    },
+    {
+      "id": "to_records",
+      "label": "Signal Static Records",
+      "note": "frankford · vinyl wall",
+      "target": "record_store",
+      "target_type": "location",
+      "cost": 4,
+      "hour_start": 11,
+      "hour_end": 23
+    },
+    {
+      "id": "to_japan_doll",
+      "label": "Japan Doll Basement",
+      "note": "night · wrong door · cover $45",
+      "target": "japan_doll_basement",
+      "target_type": "location",
+      "cost": 45,
+      "night_only": true,
+      "min_luck": 44,
+      "max_heat": 72,
+      "min_money": 20,
+      "require_unvisited": true,
+      "hour_start": 22,
+      "hour_end": 4
+    },
+    {
+      "id": "to_meridian",
+      "label": "Incomplete Biography",
+      "note": "late · wrong file",
+      "target": "meridian_incomplete_file",
+      "target_type": "maze",
+      "cost": 45,
+      "night_only": true,
+      "hour_start": 22,
+      "hour_end": 4
+    },
+    {
+      "id": "to_caseoffice",
+      "label": "Case Office",
+      "note": "weekday · municipal ledger",
+      "target": "caseoffice",
+      "target_type": "maze",
+      "cost": 65,
+      "weekdays": [1, 2, 3, 4, 5],
+      "hour_start": 9,
+      "hour_end": 17
+    },
+    {
+      "id": "to_broadcast",
+      "label": "Emergency Broadcast",
+      "note": "danger · ebs crawl",
+      "target": "broadcastpanic",
+      "target_type": "maze",
+      "cost": 80,
+      "night_only": true,
+      "hour_start": 0,
+      "hour_end": 5
+    },
+    {
+      "id": "to_hidden",
+      "label": "Hidden Page",
+      "note": "extreme · do not trust links",
+      "target": "hidden",
+      "target_type": "maze",
+      "cost": 120,
+      "night_only": true,
+      "hour_start": 1,
+      "hour_end": 4
+    }
+  ]
+}

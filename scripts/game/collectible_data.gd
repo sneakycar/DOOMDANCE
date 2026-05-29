@@ -37,13 +37,21 @@ static func id_for_name(display_name: String) -> String:
 	var d: Dictionary = _by_name.get(display_name, {})
 	return d.get("id", "")
 
+static func name_for_id(collectible_id: String) -> String:
+	var data := lookup(collectible_id)
+	return str(data.get("name", collectible_id))
+
 static func category_label(category: String) -> String:
 	load_all()
 	return _categories.get(category, {}).get("label", category.to_upper())
 
+static func category_keys() -> Array:
+	load_all()
+	return _categories.keys()
+
 static func category_cap(category: String) -> int:
 	load_all()
-	return int(_categories.get(category, {}).get("cap", 20))
+	return int(_categories.get(category, {}).get("cap", 99))
 
 static func all_in_category(category: String) -> Array:
 	load_all()
@@ -53,6 +61,27 @@ static func all_in_category(category: String) -> Array:
 			out.append(entry)
 	return out
 
-static func total_count() -> int:
+static func base_value(collectible_id: String) -> int:
+	var data := lookup(collectible_id)
+	return int(data.get("base_value", 1))
+
+static func pawn_rate(collectible_id: String) -> float:
+	var data := lookup(collectible_id)
+	return float(data.get("pawn_rate", 0.42))
+
+static func is_sellable(collectible_id: String) -> bool:
+	var data := lookup(collectible_id)
+	if data.is_empty():
+		return false
+	return bool(data.get("sellable", true))
+
+static func check_maze_page(page_id: String) -> void:
 	load_all()
-	return _collectibles.size()
+	for entry in _collectibles:
+		var gate: String = str(entry.get("maze_page", ""))
+		if gate.is_empty() or gate != page_id:
+			continue
+		var cid: String = str(entry.get("id", ""))
+		if cid.is_empty():
+			continue
+		GameState.add_collectible(cid)

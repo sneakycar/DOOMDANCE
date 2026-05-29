@@ -5,31 +5,143 @@
       "background_day": "res://generated images/kensington salvage yard day.png",
       "background_night": "res://generated images/doomdance impound wakeup.png",
       "overlays_day": [],
-      "overlays_night": ["rain", "lamp_buzz", "puddle_shimmer"],
+      "overlays_night": [
+        "rain",
+        "lamp_buzz",
+        "puddle_shimmer"
+      ],
       "lamp_spots": [
-        {"center": [0.56, 0.1], "radius": 0.042, "kind": "street"},
-        {"center": [0.795, 0.285], "radius": 0.024, "kind": "bulb"},
-        {"center": [0.828, 0.36], "radius": 0.018, "kind": "window", "color": [1.0, 0.82, 0.52, 1.0]}
+        {
+          "center": [
+            0.56,
+            0.1
+          ],
+          "radius": 0.042,
+          "kind": "street"
+        },
+        {
+          "center": [
+            0.795,
+            0.285
+          ],
+          "radius": 0.024,
+          "kind": "bulb"
+        },
+        {
+          "center": [
+            0.828,
+            0.36
+          ],
+          "radius": 0.018,
+          "kind": "window",
+          "color": [
+            1.0,
+            0.82,
+            0.52,
+            1.0
+          ]
+        }
       ],
       "hotspots": [
         {
           "id": "body",
-          "rect": [0.06, 0.48, 0.42, 0.44],
+          "rect": [
+            0.06,
+            0.48,
+            0.42,
+            0.44
+          ],
           "action": "prompt",
           "text": "you woke up drunk. it's raining again."
         },
         {
+          "id": "website",
+          "rect": [
+            0.6,
+            0.24,
+            0.24,
+            0.26
+          ],
+          "label": "monitor",
+          "action": "goto",
+          "target": "dead",
+          "text": "deadbicycle still loading on the office monitor.",
+          "observation": "old monitor. the site never finished."
+        },
+        {
           "id": "office",
-          "rect": [0.58, 0.22, 0.4, 0.62],
+          "rect": [
+            0.58,
+            0.5,
+            0.36,
+            0.34
+          ],
           "action": "goto",
           "target": "ozzy_basement",
           "text": "where's ozzy?"
         },
         {
           "id": "sign",
-          "rect": [0.02, 0.08, 0.48, 0.28],
+          "rect": [
+            0.02,
+            0.08,
+            0.48,
+            0.28
+          ],
           "action": "prompt",
           "text": "215-634-junk. nobody picks up."
+        },
+        {
+          "id": "newspaper",
+          "rect": [
+            0.7,
+            0.58,
+            0.28,
+            0.24
+          ],
+          "label": "newspaper",
+          "action": "goto",
+          "target": "make_awesome_news",
+          "text": "make awesome news. march 14."
+        },
+        {
+          "id": "ground_meth",
+          "rect": [
+            0.48,
+            0.78,
+            0.22,
+            0.18
+          ],
+          "action": "collect",
+          "collect_chance": 0.24,
+          "collectible_id": "meth",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 meth]",
+          "miss_text": "wet gravel. nothing.",
+          "text": "something in the grit by the fence line."
+        },
+        {
+          "id": "mattress_cut",
+          "rect": [
+            0.82,
+            0.62,
+            0.18,
+            0.36
+          ],
+          "action": "goto",
+          "target": "mattress_lot",
+          "text": "cut through to the vacant lot."
+        },
+        {
+          "id": "curb",
+          "rect": [
+            0.0,
+            0.72,
+            0.22,
+            0.28
+          ],
+          "action": "goto",
+          "target": "panhandle",
+          "text": "k & a corner. sit and ask."
         }
       ]
     },
@@ -37,52 +149,222 @@
       "header": "KENSINGTON LIQUORS",
       "background_day": "res://generated images/kensington liquor store day.png",
       "background_night": "res://generated images/kensington liquor store night.png",
-      "overlays_day": ["neon_lights"],
-      "overlays_night": ["neon_lights", "rain", "puddle_shimmer"],
+      "overlays_day": [
+        "neon_lights"
+      ],
+      "overlays_night": [
+        "neon_lights",
+        "rain",
+        "puddle_shimmer"
+      ],
       "neon_spots": [
-        {"center": [0.295, 0.43], "radius": 0.034, "color": [1.0, 0.12, 0.22, 1.0]},
-        {"center": [0.335, 0.47], "radius": 0.024, "color": [0.35, 0.55, 1.0, 1.0]},
-        {"center": [0.735, 0.39], "radius": 0.028, "color": [0.15, 0.95, 0.42, 1.0]}
+        {
+          "center": [
+            0.295,
+            0.43
+          ],
+          "radius": 0.034,
+          "color": [
+            1.0,
+            0.12,
+            0.22,
+            1.0
+          ]
+        },
+        {
+          "center": [
+            0.335,
+            0.47
+          ],
+          "radius": 0.024,
+          "color": [
+            0.35,
+            0.55,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "center": [
+            0.735,
+            0.39
+          ],
+          "radius": 0.028,
+          "color": [
+            0.15,
+            0.95,
+            0.42,
+            1.0
+          ]
+        }
       ],
       "hotspots": [
         {
           "id": "coors",
-          "rect": [0.2, 0.34, 0.12, 0.28],
+          "rect": [
+            0.2,
+            0.34,
+            0.12,
+            0.28
+          ],
+          "action": "buy",
+          "collectible_id": "beer",
+          "cost": 3,
+          "label": "beer",
+          "text": "beer in the cooler."
+        },
+        {
+          "id": "shelf_whiskey",
+          "rect": [
+            0.28,
+            0.3,
+            0.1,
+            0.32
+          ],
+          "action": "buy",
+          "collectible_id": "whiskey",
+          "cost": 8,
+          "label": "whiskey",
+          "text": "whiskey behind plexiglass."
+        },
+        {
+          "id": "shelf_forty",
+          "rect": [
+            0.12,
+            0.36,
+            0.08,
+            0.24
+          ],
+          "action": "buy",
+          "collectible_id": "forty_oz",
+          "cost": 5,
+          "label": "forty",
+          "text": "forty in a paper bag."
+        },
+        {
+          "id": "dust_bottle",
+          "rect": [
+            0.58,
+            0.38,
+            0.1,
+            0.22
+          ],
+          "action": "buy",
+          "collectible_id": "liquor_bottle",
+          "cost": 7,
+          "label": "bottle",
+          "text": "dust on the neck. nobody claims it."
+        },
+        {
+          "id": "shelf_evan",
+          "rect": [
+            0.52,
+            0.3,
+            0.08,
+            0.28
+          ],
+          "action": "buy",
+          "collectible_id": "evan_williams",
+          "cost": 6,
+          "label": "evan williams",
+          "text": "evan williams on the bottom shelf."
+        },
+        {
+          "id": "shelf_steel",
+          "rect": [
+            0.44,
+            0.32,
+            0.08,
+            0.26
+          ],
+          "action": "buy",
+          "collectible_id": "steel_reserve",
+          "cost": 4,
+          "label": "steel reserve",
+          "text": "steel reserve. tall can energy."
+        },
+        {
+          "id": "shelf_old_crow",
+          "rect": [
+            0.36,
+            0.28,
+            0.08,
+            0.3
+          ],
+          "action": "buy",
+          "collectible_id": "old_crow",
+          "cost": 5,
+          "label": "old crow",
+          "text": "old crow behind the register."
+        },
+        {
+          "id": "coors_sign",
+          "rect": [
+            0.2,
+            0.22,
+            0.14,
+            0.12
+          ],
           "action": "goto",
           "target": "tea",
           "text": "coors light hums through the bars."
         },
         {
           "id": "atm",
-          "rect": [0.66, 0.34, 0.1, 0.22],
+          "rect": [
+            0.66,
+            0.34,
+            0.1,
+            0.22
+          ],
           "action": "goto",
           "target": "money",
           "text": "atm screen frozen on insert card."
         },
         {
           "id": "ebt",
-          "rect": [0.72, 0.42, 0.14, 0.22],
+          "rect": [
+            0.72,
+            0.42,
+            0.14,
+            0.22
+          ],
           "action": "goto",
           "target": "supermarket",
           "text": "we accept ebt food stamps."
         },
         {
           "id": "door",
-          "rect": [0.4, 0.32, 0.18, 0.52],
+          "rect": [
+            0.4,
+            0.32,
+            0.18,
+            0.52
+          ],
           "action": "goto",
           "target": "room",
           "text": "locked. buzzer dead."
         },
         {
           "id": "no_parking",
-          "rect": [0.0, 0.22, 0.1, 0.22],
+          "rect": [
+            0.0,
+            0.22,
+            0.1,
+            0.22
+          ],
           "action": "goto",
           "target": "racecar",
           "text": "tow away zone. your car is already gone."
         },
         {
           "id": "trash",
-          "rect": [0.04, 0.58, 0.14, 0.22],
+          "rect": [
+            0.04,
+            0.58,
+            0.14,
+            0.22
+          ],
           "action": "collect",
           "collect_chance": 0.42,
           "collectible_id": "beer_can",
@@ -92,7 +374,12 @@
         },
         {
           "id": "ground_score",
-          "rect": [0.74, 0.72, 0.26, 0.28],
+          "rect": [
+            0.74,
+            0.72,
+            0.26,
+            0.28
+          ],
           "action": "collect",
           "collect_chance": 0.38,
           "collectible_id": "cocaine",
@@ -102,17 +389,71 @@
         },
         {
           "id": "yard",
-          "rect": [0.0, 0.0, 0.16, 0.35],
+          "rect": [
+            0.0,
+            0.0,
+            0.16,
+            0.35
+          ],
           "action": "goto",
           "target": "impound_lot",
           "text": "back toward the yard."
         },
         {
           "id": "sidewalk",
-          "rect": [0.0, 0.82, 0.55, 0.18],
+          "rect": [
+            0.0,
+            0.82,
+            0.55,
+            0.18
+          ],
           "action": "goto",
           "target": "impound_lot",
           "text": "wet pavement back to the yard."
+        },
+        {
+          "id": "frankford",
+          "rect": [
+            0.56,
+            0.82,
+            0.44,
+            0.18
+          ],
+          "action": "goto",
+          "target": "el_bar",
+          "text": "frankford av. neon and cold beer."
+        },
+        {
+          "id": "ground_k",
+          "rect": [
+            0.62,
+            0.68,
+            0.18,
+            0.14
+          ],
+          "action": "collect",
+          "collect_chance": 0.29,
+          "collectible_id": "ketamine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 ketamine]",
+          "miss_text": "puddle. nothing but oil.",
+          "text": "foil corner in the gutter by the atm."
+        },
+        {
+          "id": "flyer_rack",
+          "rect": [
+            0.86,
+            0.44,
+            0.12,
+            0.18
+          ],
+          "action": "collect",
+          "collect_once": true,
+          "collect_chance": 1.0,
+          "collectible_id": "neon_flyer",
+          "label": "flyer",
+          "pickup_text": "neon flyer. cold beer good times.",
+          "miss_text": "rack empty.",
+          "text": "flyer in the door rack."
         }
       ]
     },
@@ -121,10 +462,22 @@
       "decay": true,
       "background_day": "res://generated images/ozzy basement.png",
       "background_night": "res://generated images/ozzy basement.png",
-      "overlays_day": ["lamp_buzz"],
-      "overlays_night": ["lamp_buzz", "rain"],
+      "overlays_day": [
+        "lamp_buzz"
+      ],
+      "overlays_night": [
+        "lamp_buzz",
+        "rain"
+      ],
       "lamp_spots": [
-        {"center": [0.42, 0.08], "radius": 0.05, "kind": "bulb"}
+        {
+          "center": [
+            0.42,
+            0.08
+          ],
+          "radius": 0.05,
+          "kind": "bulb"
+        }
       ],
       "on_enter": {
         "message": "Ozzy's not dead, he killed someone in an Atlantic City casino",
@@ -136,37 +489,103 @@
       "hotspots": [
         {
           "id": "stairs",
-          "rect": [0.0, 0.0, 0.34, 0.55],
+          "rect": [
+            0.0,
+            0.0,
+            0.34,
+            0.55
+          ],
           "action": "goto",
           "target": "impound_lot",
           "text": "wet steps back to the yard."
         },
         {
           "id": "radio",
-          "rect": [0.72, 0.42, 0.22, 0.18],
+          "rect": [
+            0.72,
+            0.42,
+            0.22,
+            0.18
+          ],
           "action": "goto",
           "target": "meridian_incomplete_file",
           "text": "the radio plays a biography filed under the wrong name."
         },
         {
           "id": "couch",
-          "rect": [0.58, 0.48, 0.38, 0.34],
+          "rect": [
+            0.58,
+            0.48,
+            0.38,
+            0.34
+          ],
           "action": "prompt",
           "text": "corduroy still smells like clove cigarettes and salt."
         },
         {
           "id": "coffee_table",
-          "rect": [0.48, 0.62, 0.28, 0.22],
+          "rect": [
+            0.48,
+            0.62,
+            0.28,
+            0.22
+          ],
           "action": "goto",
           "target": "meridian_pull",
           "text": "papers on the table are someone else's missing paragraphs."
         },
         {
+          "id": "tv_heaven",
+          "rect": [
+            0.02,
+            0.1,
+            0.24,
+            0.34
+          ],
+          "action": "goto",
+          "target": "tv_heaven",
+          "text": "TV HEAVEN. follow the arrow down."
+        },
+        {
           "id": "washer",
-          "rect": [0.34, 0.34, 0.18, 0.28],
+          "rect": [
+            0.34,
+            0.34,
+            0.18,
+            0.28
+          ],
           "action": "goto",
           "target": "liquor_store",
           "text": "through the back way to the liquor corner."
+        },
+        {
+          "id": "ground_meth",
+          "rect": [
+            0.4,
+            0.72,
+            0.24,
+            0.26
+          ],
+          "action": "collect",
+          "collect_chance": 0.31,
+          "collectible_id": "meth",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 meth]",
+          "miss_text": "concrete dust. empty.",
+          "text": "baggie under the washer drip."
+        },
+        {
+          "id": "wrong_door",
+          "rect": [
+            0.88,
+            0.58,
+            0.12,
+            0.38
+          ],
+          "label": "wrong door",
+          "action": "goto",
+          "target": "japan_doll_basement",
+          "text": "basement door that shouldn't open. bass bleed.",
+          "observation": "The lock was never installed."
         }
       ]
     },
@@ -174,22 +593,1729 @@
       "header": "TV ALLEY",
       "background_day": "res://generated images/kensington tv alley.png",
       "background_night": "res://generated images/kensington tv alley.png",
-      "tv_static_rect": [0.405, 0.472, 0.192, 0.245],
-      "overlays_day": ["tv_static"],
-      "overlays_night": ["tv_static", "rain"],
+      "tv_static_rect": [
+        0.405,
+        0.472,
+        0.192,
+        0.245
+      ],
+      "overlays_day": [
+        "tv_static"
+      ],
+      "overlays_night": [
+        "tv_static",
+        "rain"
+      ],
       "hotspots": [
         {
           "id": "tv",
-          "rect": [0.32, 0.38, 0.36, 0.4],
+          "rect": [
+            0.32,
+            0.38,
+            0.36,
+            0.4
+          ],
           "action": "invert_page",
           "text": "the crawl is not a test."
         },
         {
           "id": "syringes",
-          "rect": [0.22, 0.68, 0.52, 0.3],
+          "rect": [
+            0.22,
+            0.68,
+            0.52,
+            0.3
+          ],
           "action": "dialogue",
           "dialogue": "Kyle died...",
           "text": "orange caps in the cracks."
+        },
+        {
+          "id": "ground_k",
+          "rect": [
+            0.44,
+            0.0,
+            0.56,
+            0.38
+          ],
+          "action": "collect",
+          "collect_chance": 0.33,
+          "collectible_id": "ketamine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 ketamine]",
+          "miss_text": "streetlight. nothing.",
+          "text": "vial cap in the upper street grit."
+        }
+      ]
+    },
+    "make_awesome_news": {
+      "header": "MAKE AWESOME NEWS",
+      "background_day": "res://generated images/make awesome news.png",
+      "background_night": "res://generated images/make awesome news.png",
+      "overlays_day": [],
+      "overlays_night": [],
+      "hotspots": [
+        {
+          "id": "beau_headline",
+          "rect": [
+            0.03,
+            0.14,
+            0.56,
+            0.16
+          ],
+          "label": "beau lou headline",
+          "action": "document",
+          "document": "res://data/text/founding_ledger_volume_i.md",
+          "document_title": "FOUNDING_LEDGER.EXE",
+          "text": "beau lou finally speaks on seven years in philly."
+        },
+        {
+          "id": "paper_stack",
+          "rect": [
+            0.04,
+            0.32,
+            0.52,
+            0.38
+          ],
+          "label": "newspaper",
+          "action": "collect",
+          "collect_once": true,
+          "collect_chance": 1.0,
+          "collectible_id": "newspaper",
+          "pickup_text": "make awesome news. march 14.",
+          "miss_text": "stack already thinned.",
+          "text": "folded stack on the counter."
+        },
+        {
+          "id": "kensington_kills",
+          "rect": [
+            0.6,
+            0.14,
+            0.38,
+            0.17
+          ],
+          "label": "sidebar",
+          "action": "goto",
+          "target": "murder",
+          "text": "kensington kills again. page 6."
+        },
+        {
+          "id": "subgenius",
+          "rect": [
+            0.6,
+            0.34,
+            0.38,
+            0.24
+          ],
+          "label": "subgenius",
+          "action": "goto",
+          "target": "meridian_pull",
+          "text": "the church of the subgenius. page 11."
+        },
+        {
+          "id": "obituaries",
+          "rect": [
+            0.6,
+            0.6,
+            0.38,
+            0.16
+          ],
+          "label": "obituaries",
+          "action": "dialogue",
+          "dialogue": "H.R. Giger. Mark Lanegan. DJ Screw.",
+          "text": "page 22."
+        },
+        {
+          "id": "footer_bar",
+          "rect": [
+            0.02,
+            0.86,
+            0.96,
+            0.12
+          ],
+          "label": "footer",
+          "action": "goto",
+          "target": "dead",
+          "text": "local news art music culture conspiracy uncensored."
+        },
+        {
+          "id": "ground_meth",
+          "rect": [
+            0.04,
+            0.72,
+            0.18,
+            0.12
+          ],
+          "action": "collect",
+          "collect_chance": 0.26,
+          "collectible_id": "meth",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 meth]",
+          "miss_text": "newsprint scraps only.",
+          "text": "shard in the folded corner."
+        }
+      ]
+    },
+    "tv_heaven": {
+      "header": "TV HEAVEN",
+      "background_day": "res://generated images/tv heaven room.png",
+      "background_night": "res://generated images/tv heaven room.png",
+      "tv_static_rects": [
+        [
+          0.03,
+          0.56,
+          0.22,
+          0.3
+        ],
+        [
+          0.8,
+          0.38,
+          0.11,
+          0.13
+        ],
+        [
+          0.8,
+          0.52,
+          0.11,
+          0.13
+        ],
+        [
+          0.05,
+          0.2,
+          0.08,
+          0.07
+        ],
+        [
+          0.06,
+          0.28,
+          0.09,
+          0.08
+        ],
+        [
+          0.14,
+          0.32,
+          0.1,
+          0.09
+        ],
+        [
+          0.22,
+          0.24,
+          0.08,
+          0.07
+        ]
+      ],
+      "tv_baseball_rect": [
+        0.4,
+        0.26,
+        0.17,
+        0.15
+      ],
+      "overlays_day": [
+        "tv_static_multi",
+        "tv_baseball"
+      ],
+      "overlays_night": [
+        "tv_static_multi",
+        "tv_baseball"
+      ],
+      "hotspots": [
+        {
+          "id": "pillar",
+          "rect": [
+            0.28,
+            0.3,
+            0.18,
+            0.38
+          ],
+          "action": "prompt",
+          "text": "TV HEAVEN. arrow points down. nobody listens."
+        },
+        {
+          "id": "baseball_tv",
+          "rect": [
+            0.38,
+            0.24,
+            0.21,
+            0.18
+          ],
+          "action": "prompt",
+          "text": "bottom seventh. gary foundry 3, doon static 2. paused."
+        },
+        {
+          "id": "static_floor",
+          "rect": [
+            0.02,
+            0.54,
+            0.26,
+            0.34
+          ],
+          "action": "collect",
+          "text": "card wedged in the cable snow.",
+          "label": "floor static",
+          "collect_once": true,
+          "collect_chance": 1.0,
+          "collectible_id": "baseball_card",
+          "pickup_text": "baseball card under the snow.",
+          "miss_text": "static only."
+        },
+        {
+          "id": "exit",
+          "rect": [
+            0.0,
+            0.0,
+            0.12,
+            0.2
+          ],
+          "action": "goto",
+          "target": "ozzy_basement",
+          "text": "back through the basement."
+        },
+        {
+          "id": "ground_c",
+          "rect": [
+            0.62,
+            0.72,
+            0.36,
+            0.26
+          ],
+          "action": "collect",
+          "collect_chance": 0.27,
+          "collectible_id": "cocaine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 cocaine]",
+          "miss_text": "cables. dust.",
+          "text": "sparkle in the cable pile."
+        }
+      ]
+    },
+    "movie_theater": {
+      "header": "THE ABYSS THEATER",
+      "background_day": "res://generated images/kensington movie theater.png",
+      "background_night": "res://generated images/kensington movie theater.png",
+      "overlays_day": [
+        "fluorescent_flicker"
+      ],
+      "overlays_night": [
+        "fluorescent_flicker"
+      ],
+      "hotspots": [
+        {
+          "id": "marquee",
+          "rect": [
+            0.22,
+            0.08,
+            0.56,
+            0.18
+          ],
+          "action": "prompt",
+          "text": "now playing: the abyss. no refunds."
+        },
+        {
+          "id": "ticket_booth",
+          "rect": [
+            0.0,
+            0.22,
+            0.22,
+            0.42
+          ],
+          "action": "prompt",
+          "text": "adults 6. seniors 5. children 4. booth empty."
+        },
+        {
+          "id": "ground_c",
+          "rect": [
+            0.04,
+            0.28,
+            0.16,
+            0.14
+          ],
+          "action": "collect",
+          "collect_chance": 0.28,
+          "collectible_id": "cocaine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 cocaine]",
+          "miss_text": "ticket stub dust. nothing.",
+          "text": "baggie in the booth corner."
+        },
+        {
+          "id": "ground_meth",
+          "rect": [
+            0.72,
+            0.72,
+            0.26,
+            0.26
+          ],
+          "action": "collect",
+          "collect_chance": 0.44,
+          "collectible_id": "meth",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 meth]",
+          "miss_text": "spilled trash. empty.",
+          "text": "shard bag by the tipped can."
+        },
+        {
+          "id": "ground_k",
+          "rect": [
+            0.0,
+            0.78,
+            0.28,
+            0.2
+          ],
+          "action": "collect",
+          "collect_chance": 0.36,
+          "collectible_id": "ketamine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 ketamine]",
+          "miss_text": "star carpet. nothing.",
+          "text": "foil in the red carpet stars."
+        },
+        {
+          "id": "doors",
+          "rect": [
+            0.34,
+            0.38,
+            0.32,
+            0.38
+          ],
+          "action": "goto",
+          "target": "tv_heaven",
+          "text": "through the doors. wrong basement."
+        },
+        {
+          "id": "exit",
+          "rect": [
+            0.78,
+            0.0,
+            0.22,
+            0.24
+          ],
+          "action": "goto",
+          "target": "septa_allegheny",
+          "text": "out to allegheny."
+        }
+      ]
+    },
+    "septa_allegheny": {
+      "header": "ALLEGHENY STATION",
+      "background_day": "res://generated images/septa allegheny station.png",
+      "background_night": "res://generated images/septa allegheny station.png",
+      "overlays_day": [],
+      "overlays_night": [
+        "lamp_buzz"
+      ],
+      "lamp_spots": [
+        {
+          "center": [
+            0.48,
+            0.42
+          ],
+          "radius": 0.06,
+          "kind": "bulb"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "sign",
+          "rect": [
+            0.18,
+            0.02,
+            0.64,
+            0.14
+          ],
+          "action": "prompt",
+          "text": "septa allegheny. eastbound. fluorescent hum."
+        },
+        {
+          "id": "turnstile",
+          "rect": [
+            0.42,
+            0.28,
+            0.22,
+            0.38
+          ],
+          "label": "turnstile",
+          "action": "transit",
+          "text": "cash only. pick a line."
+        },
+        {
+          "id": "ground_c",
+          "rect": [
+            0.0,
+            0.58,
+            0.18,
+            0.22
+          ],
+          "action": "collect",
+          "collect_chance": 0.41,
+          "collectible_id": "cocaine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 cocaine]",
+          "miss_text": "trash can picked clean.",
+          "text": "baggie behind the overflow can."
+        },
+        {
+          "id": "ground_meth",
+          "rect": [
+            0.32,
+            0.52,
+            0.36,
+            0.28
+          ],
+          "action": "collect",
+          "collect_chance": 0.34,
+          "collectible_id": "meth",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 meth]",
+          "miss_text": "steps. litter only.",
+          "text": "shard in the stair grit."
+        },
+        {
+          "id": "ground_k",
+          "rect": [
+            0.78,
+            0.62,
+            0.2,
+            0.24
+          ],
+          "action": "collect",
+          "collect_chance": 0.52,
+          "collectible_id": "ketamine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 ketamine]",
+          "miss_text": "fence line. nothing.",
+          "text": "vial by the chain link."
+        },
+        {
+          "id": "deli",
+          "rect": [
+            0.0,
+            0.0,
+            0.16,
+            0.38
+          ],
+          "action": "goto",
+          "target": "el_bar",
+          "text": "broadway deli glow. bar is close."
+        },
+        {
+          "id": "tracks",
+          "rect": [
+            0.38,
+            0.48,
+            0.24,
+            0.4
+          ],
+          "action": "goto",
+          "target": "dead",
+          "text": "down into the archive."
+        },
+        {
+          "id": "lot",
+          "rect": [
+            0.82,
+            0.0,
+            0.18,
+            0.48
+          ],
+          "action": "goto",
+          "target": "mattress_lot",
+          "text": "empty lot past the fence."
+        }
+      ]
+    },
+    "el_bar": {
+      "header": "EL BAR",
+      "background_day": "res://generated images/el bar day.png",
+      "background_night": "res://generated images/el bar night.png",
+      "overlays_day": [],
+      "overlays_night": [
+        "neon_lights"
+      ],
+      "neon_spots": [
+        {
+          "center": [
+            0.52,
+            0.38
+          ],
+          "radius": 0.04,
+          "color": [
+            1.0,
+            0.1,
+            0.2,
+            1.0
+          ]
+        },
+        {
+          "center": [
+            0.48,
+            0.52
+          ],
+          "radius": 0.028,
+          "color": [
+            0.2,
+            0.95,
+            0.35,
+            1.0
+          ]
+        },
+        {
+          "center": [
+            0.56,
+            0.56
+          ],
+          "radius": 0.024,
+          "color": [
+            0.2,
+            0.4,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "neon",
+          "rect": [
+            0.44,
+            0.18,
+            0.2,
+            0.48
+          ],
+          "action": "prompt",
+          "text": "est. 1963. cold beer good times."
+        },
+        {
+          "id": "matchbook",
+          "rect": [
+            0.38,
+            0.52,
+            0.14,
+            0.14
+          ],
+          "label": "matchbook",
+          "action": "collect",
+          "collect_once": true,
+          "collect_chance": 1.0,
+          "collectible_id": "matchbook",
+          "pickup_text": "matchbook. el bar est. 1963.",
+          "miss_text": "bar top wiped clean.",
+          "text": "matchbook by the napkin stack."
+        },
+        {
+          "id": "ground_k",
+          "rect": [
+            0.58,
+            0.68,
+            0.12,
+            0.16
+          ],
+          "action": "collect",
+          "collect_chance": 0.39,
+          "collectible_id": "ketamine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 ketamine]",
+          "miss_text": "hydrant base. dry.",
+          "text": "foil by the red hydrant."
+        },
+        {
+          "id": "ground_c",
+          "rect": [
+            0.62,
+            0.58,
+            0.22,
+            0.18
+          ],
+          "action": "collect",
+          "collect_chance": 0.31,
+          "collectible_id": "cocaine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 cocaine]",
+          "miss_text": "bench shadow. nothing.",
+          "text": "baggie under the slat bench."
+        },
+        {
+          "id": "ground_meth",
+          "rect": [
+            0.0,
+            0.82,
+            0.38,
+            0.16
+          ],
+          "action": "collect",
+          "collect_chance": 0.43,
+          "collectible_id": "meth",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 meth]",
+          "miss_text": "crosswalk grit. empty.",
+          "text": "shard in the crosswalk gutter."
+        },
+        {
+          "id": "septa",
+          "rect": [
+            0.0,
+            0.0,
+            0.14,
+            0.3
+          ],
+          "action": "goto",
+          "target": "septa_allegheny",
+          "text": "allegheny station stairs."
+        },
+        {
+          "id": "liquor",
+          "rect": [
+            0.0,
+            0.72,
+            0.18,
+            0.28
+          ],
+          "action": "goto",
+          "target": "liquor_store",
+          "text": "liquor corner up the block."
+        },
+        {
+          "id": "lot",
+          "rect": [
+            0.82,
+            0.72,
+            0.18,
+            0.28
+          ],
+          "action": "goto",
+          "target": "mattress_lot",
+          "text": "vacant lot down frankford."
+        },
+        {
+          "id": "underpass",
+          "rect": [
+            0.82,
+            0.0,
+            0.18,
+            0.42
+          ],
+          "action": "goto",
+          "target": "underpass",
+          "text": "kensington av tunnel. wet lights."
+        },
+        {
+          "id": "records",
+          "rect": [
+            0.18,
+            0.0,
+            0.18,
+            0.28
+          ],
+          "action": "goto",
+          "target": "record_store",
+          "text": "signal static records."
+        }
+      ]
+    },
+    "mattress_lot": {
+      "header": "VACANT LOT",
+      "background_day": "res://generated images/mattress lot.png",
+      "background_night": "res://generated images/mattress lot.png",
+      "overlays_day": [
+        "lamp_buzz"
+      ],
+      "overlays_night": [
+        "lamp_buzz",
+        "rain"
+      ],
+      "lamp_spots": [
+        {
+          "center": [
+            0.62,
+            0.28
+          ],
+          "radius": 0.05,
+          "kind": "street"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "mattress",
+          "rect": [
+            0.18,
+            0.52,
+            0.64,
+            0.38
+          ],
+          "action": "prompt",
+          "text": "someone slept here. nobody admits it."
+        },
+        {
+          "id": "ground_k",
+          "rect": [
+            0.28,
+            0.58,
+            0.44,
+            0.28
+          ],
+          "action": "collect",
+          "collect_chance": 0.47,
+          "collectible_id": "ketamine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 ketamine]",
+          "miss_text": "mattress stuffing. nothing.",
+          "text": "vial in the mattress seam."
+        },
+        {
+          "id": "ground_meth",
+          "rect": [
+            0.04,
+            0.68,
+            0.22,
+            0.28
+          ],
+          "action": "collect",
+          "collect_chance": 0.37,
+          "collectible_id": "meth",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 meth]",
+          "miss_text": "weeds and wrappers.",
+          "text": "bag in the lot trash."
+        },
+        {
+          "id": "ground_c",
+          "rect": [
+            0.72,
+            0.62,
+            0.26,
+            0.32
+          ],
+          "action": "collect",
+          "collect_chance": 0.33,
+          "collectible_id": "cocaine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 cocaine]",
+          "miss_text": "fence dirt. empty.",
+          "text": "baggie by the chain link."
+        },
+        {
+          "id": "yard",
+          "rect": [
+            0.0,
+            0.0,
+            0.2,
+            0.28
+          ],
+          "action": "goto",
+          "target": "impound_lot",
+          "text": "back to salvage yard."
+        },
+        {
+          "id": "bar",
+          "rect": [
+            0.8,
+            0.0,
+            0.2,
+            0.28
+          ],
+          "action": "goto",
+          "target": "el_bar",
+          "text": "neon on frankford."
+        },
+        {
+          "id": "theater",
+          "rect": [
+            0.0,
+            0.72,
+            0.18,
+            0.28
+          ],
+          "action": "goto",
+          "target": "movie_theater",
+          "text": "the abyss theater lobby."
+        }
+      ]
+    },
+    "panhandle": {
+      "header": "K & A CORNER",
+      "background_day": "res://generated images/panhandle kensington corner.png",
+      "background_night": "res://generated images/panhandle kensington corner.png",
+      "overlays_day": [
+        "puddle_shimmer"
+      ],
+      "overlays_night": [
+        "rain",
+        "puddle_shimmer",
+        "neon_lights"
+      ],
+      "neon_spots": [
+        {
+          "center": [
+            0.78,
+            0.42
+          ],
+          "radius": 0.032,
+          "color": [
+            0.15,
+            0.95,
+            0.42,
+            1.0
+          ]
+        },
+        {
+          "center": [
+            0.84,
+            0.48
+          ],
+          "radius": 0.022,
+          "color": [
+            1.0,
+            0.12,
+            0.22,
+            1.0
+          ]
+        }
+      ],
+      "lamp_spots": [
+        {
+          "center": [
+            0.52,
+            0.18
+          ],
+          "radius": 0.038,
+          "kind": "street"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "sit",
+          "rect": [
+            0.24,
+            0.68,
+            0.52,
+            0.3
+          ],
+          "label": "crosswalk",
+          "action": "panhandle",
+          "text": "sit on the crosswalk. ask."
+        },
+        {
+          "id": "stand",
+          "rect": [
+            0.24,
+            0.68,
+            0.52,
+            0.3
+          ],
+          "label": "crosswalk",
+          "action": "stop_panhandle",
+          "text": "stand up."
+        },
+        {
+          "id": "collect",
+          "rect": [
+            0.34,
+            0.72,
+            0.32,
+            0.22
+          ],
+          "label": "cup",
+          "action": "collect_panhandle",
+          "text": "what they left in the cup."
+        },
+        {
+          "id": "yard",
+          "rect": [
+            0.0,
+            0.0,
+            0.2,
+            0.38
+          ],
+          "action": "goto",
+          "target": "impound_lot",
+          "text": "back toward salvage yard."
+        },
+        {
+          "id": "market",
+          "rect": [
+            0.0,
+            0.1,
+            0.36,
+            0.52
+          ],
+          "action": "goto",
+          "target": "liquor_store",
+          "text": "k & a market corner. liquor up the block."
+        },
+        {
+          "id": "alley_gate",
+          "rect": [
+            0.4,
+            0.18,
+            0.22,
+            0.48
+          ],
+          "action": "goto",
+          "target": "underpass",
+          "text": "kensington av underpass. tunnel lights."
+        },
+        {
+          "id": "pawn",
+          "rect": [
+            0.62,
+            0.12,
+            0.38,
+            0.58
+          ],
+          "action": "goto",
+          "text": "kensington pawn. cash loans. open.",
+          "target": "pawn_shop",
+          "label": "pawn",
+          "observation": "cash loans gold. open late."
+        }
+      ]
+    },
+    "pawn_shop": {
+      "header": "KENSINGTON PAWN",
+      "background_day": "res://generated images/panhandle kensington corner.png",
+      "background_night": "res://generated images/panhandle kensington corner.png",
+      "overlays_day": [
+        "neon_lights"
+      ],
+      "overlays_night": [
+        "neon_lights",
+        "rain",
+        "puddle_shimmer"
+      ],
+      "neon_spots": [
+        {
+          "center": [
+            0.72,
+            0.38
+          ],
+          "radius": 0.034,
+          "color": [
+            1.0,
+            0.85,
+            0.2,
+            1.0
+          ]
+        },
+        {
+          "center": [
+            0.68,
+            0.52
+          ],
+          "radius": 0.022,
+          "color": [
+            0.2,
+            0.4,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "lamp_spots": [
+        {
+          "center": [
+            0.48,
+            0.16
+          ],
+          "radius": 0.036,
+          "kind": "street"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "counter",
+          "rect": [
+            0.52,
+            0.42,
+            0.46,
+            0.38
+          ],
+          "label": "counter",
+          "action": "sell",
+          "venue": "pawn",
+          "text": "sell anything. they weigh it in their head.",
+          "observation": "cash loans gold. we buy anything."
+        },
+        {
+          "id": "buy_griffey_card",
+          "rect": [
+            0.6,
+            0.2,
+            0.16,
+            0.18
+          ],
+          "label": "griffey card",
+          "action": "buy",
+          "collectible_id": "griffey_card",
+          "cost": 18,
+          "text": "griffey card in the case."
+        },
+        {
+          "id": "buy_rusty_key",
+          "rect": [
+            0.76,
+            0.22,
+            0.16,
+            0.16
+          ],
+          "label": "rusty key",
+          "action": "buy",
+          "collectible_id": "rusty_key",
+          "cost": 12,
+          "text": "rusty key in the case."
+        },
+        {
+          "id": "buy_card_griffey",
+          "rect": [
+            0.6,
+            0.38,
+            0.14,
+            0.14
+          ],
+          "label": "griffey reprint",
+          "action": "buy",
+          "collectible_id": "card_griffey",
+          "cost": 22,
+          "text": "griffey reprint in the case."
+        },
+        {
+          "id": "buy_starter_phillies",
+          "rect": [
+            0.76,
+            0.38,
+            0.14,
+            0.14
+          ],
+          "label": "phillies starter",
+          "action": "buy",
+          "collectible_id": "starter_phillies",
+          "cost": 28,
+          "text": "phillies starter in the case."
+        },
+        {
+          "id": "buy_vinyl_comp",
+          "rect": [
+            0.66,
+            0.54,
+            0.14,
+            0.12
+          ],
+          "label": "comp tape dub",
+          "action": "buy",
+          "collectible_id": "vinyl_comp",
+          "cost": 6,
+          "text": "comp tape dub in the case."
+        },
+        {
+          "id": "buy_bb_pistol",
+          "rect": [
+            0.82,
+            0.5,
+            0.14,
+            0.14
+          ],
+          "label": "bb pistol",
+          "action": "buy",
+          "collectible_id": "bb_pistol",
+          "cost": 35,
+          "text": "bb pistol in the case."
+        },
+        {
+          "id": "buy_zippo",
+          "rect": [
+            0.58,
+            0.66,
+            0.16,
+            0.14
+          ],
+          "label": "zippo",
+          "action": "buy",
+          "collectible_id": "zippo",
+          "cost": 9,
+          "text": "zippo in the case."
+        },
+        {
+          "id": "buy_watch_casio",
+          "rect": [
+            0.76,
+            0.66,
+            0.16,
+            0.14
+          ],
+          "label": "casio watch",
+          "action": "buy",
+          "collectible_id": "watch_casio",
+          "cost": 14,
+          "text": "casio watch in the case."
+        },
+        {
+          "id": "buy_chain_gold",
+          "rect": [
+            0.66,
+            0.78,
+            0.18,
+            0.12
+          ],
+          "label": "gold chain",
+          "action": "buy",
+          "collectible_id": "chain_gold",
+          "cost": 40,
+          "text": "gold chain in the case."
+        },
+        {
+          "id": "buy_mad_dog",
+          "rect": [
+            0.84,
+            0.78,
+            0.14,
+            0.12
+          ],
+          "label": "mad dog",
+          "action": "buy",
+          "collectible_id": "mad_dog",
+          "cost": 4,
+          "text": "mad dog in the case."
+        },
+        {
+          "id": "window",
+          "rect": [
+            0.58,
+            0.18,
+            0.38,
+            0.52
+          ],
+          "label": "glass case",
+          "action": "collect",
+          "collect_once": true,
+          "collect_chance": 1.0,
+          "collectible_id": "lottery_ticket",
+          "pickup_text": "lottery ticket pressed to the glass.",
+          "miss_text": "case already picked over.",
+          "text": "lottery ticket in the pawn window."
+        },
+        {
+          "id": "sign",
+          "rect": [
+            0.54,
+            0.08,
+            0.42,
+            0.14
+          ],
+          "action": "prompt",
+          "label": "sign",
+          "text": "cash loans gold. we buy anything. nobody asks where it came from."
+        },
+        {
+          "id": "curb",
+          "rect": [
+            0.18,
+            0.62,
+            0.4,
+            0.36
+          ],
+          "action": "goto",
+          "target": "panhandle",
+          "text": "back to the crosswalk."
+        },
+        {
+          "id": "market",
+          "rect": [
+            0.0,
+            0.08,
+            0.28,
+            0.48
+          ],
+          "action": "goto",
+          "target": "liquor_store",
+          "text": "k & a market. liquor corner."
+        },
+        {
+          "id": "alley",
+          "rect": [
+            0.0,
+            0.56,
+            0.22,
+            0.44
+          ],
+          "action": "goto",
+          "target": "septa_allegheny",
+          "text": "alley gate toward allegheny."
+        },
+        {
+          "id": "yard",
+          "rect": [
+            0.82,
+            0.0,
+            0.18,
+            0.32
+          ],
+          "action": "goto",
+          "target": "impound_lot",
+          "text": "salvage yard through the cut."
+        }
+      ]
+    },
+    "underpass": {
+      "header": "KENSINGTON UNDERPASS",
+      "background_day": "res://generated images/kensington underpass.png",
+      "background_night": "res://generated images/kensington underpass.png",
+      "overlays_day": [
+        "lamp_buzz",
+        "puddle_shimmer"
+      ],
+      "overlays_night": [
+        "lamp_buzz",
+        "puddle_shimmer",
+        "fluorescent_flicker"
+      ],
+      "lamp_spots": [
+        {
+          "center": [
+            0.5,
+            0.22
+          ],
+          "radius": 0.028,
+          "kind": "bulb"
+        },
+        {
+          "center": [
+            0.5,
+            0.16
+          ],
+          "radius": 0.022,
+          "kind": "bulb"
+        },
+        {
+          "center": [
+            0.5,
+            0.1
+          ],
+          "radius": 0.018,
+          "kind": "bulb"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "sit",
+          "rect": [
+            0.3,
+            0.52,
+            0.4,
+            0.34
+          ],
+          "label": "crosswalk",
+          "action": "panhandle",
+          "text": "sit on the wet crosswalk. ask.",
+          "observation": "tunnel echo. headlights far away."
+        },
+        {
+          "id": "stand",
+          "rect": [
+            0.3,
+            0.52,
+            0.4,
+            0.34
+          ],
+          "label": "crosswalk",
+          "action": "stop_panhandle",
+          "text": "stand up."
+        },
+        {
+          "id": "collect",
+          "rect": [
+            0.38,
+            0.58,
+            0.24,
+            0.22
+          ],
+          "label": "cup",
+          "action": "collect_panhandle",
+          "text": "what they left in the cup."
+        },
+        {
+          "id": "sign",
+          "rect": [
+            0.72,
+            0.38,
+            0.26,
+            0.22
+          ],
+          "label": "kensington av",
+          "action": "prompt",
+          "text": "kensington av 2800. stay in lane. no pedestrians."
+        },
+        {
+          "id": "frankford",
+          "rect": [
+            0.78,
+            0.0,
+            0.22,
+            0.38
+          ],
+          "action": "goto",
+          "target": "el_bar",
+          "text": "out to frankford. el bar neon."
+        },
+        {
+          "id": "septa",
+          "rect": [
+            0.0,
+            0.0,
+            0.18,
+            0.42
+          ],
+          "action": "goto",
+          "target": "septa_allegheny",
+          "text": "stairs up to allegheny station."
+        },
+        {
+          "id": "curb",
+          "rect": [
+            0.0,
+            0.62,
+            0.22,
+            0.38
+          ],
+          "action": "goto",
+          "target": "panhandle",
+          "text": "k & a corner. crosswalk out."
+        },
+        {
+          "id": "yard",
+          "rect": [
+            0.82,
+            0.62,
+            0.18,
+            0.38
+          ],
+          "action": "goto",
+          "target": "impound_lot",
+          "text": "salvage yard through the cut."
+        }
+      ]
+    },
+    "record_store": {
+      "header": "SIGNAL STATIC",
+      "background_day": "res://generated images/el bar day.png",
+      "background_night": "res://generated images/el bar night.png",
+      "overlays_day": [
+        "lamp_buzz"
+      ],
+      "overlays_night": [
+        "neon_lights",
+        "lamp_buzz"
+      ],
+      "hotspots": [
+        {
+          "id": "counter_sell",
+          "rect": [
+            0.38,
+            0.48,
+            0.28,
+            0.28
+          ],
+          "label": "counter",
+          "action": "sell",
+          "venue": "record",
+          "text": "sell vinyl back. always at a loss."
+        },
+        {
+          "id": "buy_vinyl_punk_7",
+          "rect": [
+            0.12,
+            0.18,
+            0.16,
+            0.18
+          ],
+          "label": "punk 7-inch",
+          "action": "buy",
+          "collectible_id": "vinyl_punk_7",
+          "cost": 12,
+          "text": "punk 7-inch on the wall."
+        },
+        {
+          "id": "buy_vinyl_hardcore_lp",
+          "rect": [
+            0.32,
+            0.18,
+            0.16,
+            0.18
+          ],
+          "label": "hardcore lp",
+          "action": "buy",
+          "collectible_id": "vinyl_hardcore_lp",
+          "cost": 18,
+          "text": "hardcore lp on the wall."
+        },
+        {
+          "id": "buy_vinyl_jazz",
+          "rect": [
+            0.52,
+            0.18,
+            0.16,
+            0.18
+          ],
+          "label": "jazz reissue",
+          "action": "buy",
+          "collectible_id": "vinyl_jazz",
+          "cost": 16,
+          "text": "jazz reissue on the wall."
+        },
+        {
+          "id": "buy_vinyl_soul",
+          "rect": [
+            0.7200000000000001,
+            0.18,
+            0.16,
+            0.18
+          ],
+          "label": "philly soul",
+          "action": "buy",
+          "collectible_id": "vinyl_soul",
+          "cost": 14,
+          "text": "philly soul on the wall."
+        },
+        {
+          "id": "buy_vinyl_infest",
+          "rect": [
+            0.12,
+            0.4,
+            0.16,
+            0.18
+          ],
+          "label": "infest lp",
+          "action": "buy",
+          "collectible_id": "vinyl_infest",
+          "cost": 42,
+          "text": "infest lp on the wall."
+        },
+        {
+          "id": "buy_vinyl_integrity",
+          "rect": [
+            0.32,
+            0.4,
+            0.16,
+            0.18
+          ],
+          "label": "integrity lp",
+          "action": "buy",
+          "collectible_id": "vinyl_integrity",
+          "cost": 38,
+          "text": "integrity lp on the wall."
+        },
+        {
+          "id": "buy_vinyl_japan_doll",
+          "rect": [
+            0.52,
+            0.4,
+            0.16,
+            0.18
+          ],
+          "label": "japan doll demo",
+          "action": "buy",
+          "collectible_id": "vinyl_japan_doll",
+          "cost": 55,
+          "text": "japan doll demo on the wall."
+        },
+        {
+          "id": "buy_vinyl_minor_threat",
+          "rect": [
+            0.7200000000000001,
+            0.4,
+            0.16,
+            0.18
+          ],
+          "label": "minor threat 7",
+          "action": "buy",
+          "collectible_id": "vinyl_minor_threat",
+          "cost": 45,
+          "text": "minor threat 7 on the wall."
+        },
+        {
+          "id": "door",
+          "rect": [
+            0.0,
+            0.72,
+            0.22,
+            0.28
+          ],
+          "action": "goto",
+          "target": "el_bar",
+          "text": "out to frankford."
+        },
+        {
+          "id": "septa",
+          "rect": [
+            0.0,
+            0.0,
+            0.16,
+            0.32
+          ],
+          "action": "goto",
+          "target": "septa_allegheny",
+          "text": "allegheny stairs."
+        }
+      ]
+    },
+    "japan_doll_basement": {
+      "header": "JAPAN DOLL BASEMENT",
+      "background_day": "res://generated images/japan doll basement.png",
+      "background_night": "res://generated images/japan doll basement.png",
+      "overlays_day": [
+        "lamp_buzz"
+      ],
+      "overlays_night": [
+        "lamp_buzz",
+        "tv_static"
+      ],
+      "lamp_spots": [
+        {
+          "center": [
+            0.22,
+            0.12
+          ],
+          "radius": 0.04,
+          "kind": "bulb"
+        },
+        {
+          "center": [
+            0.5,
+            0.1
+          ],
+          "radius": 0.035,
+          "kind": "bulb"
+        },
+        {
+          "center": [
+            0.78,
+            0.14
+          ],
+          "radius": 0.03,
+          "kind": "bulb"
+        }
+      ],
+      "hotspots": [
+        {
+          "id": "banner",
+          "rect": [
+            0.28,
+            0.08,
+            0.44,
+            0.22
+          ],
+          "label": "japan doll",
+          "action": "prompt",
+          "text": "japan doll. where is the..."
+        },
+        {
+          "id": "stage",
+          "rect": [
+            0.22,
+            0.28,
+            0.56,
+            0.32
+          ],
+          "label": "stage",
+          "action": "collect",
+          "collect_once": true,
+          "collect_chance": 1.0,
+          "collectible_id": "vinyl_japan_doll",
+          "pickup_text": "japan doll demo. basement only.",
+          "miss_text": "stage picked clean.",
+          "text": "demo tape under the drum rug."
+        },
+        {
+          "id": "infest_poster",
+          "rect": [
+            0.02,
+            0.14,
+            0.16,
+            0.28
+          ],
+          "label": "infest poster",
+          "action": "collect",
+          "collect_once": true,
+          "collect_chance": 1.0,
+          "collectible_id": "infest_flyer",
+          "pickup_text": "infest flyer. spread fear.",
+          "miss_text": "poster gone.",
+          "text": "peeling flyer on the pillar."
+        },
+        {
+          "id": "integrity_sticker",
+          "rect": [
+            0.84,
+            0.2,
+            0.14,
+            0.18
+          ],
+          "label": "sticker",
+          "action": "collect",
+          "collect_once": true,
+          "collect_chance": 1.0,
+          "collectible_id": "integrity_sticker",
+          "pickup_text": "integrity sticker.",
+          "miss_text": "pillar scraped.",
+          "text": "sticker on the yellow post."
+        },
+        {
+          "id": "floor_beer",
+          "rect": [
+            0.08,
+            0.62,
+            0.36,
+            0.34
+          ],
+          "action": "collect",
+          "collect_chance": 0.55,
+          "collectible_id": "crushed_beer_can",
+          "pickup_text": "crushed can from the pit.",
+          "miss_text": "floor swept.",
+          "text": "cans in the puddle shine."
+        },
+        {
+          "id": "pit_offer",
+          "rect": [
+            0.18,
+            0.48,
+            0.64,
+            0.38
+          ],
+          "label": "pit",
+          "action": "concert_offer",
+          "observation": "stay for JAPAN DOLL concert?",
+          "text": "bodies in the pit."
+        },
+        {
+          "id": "pit_leave",
+          "rect": [
+            0.18,
+            0.48,
+            0.64,
+            0.38
+          ],
+          "label": "pit",
+          "action": "stop_concert",
+          "text": "leave the pit."
+        },
+        {
+          "id": "pit_heal",
+          "rect": [
+            0.28,
+            0.52,
+            0.44,
+            0.28
+          ],
+          "label": "pit",
+          "action": "collect_concert",
+          "text": "what the set gave back."
+        },
+        {
+          "id": "exit",
+          "rect": [
+            0.88,
+            0.08,
+            0.12,
+            0.38
+          ],
+          "action": "goto",
+          "target": "ozzy_basement",
+          "text": "wrong stairs up."
+        },
+        {
+          "id": "record_shop",
+          "rect": [
+            0.0,
+            0.0,
+            0.12,
+            0.22
+          ],
+          "action": "goto",
+          "target": "record_store",
+          "text": "signal static through the alley."
         }
       ]
     }

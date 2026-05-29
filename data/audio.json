@@ -1,0 +1,68 @@
+{
+  "ambience": {
+    "lamp_buzz": {
+      "path": "res://assets/audio/ambience/lamp_buzz.mp3",
+      "loop": true,
+      "volume_db": -8.0,
+      "note": "fluorescent / ballast buzz — drop file here"
+    },
+    "basement_electric": {
+      "path": "res://assets/audio/ambience/basement_electric.mp3",
+      "loop": true,
+      "volume_db": -10.0,
+      "note": "wet wiring / breaker hum — japan doll basement"
+    },
+    "tunnel_hum": {
+      "path": "res://assets/audio/ambience/tunnel_hum.mp3",
+      "loop": true,
+      "volume_db": -12.0,
+      "note": "underpass / septa tunnel"
+    },
+    "yard_rain": {
+      "path": "res://assets/audio/ambience/yard_rain.mp3",
+      "loop": true,
+      "volume_db": -14.0,
+      "note": "salvage yard rain layer"
+    },
+    "tv_static": {
+      "path": "res://assets/audio/ambience/tv_static.mp3",
+      "loop": true,
+      "volume_db": -16.0,
+      "note": "tv alley static hiss"
+    },
+    "neon_hum": {
+      "path": "res://assets/audio/ambience/neon_hum.mp3",
+      "loop": true,
+      "volume_db": -11.0,
+      "note": "liquor store sign / neon"
+    }
+  },
+  "rooms": {
+    "japan_doll_basement": ["lamp_buzz", "basement_electric"],
+    "underpass": ["tunnel_hum"],
+    "impound_lot": ["yard_rain"],
+    "tv_alley": ["tv_static"],
+    "liquor_store": ["neon_hum"]
+  },
+  "japan_doll_concert": {
+    "duck_music_db": -14.0,
+    "volume_db": -2.0,
+    "tracks": [
+      {
+        "id": "japan_doll_01",
+        "path": "res://assets/audio/concert/japan_doll_01.mp3",
+        "label": "japan doll — track 01"
+      },
+      {
+        "id": "japan_doll_02",
+        "path": "res://assets/audio/concert/japan_doll_02.mp3",
+        "label": "japan doll — track 02"
+      },
+      {
+        "id": "japan_doll_03",
+        "path": "res://assets/audio/concert/japan_doll_03.mp3",
+        "label": "japan doll — track 03"
+      }
+    ]
+  }
+}

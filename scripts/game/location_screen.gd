@@ -2,11 +2,13 @@ extends Control
 class_name LocationScreen
 
 signal hotspot_pressed(hotspot: Dictionary)
+signal empty_tapped
 
 @onready var _background: TextureRect = %Background
 @onready var _overlay_layer: Control = %OverlayLayer
 @onready var _decay_layer: Control = %DecayLayer
 @onready var _event_layer: Control = %EventLayer
+@onready var _panhandle_overlay: Control = %PanhandleOverlay
 @onready var _hotspot_layer: Control = %HotspotLayer
 @onready var _status_label: Label = %StatusLabel
 @onready var _dialogue: PanelContainer = %DialogueBox
@@ -23,6 +25,7 @@ var _inverted := false
 func _ready() -> void:
 	resized.connect(_on_resized)
 	GameState.world_event_changed.connect(_refresh_world_events)
+	_hotspot_layer.gui_input.connect(_on_hotspot_layer_input)
 	_style_dialogue()
 	_dialogue_dismiss.pressed.connect(_hide_dialogue)
 	if not _pending_data.is_empty():
@@ -32,6 +35,8 @@ func _ready() -> void:
 func _exit_tree() -> void:
 	if GameState.world_event_changed.is_connected(_refresh_world_events):
 		GameState.world_event_changed.disconnect(_refresh_world_events)
+	if screen_id != "":
+		DoomAmbience.clear_room()
 
 func setup(id: String) -> void:
 	screen_id = id
@@ -48,12 +53,23 @@ func _apply_setup(data: Dictionary) -> void:
 	modulate = Color(1, 1, 1, 1)
 	_hide_dialogue()
 	_showing_night = DayNight.is_night()
+	if screen_id == "impound_lot" and GameState.consume_aftermath():
+		_status_label.visible = true
+		_status_label.text = "ground zero."
+		GameState.message_requested.emit("still raining.")
 	_apply_background(data)
 	_build_overlays(_overlays_for(data), data)
 	_rebuild_hotspots(data)
 	_apply_on_enter(data)
 	_apply_decay(data)
 	_refresh_world_events()
+	_refresh_panhandle_status()
+	_bind_panhandle_overlay()
+	DoomAmbience.set_room(screen_id)
+
+func _bind_panhandle_overlay() -> void:
+	if _panhandle_overlay.has_method("bind_screen"):
+		_panhandle_overlay.bind_screen(screen_id)
 
 func _apply_decay(data: Dictionary) -> void:
 	if not bool(data.get("decay", false)):
@@ -145,19 +161,26 @@ func _process(_delta: float) -> void:
 					var visits := GameState.location_visit_count(screen_id)
 					if visits > 0:
 						ScreenDecay.apply(_decay_layer, _background, visits, _decay_layer_size())
+		if screen_id == "panhandle" or ScreenData.is_activity_site(screen_id):
+			_refresh_activity_status()
 
-func _refresh_alley_status() -> void:
-	if screen_id != "alley":
-		_status_label.visible = false
+func _refresh_activity_status() -> void:
+	if not ScreenData.is_activity_site(screen_id):
 		return
-	var line := GameState.panhandle_status_line()
+	var line := GameState.activity_status_line()
 	_status_label.visible = not line.is_empty()
 	_status_label.text = line
+
+func _refresh_panhandle_status() -> void:
+	_refresh_activity_status()
+
+func _refresh_alley_status() -> void:
+	_refresh_panhandle_status()
 
 func _refresh_world_events() -> void:
 	for child in _event_layer.get_children():
 		child.queue_free()
-	if screen_id != "alley":
+	if screen_id != "panhandle":
 		return
 	if not GameState.is_fence_man_visible():
 		return
@@ -186,6 +209,8 @@ func _build_overlays(names: Array, data: Dictionary = {}) -> void:
 		"lamp_spots": data.get("lamp_spots", []),
 		"neon_spots": data.get("neon_spots", []),
 		"tv_static_rect": data.get("tv_static_rect", []),
+		"tv_static_rects": data.get("tv_static_rects", []),
+		"tv_baseball_rect": data.get("tv_baseball_rect", []),
 	}
 	ScreenOverlays.build(_overlay_layer, names, size, extras)
 
@@ -210,10 +235,49 @@ func _finish_rebuild_hotspots(data: Dictionary) -> void:
 		call_deferred("_relayout_hotspots")
 
 func _should_skip_hotspot(hotspot: Dictionary) -> bool:
-	if hotspot.get("action", "") == "collect":
-		var hotspot_id: String = str(hotspot.get("id", ""))
-		return not GameState.is_repeat_collect_available(screen_id, hotspot_id)
+	var action := str(hotspot.get("action", ""))
+	if action == "collect" and bool(hotspot.get("collect_once", false)):
+		var cid: String = str(hotspot.get("collectible_id", ""))
+		if cid != "" and cid in GameState.seen_collectibles:
+			return true
+	if action == "buy":
+		var cid: String = str(hotspot.get("collectible_id", ""))
+		var data := CollectibleData.lookup(cid)
+		if not data.is_empty() and GameState.has_item(str(data.get("name", ""))):
+			return true
+	if not ScreenData.is_panhandle_site(screen_id):
+		pass
+	else:
+		match str(hotspot.get("action", "")):
+			"panhandle":
+				return GameState.is_panhandling_active()
+			"stop_panhandle":
+				return not GameState.is_panhandling_active()
+			"collect_panhandle":
+				return not GameState.can_collect_panhandle_at(screen_id)
+	if not ScreenData.is_concert_site(screen_id):
+		return false
+	match str(hotspot.get("action", "")):
+		"concert_offer":
+			return not GameState.can_start_concert()
+		"stop_concert":
+			return not GameState.is_concert_active()
+		"collect_concert":
+			return not GameState.can_collect_concert_at(screen_id)
 	return false
+
+func refresh_hotspots() -> void:
+	if screen_id.is_empty():
+		return
+	_rebuild_hotspots(ScreenData.get_screen(screen_id))
+	_refresh_panhandle_status()
+	_bind_panhandle_overlay()
+
+func _on_hotspot_layer_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
+		empty_tapped.emit()
+	elif event is InputEventScreenTouch and event.pressed:
+		empty_tapped.emit()
 
 func _add_hotspot_button(hotspot: Dictionary) -> void:
 	var id: String = hotspot.get("id", "unknown")
@@ -269,6 +333,11 @@ func _on_hotspot_pressed(hotspot: Dictionary) -> void:
 		return
 	if action == "dialogue":
 		_show_dialogue(str(hotspot.get("dialogue", hotspot.get("text", ""))))
+		return
+	if action == "document":
+		var doc_path: String = str(hotspot.get("document", ""))
+		var doc_title: String = str(hotspot.get("document_title", hotspot.get("label", "READ.ME")))
+		GameState.document_requested.emit(doc_path, doc_title)
 		return
 	hotspot_pressed.emit(hotspot)
 

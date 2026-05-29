@@ -4,20 +4,22 @@ extends Node
 signal room_changed(page_id: String)
 signal overlay_message(text: String)
 signal residue_changed
-signal returned_to_beginning
+signal returned_to_ground_zero
 
 const DATA_PATH := "res://data/maze_pages.json"
 const SAVE_PATH := "user://maze_state.cfg"
+const GROUND_ZERO_PAGE := "kensington_trash_yard"
 
 var pages: Dictionary = {}
 var start_room := "dead"
-var current_id := "dead"
+var current_id := GROUND_ZERO_PAGE
 var history: Array[String] = []
 var visited_counts: Dictionary = {}
 var route_log: Array[String] = []
 var residue: Array[String] = []
 var haunt_level := 0
 var dig_count := 0
+var _started := false
 
 func _ready() -> void:
 	_load_pages()
@@ -49,6 +51,49 @@ func all_room_ids() -> Array[String]:
 			out.append(str(k))
 	out.sort()
 	return out
+
+func all_page_ids() -> Array[String]:
+	var out: Array[String] = []
+	for k in pages.keys():
+		out.append(str(k))
+	out.sort()
+	return out
+
+func has_visited_page(page_id: String) -> bool:
+	return int(visited_counts.get(page_id, 0)) >= 1
+
+func visited_page_count() -> int:
+	var n := 0
+	for page_id in all_page_ids():
+		if has_visited_page(page_id):
+			n += 1
+	return n
+
+func all_maze_pages_visited() -> bool:
+	for page_id in all_page_ids():
+		if not has_visited_page(page_id):
+			return false
+	return true
+
+func page_visit_count(page_id: String) -> int:
+	return int(visited_counts.get(page_id, 0))
+
+func all_maze_pages_meet_minimum(min_visits: int) -> bool:
+	for page_id in all_page_ids():
+		if page_visit_count(page_id) < min_visits:
+			return false
+	return true
+
+func maze_grind_complete(grind_visits: int, ratio: float) -> bool:
+	var ids := all_page_ids()
+	if ids.is_empty():
+		return false
+	var required := int(ceilf(float(ids.size()) * ratio))
+	var met := 0
+	for page_id in ids:
+		if page_visit_count(page_id) >= grind_visits:
+			met += 1
+	return met >= required
 
 func random_room_id(excluding: String) -> String:
 	var pool: Array[String] = []
@@ -133,24 +178,36 @@ func reset_maze() -> void:
 	residue.clear()
 	haunt_level = 0
 	dig_count = 0
-	current_id = start_room
-	_mark_visit(start_room, true)
+	current_id = GROUND_ZERO_PAGE
+	_mark_visit(GROUND_ZERO_PAGE, true)
 	_save_state()
-	room_changed.emit(start_room)
+	if _started:
+		room_changed.emit(GROUND_ZERO_PAGE)
 
-func reset_to_beginning() -> void:
+func return_to_ground_zero(from_death: bool = false) -> void:
 	history.clear()
 	route_log.clear()
-	visited_counts.clear()
-	residue.clear()
-	haunt_level = 0
 	dig_count = 0
-	current_id = start_room
-	visited_counts[start_room] = 1
+	current_id = GROUND_ZERO_PAGE
+	if not visited_counts.has(GROUND_ZERO_PAGE):
+		visited_counts[GROUND_ZERO_PAGE] = 0
+	visited_counts[GROUND_ZERO_PAGE] = int(visited_counts.get(GROUND_ZERO_PAGE, 0)) + 1
+	if from_death:
+		haunt_level = mini(99, haunt_level + 2)
 	_save_state()
-	room_changed.emit(start_room)
-	returned_to_beginning.emit()
-	overlay_message.emit("YOU DIED // BEGINNING AGAIN")
+	if _started:
+		room_changed.emit(GROUND_ZERO_PAGE)
+	if from_death:
+		returned_to_ground_zero.emit()
+
+func reset_to_beginning() -> void:
+	return_to_ground_zero(true)
+
+func begin_session() -> void:
+	_started = true
+	if not pages.has(current_id):
+		current_id = GROUND_ZERO_PAGE
+	room_changed.emit(current_id)
 
 func _mark_visit(page_id: String, roll_life: bool) -> void:
 	var first: bool = not visited_counts.has(page_id)
@@ -170,6 +227,9 @@ func _mark_visit(page_id: String, roll_life: bool) -> void:
 	GameState.persist()
 	if roll_life:
 		_apply_page_life(page_id)
+	CollectibleData.check_maze_page(page_id)
+	RumorData.check_maze_page(page_id)
+	GameState.check_the_end()
 
 func _apply_page_life(page_id: String) -> void:
 	GameState.apply_page_life(page_id, page(page_id))
@@ -268,9 +328,9 @@ func _save_state() -> void:
 func _load_state() -> void:
 	var cfg := ConfigFile.new()
 	if cfg.load(SAVE_PATH) != OK:
-		current_id = start_room
+		current_id = GROUND_ZERO_PAGE
 		return
-	current_id = str(cfg.get_value("maze", "current_id", start_room))
+	current_id = str(cfg.get_value("maze", "current_id", GROUND_ZERO_PAGE))
 	history.clear()
 	for h in cfg.get_value("maze", "history", []):
 		history.append(str(h))
@@ -284,4 +344,4 @@ func _load_state() -> void:
 	haunt_level = int(cfg.get_value("maze", "haunt_level", 0))
 	dig_count = int(cfg.get_value("maze", "dig_count", 0))
 	if not pages.has(current_id):
-		current_id = start_room
+		current_id = GROUND_ZERO_PAGE

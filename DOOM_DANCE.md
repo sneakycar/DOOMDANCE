@@ -4,77 +4,68 @@ Living index for Chapter 1. **Update this file whenever you add or change a loca
 
 ---
 
-## LOCATIONS
+## CORE LOOP
 
-IMPOUND LOT  
-ALLEY  
-LIQUOR STORE  
-SEPTA ENTRANCE  
-PAWN SHOP  
-VACANT LOT  
-MOVIE THEATER  
-WESTERN UNION  
-ROWHOUSE  
-UNDERPASS  
-
----
-
-## ITEMS
-
-Beer Can (Crushed Beer Can)  
-Old Crow  
-Bus Pass  
-Beer  
-Whiskey  
-Steel Reserve  
-Evan Williams  
-Old Receipt  
-Photo  
-Matchbook  
-Lottery Ticket  
-Griffey Card  
-Rusty Key  
-Newspaper  
-Liquor Bottle  
-Neon Flyer  
-Transit Map  
+1. **Explore** — SEPTA, maze links, location hotspots (some rooms are expensive or gated)
+2. **Find / buy** — items go into **inventory** (held now)
+3. **Need money?** — **panhandle** (slow, free) or **sell** at pawn (anything) / record store (vinyl at a loss)
+4. **Selling removes from inventory** — item stays in **seen** log only
+5. **Die** — lose ~22–55% of inventory + money tax; seen log persists
+6. **Win (THE END)** — grind, not a checklist:
+   - Every location visited **5×** default (**12×** Japan Doll basement)
+   - Every maze page **1×** minimum
+   - **55%** of maze pages visited **3×**
+   - Designed for **100+ hour** completion if anyone ever does
 
 ---
 
-## COLLECTIONS
+## ECONOMY
 
-Liquor  
-Found Objects (ITEMS in HUD)  
+| Venue | Buy | Sell |
+|-------|-----|------|
+| Liquor store | shelf prices | — |
+| Pawn shop | catalog (`data/pawn_catalog.json`) | anything sellable · `base × pawn_rate × luck` |
+| Record store | retail vinyl | vinyl only · **55%** buyback |
+| Panhandle | — | cash + tier drops |
 
----
+**Hidden metrics** (off HUD): mood · luck · heat · intoxication · memory — affect prices, transit gates, death loss.
 
-## MYSTERIES
+**Catalog:** `data/collectibles.json` (119 items, 7 categories) — rebuild with `python3 tools/build_collectibles.py`
 
-Locked Basement (boarded rowhouse / alley — not yet)  
-Fence Man (2:37 AM, alley fence)  
-
----
-
-## RULES
-
-Location design: **one screen at a time** — anchor · animation · interaction · observation — see `LOCATION_DESIGN.md` (LOCKED)  
-Weighted realism: **85% ordinary · 14% uncommon · 1% legendary** — see `WEIGHTED_REALISM.md`  
-Panhandle = 5 minutes (real time); earnings use rarity tiers (cash / receipt·can / bus pass)  
-Start money = $8.00  
-Travel between screens = +12 minutes game time  
-Typography: field notes / receipts / signage — see `TYPOGRAPHY.md`  
-Most screens stay calm — rare events and overlays only where they earn it  
+**Collections UI:** **HELD** (inventory) + **SEEN** (encountered, not owned) + places progress `visits/required`
 
 ---
 
-## NOTES
+## LOCATIONS (15 screens)
 
-Maybe SEPTA leads to another district  
-Interesting events stay rare so normal nights feel real  
+| ID | Notes |
+|----|--------|
+| `impound_lot` | Start |
+| `liquor_store` | 7+ liquor buys |
+| `ozzy_basement` | wrong door → Japan Doll |
+| `tv_alley` | invert page |
+| `make_awesome_news` | newspaper |
+| `tv_heaven` | baseball card |
+| `movie_theater` | ground scores |
+| `septa_allegheny` | turnstile · transit map |
+| `el_bar` | matchbook · records |
+| `mattress_lot` | vacant lot |
+| `panhandle` | panhandle site |
+| `pawn_shop` | buy catalog · **sell counter** |
+| `underpass` | panhandle site |
+| `record_store` | vinyl buy / sell at loss |
+| `japan_doll_basement` | **hard** · random maze weave · $45 night SEPTA |
+
+---
+
+## CATEGORIES
+
+Liquor · Drugs · Vinyl · Jackets · Cards · Guns · Items
 
 ---
 
 ## DEPLOY
 
-Git / Vercel / DNS: **`docs/DOOMDANCE_DEPLOY.md`**  
-Play path (this monorepo): **`/doom-dance`** on your Vercel domain  
+Git / Vercel: **`docs/DOOMDANCE_DEPLOY.md`**  
+Play: **`/doom-dance`**  
+Re-export: `bash scripts/export-web.sh`

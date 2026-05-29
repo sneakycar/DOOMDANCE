@@ -18,6 +18,17 @@ WEAVE_TARGETS: list[str] = [
     "meridian_incomplete_file",
     "meridian_pull",
     "tv_alley",
+    "make_awesome_news",
+    "tv_heaven",
+    "movie_theater",
+    "septa_allegheny",
+    "el_bar",
+    "mattress_lot",
+    "panhandle",
+    "pawn_shop",
+    "underpass",
+    "japan_doll_basement",
+    "record_store",
 ]
 
 
@@ -360,6 +371,8 @@ def authored_pages() -> dict[str, dict]:
         [
             link("enter salvage yard", "impound_lot"),
             link("liquor store", "liquor_store"),
+            link("vacant lot", "mattress_lot", True),
+            link("el bar", "el_bar", True),
             link("back to maze", "lost"),
         ],
         unstable=True,
@@ -374,7 +387,12 @@ def authored_pages() -> dict[str, dict]:
         [],
         "you woke up drunk. it's raining again.",
         [frag("LOOK AROUND", img("handprint.jpg"), "impound_lot")],
-        [link("office", "ozzy_basement"), link("back to archive", "kensington_trash_yard")],
+        [
+            link("office", "ozzy_basement"),
+            link("vacant lot", "mattress_lot"),
+            link("theater", "movie_theater", True),
+            link("back to archive", "kensington_trash_yard"),
+        ],
         location_screen="impound_lot",
     )
 
@@ -422,6 +440,201 @@ def authored_pages() -> dict[str, dict]:
         unstable=True,
         residue_key="TV ALLEY",
         location_screen="tv_alley",
+    )
+
+    pages["make_awesome_news"] = page(
+        "make_awesome_news",
+        "MAKE AWESOME NEWS",
+        "vol 13 issue 7 / march 14 / positive force",
+        [img("blackline.gif")],
+        "A POSITIVE FORCE IN A NEGATIVE WORLD. Beau Lou speaks. Kensington kills again. The footer still routes to the archive.",
+        [frag("LEDGER", img("blackline.gif"), "dead")],
+        [
+            link("founding ledger", "dead", True),
+            link("kensington kills", "murder"),
+            link("back to yard", "kensington_trash_yard"),
+        ],
+        unstable=True,
+        residue_key="MAKE AWESOME NEWS",
+        location_screen="make_awesome_news",
+    )
+
+    pages["tv_heaven"] = page(
+        "tv_heaven",
+        "TV HEAVEN",
+        "basement / crt graveyard / arrow down",
+        [img("dotsandtelevisions.gif"), img("channelstatic.gif")],
+        "TV HEAVEN. Dozens of sets. Most show snow. One is paused on a MAL night game.",
+        [frag("SNOW", img("dotsandtelevisions.gif"), "channelstatic")],
+        [
+            link("channel static", "channelstatic", True),
+            link("ozzy basement", "ozzy_basement"),
+            link("wrong broadcast", "broadcastpanic", True),
+        ],
+        unstable=True,
+        residue_key="TV HEAVEN",
+        location_screen="tv_heaven",
+    )
+
+    pages["movie_theater"] = page(
+        "movie_theater",
+        "THE ABYSS THEATER",
+        "now playing / ticket booth / star carpet",
+        [img("handprint.jpg")],
+        "NOW PLAYING THE ABYSS. Ground scores hide in the lobby trash and ticket dust.",
+        [frag("LOBBY", img("handprint.jpg"), "movie_theater")],
+        [
+            link("enter lobby", "movie_theater"),
+            link("tv heaven", "tv_heaven", True),
+            link("allegheny", "septa_allegheny"),
+        ],
+        unstable=True,
+        residue_key="THE ABYSS",
+        location_screen="movie_theater",
+    )
+
+    pages["septa_allegheny"] = page(
+        "septa_allegheny",
+        "ALLEGHENY STATION",
+        "septa eastbound / stair grit / fence line",
+        [img("blackline.gif")],
+        "Fluorescent hum. Trash can overflow. Something always glints on the steps.",
+        [frag("STAIRS", img("blackline.gif"), "septa_allegheny")],
+        [
+            link("enter station", "septa_allegheny"),
+            link("el bar", "el_bar"),
+            link("vacant lot", "mattress_lot"),
+            link("archive", "dead", True),
+        ],
+        unstable=True,
+        residue_key="ALLEGHENY STATION",
+        location_screen="septa_allegheny",
+    )
+
+    pages["el_bar"] = page(
+        "el_bar",
+        "EL BAR",
+        "frankford av / neon / est 1963",
+        [img("handprint.jpg")],
+        "Cold beer good times. Ground scores under the bench and in the crosswalk gutter.",
+        [frag("CORNER", img("handprint.jpg"), "el_bar")],
+        [
+            link("enter bar corner", "el_bar"),
+            link("liquor store", "liquor_store"),
+            link("allegheny station", "septa_allegheny"),
+            link("vacant lot", "mattress_lot"),
+        ],
+        unstable=True,
+        residue_key="EL BAR",
+        location_screen="el_bar",
+    )
+
+    pages["mattress_lot"] = page(
+        "mattress_lot",
+        "VACANT LOT",
+        "mattress / chain link / purple dusk",
+        [img("trash4b.gif"), img("biglegotrash.jpg")],
+        "Someone slept on the mattress. The lot keeps giving up ground scores.",
+        [frag("LOT", img("trash4b.gif"), "mattress_lot")],
+        [
+            link("enter lot", "mattress_lot"),
+            link("salvage yard", "impound_lot"),
+            link("el bar", "el_bar"),
+            link("theater", "movie_theater", True),
+        ],
+        unstable=True,
+        residue_key="VACANT LOT",
+        location_screen="mattress_lot",
+    )
+
+    pages["panhandle"] = page(
+        "panhandle",
+        "K & A CORNER",
+        "kensington av / pawn shop / crosswalk",
+        [img("handprint.jpg")],
+        "K & A Food Market. Kensington Pawn. Sit on the crosswalk until they look away.",
+        [frag("CURB", img("handprint.jpg"), "panhandle")],
+        [
+            link("enter curb", "panhandle"),
+            link("salvage yard", "impound_lot"),
+            link("liquor corner", "liquor_store"),
+            link("kensington pawn", "pawn_shop"),
+            link("allegheny station", "septa_allegheny"),
+        ],
+        unstable=True,
+        residue_key="PANHANDLE CURB",
+        location_screen="panhandle",
+    )
+
+    pages["pawn_shop"] = page(
+        "pawn_shop",
+        "KENSINGTON PAWN",
+        "cash loans gold / glass case / loan drawer",
+        [img("handprint.jpg"), img("circletrash4.gif")],
+        "The window keeps lottery tickets like trophies. Griffey card under fluorescent guilt.",
+        [frag("PAWN WINDOW", img("handprint.jpg"), "pawn_shop")],
+        [
+            link("enter pawn", "pawn_shop"),
+            link("frankford curb", "panhandle"),
+            link("liquor corner", "liquor_store"),
+            link("allegheny station", "septa_allegheny"),
+        ],
+        unstable=True,
+        residue_key="PAWN SHOP",
+        location_screen="pawn_shop",
+    )
+
+    pages["underpass"] = page(
+        "underpass",
+        "KENSINGTON UNDERPASS",
+        "kensington av 2800 / wet tunnel / crosswalk",
+        [img("handprint.jpg"), img("trash4b.gif")],
+        "Stay in lane. No pedestrians. Sit on the zebra stripes until someone looks away.",
+        [frag("TUNNEL CROSSWALK", img("handprint.jpg"), "underpass")],
+        [
+            link("enter tunnel", "underpass"),
+            link("frankford curb", "panhandle"),
+            link("el bar", "el_bar"),
+            link("allegheny station", "septa_allegheny"),
+        ],
+        unstable=True,
+        residue_key="UNDERPASS",
+        location_screen="underpass",
+    )
+
+    pages["record_store"] = page(
+        "record_store",
+        "SIGNAL STATIC",
+        "frankford av / vinyl wall / buy retail",
+        [img("handprint.jpg")],
+        "Buy records at full price. Sell them back poorer.",
+        [frag("VINYL WALL", img("handprint.jpg"), "record_store")],
+        [
+            link("enter shop", "record_store"),
+            link("el bar", "el_bar"),
+            link("allegheny station", "septa_allegheny"),
+        ],
+        unstable=True,
+        residue_key="RECORD STORE",
+        location_screen="record_store",
+    )
+
+    pages["japan_doll_basement"] = page(
+        "japan_doll_basement",
+        "JAPAN DOLL BASEMENT",
+        "hardcore basement / pearl kit / wrong door",
+        [img("handprint.jpg"), img("circletrash4.gif")],
+        "Japan Doll banner drips red. Infest Integrity Unbroken on the walls. Almost nobody finds the stairs.",
+        [frag("BASEMENT SHOW", img("handprint.jpg"), "japan_doll_basement", 2)],
+        [
+            link("enter basement", "japan_doll_basement"),
+            link("ozzy basement", "ozzy_basement", True),
+            link("signal static", "record_store"),
+        ],
+        hidden=True,
+        unstable=True,
+        residue_key="JAPAN DOLL",
+        location_screen="japan_doll_basement",
     )
 
     pages["salvage_sitemap"] = page(
@@ -667,6 +880,7 @@ def main() -> None:
     pages.update(authored_pages())  # authored wins
     pages.update(meridian_pages(page, link, frag, img))
     weave_targets(pages, WEAVE_TARGETS)
+    weave_targets(pages, ["japan_doll_basement"], replacements_per_target=32)
     ensure_inbound_links(pages)
 
     payload = {

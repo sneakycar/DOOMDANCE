@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cphillylocation01"]
+[gd_scene load_steps=3 format=3 uid="uid://cphillylocation01"]
 
 [ext_resource type="Script" path="res://scripts/game/location_screen.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/game/panhandle_scene_overlay.gd" id="2"]
 
 [node name="LocationScreen" type="Control"]
 layout_mode = 3
@@ -53,8 +54,49 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
+[node name="PanhandleOverlay" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = 12
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2")
+
+[node name="Dim" type="ColorRect" parent="PanhandleOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.02, 0.03, 0.06, 0.62)
+
+[node name="Label" type="Label" parent="PanhandleOverlay"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -36.0
+offset_right = 320.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "panhandling."
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="HotspotLayer" type="Control" parent="."]
 unique_name_in_owner = true
+z_index = 14
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

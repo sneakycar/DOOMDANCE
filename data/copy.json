@@ -11,19 +11,37 @@
     "nothing_happens": "—"
   },
   "panhandle": {
-    "start": "SIT.\nASK.",
-    "active": "PANHANDLING.",
-    "ready": "COLLECT EARNINGS.",
-    "blocked": "NOT NOW.",
+    "start": "sit. ask.",
+    "active": "panhandling.",
+    "ready": "collect earnings.",
+    "stopped": "money waits where you sat.",
+    "collected": "$%d.",
+    "away": "come back where you sat.",
+    "blocked": "not now.",
     "receipt": "OLD RECEIPT.",
     "bus_pass": "BUS PASS.",
     "beer_can": "CRUSHED CAN.",
     "cash": "$%d.",
     "cash_one": "$1."
   },
+  "concert": {
+    "start": "stay. listen.",
+    "active": "japan doll.",
+    "ready": "collect life.",
+    "stopped": "life waits where you stood.",
+    "collected": "+%d life.",
+    "away": "come back where you stood.",
+    "blocked": "not now."
+  },
   "commerce": {
     "bought": "$%d.\n%s.",
-    "picked_up": "%s."
+    "sold": "$%d.\n%s.",
+    "not_sellable": "THEY WON'T TAKE IT.",
+    "records_only": "VINYL ONLY.",
+    "transit": "septa. $%d."
+  },
+  "death": {
+    "lost_items": "something slipped away in the dark."
   },
   "world": {
     "fence_man": "SOMETHING MOVED.\n\nBEHIND THE FENCE."

@@ -16,8 +16,8 @@ func _apply_style() -> void:
 	var panel := StyleBoxFlat.new()
 	panel.bg_color = Color(0, 0, 0, 0.9)
 	panel.set_content_margin_all(10)
-	panel.set_content_margin_left = 14
-	panel.set_content_margin_right = 14
+	panel.set_content_margin(Side.SIDE_LEFT, 14)
+	panel.set_content_margin(Side.SIDE_RIGHT, 14)
 	add_theme_stylebox_override("panel", panel)
 
 func show_fragment(text: String, duration: float = 3.2) -> void:

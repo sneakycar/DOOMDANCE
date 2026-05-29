@@ -2,13 +2,6 @@ extends PanelContainer
 
 signal closed()
 
-const COLLECTION_SECTIONS := [
-	{"key": "liquor", "label": "LIQUOR", "type": "collectibles"},
-	{"key": "items", "label": "ITEMS", "type": "collectibles"},
-	{"key": "rumors", "label": "RUMORS", "type": "rumors"},
-	{"key": "places", "label": "PLACES", "type": "places"},
-]
-
 @onready var _list: VBoxContainer = %CollectionList
 
 func _ready() -> void:
@@ -20,6 +13,7 @@ func _ready() -> void:
 	DoomTypography.stamp_mono(%CloseButton, 11)
 	%Title.text = "COLLECTIONS"
 	GameState.collections_changed.connect(_refresh)
+	GameState.inventory_changed.connect(_refresh)
 	%CloseButton.pressed.connect(_on_close)
 
 func _apply_style() -> void:
@@ -37,35 +31,57 @@ func toggle() -> void:
 func _refresh() -> void:
 	for child in _list.get_children():
 		child.queue_free()
-	for section in COLLECTION_SECTIONS:
-		var entries := _entries_for_section(section)
+	var held := GameState.inventory_counts()
+	_add_section_header("HELD")
+	if held.is_empty():
+		_add_line("—")
+	else:
+		for item_name in held.keys():
+			var cid := CollectibleData.id_for_name(item_name)
+			var suffix := " x%d" % held[item_name] if int(held[item_name]) > 1 else ""
+			_add_line("• %s%s" % [DoomTypography.format_item_label(item_name), suffix], true)
+	for cat in CollectibleData.category_keys():
+		var entries := _seen_lines_for_category(cat, held)
 		if entries.is_empty():
 			continue
-		var header := Label.new()
-		header.text = section.label
-		DoomTypography.stamp_mono(header, 11, true)
-		_list.add_child(header)
+		_add_section_header(CollectibleData.category_label(cat))
 		for line in entries:
-			var item_lbl := Label.new()
-			item_lbl.text = line
-			DoomTypography.stamp_mono(item_lbl, 11)
-			_list.add_child(item_lbl)
+			_add_line(line)
+	if not GameState.discovered_rumors.is_empty():
+		_add_section_header("RUMORS")
+		for rumor_id in GameState.discovered_rumors:
+			_add_line(RumorData.label_for(str(rumor_id)))
+	if not GameState.visited_places().is_empty():
+		_add_section_header("PLACES")
+		for screen_id in GameState.visited_places():
+			var req := ProgressionData.location_visits_required(screen_id)
+			var count := GameState.location_visit_count(screen_id)
+			var mark := "✓" if count >= req else "%d/%d" % [count, req]
+			_add_line("%s  %s" % [DoomTypography.header_for_screen(screen_id), mark])
 
-func _entries_for_section(section: Dictionary) -> PackedStringArray:
+func _seen_lines_for_category(category: String, held: Dictionary) -> PackedStringArray:
 	var out: PackedStringArray = []
-	match section.type:
-		"collectibles":
-			for entry in CollectibleData.all_in_category(section.key):
-				var id: String = entry.get("id", "")
-				if id in GameState.discovered_collectibles:
-					out.append(DoomTypography.format_item_label(entry.get("name", id)))
-		"rumors":
-			for rumor_id in GameState.discovered_rumors:
-				out.append(DoomTypography.format_item_label(str(rumor_id).replace("_", " ")))
-		"places":
-			for screen_id in GameState.visited_places():
-				out.append(DoomTypography.header_for_screen(screen_id))
+	for entry in CollectibleData.all_in_category(category):
+		var id: String = entry.get("id", "")
+		if id not in GameState.seen_collectibles:
+			continue
+		var name: String = entry.get("name", id)
+		if held.has(name):
+			continue
+		out.append("  %s" % DoomTypography.format_item_label(name))
 	return out
+
+func _add_section_header(text: String) -> void:
+	var header := Label.new()
+	header.text = text
+	DoomTypography.stamp_mono(header, 11, true)
+	_list.add_child(header)
+
+func _add_line(text: String, bright: bool = false) -> void:
+	var item_lbl := Label.new()
+	item_lbl.text = text
+	DoomTypography.stamp_mono(item_lbl, 11, not bright)
+	_list.add_child(item_lbl)
 
 func _on_close() -> void:
 	visible = false

@@ -1,0 +1,13 @@
+{
+  "location_visits_default": 5,
+  "location_visits": {
+    "japan_doll_basement": 12,
+    "tv_heaven": 8,
+    "ozzy_basement": 6,
+    "make_awesome_news": 4,
+    "record_store": 4
+  },
+  "maze_min_visits_per_page": 1,
+  "maze_grind_visits": 3,
+  "maze_grind_ratio": 0.55
+}

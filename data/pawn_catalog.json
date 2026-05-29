@@ -1,0 +1,16 @@
+{
+  "header": "KENSINGTON PAWN",
+  "subtitle": "cash loans gold · buy · sell anything",
+  "buys": [
+    { "collectible_id": "griffey_card", "cost": 18, "label": "griffey card" },
+    { "collectible_id": "rusty_key", "cost": 12, "label": "rusty key" },
+    { "collectible_id": "card_griffey", "cost": 22, "label": "griffey reprint" },
+    { "collectible_id": "starter_phillies", "cost": 28, "label": "phillies starter" },
+    { "collectible_id": "vinyl_comp", "cost": 6, "label": "comp tape dub" },
+    { "collectible_id": "bb_pistol", "cost": 35, "label": "bb pistol" },
+    { "collectible_id": "zippo", "cost": 9, "label": "zippo" },
+    { "collectible_id": "watch_casio", "cost": 14, "label": "casio watch" },
+    { "collectible_id": "chain_gold", "cost": 40, "label": "gold chain" },
+    { "collectible_id": "mad_dog", "cost": 4, "label": "mad dog" }
+  ]
+}

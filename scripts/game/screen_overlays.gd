@@ -38,6 +38,10 @@ static func _make_effect(name: String, size: Vector2, extras: Dictionary = {}) -
 			return _train_flash(size)
 		"tv_static":
 			return _tv_static(size, extras.get("tv_static_rect", []))
+		"tv_static_multi":
+			return _tv_static_multi(size, extras.get("tv_static_rects", []))
+		"tv_baseball":
+			return _tv_baseball(size, extras.get("tv_baseball_rect", []))
 		_:
 			return null
 
@@ -258,8 +262,50 @@ static func _tv_static(size: Vector2, rect_norm: Array) -> Control:
 	host.offset_right = size.x
 	host.offset_bottom = size.y
 	host.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	host.add_child(_tv_static_panel(size, rect_norm, "TvStaticPanel"))
+	return host
+
+static func _tv_static_multi(size: Vector2, rects: Array) -> Control:
+	if rects.is_empty():
+		return null
+	var host := Control.new()
+	host.name = "TvStaticMulti"
+	host.set_anchors_preset(Control.PRESET_FULL_RECT)
+	host.offset_right = size.x
+	host.offset_bottom = size.y
+	host.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	for i in rects.size():
+		var rect_norm: Array = rects[i]
+		if rect_norm.size() < 4:
+			continue
+		var panel := _tv_static_panel(size, rect_norm, "TvStatic_%d" % i)
+		if panel:
+			host.add_child(panel)
+	return host
+
+static func _tv_static_panel(size: Vector2, rect_norm: Array, panel_name: String) -> Control:
+	var host := Control.new()
+	host.name = panel_name
+	host.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	var panel := TvStatic.new()
 	panel.name = "TvStaticPanel"
+	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	panel.position = Vector2(float(rect_norm[0]), float(rect_norm[1])) * size
+	panel.size = Vector2(float(rect_norm[2]), float(rect_norm[3])) * size
+	host.add_child(panel)
+	return host
+
+static func _tv_baseball(size: Vector2, rect_norm: Array) -> Control:
+	if rect_norm.is_empty() or rect_norm.size() < 4:
+		return null
+	var host := Control.new()
+	host.name = "TvBaseballHost"
+	host.set_anchors_preset(Control.PRESET_FULL_RECT)
+	host.offset_right = size.x
+	host.offset_bottom = size.y
+	host.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var panel := TvBaseball.new()
+	panel.name = "TvBaseballPanel"
 	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	panel.position = Vector2(float(rect_norm[0]), float(rect_norm[1])) * size
 	panel.size = Vector2(float(rect_norm[2]), float(rect_norm[3])) * size

@@ -2,13 +2,15 @@ extends HBoxContainer
 
 signal tool_pressed(tool: String)
 
-const TOOLS := ["BACK", "LOST", "RND", "DIG", "TEST"]
+const TOOLS := ["BACK", "LOST", "RND", "DIG"]
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_theme_constant_override("separation", 4)
 	for tool in TOOLS:
 		add_child(_make_button(tool))
+	if OS.is_debug_build():
+		add_child(_make_button("TEST"))
 	_apply_bar_style()
 
 func _apply_bar_style() -> void:

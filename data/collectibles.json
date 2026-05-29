@@ -1,30 +1,992 @@
 {
   "categories": {
-    "liquor": { "label": "LIQUOR", "cap": 20 },
-    "items": { "label": "ITEMS", "cap": 20 }
+    "liquor": {
+      "label": "LIQUOR",
+      "cap": 99
+    },
+    "drugs": {
+      "label": "DRUGS",
+      "cap": 99
+    },
+    "vinyl": {
+      "label": "VINYL",
+      "cap": 99
+    },
+    "jackets": {
+      "label": "JACKETS",
+      "cap": 99
+    },
+    "cards": {
+      "label": "CARDS",
+      "cap": 99
+    },
+    "guns": {
+      "label": "GUNS",
+      "cap": 99
+    },
+    "items": {
+      "label": "ITEMS",
+      "cap": 99
+    }
   },
   "collectibles": [
-    { "id": "beer", "name": "Beer", "category": "liquor" },
-    { "id": "beer_can", "name": "Beer Can", "category": "liquor" },
-    { "id": "whiskey", "name": "Whiskey", "category": "liquor" },
-    { "id": "old_crow", "name": "Old Crow", "category": "liquor" },
-    { "id": "steel_reserve", "name": "Steel Reserve", "category": "liquor" },
-    { "id": "evan_williams", "name": "Evan Williams", "category": "liquor" },
-    { "id": "forty_oz", "name": "Forty Ounce", "category": "liquor" },
-    { "id": "crushed_beer_can", "name": "Crushed Beer Can", "category": "items" },
-    { "id": "cocaine", "name": "Cocaine", "category": "items" },
-    { "id": "bus_pass", "name": "Bus Pass", "category": "items" },
-    { "id": "old_receipt", "name": "Old Receipt", "category": "items" },
-    { "id": "photo", "name": "Photo", "category": "items" },
-    { "id": "matchbook", "name": "Matchbook", "category": "items" },
-    { "id": "lottery_ticket", "name": "Lottery Ticket", "category": "items" },
-    { "id": "griffey_card", "name": "Griffey Card", "category": "items" },
-    { "id": "rusty_key", "name": "Rusty Key", "category": "items" },
-    { "id": "newspaper", "name": "Newspaper", "category": "items" },
-    { "id": "liquor_bottle", "name": "Liquor Bottle", "category": "items" },
-    { "id": "baseball_card", "name": "Baseball Card", "category": "items" },
-    { "id": "pawn_stub", "name": "Pawn Stub", "category": "items" },
-    { "id": "neon_flyer", "name": "Neon Flyer", "category": "items" },
-    { "id": "transit_map", "name": "Transit Map", "category": "items" }
+    {
+      "id": "baseball_card",
+      "name": "Baseball Card",
+      "category": "cards",
+      "base_value": 5,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_bicycle",
+      "name": "Bicycle Deck",
+      "category": "cards",
+      "base_value": 5,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_bonds",
+      "name": "Bonds RC",
+      "category": "cards",
+      "base_value": 20,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_error",
+      "name": "Misprint Card",
+      "category": "cards",
+      "base_value": 25,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_football",
+      "name": "Football QB",
+      "category": "cards",
+      "base_value": 7,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_garbage",
+      "name": "Garbage Pail",
+      "category": "cards",
+      "base_value": 4,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_griffey",
+      "name": "Griffey Rookie",
+      "category": "cards",
+      "base_value": 45,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_hockey",
+      "name": "Hockey Goalie",
+      "category": "cards",
+      "base_value": 6,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_jordan",
+      "name": "Jordan Insert",
+      "category": "cards",
+      "base_value": 55,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_mantle",
+      "name": "Mantle Reprint",
+      "category": "cards",
+      "base_value": 8,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_nascar",
+      "name": "NASCAR Card",
+      "category": "cards",
+      "base_value": 2,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_pokemon",
+      "name": "Holo Pokemon",
+      "category": "cards",
+      "base_value": 15,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_ripken",
+      "name": "Ripken Cal",
+      "category": "cards",
+      "base_value": 12,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_topps",
+      "name": "Topps Foil",
+      "category": "cards",
+      "base_value": 9,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "card_wrestling",
+      "name": "Wrestling Card",
+      "category": "cards",
+      "base_value": 3,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "griffey_card",
+      "name": "Griffey Card",
+      "category": "cards",
+      "base_value": 45,
+      "reveal": "1989 upper deck. rookie.",
+      "maze_page": "racecar"
+    },
+    {
+      "id": "adderall",
+      "name": "Adderall 30",
+      "category": "drugs",
+      "base_value": 10,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "library floor."
+    },
+    {
+      "id": "bup_strip",
+      "name": "Sub Strip",
+      "category": "drugs",
+      "base_value": 9,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "clinic line."
+    },
+    {
+      "id": "cocaine",
+      "name": "Cocaine",
+      "category": "drugs",
+      "base_value": 25,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "ground score. cocaine."
+    },
+    {
+      "id": "crack_vial",
+      "name": "Crack Vial",
+      "category": "drugs",
+      "base_value": 20,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "cap in the gutter."
+    },
+    {
+      "id": "fent_strip",
+      "name": "Fent Strip",
+      "category": "drugs",
+      "base_value": 22,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "test line pink."
+    },
+    {
+      "id": "heroin_bag",
+      "name": "Heroin Bag",
+      "category": "drugs",
+      "base_value": 30,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "foil corner."
+    },
+    {
+      "id": "k_pin",
+      "name": "K Pin",
+      "category": "drugs",
+      "base_value": 17,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "vial in the seam."
+    },
+    {
+      "id": "ketamine",
+      "name": "Ketamine",
+      "category": "drugs",
+      "base_value": 18,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "ground score. ketamine."
+    },
+    {
+      "id": "lsd_tab",
+      "name": "LSD Tab",
+      "category": "drugs",
+      "base_value": 16,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "stamp on tongue."
+    },
+    {
+      "id": "mdma_cap",
+      "name": "MDMA Cap",
+      "category": "drugs",
+      "base_value": 18,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "club parking lot."
+    },
+    {
+      "id": "meth",
+      "name": "Meth",
+      "category": "drugs",
+      "base_value": 15,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "ground score. meth."
+    },
+    {
+      "id": "oxy_15",
+      "name": "Oxy 15",
+      "category": "drugs",
+      "base_value": 24,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "pill in the dust."
+    },
+    {
+      "id": "perc_10",
+      "name": "Perc 10",
+      "category": "drugs",
+      "base_value": 14,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "bathroom tile."
+    },
+    {
+      "id": "speed_bag",
+      "name": "Speed Bag",
+      "category": "drugs",
+      "base_value": 11,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "trucker stop."
+    },
+    {
+      "id": "xanax_strip",
+      "name": "Xanax Strip",
+      "category": "drugs",
+      "base_value": 12,
+      "pawn_rate": 0.42,
+      "sellable": true,
+      "reveal": "pharmacy trash."
+    },
+    {
+      "id": "bat_aluminum",
+      "name": "Aluminum Bat",
+      "category": "guns",
+      "base_value": 14,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "bb_pistol",
+      "name": "BB Pistol",
+      "category": "guns",
+      "base_value": 12,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "brass_knuckles",
+      "name": "Brass Knuckles",
+      "category": "guns",
+      "base_value": 15,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "cap_gun",
+      "name": "Cap Gun",
+      "category": "guns",
+      "base_value": 2,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "crowbar",
+      "name": "Crowbar",
+      "category": "guns",
+      "base_value": 10,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "flare_gun",
+      "name": "Flare Gun",
+      "category": "guns",
+      "base_value": 18,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "knife_kitchen",
+      "name": "Kitchen Knife",
+      "category": "guns",
+      "base_value": 6,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "machete",
+      "name": "Machete",
+      "category": "guns",
+      "base_value": 28,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "pellet_rifle",
+      "name": "Pellet Rifle",
+      "category": "guns",
+      "base_value": 35,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "pistol_22",
+      "name": ".22 Pistol",
+      "category": "guns",
+      "base_value": 65,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "revolver_rust",
+      "name": "Rusty Revolver",
+      "category": "guns",
+      "base_value": 80,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "shotgun_saw",
+      "name": "Sawed Shotgun",
+      "category": "guns",
+      "base_value": 120,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "starter_pistol",
+      "name": "Starter Pistol",
+      "category": "guns",
+      "base_value": 8,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "switchblade",
+      "name": "Switchblade",
+      "category": "guns",
+      "base_value": 22,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "taser_old",
+      "name": "Old Taser",
+      "category": "guns",
+      "base_value": 40,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "backpack",
+      "name": "Backpack",
+      "category": "items",
+      "base_value": 10,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "band_shirt",
+      "name": "Band Shirt",
+      "category": "items",
+      "base_value": 8,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "bus_pass",
+      "name": "Bus Pass",
+      "category": "items",
+      "base_value": 18,
+      "reveal": "panhandle legendary.",
+      "sellable": false
+    },
+    {
+      "id": "chain_gold",
+      "name": "Gold Chain",
+      "category": "items",
+      "base_value": 55,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "charger_burn",
+      "name": "Burned Charger",
+      "category": "items",
+      "base_value": 2,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "earbuds",
+      "name": "Earbuds",
+      "category": "items",
+      "base_value": 5,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "flashlight",
+      "name": "Flashlight",
+      "category": "items",
+      "base_value": 4,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "id_fake",
+      "name": "Fake ID",
+      "category": "items",
+      "base_value": 20,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "infest_flyer",
+      "name": "Infest Flyer",
+      "category": "items",
+      "base_value": 3,
+      "reveal": "basement wall. spread fear."
+    },
+    {
+      "id": "integrity_sticker",
+      "name": "Integrity Sticker",
+      "category": "items",
+      "base_value": 4,
+      "reveal": "peeling off the pillar."
+    },
+    {
+      "id": "lottery_ticket",
+      "name": "Lottery Ticket",
+      "category": "items",
+      "base_value": 2,
+      "reveal": "pawn shop glass."
+    },
+    {
+      "id": "matchbook",
+      "name": "Matchbook",
+      "category": "items",
+      "base_value": 1,
+      "reveal": "el bar. est. 1963."
+    },
+    {
+      "id": "neon_flyer",
+      "name": "Neon Flyer",
+      "category": "items",
+      "base_value": 1,
+      "reveal": "cold beer good times."
+    },
+    {
+      "id": "newspaper",
+      "name": "Newspaper",
+      "category": "items",
+      "base_value": 1,
+      "reveal": "make awesome news. march 14."
+    },
+    {
+      "id": "old_receipt",
+      "name": "Old Receipt",
+      "category": "items",
+      "base_value": 1,
+      "reveal": "panhandle uncommon."
+    },
+    {
+      "id": "pawn_stub",
+      "name": "Pawn Stub",
+      "category": "items",
+      "base_value": 1,
+      "reveal": "cash loans gold.",
+      "sellable": false
+    },
+    {
+      "id": "phone_flip",
+      "name": "Flip Phone",
+      "category": "items",
+      "base_value": 6,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "photo",
+      "name": "Photo",
+      "category": "items",
+      "base_value": 12,
+      "reveal": "blurry hallway. half a face.",
+      "maze_page": "meridian_photos"
+    },
+    {
+      "id": "rusty_key",
+      "name": "Rusty Key",
+      "category": "items",
+      "base_value": 8,
+      "reveal": "pawn drawer. no lock fits."
+    },
+    {
+      "id": "scarf_knit",
+      "name": "Knit Scarf",
+      "category": "items",
+      "base_value": 3,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "sunglasses",
+      "name": "Sunglasses",
+      "category": "items",
+      "base_value": 7,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "tool_mult",
+      "name": "Multi-Tool",
+      "category": "items",
+      "base_value": 14,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "transit_map",
+      "name": "Transit Map",
+      "category": "items",
+      "base_value": 4,
+      "reveal": "septa departures.",
+      "sellable": false
+    },
+    {
+      "id": "umbrella_broke",
+      "name": "Broken Umbrella",
+      "category": "items",
+      "base_value": 1,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "wallet_empty",
+      "name": "Empty Wallet",
+      "category": "items",
+      "base_value": 1,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "watch_casio",
+      "name": "Casio Watch",
+      "category": "items",
+      "base_value": 12,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "zippo",
+      "name": "Zippo Lighter",
+      "category": "items",
+      "base_value": 8,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "carhartt_coat",
+      "name": "Carhartt Coat",
+      "category": "jackets",
+      "base_value": 40,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "denim_jacket",
+      "name": "Denim Jacket",
+      "category": "jackets",
+      "base_value": 15,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "letterman",
+      "name": "Letterman Jacket",
+      "category": "jackets",
+      "base_value": 50,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "northface_old",
+      "name": "North Face Old",
+      "category": "jackets",
+      "base_value": 35,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "puffy_90s",
+      "name": "90s Puffy",
+      "category": "jackets",
+      "base_value": 28,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "rain_poncho",
+      "name": "SEPTA Poncho",
+      "category": "jackets",
+      "base_value": 3,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "starter_bulls",
+      "name": "Bulls Starter",
+      "category": "jackets",
+      "base_value": 25,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "starter_eagles",
+      "name": "Eagles Starter",
+      "category": "jackets",
+      "base_value": 35,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "starter_flyers",
+      "name": "Flyers Starter",
+      "category": "jackets",
+      "base_value": 28,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "starter_lions",
+      "name": "Detroit Starter",
+      "category": "jackets",
+      "base_value": 22,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "starter_phillies",
+      "name": "Phillies Starter",
+      "category": "jackets",
+      "base_value": 30,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "starter_raiders",
+      "name": "Raiders Starter",
+      "category": "jackets",
+      "base_value": 38,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "starter_sixers",
+      "name": "Sixers Starter",
+      "category": "jackets",
+      "base_value": 32,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "varsity_leather",
+      "name": "Varsity Leather",
+      "category": "jackets",
+      "base_value": 45,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "work_chore",
+      "name": "Chore Coat",
+      "category": "jackets",
+      "base_value": 18,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "beer",
+      "name": "Beer",
+      "category": "liquor",
+      "base_value": 3,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "beer_can",
+      "name": "Beer Can",
+      "category": "liquor",
+      "base_value": 1,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "burnettes",
+      "name": "Burnett's Vodka",
+      "category": "liquor",
+      "base_value": 4,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "crushed_beer_can",
+      "name": "Crushed Beer Can",
+      "category": "liquor",
+      "base_value": 1,
+      "reveal": "panhandle uncommon."
+    },
+    {
+      "id": "evan_williams",
+      "name": "Evan Williams",
+      "category": "liquor",
+      "base_value": 6,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "fireball",
+      "name": "Fireball Mini",
+      "category": "liquor",
+      "base_value": 2,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "forty_oz",
+      "name": "Forty Ounce",
+      "category": "liquor",
+      "base_value": 5,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "jameson",
+      "name": "Jameson Half-Pint",
+      "category": "liquor",
+      "base_value": 7,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "liquor_bottle",
+      "name": "Liquor Bottle",
+      "category": "liquor",
+      "base_value": 7,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "mad_dog",
+      "name": "Mad Dog 20/20",
+      "category": "liquor",
+      "base_value": 3,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "malt_liquor",
+      "name": "Country Club Malt",
+      "category": "liquor",
+      "base_value": 3,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "natty_ice",
+      "name": "Natty Ice 30-Pack",
+      "category": "liquor",
+      "base_value": 6,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "old_crow",
+      "name": "Old Crow",
+      "category": "liquor",
+      "base_value": 5,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "rotgut",
+      "name": "Rotgut Pint",
+      "category": "liquor",
+      "base_value": 2,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "steel_reserve",
+      "name": "Steel Reserve",
+      "category": "liquor",
+      "base_value": 4,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "whiskey",
+      "name": "Whiskey",
+      "category": "liquor",
+      "base_value": 8,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_ambient",
+      "name": "Ambient 2LP",
+      "category": "vinyl",
+      "base_value": 15,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_bad_brains",
+      "name": "Bad Brains LP",
+      "category": "vinyl",
+      "base_value": 26,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_comp",
+      "name": "Comp Tape Dub",
+      "category": "vinyl",
+      "base_value": 4,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_country",
+      "name": "Country Gold",
+      "category": "vinyl",
+      "base_value": 6,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_disco",
+      "name": "Disco 12-Inch",
+      "category": "vinyl",
+      "base_value": 9,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_hardcore_lp",
+      "name": "Hardcore LP",
+      "category": "vinyl",
+      "base_value": 14,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_infest",
+      "name": "Infest LP",
+      "category": "vinyl",
+      "base_value": 35,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_integrity",
+      "name": "Integrity LP",
+      "category": "vinyl",
+      "base_value": 28,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_japan_doll",
+      "name": "Japan Doll Demo",
+      "category": "vinyl",
+      "base_value": 40,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_jazz",
+      "name": "Jazz Reissue",
+      "category": "vinyl",
+      "base_value": 12,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_metal",
+      "name": "Thrash Demo",
+      "category": "vinyl",
+      "base_value": 18,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_minor_threat",
+      "name": "Minor Threat 7",
+      "category": "vinyl",
+      "base_value": 30,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_misfits",
+      "name": "Misfits Boot",
+      "category": "vinyl",
+      "base_value": 22,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_punk_7",
+      "name": "Punk 7-Inch",
+      "category": "vinyl",
+      "base_value": 8,
+      "pawn_rate": 0.42,
+      "sellable": true
+    },
+    {
+      "id": "vinyl_soul",
+      "name": "Philly Soul LP",
+      "category": "vinyl",
+      "base_value": 10,
+      "pawn_rate": 0.42,
+      "sellable": true
+    }
   ]
 }

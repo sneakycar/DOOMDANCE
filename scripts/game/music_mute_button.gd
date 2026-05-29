@@ -26,4 +26,6 @@ func _on_mute_changed(muted: bool) -> void:
 	_refresh(muted)
 
 func _refresh(muted: bool) -> void:
-	text = "mute" if muted else "sound"
+	text = DoomTypography.symbol_mute_off() if muted else DoomTypography.symbol_mute_on()
+	modulate = Color(1, 1, 1, 0.82 if muted else 0.95)
+	tooltip_text = "unmute" if muted else "mute"
