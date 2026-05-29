@@ -22,6 +22,7 @@ func _ready() -> void:
 	_apply_corner_ui()
 	_apply_location_badge()
 	_apply_transition_label()
+	%MuteButton.visible = true
 	GameState.message_requested.connect(_show_message)
 	GameState.panhandle_changed.connect(_on_panhandle_changed)
 	_hud.inventory_requested.connect(_on_inventory_pressed)
@@ -74,16 +75,19 @@ func _on_inventory_pressed() -> void:
 	if _collections.visible:
 		_collections.visible = false
 	_hud.visible = not _inventory.visible
+	%MuteButton.visible = true
 
 func _on_collections_pressed() -> void:
 	_collections.toggle()
 	if _inventory.visible:
 		_inventory.visible = false
 	_hud.visible = not _collections.visible
+	%MuteButton.visible = true
 
 func _on_overlay_closed() -> void:
 	if not _inventory.visible and not _collections.visible:
 		_hud.visible = true
+	%MuteButton.visible = true
 
 func _on_panhandle_changed() -> void:
 	if _current_id == "alley" and _current_screen:
@@ -103,6 +107,7 @@ func _go_to_screen(screen_id: String, instant: bool = false) -> void:
 	_inventory.visible = false
 	_collections.visible = false
 	_hud.visible = true
+	%MuteButton.visible = true
 	_fade_busy = true
 	_fade.mouse_filter = Control.MOUSE_FILTER_STOP
 	GameState.persist()
