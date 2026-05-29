@@ -1,0 +1,29 @@
+name: Export Web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: firebelley/setup-godot@v1
+        with:
+          godot-version: "4.4.1"
+          cache: true
+      - name: Export HTML5
+        run: |
+          godot --headless --import
+          mkdir -p public
+          godot --headless --export-release "Web" public/index.html
+          cp -f web/manifest.webmanifest public/manifest.webmanifest
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: export web build"
+          file_pattern: public/**
