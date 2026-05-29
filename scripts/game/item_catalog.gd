@@ -16,7 +16,7 @@ const ID_FOLDED_NOTE := &"folded_note"
 const ID_LOOSE_CIGS := &"loose_cigarettes"
 const ID_NIGHT_KEY := &"alley_key"
 
-static func get(item_id: StringName) -> Dictionary:
+static func lookup(item_id: StringName) -> Dictionary:
 	AlleyContent.ensure_loaded()
 	var d := AlleyContent.item(item_id)
 	if d.is_empty():

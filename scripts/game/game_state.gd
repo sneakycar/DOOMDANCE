@@ -232,7 +232,7 @@ func collect_panhandle() -> void:
 		_:
 			var cash := randi_range(0, 4)
 			add_money(cash)
-			message_requested.emit(CopyData.lookup("panhandle/cash", "$%d.") % cash)
+			message_requested.emit(CopyData.lookup("panhandle/cash", "$%d.") % [cash])
 	panhandling_until = 0
 	panhandle_changed.emit()
 	_save()

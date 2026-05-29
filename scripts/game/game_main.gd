@@ -22,7 +22,7 @@ func _ready() -> void:
 	GameState.panhandle_changed.connect(_on_panhandle_changed)
 	%CollectionsButton.pressed.connect(func() -> void: _collections.toggle())
 	_on_hud_refresh()
-	_go_to_screen("impound_lot", instant: true)
+	_go_to_screen("impound_lot", true)
 
 func _apply_hud_typography() -> void:
 	DoomTypography.stamp_mono(%TimeLabel, 13)
