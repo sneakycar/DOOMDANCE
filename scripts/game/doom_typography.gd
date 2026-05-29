@@ -120,6 +120,12 @@ func header_for_screen(screen_id: String) -> String:
 		return str(data.get("header", "")).to_upper()
 	return str(data.get("title", screen_id)).to_upper().replace("_", " ")
 
+func transition_for_screen(screen_id: String) -> String:
+	var data := ScreenData.get_screen(screen_id)
+	if data.has("transition_title"):
+		return str(data.get("transition_title", "")).to_upper()
+	return header_for_screen(screen_id)
+
 func symbol_mute_on() -> String:
 	return char(0x1F50A)
 

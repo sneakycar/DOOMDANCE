@@ -133,7 +133,7 @@ func _go_to_screen(screen_id: String, instant: bool = false) -> void:
 		_transition_label.visible = false
 		return
 
-	_transition_label.text = DoomTypography.header_for_screen(screen_id)
+	_transition_label.text = DoomTypography.transition_for_screen(screen_id)
 	_transition_label.visible = true
 	_transition_label.modulate.a = 0.0
 	var tween_in := create_tween()

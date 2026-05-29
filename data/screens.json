@@ -21,10 +21,10 @@
         {
           "id": "office",
           "label": "OFFICE",
-          "observation": "Light on inside. Locked.",
+          "observation": "Door to the liquor store.",
           "rect": [0.62, 0.32, 0.36, 0.55],
-          "action": "message",
-          "text": "LOCKED.\n\nLight on inside."
+          "action": "goto",
+          "target": "liquor_store"
         }
       ]
     },
@@ -38,7 +38,8 @@
       "hotspots": []
     },
     "liquor_store": {
-      "header": "LIQUOR STORE",
+      "header": "KENSINGTON LIQUORS",
+      "transition_title": "KENSINGTON\nLIQUORS",
       "background": "res://generated images/liquor store.png",
       "overlays": ["fluorescent_flicker", "neon_buzz"],
       "hotspots": []
