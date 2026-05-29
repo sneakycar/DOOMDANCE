@@ -1,5 +1,17 @@
 # Deploy DOOM DANCE (Git + Vercel)
 
+## Export web build (no Godot installed?)
+
+```bash
+./scripts/export-web.sh
+```
+
+The script downloads Godot **4.4.1** into `.cache/godot` on first run (~90MB). You still need **Web** export templates: open the project once in the Godot editor → **Editor → Manage Export Templates → Download and Install**, then re-run the script.
+
+Or use **GitHub Actions**: push `.github/workflows/export-web.yml` (needs PAT `workflow` scope) and enable Actions **read/write** on the repo.
+
+---
+
 ## 1. Create GitHub repo
 
 Name: **`DOOMDANCE`** (or `doom-dance`) — **not** makeawesome-baseball.
