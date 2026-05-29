@@ -163,7 +163,7 @@ func add_item(item_name: String) -> void:
 	_save()
 
 func add_collectible(collectible_id: String) -> void:
-	var data := CollectibleData.get(collectible_id)
+	var data := CollectibleData.lookup(collectible_id)
 	if data.is_empty():
 		return
 	var name: String = data.get("name", collectible_id)
@@ -208,7 +208,7 @@ func _grant_panhandle_uncommon() -> void:
 	var pool: Array[String] = ["old_receipt", "crushed_beer_can"]
 	pool.shuffle()
 	for cid in pool:
-		var data := CollectibleData.get(cid)
+		var data := CollectibleData.lookup(cid)
 		var name: String = data.get("name", cid)
 		if cid in discovered_collectibles or has_item(name):
 			continue

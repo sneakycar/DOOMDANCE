@@ -78,7 +78,7 @@ static func item_spawn_phases(item_id: StringName) -> Array:
 		return []
 	return d.get("spawn_phases", [])
 
-static func item_spawn_active(item_id: StringName, phase: GameClock.TimePhase) -> bool:
+static func item_spawn_active(item_id: StringName, phase: int) -> bool:
 	var phases: Array = item_spawn_phases(item_id)
 	if phases.is_empty():
 		return true
@@ -86,7 +86,7 @@ static func item_spawn_active(item_id: StringName, phase: GameClock.TimePhase) -
 
 static func pick_spawn_item(rng: RandomNumberGenerator, state: AlleyState) -> Dictionary:
 	ensure_loaded()
-	var phase := state.get_phase() if state != null else GameClock.TimePhase.MORNING
+	var phase: int = state.get_phase() if state != null else GameClock.Phase.MORNING
 	var pool: Array[Dictionary] = []
 	for entry in _items:
 		if entry.get("vendor_only", false):
@@ -167,29 +167,29 @@ static func parse_phases(phase_names: Array) -> Array:
 static func phase_from_name(name: String) -> int:
 	match name.to_lower():
 		"late_night":
-			return GameClock.TimePhase.LATE_NIGHT
+			return GameClock.Phase.NIGHT
 		"dawn":
-			return GameClock.TimePhase.DAWN
+			return GameClock.Phase.DAWN
 		"morning":
-			return GameClock.TimePhase.MORNING
+			return GameClock.Phase.MORNING
 		"afternoon":
-			return GameClock.TimePhase.AFTERNOON
+			return GameClock.Phase.AFTERNOON
 		"evening":
-			return GameClock.TimePhase.EVENING
+			return GameClock.Phase.EVENING
 		_:
 			return -1
 
 static func phase_name(phase: int) -> String:
 	match phase:
-		GameClock.TimePhase.LATE_NIGHT:
+		GameClock.Phase.NIGHT:
 			return "late_night"
-		GameClock.TimePhase.DAWN:
+		GameClock.Phase.DAWN:
 			return "dawn"
-		GameClock.TimePhase.MORNING:
+		GameClock.Phase.MORNING:
 			return "morning"
-		GameClock.TimePhase.AFTERNOON:
+		GameClock.Phase.AFTERNOON:
 			return "afternoon"
-		GameClock.TimePhase.EVENING:
+		GameClock.Phase.EVENING:
 			return "evening"
 		_:
 			return ""

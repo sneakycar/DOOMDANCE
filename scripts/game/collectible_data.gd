@@ -28,7 +28,7 @@ static func load_all() -> void:
 		_by_id[d.get("id", "")] = d
 		_by_name[d.get("name", "")] = d
 
-static func get(id: String) -> Dictionary:
+static func lookup(id: String) -> Dictionary:
 	load_all()
 	return _by_id.get(id, {})
 

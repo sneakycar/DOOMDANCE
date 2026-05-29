@@ -46,7 +46,7 @@ func try_interact(_player: Node, clock: GameClock, wallet: PlayerWallet, invento
 		inventory.add_item_by_id(reward_item, AlleyContent.item_label(reward_item))
 	return success_message
 
-func _phase_ok(phase: GameClock.TimePhase) -> bool:
+func _phase_ok(phase: GameClock.Phase) -> bool:
 	if open_phases.is_empty():
 		return true
 	return phase in open_phases
@@ -59,17 +59,17 @@ func _phase_hint() -> String:
 		names.append(_phase_name(p))
 	return ", ".join(names)
 
-func _phase_name(phase: GameClock.TimePhase) -> String:
+func _phase_name(phase: GameClock.Phase) -> String:
 	match phase:
-		GameClock.TimePhase.LATE_NIGHT:
+		GameClock.Phase.NIGHT:
 			return "Late Night"
-		GameClock.TimePhase.DAWN:
+		GameClock.Phase.DAWN:
 			return "Dawn"
-		GameClock.TimePhase.MORNING:
+		GameClock.Phase.MORNING:
 			return "Morning"
-		GameClock.TimePhase.AFTERNOON:
+		GameClock.Phase.AFTERNOON:
 			return "Afternoon"
-		GameClock.TimePhase.EVENING:
+		GameClock.Phase.EVENING:
 			return "Evening"
 		_:
 			return "?"

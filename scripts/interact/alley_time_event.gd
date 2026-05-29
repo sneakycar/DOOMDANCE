@@ -39,7 +39,7 @@ func try_interact(_player: Node, clock: GameClock, wallet: PlayerWallet, invento
 		inventory.add_item_by_id(reward_item, AlleyContent.item_label(reward_item))
 	return success_message
 
-func _phase_ok(phase: GameClock.TimePhase) -> bool:
+func _phase_ok(phase: GameClock.Phase) -> bool:
 	if active_phases.is_empty():
 		return true
 	return phase in active_phases

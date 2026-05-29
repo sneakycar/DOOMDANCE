@@ -6,6 +6,9 @@ class_name AlleyState
 
 var current_phase: int = 0
 
+func get_phase() -> int:
+	return current_phase
+
 func prop_spawn_chance() -> float:
 	return clampf(0.65 + luck * 0.25 + (1.0 - happiness) * 0.1, 0.45, 0.98)
 

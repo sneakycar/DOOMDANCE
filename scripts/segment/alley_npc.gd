@@ -46,6 +46,6 @@ func _apply_profile(profile: Dictionary, state: AlleyState, rng: RandomNumberGen
 		_tag.text = display_label
 		_tag.visible = false
 	if state != null:
-		var light := state.get_backdrop_modulate()
+		var light: Color = state.get_scene_modulate()
 		modulate = light.lerp(Color.WHITE, 0.35)
 	scale.x = -1.0 if rng.randf() > 0.5 else 1.0

@@ -136,7 +136,7 @@ func _on_hotspot(hotspot: Dictionary) -> void:
 func _try_buy(hotspot: Dictionary) -> void:
 	var cost: int = int(hotspot.get("cost", 0))
 	var cid: String = hotspot.get("collectible_id", "")
-	var data := CollectibleData.get(cid)
+	var data := CollectibleData.lookup(cid)
 	var name: String = data.get("name", hotspot.get("item", "Item"))
 	if cid != "" and cid in GameState.discovered_collectibles and GameState.has_item(name):
 		_show_message(CopyData.lookup("affordance/already_have", "ALREADY HAVE."))
@@ -155,7 +155,7 @@ func _try_buy(hotspot: Dictionary) -> void:
 func _try_collect(hotspot: Dictionary) -> void:
 	var flag: String = hotspot.get("flag", "")
 	var cid: String = hotspot.get("collectible_id", "")
-	var data := CollectibleData.get(cid)
+	var data := CollectibleData.lookup(cid)
 	var name: String = data.get("name", hotspot.get("item", "Item"))
 	if flag != "" and GameState.is_collected(flag):
 		_show_message(CopyData.lookup("affordance/nothing_here", "NOTHING."))
