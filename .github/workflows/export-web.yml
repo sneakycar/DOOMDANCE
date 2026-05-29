@@ -26,7 +26,9 @@ jobs:
           godot --version
           godot --headless --import
           mkdir -p public
-          godot --headless --export-release "Web" public/index.html
+          godot --headless --export-release "Web" public/index.html 2>&1 | tee export.log
+          tail -50 export.log
+          test -f public/index.wasm || test -f public/index.pck || (echo "Export did not produce wasm/pck" && exit 1)
           cp -f web/manifest.webmanifest public/manifest.webmanifest
           ls -la public/
 
