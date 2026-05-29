@@ -143,9 +143,13 @@ static func _neon_buzz(size: Vector2) -> ColorRect:
 	tween.tween_property(rect, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.22)
 	return rect
 
-static func _lamp_buzz(size: Vector2, spots: Array) -> Node2D:
-	var root := Node2D.new()
+static func _lamp_buzz(size: Vector2, spots: Array) -> Control:
+	var root := Control.new()
 	root.name = "LampBuzz"
+	root.set_anchors_preset(Control.PRESET_FULL_RECT)
+	root.offset_right = size.x
+	root.offset_bottom = size.y
+	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	if spots.is_empty():
 		spots = [
 			{"rect": [0.04, 0.06, 0.16, 0.22]},
@@ -158,15 +162,16 @@ static func _lamp_buzz(size: Vector2, spots: Array) -> Node2D:
 		var glow := ColorRect.new()
 		glow.set_script(flicker_script)
 		glow.set("buzz_seed", float(i) * 0.37)
+		glow.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		glow.position = Vector2(rect_norm[0], rect_norm[1]) * size
 		glow.size = Vector2(rect_norm[2], rect_norm[3]) * size
-		var tint: Variant = spot.get("color", Color(1.0, 0.78, 0.42, 0.26))
+		var tint: Variant = spot.get("color", Color(1.0, 0.78, 0.42, 0.34))
 		if tint is Array and tint.size() >= 4:
 			glow.color = Color(float(tint[0]), float(tint[1]), float(tint[2]), float(tint[3]))
 		elif tint is Color:
 			glow.color = tint
 		else:
-			glow.color = Color(1.0, 0.78, 0.42, 0.26)
+			glow.color = Color(1.0, 0.78, 0.42, 0.34)
 		root.add_child(glow)
 	return root
 

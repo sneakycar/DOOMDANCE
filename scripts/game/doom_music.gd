@@ -48,11 +48,17 @@ func _load_track() -> void:
 func unlock() -> void:
 	_unlocked = true
 	_maybe_start()
+	if _stream_ready and _player != null and not _player.playing:
+		_player.play()
+		_started = true
 
 func _maybe_start() -> void:
-	if _started or not _stream_ready:
+	if not _stream_ready or _player == null:
 		return
 	if OS.has_feature("web") and not _unlocked:
+		return
+	if _player.playing:
+		_started = true
 		return
 	_player.play()
 	_started = true

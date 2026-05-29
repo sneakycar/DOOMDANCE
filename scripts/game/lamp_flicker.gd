@@ -5,7 +5,7 @@ extends ColorRect
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	modulate.a = 0.75
+	modulate.a = 0.82
 	_buzz_step()
 
 func _buzz_step() -> void:
