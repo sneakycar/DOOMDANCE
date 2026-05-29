@@ -1,0 +1,160 @@
+body { scrollbar-arrow-color: #cccccc; 
+scrollbar-3dlight-color: #000000; 
+scrollbar-highlight-color: #cccccc; 
+scrollbar-face-color: #cccccc; 
+scrollbar-shadow-color: #cccccc; 
+scrollbar-track-color: #ccff00; 
+scrollbar-darkshadow-color: #000000;
+}
+
+
+a:link { text-decoration: underline; font-size: 9px;}
+a:active  { text-decoration: underline; font-size: 9px; }
+a:vlink { text-decoration: underline; font-size: 9px;}
+a { text-decoration: underline; font-size: 9px;}
+a:hover { text-decoration: underline; font-size: 9px;}
+
+
+b { font-weight: bold }
+i { font-style: italic }
+u { font-decoration: underline }
+
+A {text-decoration:underline}
+
+A.forum {color:#0000ff}
+A.forum:active {color:#0000ff}
+A.forum:visited {color:#8D9EBB}
+A.forum:hover {color:#FFFFFF}
+A.forumnormal {color:#768ABE}
+A.forumnormal:active {color:#C2C9E0}
+A.billgates { color: black; font-size: 9px; text-decoration: underline }
+A.forumnormal:visited {color:#6F7FCF}
+A.forumnormal:hover {color:#AAB1CE} 
+
+TD {font-family:Verdana,Geneva,Arial,sans-serif; font-size: 9px}
+
+TD.lowercase {text-transform:lowercase}
+
+.text {font-family:Verdana,Geneva,Arial,sans-serif; font-size: 9px}
+
+.blacktable
+{
+    border-style : solid;
+    border-color : Black;
+    border-width : 1px;
+}
+
+.bgback { background: #FFFFFF }
+A.STORY { font-style: oblique; font-size: 12px }
+A.STORY:vlink { font-style: oblique; font-size: 12px }
+A.STORY:link { color: olive; font-weight: bolder; font-size: 11px }
+A.milk:link  { color: olive; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.family:link { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.family { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.boy { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.boy2  { color: #00c; font-weight: bolder; font-size: 7px }
+A.boy2:vlink  { color: #00c; font-weight: bolder; font-size: 7px }
+A.boy2:active  { color: #00c; font-weight: bolder; font-size: 7px }
+A.boy2:hover  { color: #00c; font-weight: bolder; font-size: 7px }
+A.boy3 { color: #00c; font-style: oblique; font-weight: bolder; text-decoration: underline }
+A.boy3:active { color: #00c; font-style: oblique; font-weight: bolder; text-decoration: underline }
+A.boy3:hover { color: #00c; font-style: oblique; font-weight: bolder; text-decoration: underline }
+A.boy3:vlink { color: #00c; font-style: oblique; font-weight: bolder; text-decoration: underline }
+A.boy4:vlink  { color: red; font-style: normal; font-weight: bolder; font-size: 10px; text-decoration: underline }
+A.boy4  { color: red; font-style: normal; font-weight: bolder; font-size: 10px; text-decoration: underline }
+A.big  { color: #9f2710; font-style: oblique; font-weight: bolder; font-size: 16px }
+A.big1 { color: #9f2710; font-style: oblique; font-weight: bolder; font-size: 16px; text-decoration: underline }
+A.boy4:hover  { color: red; font-style: normal; font-weight: bolder; font-size: 10px; text-decoration: underline }
+A.boy4:active  { color: red; font-style: normal; font-weight: bolder; font-size: 10px; text-decoration: underline }
+A.boy:vlink { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.boy:active { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.boy:hover { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.family:vlink { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.family:active { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.family:hover { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.milk:vlink { color: olive; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.fast { color: white; font-style: oblique; font-weight: bolder; text-decoration: underline }
+A.beetle { color: #369; font-weight: bolder; text-decoration: none }
+A.beetle:hover { color: #369; font-weight: bolder; text-decoration: none }
+A.beetle:vlink { color: #369; font-weight: bolder; text-decoration: none }
+A.beetle:active { color: #369; font-weight: bolder; text-decoration: none }
+A.fast:vlink { color: white; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.fast:active { color: #fff; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.fast:hover { color: #fff; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.love:hover { color: white; text-decoration: none }
+A.love { color: white; text-decoration: none }
+A.love:vlink { color: white; text-decoration: none }
+A.love:active { color: white; text-decoration: none }
+A.quiz:active { color: white; font-style: oblique; font-weight: bolder; text-decoration: underline }
+A.quiz { color: white; font-style: oblique; font-weight: bolder; text-decoration: underline }
+A.quiz:vlink { color: white; font-style: oblique; font-weight: bolder; text-decoration: underline }
+A.quiz:hover { color: white; font-style: oblique; font-weight: bolder; text-decoration: underline }
+A.milk { color: olive; font-style: italic; font-weight: bolder; text-decoration: underline }
+a.grandma { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+a.grandma:vlink { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+a.grandma:link { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+a.grandma:hover  { color: yellow; font-style: italic; font-weight: bolder; text-decoration: underline }
+A.lost:hover { color: black; text-decoration: none; background: #ccff33 }
+A.lost { color: black; text-decoration: none }
+A.lost:vlink { color: black; text-decoration: none }
+A.lost:active { color: black; text-decoration: none }
+
+A.pave:hover   { color: black; text-decoration: none }
+A.pave   { color: black; text-decoration: none }
+A.pave:vlink   { color: black; text-decoration: none }
+A.pave:active   { color: black; text-decoration: none }
+A.pave:link   { color: black; text-decoration: none }
+
+
+A.pave2:hover { color: #ccff33; text-decoration: none }
+A.pave2 { color: #ccff33; text-decoration: none }
+A.pave2:vlink { color: #ccff33; text-decoration: none }
+A.pave2:active { color: #ccff33; text-decoration: none }
+A.pave2:link { color: #ccff33; text-decoration: none }
+
+A.pave3:hover   { color: yellow; text-decoration: underline }
+A.pave3  { color: #000099; text-decoration: line-through }
+
+A.pave3:link  { color: #000099; text-decoration: line-through }
+A.pave3:active  { color: #000099; text-decoration: line-through }
+A.pave3:vlink  { color: #000099; text-decoration: line-through }
+
+A.1962:hover { color: #336600; text-decoration: none }
+A.1962:link { color: #99cc33; text-decoration: none }
+A.1962:alink { color: #99cc33; text-decoration: none }
+A.1962:vlink { color: #99cc33; text-decoration: none }
+A.larry  { color: #993; text-decoration: underline }
+A.larry:vlink  { color: #993; text-decoration: underline }
+A.larry:alink  { color: #993; text-decoration: underline }
+A.larry:hover { color: #993; text-decoration: underline }
+A.trick { color: #fffffc; text-decoration: none }
+A.murder { color: navy; text-decoration: none }
+A.murder:hover { color: #cc6; text-decoration: underline overline line-through }
+A.murder:vlink { color: navy; text-decoration: none }
+A.murder:alink { color: navy; text-decoration: none }
+A.church { color: #f96; font-weight: bolder; font-size: 10px; text-decoration: underline }
+A.church:active { color: #f96; font-weight: bolder; font-size: 10px; text-decoration: underline }
+A.church:hover { color: #f96; font-weight: bolder; font-size: 10px; text-decoration: underline }
+A.church:vlink { color: #f96; font-weight: bolder; font-size: 10px; text-decoration: underline }
+A.trick:vlink { color: #fffffc; text-decoration: none }
+A.trick:alink { color: #fffffc; text-decoration: none }
+A.trick:hover { color: #fffffc; text-decoration: none }
+A.feed  { color: #787878; font-weight: bolder; font-size: 9px; text-decoration: none }
+A.author  { color: #000; font-weight: bolder; font-size: 9px; text-decoration: none }
+A.author:vlink  { color: #000; font-weight: bolder; font-size: 9px; text-decoration: none }
+A.author:alink  { color: #000; font-weight: bolder; font-size: 9px; text-decoration: none }
+A.author:hover  { color: #000; font-weight: bolder; font-size: 9px; text-decoration: none }
+A.author:hover1active { color: #000; font-weight: bolder; font-size: 9px; text-decoration: none }
+A.feed:vlink  { color: #787878; font-weight: bolder; font-size: 9px; text-decoration: none }
+A.feed:alink  { color: #787878; font-weight: bolder; font-size: 9px; text-decoration: none }
+A.feed:hover  { color: #787878; font-weight: bolder; font-size: 9px; text-decoration: none }
+bricks { border: dashed 1px #eee }
+.gummo  { border: solid 1px #000 }
+.battle { border: solid 2px #fff }
+.rules { border: solid 2px #707070 }
+.logged { color: #768abe; 
+         text-decoration: none; background: yellow;
+	 font-size: 9px;
+         font-style:bold;
+ }
+.lime {background:#ccff00;}

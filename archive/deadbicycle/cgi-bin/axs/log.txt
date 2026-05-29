@@ -1,0 +1,378 @@
+|a24b161n130client127.hawaii.rr.com|24.161.130.127|http://www.angelfire.com/sd/lou1/index.html||Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|28|3|21|14|2|103|5|72|
+|12-225-186-247.client.attbi.com|12.225.186.247|http://www.deadbicycle.com/|http://www.deadbicycle.com/headphones/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; MSOCD)|31|53|3|15|2|103|6|73|
+|12-225-186-247.client.attbi.com|12.225.186.247|http://www.deadbicycle.com/lost/index.html|http://www.deadbicycle.com/airplanes/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; MSOCD)|12|13|4|15|2|103|6|73|
+|c-24-125-113-143.va.client2.attbi.com|24.125.113.143|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)|38|22|15|15|2|103|6|73|
+|mr-ridge5176.starstream.net|66.124.190.176|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705; MSIECrawler)|13|25|15|15|2|103|6|73|
+|modemcable215.65-203-24.mtl.mc.videotron.ca|24.203.65.215|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|29|25|15|15|2|103|6|73|
+|mtl-ppp-158680.qc.sympatico.ca|65.94.58.130|about:blank|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.0.1) Gecko/20020823 Netscape/7.0|14|26|15|15|2|103|6|73|
+|x98a3a04d.pix.aol.com|152.163.160.77|http://halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)|33|28|15|15|2|103|6|73|
+|px3nr.wp.shawcable.net|24.66.94.142|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|0|52|15|15|2|103|6|73|
+|px3nr.wp.shawcable.net|24.66.94.142|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|9|52|15|15|2|103|6|73|
+|modemcable215.65-203-24.mtl.mc.videotron.ca|24.203.65.215|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|14|52|15|15|2|103|6|73|
+|fe070.world-online.no|213.142.64.157|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|12|53|15|15|2|103|6|73|
+|200.182.232.180|200.182.232.180|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)|21|59|15|15|2|103|6|73|
+|fbeg-d9b849c5.pool.mediaways.net|217.184.73.197|http://coolstop.com/2003/||Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; QXW0334c)|3|14|16|15|2|103|6|73|
+|dial-tm-mp-200-149-113-249.estaminas.com.br|200.149.113.249|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)|52|39|16|15|2|103|6|73|
+|200-100-91-250.dsl.telesp.net.br|200.100.91.250|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|0|16|17|15|2|103|6|73|
+|cpe0050da08edb8-cm012069962954.cpe.net.cable.rogers.com|24.101.145.133|http://halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|32|24|17|15|2|103|6|73|
+|pr7-ts.telepac.pt|194.65.14.77|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|43|44|17|15|2|103|6|73|
+|200.254.44.172|200.254.44.172|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; MyIE2; .NET CLR 1.1.4322)|1|52|17|15|2|103|6|73|
+|81.6.221.174|81.6.221.174|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|2|4|18|15|2|103|6|73|
+|200-163-152-054.paemt210.dial.brasiltelecom.net.br|200.163.152.54|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|0|7|18|15|2|103|6|73|
+|alb-24-194-114-90.nycap.rr.com|24.194.114.90|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|57|15|18|15|2|103|6|73|
+|12-254-202-110.client.attbi.com|12.254.202.110|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|18|19|18|15|2|103|6|73|
+|66-108-121-245.nyc.rr.com|66.108.121.245|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461)|21|23|18|15|2|103|6|73|
+|h24-86-215-133.ed.shawcable.net|24.86.215.133|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|24|25|18|15|2|103|6|73|
+|acca0bc8.ipt.aol.com|172.202.11.200|http://www.msn.com/|http://www.msn.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; DigExt; YComp 5.0.2.6; .NET CLR 1.0.3705)|40|34|18|15|2|103|6|73|
+|adsl-67-116-237-186.dsl.pltn13.pacbell.net|67.116.237.186|http://www.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; .NET CLR 1.0.3705)|30|53|18|15|2|103|6|73|
+|c-24-130-216-82.we.client2.attbi.com|24.130.216.82|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; (R1 1.3))|24|2|19|15|2|103|6|73|
+|dialup-67.24.6.133.dial1.stamford1.level3.net|67.24.6.133|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; MSN 6.1; MSNbDELL; MSNmen-us; MSNc11; v5m)|17|18|19|15|2|103|6|73|
+|pc1-wilm1-5-cust39.mant.cable.ntl.com|81.97.178.39|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|26|35|19|15|2|103|6|73|
+|dialup222.tncro.usit.net|216.80.182.222|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|19|51|19|15|2|103|6|73|
+|dialup222.tncro.usit.net|216.80.182.222|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|58|51|19|15|2|103|6|73|
+|dialup222.tncro.usit.net|216.80.182.222|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|3|52|19|15|2|103|6|73|
+|198.30.184.10|198.30.184.10|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|4|9|20|15|2|103|6|73|
+|adsl-64-160-145-25.dsl.lsan03.pacbell.net|64.160.145.25|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|36|19|20|15|2|103|6|73|
+|166.84.167.54|166.84.167.54|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|55|53|20|15|2|103|6|73|
+|166.84.167.54|166.84.167.54|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|11|54|20|15|2|103|6|73|
+|k31-206.datanet.nyu.edu|216.165.31.206|http://coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|0|56|20|15|2|103|6|73|
+|puffer-fish.ptk.pesat.net.id|202.95.136.51|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)|59|25|21|15|2|103|6|73|
+|cdm-208-136-220-vctr.cox-internet.com|208.180.136.220|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Win 9x 4.90)|36|37|21|15|2|103|6|73|
+|dialup-64.158.239.224.dial1.philadelphia1.level3.net|64.158.239.224|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461; MSN 6.1; MSNbMSFT; MSNmen-us; MSNc11; MSNc21)|21|50|21|15|2|103|6|73|
+|cpe-144-137-86-179.nsw.bigpond.net.au|144.137.86.179|http://www.textbased.com/%7Eminimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|18|54|21|15|2|103|6|73|
+|adsl-66-124-226-195.dsl.snfc21.pacbell.net|66.124.226.195|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.16; Mac_PowerPC)|38|21|22|15|2|103|6|73|
+|cp251274-a.dbsch1.nb.home.nl|217.121.100.65|http://system.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|23|24|22|15|2|103|6|73|
+|dialup-63.214.114.69.dial1.boston1.level3.net|63.214.114.69|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|1|39|22|15|2|103|6|73|
+|alb-24-195-205-76.nycap.rr.com|24.195.205.76|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|10|42|22|15|2|103|6|73|
+|245.a.007.syd.iprimus.net.au|210.50.176.245|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; MyIE2)|19|47|22|15|2|103|6|73|
+|cache-rl05.proxy.aol.com|152.163.189.101|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; AOL 7.0; Windows NT 5.1)|37|11|23|15|2|103|6|73|
+|dhcp024-166-107-134.neo.rr.com|24.166.107.134|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|53|11|23|15|2|103|6|73|
+|proxy3.skyinet.net|202.78.97.14|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=halfproject&dfont=9|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|4|14|23|15|2|103|6|73|
+|modemcable027.213-201-24.que.mc.videotron.ca|24.201.213.27|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|39|21|23|15|2|103|6|73|
+|gatekeeper.polytech.ac.nz|203.97.92.98|http://system.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.21; Mac_PowerPC)|44|22|23|15|2|103|6|73|
+|host237-14.pool62211.interbusiness.it|62.211.14.237|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=halfproject&dfont=9|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|27|24|23|15|2|103|6|73|
+|adsl-64-165-211-100.dsl.snfc21.pacbell.net|64.165.211.100|http://halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC)|49|28|23|15|2|103|6|73|
+|h68-145-127-48.cg.shawcable.net|68.145.127.48|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|26|31|23|15|2|103|6|73|
+|61.171.82.25|61.171.82.25|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|42|26|0|16|2|103|0|74|
+|dialup-63.208.113.79.dial1.weehawken1.level3.net|63.208.113.79|http://coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|13|30|0|16|2|103|0|74|
+|200-161-88-228.dsl.telesp.net.br|200.161.88.228|http://coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|28|34|0|16|2|103|0|74|
+|akcf3-ggi.xtra.co.nz|210.54.247.221|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|27|40|0|16|2|103|0|74|
+|mke-65-30-195-166.wi.rr.com|65.30.195.166|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Opera/7.0 (Windows NT 5.1; U)  [en]|54|14|1|16|2|103|0|74|
+|d20.netrus.net|206.251.198.20|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|33|25|1|16|2|103|0|74|
+|dialup-64.158.81.31.dial1.buffalo1.level3.net|64.158.81.31|http://system.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461; YComp 5.0.2.4; Hotbar 4.1.7.0; yplus 1.0)|28|43|1|16|2|103|0|74|
+|200.228.134.144|200.228.134.144|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|9|2|2|16|2|103|0|74|
+|adsl-66-124-4-118.dsl.lsan03.pacbell.net|66.124.4.118|http://www.textbased.com/%7Eminimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|25|25|2|16|2|103|0|74|
+|218.60.8.20|218.60.8.20|http://209.227.239.216/news01/news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|59|29|2|16|2|103|0|74|
+|pool-138-89-153-99.mad.east.verizon.net|138.89.153.99|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|13|35|2|16|2|103|0|74|
+|ac968ebd.ipt.aol.com|172.150.142.189|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.3b) Gecko/20030210|26|37|2|16|2|103|0|74|
+|196.36.98.98|196.36.98.98|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|31|42|2|16|2|103|0|74|
+|66-214-137-13.gln-eres.charterpipeline.net|66.214.137.13|http://halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|1|49|2|16|2|103|0|74|
+|12-210-201-154.client.attbi.com|12.210.201.154|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/60 (like Gecko) Safari/60|16|7|3|16|2|103|0|74|
+|px3wh.vc.shawcable.net|24.69.255.204|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; i-Nav 3.0.1.0F)|59|26|3|16|2|103|0|74|
+|12-228-166-186.client.attbi.com|12.228.166.186|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.3) Gecko/20030312|3|45|3|16|2|103|0|74|
+|pb73.radlin.sdi.tpnet.pl|80.49.136.73|http://209.227.239.216/news01/news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|16|59|3|16|2|103|0|74|
+|217.173.192.181|217.173.192.181|http://halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; TUCOWS)|11|21|4|16|2|103|0|74|
+|61.183.39.33|61.183.39.33|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; MyIE2)|27|24|4|16|2|103|0|74|
+|62.145.83.132|62.145.83.132|||Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|58|28|4|16|2|103|0|74|
+|d135022.upc-d.chello.nl|213.46.135.22|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; DigExt)|20|46|4|16|2|103|0|74|
+|ool-43517f4f.dyn.optonline.net|67.81.127.79|http://halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|54|53|4|16|2|103|0|74|
+|81.11.137.146|81.11.137.146|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|57|14|5|16|2|103|0|74|
+|inktomi2-lee.server.ntl.com|62.252.224.5|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)|27|19|5|16|2|103|0|74|
+|cc301394-a.ensch1.ov.home.nl|217.122.190.64|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Win98; en-US; rv:1.3a) Gecko/20021207 Phoenix/0.5|33|44|5|16|2|103|0|74|
+|213-140-20-184.fastres.net|213.140.20.184|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=halfproject&dfont=9|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|12|50|5|16|2|103|0|74|
+|bbcache-232.singnet.com.sg|202.166.126.232|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Hotbar 4.0)|50|25|6|16|2|103|0|74|
+|24-205-28-132.nwk-eres.charterpipeline.net|24.205.28.132|http://halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|41|0|7|16|2|103|0|74|
+|wnpgmb0128w-cc02-v981.mts.net|142.161.0.92|||Mozilla/3.01 (compatible;)|56|2|7|16|2|103|0|74|
+|wnpgmb0128w-cc02-v981.mts.net|142.161.0.92|http://www.halfproject.com/news_old_show.php?entry_date=03.15.03|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; YComp 5.0.2.6)|57|2|7|16|2|103|0|74|
+|dsl-213-023-039-132.arcor-ip.net|213.23.39.132|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|40|6|7|16|2|103|0|74|
+|12-247-57-19.client.attbi.com|12.247.57.19|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)|55|36|7|16|2|103|0|74|
+|12-250-112-78.client.attbi.com|12.250.112.78|http://www.coolstop.com/2003/||Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|0|1|8|16|2|103|0|74|
+|218.20.118.239|218.20.118.239|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0b; Windows 98)|27|6|8|16|2|103|0|74|
+|212.199.10.58.012.net.il|212.199.10.58|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; H010818)|15|30|8|16|2|103|0|74|
+|chello080108253140.6.14.vie.surfer.at|80.108.253.140|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.3) Gecko/20030312|38|58|8|16|2|103|0|74|
+|chello080108253140.6.14.vie.surfer.at|80.108.253.140|http://www.deadbicycle.com/cgi-bin/list/mail.cgi|http://www.deadbicycle.com/index.html|Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.3) Gecko/20030312|28|0|9|16|2|103|0|74|
+|200-170-226-162.core01.rjo.ifx.net.br|200.170.226.162|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; DigExt)|6|1|9|16|2|103|0|74|
+|ppp-219-54.27-151.libero.it|151.27.54.219|http://209.227.239.216/news01/news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Virgilio6pc; DP1000)|45|3|9|16|2|103|0|74|
+|qn-213-73-208-217.quicknet.nl|213.73.208.217|http://www.coolstop.com/2002v1/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|53|12|9|16|2|103|0|74|
+|rj187007.user.veloxzone.com.br|200.149.187.7|http://www.textbased.com/%7Eminimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows 98)|21|49|9|16|2|103|0|74|
+|cache51.156ce.scvmaxonline.com.sg|202.156.2.51|http://system.coolstop.com/2001v2/best_of_the_cool/||Mozilla/4.0 (compatible; MSIE 5.0; Windows 98) Opera 6.01  [en]|44|56|9|16|2|103|0|74|
+|host81-205.pool80181.interbusiness.it|80.181.205.81|http://www.recycledarea.co.uk/blogg/deconstruction.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|15|2|10|16|2|103|0|74|
+|host81-205.pool80181.interbusiness.it|80.181.205.81|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|44|7|10|16|2|103|0|74|
+|200-158-194-109.dsl.telesp.net.br|200.158.194.109|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC)|30|22|10|16|2|103|0|74|
+|a80-126-24-229.adsl.xs4all.nl|80.126.24.229|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.21; Mac_PowerPC)|26|2|11|16|2|103|0|74|
+|cpe00a0cc2c7600-cm013010001718.cpe.net.cable.rogers.com|24.156.59.217|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 4.0)|2|4|11|16|2|103|0|74|
+|star-gw.zapsurf.com.sg|203.124.0.247|http://www.coolstop.com/2003/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461; MYSINGTEL)|59|5|12|16|2|103|0|74|
+|pc145102.stofanet.dk|212.10.80.102|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|36|29|12|16|2|103|0|74|
+|cache-edi-hsi.cableinet.co.uk|62.31.64.2|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|48|37|12|16|2|103|0|74|
+|adsl-208-191-143-0.dsl.spfdmo.swbell.net|208.191.143.0|http://www.coolstop.com/2001v2/reviews/||Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|31|11|13|16|2|103|0|74|
+|202.107.59.60|202.107.59.60|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Assistant 1.0.2.3; Hotbar 4.2.8.0)|26|27|13|16|2|103|0|74|
+|v18-14.vildanden.afb.lu.se|130.235.174.189|http://www.textbased.com/%7Eminimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows 95)|23|57|13|16|2|103|0|74|
+|72.3-136-217.adsl.skynet.be|217.136.3.72|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; TUCOWS; (R1 1.3))|3|42|14|16|2|103|0|74|
+|user141.shawus.com|65.247.224.141|http://65.54.246.250/cgi-bin/linkrd?_lang=EN&lah=5aac8d8412162b101ca29b43a9273fa7&lat=1047844092&hm___action=http%3a%2f%2fwww%2edeadbicycle%2ecom|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Hotbar 4.2.8.0)|5|49|14|16|2|103|0|74|
+|akgs20m2y142l.bc.hsia.telus.net|64.180.76.226|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Opera/7.03 (Windows 98; U)  [en]|19|24|15|16|2|103|0|74|
+|acca6fec.ipt.aol.com|172.202.111.236|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; .NET CLR 1.0.3705)|51|33|15|16|2|103|0|74|
+|dsl-182.mtcnet.net|66.43.202.182|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|58|33|15|16|2|103|0|74|
+|acca6fec.ipt.aol.com|172.202.111.236|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; .NET CLR 1.0.3705)|0|34|15|16|2|103|0|74|
+|dsl-182.mtcnet.net|66.43.202.182|http://www.deadbicycle.com/cgi-bin/list/mail.cgi|http://www.deadbicycle.com/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|40|42|15|16|2|103|0|74|
+|pool-151-203-148-57.wma.east.verizon.net|151.203.148.57|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|7|7|16|16|2|103|0|74|
+|237-68-194.cgocable.ca|205.237.68.194|http://www.textbased.com/%7Eminimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Hotbar 4.1.2.0)|29|16|16|16|2|103|0|74|
+|cdm-66-146-232-slsp.cox-internet.com|66.233.146.232|http://us.f416.mail.yahoo.com/ym/ShowLetter?MsgId=1380_730952_16535_1160_504_0_12427_-1_0&YY=20449&inc=200&order=down&sort=date&pos=0&view=&head=&box=Inbox|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|59|47|16|16|2|103|0|74|
+|user141.shawus.com|65.247.224.141|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Hotbar 4.2.8.0)|12|59|16|16|2|103|0|74|
+|host156-75.pool80180.interbusiness.it|80.180.75.156|http://www.recycledarea.co.uk/blogg/deconstruction.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|43|59|16|16|2|103|0|74|
+|c-24-127-74-199.we.client2.attbi.com|24.127.74.199|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|22|5|17|16|2|103|0|74|
+|216.40.194.23|216.40.194.23|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.3a) Gecko/20021212|10|14|17|16|2|103|0|74|
+|es093210.user.veloxzone.com.br|200.149.93.210|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|42|17|17|16|2|103|0|74|
+|h-68-165-116-54.sfldmidn.covad.net|68.165.116.54|http://www.coolstop.com/2003/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 4.0; T312461)|9|24|17|16|2|103|0|74|
+|px3nr.wp.shawcable.net|24.66.94.142|http://www.textbased.com/%7Eminimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)|25|0|18|16|2|103|0|74|
+|che-73-100.reshall.berkeley.edu|169.229.73.100|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|20|7|19|16|2|103|0|74|
+|129.171.209.59|129.171.209.59|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|24|9|19|16|2|103|0|74|
+|node113db.a2000.nl|24.132.19.219|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|25|29|19|16|2|103|0|74|
+|c-66-229-137-219.we.client2.attbi.com|66.229.137.219|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|52|3|20|16|2|103|0|74|
+|spsticckin.rh.rit.edu|129.21.137.144|http://www.textbased.com/%7Eminimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|52|18|20|16|2|103|0|74|
+|u178n107.hfx.eastlink.ca|24.222.178.107|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; Q312461)|11|53|20|16|2|103|0|74|
+|u178n107.hfx.eastlink.ca|24.222.178.107|http://www.deadbicycle.com/headphones.html|http://www.deadbicycle.com/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; Q312461)|51|56|20|16|2|103|0|74|
+|spot.merck.com|155.91.6.71|||Mozilla/3.01 (compatible;)|6|1|21|16|2|103|0|74|
+|spot.merck.com|155.91.6.71|http://www.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 4.0; H010818)|6|1|21|16|2|103|0|74|
+|cache210.156ce.scvmaxonline.com.sg|202.156.2.210|http://www.coolstop.com/2003/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461)|31|5|21|16|2|103|0|74|
+|ca-stmnca-cuda1-c7c-62.stmnca.adelphia.net|68.70.45.62|http://www.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; sureseeker.com; HomePage; AIRF)|33|46|21|16|2|103|0|74|
+|user7.net562.ua.sprint-hsd.net|65.40.247.7|http://www.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|45|46|21|16|2|103|0|74|
+|cpe-68-115-235-110.spart.sc.charter.com|68.115.235.110|http://www.coolstop.com/radio/|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.3a) Gecko/20021207 Phoenix/0.5|25|5|22|16|2|103|0|74|
+|200-101-046-176.gnace7006.dsl.brasiltelecom.net.br|200.101.46.176|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|43|9|22|16|2|103|0|74|
+|200.175.168.95|200.175.168.95|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|24|10|22|16|2|103|0|74|
+|200.103.64.23|200.103.64.23|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|50|12|22|16|2|103|0|74|
+|msomac04.registrar.unimelb.edu.au|128.250.53.147|http://www.coolstop.com/2003/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|5|14|22|16|2|103|0|74|
+|202.52.161.40|202.52.161.40|http://www.halfproject.com/news_feed.php|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)|38|40|22|16|2|103|0|74|
+|200.222.172.186|200.222.172.186|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|58|19|23|16|2|103|0|74|
+|200-147-23-140.tlf.dialuol.com.br|200.147.23.140|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)|3|40|23|16|2|103|0|74|
+|host-66-81-49-247.rev.o1.com|66.81.49.247|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.2.1) Gecko/20021130|58|57|23|16|2|103|0|74|
+|202.55.173.131|202.55.173.131|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|14|2|0|17|2|103|1|75|
+|webcacheb07a.cache.pol.co.uk|195.92.168.169|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/64 (KHTML, like Gecko) Safari/64|13|3|0|17|2|103|1|75|
+|ts46-01-qdr2566.rddng.ca.charter.com|68.116.68.21|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Hotbar 4.1.5.0)|44|17|0|17|2|103|1|75|
+|210.220.73.9|210.220.73.9|http://www.coolstop.com/2003/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|11|45|0|17|2|103|1|75|
+|c-24-118-122-41.mn.client2.attbi.com|24.118.122.41|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|35|1|1|17|2|103|1|75|
+|adsl-156-198-110.pns.bellsouth.net|66.156.198.110|http://www.coolstop.com/2003/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|35|13|1|17|2|103|1|75|
+|i216-126.nv.iinet.net.au|203.59.216.126|http://coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.2.1) Gecko/20021130|27|23|1|17|2|103|1|75|
+|proxy-v.terumo.co.jp|61.195.162.226|http://system.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)|50|43|1|17|2|103|1|75|
+|proxy-v.terumo.co.jp|61.195.162.226|http://system.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)|17|44|1|17|2|103|1|75|
+|66-74-231-36.san.rr.com|66.74.231.36|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|58|19|2|17|2|103|1|75|
+|193.132.196.9|193.132.196.9|http://www.stereotypography.com/forum_entry.php3?id=5654&ftype=2|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|2|58|3|17|2|103|1|75|
+|138.227.189.9|138.227.189.9|||Mozilla/3.01 (compatible;)|38|15|6|17|2|103|1|75|
+|sv-fw.looksmart.com|64.241.242.18|http://www.angelfire.com/sd/lou1/index.html|http://www.mtcnet.net/~nebulous/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; T312461)|7|59|16|17|2|103|1|75|
+|cbl-070.mtcnet.net|216.51.174.69|http://www.mtcnet.net/~nebulous/|http://www.mtcnet.net/~nebulous/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|41|21|12|18|2|103|2|76|
+|pool-141-149-57-230.ny325.east.verizon.net|141.149.57.230|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC)|15|22|12|18|2|103|2|76|
+|vpn.mrv.com|64.166.213.5|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC)|59|26|12|18|2|103|2|76|
+|h-68-165-143-133.nycmny83.covad.net|68.165.143.133|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|15|27|12|18|2|103|2|76|
+|d207.181.40.20.mcc.cc.ms.us|207.181.40.20|http://dir.yahoo.com/new_additions/20030317/Arts/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Windows 98; DigExt)|49|27|12|18|2|103|2|76|
+|henderson-grime-gw.hiway.co.uk|195.12.31.10|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|6|34|12|18|2|103|2|76|
+|204.167.145.56|204.167.145.56|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|44|36|12|18|2|103|2|76|
+|dslr-13.madison.chorus.net|216.165.182.13|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.21; Mac_PowerPC)|26|37|12|18|2|103|2|76|
+|204.167.145.56|204.167.145.56|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|59|37|12|18|2|103|2|76|
+|217.26.77.31|217.26.77.31|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461)|34|40|12|18|2|103|2|76|
+|cbl-070.mtcnet.net|216.51.174.69|http://www.mtcnet.net/~nebulous/|http://www.mtcnet.net/~nebulous/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|46|25|23|18|2|103|2|76|
+|aoh33h0y130c.ab.hsia.telus.net|137.186.196.189|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; TELUS PLAnet Internet (http://www.telusplanet.net))|40|56|23|18|2|103|2|76|
+|12-233-234-113.client.attbi.com|12.233.234.113|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.0.1) Gecko/20021220 Chimera/0.6+|23|31|0|19|2|103|3|77|
+|12-228-181-145.client.attbi.com|12.228.181.145|http://dir.yahoo.com/new_additions/20030317/Arts/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|48|39|0|19|2|103|3|77|
+|12-225-132-96.client.attbi.com|12.225.132.96|http://dir.yahoo.com/new_additions/20030317/Arts/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461)|23|49|0|19|2|103|3|77|
+|adsl-64-166-198-214.dsl.lsan03.pacbell.net|64.166.198.214|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/64 (KHTML, like Gecko) Safari/64|12|24|1|19|2|103|3|77|
+|wp218.internetdsl.tpnet.pl|80.55.197.218|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|5|32|1|19|2|103|3|77|
+|proxy.integrity.com|63.251.172.50|http://www.coolstop.com/2003/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|30|44|1|19|2|103|3|77|
+|164.b.002.pth.iprimus.net.au|210.50.109.164|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|13|48|1|19|2|103|3|77|
+|desm-14-15.dialup.netins.net|167.142.16.144|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|40|53|1|19|2|103|3|77|
+|desm-01-87.dialup.netins.net|167.142.10.88|http://www.deadbicycle.com/headphones.html|http://www.deadbicycle.com/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|19|1|2|19|2|103|3|77|
+|12-218-151-38.client.mchsi.com|12.218.151.38|http://my.yahoo.com/p/2.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|32|3|2|19|2|103|3|77|
+|dsl-62-3-70-219.zen.co.uk|62.3.70.219|http://system.coolstop.com/2003/news/news.shtml|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.3a) Gecko/20021207 Phoenix/0.5|24|19|2|19|2|103|3|77|
+|ac819bce.ipt.aol.com|172.129.155.206|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|30|20|2|19|2|103|3|77|
+|069.b.002.brs.iprimus.net.au|210.50.61.69|http://www.textbased.com/%7Eminimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|33|43|2|19|2|103|3|77|
+|na-148-243-51-3.na.avantel.net.mx|148.243.56.3|http://dir.yahoo.com/new_additions/20030317/Arts/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|50|53|2|19|2|103|3|77|
+|pppoe1097.gh.centurytel.net|64.91.48.119|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|37|56|2|19|2|103|3|77|
+|207.224.99.130|207.224.99.130|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/60 (like Gecko) Safari/60|58|28|3|19|2|103|3|77|
+|136.8.159.11|136.8.159.11|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.14; Mac_PowerPC)|35|7|4|19|2|103|3|77|
+|cpe00104b285185-cm014210008608.cpe.net.cable.rogers.com|24.112.13.104|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|18|22|4|19|2|103|3|77|
+|213.31.17.38|213.31.17.38|||Mozilla/3.01 (compatible;)|15|34|4|19|2|103|3|77|
+|213.31.17.38|213.31.17.38|||Mozilla/3.01 (compatible;)|17|34|4|19|2|103|3|77|
+|213.31.17.38|213.31.17.38|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; MSIE 5.5; Windows 2000) Opera 7.0  [en]|19|34|4|19|2|103|3|77|
+|lhdynip253.lionhead.com|212.250.16.253|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|16|45|4|19|2|103|3|77|
+|cp280379-a.roemd1.lb.home.nl|217.122.12.236|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; nl-nl) AppleWebKit/60 (like Gecko) Safari/60|8|48|4|19|2|103|3|77|
+|firewall.netxtra.net|195.224.48.2|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|5|32|5|19|2|103|3|77|
+|celsius.noos.net|212.198.0.97|http://pixelsurgeon.leafinternet.com/beans/psnews.jsp||Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|17|37|5|19|2|103|3|77|
+|pc-80-194-216-132-ga.blueyonder.co.uk|80.194.216.132|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; .NET CLR 1.0.3705)|23|37|5|19|2|103|3|77|
+|cpe-144-132-252-182.nsw.bigpond.net.au|144.132.252.182|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/60 (like Gecko) Safari/60|39|54|5|19|2|103|3|77|
+|217.218.247.10|217.218.247.10|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 4.01; Windows 98;CP=MS)|31|3|6|19|2|103|3|77|
+|adsl-158-164-106.mia.bellsouth.net|68.158.164.106|http://dir.yahoo.com/new_additions/20030317/Arts/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|49|15|6|19|2|103|3|77|
+|235.red-80-58-33.pooles.rima-tde.net|80.58.33.235|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|27|36|6|19|2|103|3|77|
+|62.70.87.98|62.70.87.98|http://www.coolstop.com/2002v1/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|57|46|6|19|2|103|3|77|
+|62.70.87.98|62.70.87.98|http://www.coolstop.com/2002v1/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|13|47|6|19|2|103|3|77|
+|wwwcache2.livjm.ac.uk|150.204.254.49|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|5|2|7|19|2|103|3|77|
+|12-211-157-45.client.attbi.com|12.211.157.45|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|10|16|7|19|2|103|3|77|
+|62.17.245.86|62.17.245.86|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Tucows)|6|34|7|19|2|103|3|77|
+|212.104.132.66|212.104.132.66|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|18|3|8|19|2|103|3|77|
+|195.234.136.13|195.234.136.13|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|45|3|8|19|2|103|3|77|
+|200-204-171-164.speedyterra.com.br|200.204.171.164|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|58|7|8|19|2|103|3|77|
+|12-222-153-238.client.insightbb.com|12.222.153.238|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC)|52|35|8|19|2|103|3|77|
+|usen-219x113x209x119.ap-us.usen.ad.jp|219.113.209.119|http://www.coolstop.com/2002v1/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0; .NET CLR 1.0.3705)|13|49|8|19|2|103|3|77|
+|firewall.digital-animations.com|62.253.177.100|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Digital Animations Group plc)|47|55|8|19|2|103|3|77|
+|62.79.74.81|62.79.74.81|http://system.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|54|57|8|19|2|103|3|77|
+|ts16-057.dublin.indigo.ie|194.125.177.57|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows 98)|5|2|9|19|2|103|3|77|
+|63.121.150.38|63.121.150.38|http://my.yahoo.com/p/2.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461; YComp 5.0.2.6)|13|8|9|19|2|103|3|77|
+|207.4.189.212|207.4.189.212|http://www.coolstop.com/2003/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461; .NET CLR 1.0.3705)|40|10|9|19|2|103|3|77|
+|63.121.150.38|63.121.150.38|http://www.deadbicycle.com/cgi-bin/list/mail.cgi|http://www.deadbicycle.com/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461; YComp 5.0.2.6)|41|10|9|19|2|103|3|77|
+|194.119.151.36|194.119.151.36|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.0.2) Gecko/20021120 Netscape/7.01|43|24|9|19|2|103|3|77|
+|cc240029-a.groni1.gr.home.nl|217.121.243.114|http://system.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|37|30|9|19|2|103|3|77|
+|h24-71-117-18.ss.shawcable.net|24.71.117.18|http://ca.my.yahoo.com/p/d.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; sureseeker.com; AtHome0107; T312461; Q312461; .NET CLR 1.0.3705)|12|32|9|19|2|103|3|77|
+|client-207-174.hku.nl|194.171.207.174|http://195.82.99.51/beans/psnewsarch.jsp?date=17-03-2003|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|34|38|9|19|2|103|3|77|
+|client-207-174.hku.nl|194.171.207.174|http://195.82.99.51/beans/psnewsarch.jsp?date=17-03-2003|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|39|38|9|19|2|103|3|77|
+|client-207-174.hku.nl|194.171.207.174|http://195.82.99.51/beans/psnewsarch.jsp?date=17-03-2003|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|41|38|9|19|2|103|3|77|
+|195.166.96.227|195.166.96.227|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|14|52|9|19|2|103|3|77|
+|codpiece.goodtech.co.uk|217.158.189.253|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|45|53|9|19|2|103|3|77|
+|osmannoro.dada.it|195.110.97.11|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|8|15|10|19|2|103|3|77|
+|fw.jabba.fi|212.213.155.82|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC; en-US; rv:0.9.4.1) Gecko/20020508 Netscape6/6.2.3|52|20|10|19|2|103|3|77|
+|moni.intuitionweb.com|62.17.163.184|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)|47|22|10|19|2|103|3|77|
+|dialup-67.74.24.205.dial1.kansascity.level3.net|67.74.24.205|http://my.yahoo.com/||Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|3|45|10|19|2|103|3|77|
+|afabret.etseq.urv.es|193.144.17.246|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/5.0 (X11; U; Linux i686; en-US; rv:0.9.4) Gecko/20011126 Netscape6/6.2.1|57|47|10|19|2|103|3|77|
+|63.117.97.163|63.117.97.163|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461; .NET CLR 1.0.3705)|23|50|10|19|2|103|3|77|
+|wacken59.wohnheim.uni-kl.de|131.246.233.68|http://system.coolstop.com/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; MSIE 5.5; Windows XP) Opera 7.0  [en]|36|27|12|19|2|103|3|77|
+|psjmail.beaufort.k12.nc.us|207.4.4.162|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Q312461)|56|27|12|19|2|103|3|77|
+|ool-43571cfe.dyn.optonline.net|67.87.28.254|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/60 (like Gecko) Safari/60|40|29|12|19|2|103|3|77|
+|207.164.171.218|207.164.171.218|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Hotbar 3.0)|44|32|12|19|2|103|3|77|
+|65.205.146.8|65.205.146.8|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0; H010818)|20|57|12|19|2|103|3|77|
+|12.242.161.165|12.242.161.165|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; MSOCD; Q312461)|31|16|13|19|2|103|3|77|
+|serial02-transware.net.weblink.ie|194.149.77.50|http://www.coolstop.com/2003/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)|51|16|13|19|2|103|3|77|
+|d207.181.39.20.jcjc.cc.ms.us|207.181.39.20|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|38|21|13|19|2|103|3|77|
+|d207.181.39.20.jcjc.cc.ms.us|207.181.39.20|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|28|22|13|19|2|103|3|77|
+|12.154.253.254|12.154.253.254|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.16; Mac_PowerPC)|4|24|13|19|2|103|3|77|
+|workstation232.seacorp.com|204.17.97.232|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0; YComp 5.0.0.0)|46|36|13|19|2|103|3|77|
+|acb3ff72.ipt.aol.com|172.179.255.114|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461)|41|4|14|19|2|103|3|77|
+|64.132.129.189|64.132.129.189|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|2|7|14|19|2|103|3|77|
+|64.132.129.189|64.132.129.189|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|10|8|14|19|2|103|3|77|
+|p69-100.acedsl.com|66.114.69.100|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.16; Mac_PowerPC)|25|18|14|19|2|103|3|77|
+|host238-228.pool80182.interbusiness.it|80.182.228.238|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|37|30|14|19|2|103|3|77|
+|msp-65-29-1-21.mn.rr.com|65.29.1.21|http://system.coolstop.com/2003/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|23|34|14|19|2|103|3|77|
+|dhcp065-024-046-046.columbus.rr.com|65.24.46.46|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|15|36|14|19|2|103|3|77|
+|host213-122-124-90.in-addr.btopenworld.com|213.122.124.90|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows 98)|10|43|14|19|2|103|3|77|
+|212.248.140.54|212.248.140.54|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|46|54|14|19|2|103|3|77|
+|2-205-106-207.hosted-by.intermediainc.com|207.106.205.2|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Hotbar 4.1.8.0)|36|12|15|19|2|103|3|77|
+|ppp-225-56-114.friaco.access.uk.tiscali.com|80.225.56.114|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|32|14|15|19|2|103|3|77|
+|fw.lookandfeel.com|12.108.129.2|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|51|26|15|19|2|103|3|77|
+|host208-247.pool80181.interbusiness.it|80.181.247.208|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; it-it) AppleWebKit/62 (like Gecko) Safari/62|45|41|15|19|2|103|3|77|
+|adsl-64-161-201-107.dsl.snfc21.pacbell.net|64.161.201.107|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.15; Mac_PowerPC)|3|47|15|19|2|103|3|77|
+|adsluser-382.adsl.ttnet.net.tr|212.174.49.126|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|6|54|15|19|2|103|3|77|
+|63.121.150.38|63.121.150.38|http://my.yahoo.com/p/2.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461; YComp 5.0.2.6)|35|17|16|19|2|103|3|77|
+|mvx-200-196-61-237.mundivox.com|200.196.62.237|http://www.eyepunch.com/i_news.asp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|34|23|16|19|2|103|3|77|
+|pd9509617.dip.t-dialin.net|217.80.150.23|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; de-de) AppleWebKit/64 (KHTML, like Gecko) Safari/64|27|45|16|19|2|103|3|77|
+|user-112u7eq.biz.mindspring.com|66.47.29.218|http://my.yahoo.com/p/d.html?v|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC)|48|52|16|19|2|103|3|77|
+|66-50-68-157.prtc.net|66.50.68.157|http://my.yahoo.com/p/d.html?v|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.16; Mac_PowerPC)|25|56|16|19|2|103|3|77|
+|pool-157.wcvt.com|65.19.86.157|http://www.coolstop.com/2003/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Hotbar 4.0)|42|0|17|19|2|103|3|77|
+|dsl081-248-175.sfo1.dsl.speakeasy.net|64.81.248.175|http://www.k10k.net/vipadmin/scripts/externallinks.asp|http://deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; (R1 1.1))|4|9|17|19|2|103|3|77|
+|192.61.109.127|192.61.109.127|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; .NET CLR 1.0.3705)|35|9|17|19|2|103|3|77|
+|host217-41-37-235.in-addr.btopenworld.com|217.41.37.235|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; BTopenworld)|48|34|17|19|2|103|3|77|
+|lns-th2-6-81-57-182-57.adsl.proxad.net|81.57.182.57|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; FREE)|39|41|17|19|2|103|3|77|
+|12.104.126.52|12.104.126.52|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; YComp 5.0.2.6)|17|47|17|19|2|103|3|77|
+|intech.ginet.cz|62.77.72.148|http://www.pixelsurgeon.com/news/||Mozilla/4.0 (compatible; MSIE 6.0; MSIE 5.5; Windows NT 5.0) Opera 7.0  [en] WebWasher 3.3|46|48|17|19|2|103|3|77|
+|intech.ginet.cz|62.77.72.148|||Mozilla/4.0 (compatible; MSIE 6.0; MSIE 5.5; Windows NT 5.0) Opera 7.0  [en] WebWasher 3.3|14|50|17|19|2|103|3|77|
+|adsl-63-198-192-173.dsl.snfc21.pacbell.net|63.198.192.173|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.3) Gecko/20030312|5|0|18|19|2|103|3|77|
+|adsl-63-198-192-173.dsl.snfc21.pacbell.net|63.198.192.173|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.3) Gecko/20030312|18|2|18|19|2|103|3|77|
+|adsl-63-198-192-173.dsl.snfc21.pacbell.net|63.198.192.173|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.3) Gecko/20030312|32|2|18|19|2|103|3|77|
+|intech.ginet.cz|62.77.72.148|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.0.2) Gecko/20021120 Netscape/7.01|24|4|18|19|2|103|3|77|
+|user-0c93vn7.cable.mindspring.com|24.145.254.231|http://host21.hrwebservices.net/~stereot/newsframe4.php?feed=pixelsurgeon|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.21; Mac_PowerPC)|0|8|18|19|2|103|3|77|
+|pc3-nfds1-6-cust111.nott.cable.ntl.com|80.6.194.111|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; The Free Internet)|11|11|18|19|2|103|3|77|
+|pcp02996179pcs.stclar01.mi.comcast.net|68.40.28.229|http://board.shodown.net/viewtopic.php?t=351|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Avant Browser [avantbrowser.com])|14|18|18|19|2|103|3|77|
+|pcp02996179pcs.stclar01.mi.comcast.net|68.40.28.229|http://www.deadbicycle.com/headphones.html|http://www.deadbicycle.com/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Avant Browser [avantbrowser.com])|35|19|18|19|2|103|3|77|
+|ip68-104-75-181.lv.lv.cox.net|68.104.75.181|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; (R1 1.3))|12|15|21|19|2|103|3|77|
+|dpc69191201.direcpc.com|69.19.1.201|http://www.textbased.com/%7Eminimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|19|20|22|19|2|103|3|77|
+|c68.115.91.27.roc.mn.charter.com|68.115.91.27|http://195.82.99.51/beans/psnews.jsp|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.16; Mac_PowerPC)|30|14|23|19|2|103|3|77|
+|h24-77-101-43.vc.shawcable.net|24.77.101.43|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/60 (like Gecko) Safari/60|32|32|23|19|2|103|3|77|
+|chi1292-154-48.ppp.netnitco.net|216.176.154.48|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|19|9|1|20|2|103|4|78|
+|dialup-67.25.10.47.dial1.neworleans1.level3.net|67.25.10.47|http://dir.yahoo.com/new_additions/20030317/Arts/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|25|36|1|20|2|103|4|78|
+|cf1-new.utc.com|192.249.47.9|http://my.yahoo.com/p/2.html|http://www.deadbicycle.com/|Mozilla/4.08 [en] (WinNT; U ;Nav)|36|32|7|20|2|103|4|78|
+|cf1-new.utc.com|192.249.47.9|http://my.yahoo.com/p/2.html|http://www.deadbicycle.com/|Mozilla/4.08 [en] (WinNT; U ;Nav)|56|32|7|20|2|103|4|78|
+|cf1-new.utc.com|192.249.47.9|http://www.deadbicycle.com/skull/global.css|http://www.deadbicycle.com/index.html|Mozilla/4.08 [en] (WinNT; U ;Nav)|1|33|7|20|2|103|4|78|
+|cf1-new.utc.com|192.249.47.9|http://www.deadbicycle.com/skull/global.css|http://www.deadbicycle.com/index.html|Mozilla/4.08 [en] (WinNT; U ;Nav)|5|33|7|20|2|103|4|78|
+|cf1-new.utc.com|192.249.47.9|http://www.deadbicycle.com/skull/global.css|http://www.deadbicycle.com/index.html|Mozilla/4.08 [en] (WinNT; U ;Nav)|19|33|7|20|2|103|4|78|
+|213.156.49.37|213.156.49.37|http://www.coolstop.com/2001v2/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|54|37|7|20|2|103|4|78|
+|68.80-202-104.nextgentel.com|80.202.104.68|http://uglyfatkid.violentnation.com/links.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.16; Mac_PowerPC)|32|17|8|20|2|103|4|78|
+|217.5.139.244|217.5.139.244|http://www.coolstop.com/2001v2/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|48|59|8|20|2|103|4|78|
+|c-24-127-121-94.we.client2.attbi.com|24.127.121.94|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|31|19|9|20|2|103|4|78|
+|user62.brooks.com|63.95.233.62|http://www.coolstop.com/2003/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)|50|23|9|20|2|103|4|78|
+|fcomet.singnet.com.sg|203.124.2.59|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; SINGNET/HTMLAB; Q312461)|24|44|9|20|2|103|4|78|
+|eui2ca.euskaltel.es|62.99.88.11|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|34|13|10|20|2|103|4|78|
+|ip-171-131.dtp.net.id|202.43.171.131|http://www.mohenk.com/mt/archives/2003_01.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; TUCOWS)|32|24|10|20|2|103|4|78|
+|64.207.80.30|64.207.80.30|http://www.yayhooray.com/profile/1274.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Windows 98; DigExt)|53|24|23|20|2|103|4|78|
+|61.9.12.54|61.9.12.54|http://www.coolstop.com/2003/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|54|0|0|21|2|103|5|79|
+|209.129.168.40|209.129.168.40|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.0; Mac_PowerPC)|31|7|0|21|2|103|5|79|
+|adsl-68-78-32-226.dsl.emhril.ameritech.net|68.78.32.226|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0; sbcydsl 3.12; YComp 5.0.0.0)|18|19|2|21|2|103|5|79|
+|neptun.rz-as.de|195.243.22.35|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|30|37|2|21|2|103|5|79|
+|hellnet.myslowice.artcom.pl|213.25.137.14|http://www.lounge72.com/02/viewtopic.php?t=141&highlight=battle|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; MyIE2; YComp 5.0.2.6)|8|3|3|21|2|103|5|79|
+|resnet224-69.resnet.buffalo.edu|128.205.224.69|http://my.yahoo.com/p/d.html?v|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.13; Mac_PowerPC)|15|6|8|21|2|103|5|79|
+|0-1pool57-35.nas16.kansas-city1.mo.us.da.qwest.net|65.148.57.35|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|24|8|8|21|2|103|5|79|
+|yahoobb219030021044.bbtec.net|219.30.21.44|http://uglyfatkid.violentnation.com/links.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC)|21|12|8|21|2|103|5|79|
+|218.145.25.75|218.145.25.75|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|40|18|8|21|2|103|5|79|
+|cpe-144-132-149-62.nsw.bigpond.net.au|144.132.149.62|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|57|22|8|21|2|103|5|79|
+|proxy2.dcu.ie|136.206.1.18|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.76 [en] (Windows NT 5.0; U)|37|57|8|21|2|103|5|79|
+|proxy2.dcu.ie|136.206.1.18|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.76 [en] (Windows NT 5.0; U)|45|57|8|21|2|103|5|79|
+|204.217.62.47|204.217.62.47|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|25|36|9|21|2|103|5|79|
+|cpe0080c6f17751-cm023030001497.cpe.net.cable.rogers.com|65.49.170.100|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-us) AppleWebKit/60 (like Gecko) Safari/60|59|2|10|21|2|103|5|79|
+|bb1-galaxy.thrunet.com|210.117.67.21|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|8|38|10|21|2|103|5|79|
+|pool-151-197-5-29.phil.east.verizon.net|151.197.5.29|http://www.inliquid.com/links/links.shtml|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.21; Mac_PowerPC)|57|50|10|21|2|103|5|79|
+|62.255.241.250|62.255.241.250|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 4.0)|58|18|11|21|2|103|5|79|
+|216-99-192-237.dial.spiritone.com|216.99.192.237|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.61 (Macintosh; I; PPC)|7|34|11|21|2|103|5|79|
+|adsluser-614.adsl.ttnet.net.tr|212.174.50.102|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; i-Nav 3.0.1.0F)|39|44|11|21|2|103|5|79|
+|65-37-40-3.nrp4.roc.ny.frontiernet.net|65.37.40.3|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.16; Mac_PowerPC)|24|49|11|21|2|103|5|79|
+|82-43-50-153.cable.ubr03.croy.blueyonder.co.uk|82.43.50.153|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|35|11|13|21|2|103|5|79|
+|cache1-herm.server.ntli.net|80.3.32.4|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461; .NET CLR 1.0.3705)|47|11|13|21|2|103|5|79|
+|dhcp-103-90.bgsu.edu|129.1.103.90|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.16; Mac_PowerPC)|17|21|13|21|2|103|5|79|
+|edmund.cis.mcmaster.ca|130.113.128.11|http://board.shodown.net/viewtopic.php?t=351&sid=1b6b7764b6449ce4da75b910bb64a822|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|39|15|14|21|2|103|5|79|
+|216.94.112.103|216.94.112.103|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|29|27|14|21|2|103|5|79|
+|65.163.58.73|65.163.58.73|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; T312461)|34|29|14|21|2|103|5|79|
+|213.24.132.37|213.24.132.37|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|22|44|14|21|2|103|5|79|
+|adsl-66-136-177-142.dsl.stlsmo.swbell.net|66.136.177.142|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; (R1 1.3))|58|45|15|21|2|103|5|79|
+|user-2ive4ad.dialup.mindspring.com|165.247.17.77|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.15; Mac_PowerPC)|54|5|16|21|2|103|5|79|
+|64-42-68-22.atgi.net|64.42.68.22|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|50|37|16|21|2|103|5|79|
+|h-66-134-24-202.nycmny83.covad.net|66.134.24.202|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|57|1|17|21|2|103|5|79|
+|webcacheh06a.cache.pol.co.uk|195.92.67.70|http://dir.yahoo.com/Arts/Visual_Arts/Web_Art/Web_Installations/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|13|37|17|21|2|103|5|79|
+|cs6669149-134.houston.rr.com|66.69.149.134|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.22; Mac_PowerPC)|35|13|18|21|2|103|5|79|
+|host-216-78-32-202.ath.bellsouth.net|216.78.32.202|http://my.yahoo.com/p/d.html?v|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Avant Browser [avantbrowser.com]; .NET CLR 1.0.3705)|19|14|18|21|2|103|5|79|
+|sdn-ap-010masprip0056.dialsprint.net|63.186.160.56|http://search.msn.com/results.aspx?ps=ba%3d(0.15)0(.)0.......%26co%3d(0.15)4(0.1)3.200.2.5.10.3..%26pn%3d1%26rd%3d0%26&q=skull+and+crossbones+graphics&ck_sc=1&ck_af=0|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; (R1 1.1); MSN 8.0; MSNbMSNI; MSNmen-us; MSNcIA)|35|18|18|21|2|103|5|79|
+|host-216-78-32-202.ath.bellsouth.net|216.78.32.202|http://www.deadbicycle.com/cgi-bin/list/mail.cgi|http://www.deadbicycle.com/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Avant Browser [avantbrowser.com]; .NET CLR 1.0.3705)|9|21|18|21|2|103|5|79|
+|host-216-78-32-202.ath.bellsouth.net|216.78.32.202|http://www.deadbicycle.com/headphones.html|http://www.deadbicycle.com/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Avant Browser [avantbrowser.com]; .NET CLR 1.0.3705)|14|25|18|21|2|103|5|79|
+|12-207-136-237.client.attbi.com|12.207.136.237|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|44|27|18|21|2|103|5|79|
+|63.204.205.222|63.204.205.222|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)|47|12|19|21|2|103|5|79|
+|chcgil2-ar7-4-46-244-155.chcgil2.dsl-verizon.net|4.46.244.155|http://my.yahoo.com/p/3.html|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98)|22|36|20|21|2|103|5|79|
+|cpe-144-132-190-253.nsw.bigpond.net.au|144.132.190.253|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; APC)|47|22|21|21|2|103|5|79|
+|ip68-8-172-176.sd.sd.cox.net|68.8.172.176|http://www.coolstop.com/2003/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Cox High Speed Internet Customer)|22|1|22|21|2|103|5|79|
+|ip68-8-172-176.sd.sd.cox.net|68.8.172.176|http://www.deadbicycle.com/cgi-bin/list/mail.cgi|http://www.deadbicycle.com/index.html|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Cox High Speed Internet Customer)|2|7|22|21|2|103|5|79|
+|ip68-8-172-176.sd.sd.cox.net|68.8.172.176|http://www.deadbicycle.com/cgi-bin/list/mail.cgi|http://www.deadbicycle.com/index.html|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Cox High Speed Internet Customer)|1|8|22|21|2|103|5|79|
+|ip68-8-172-176.sd.sd.cox.net|68.8.172.176|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Cox High Speed Internet Customer)|31|8|22|21|2|103|5|79|
+|ip68-8-172-176.sd.sd.cox.net|68.8.172.176|http://3.avatarreview.com:8081/SwampTrailer/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Cox High Speed Internet Customer)|3|12|22|21|2|103|5|79|
+|dsc06-ivn-ca-2-143.rasserver.net|206.214.113.143|http://3.avatarreview.com:8081/SwampTrailer/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90; MSN 8.0; MSNbBBYZ; MSNmen-us; MSNcIA)|28|36|22|21|2|103|5|79|
+|66-50-65-254.prtc.net|66.50.65.254|http://my.yahoo.com/|http://www.deadbicycle.com/|Mozilla/4.77C-CCK-MCD {C-UDP; EBM-APPLE} (Macintosh; U; PPC)|1|46|22|21|2|103|5|79|
+|ip68-8-172-176.sd.sd.cox.net|68.8.172.176|http://3.avatarreview.com:8081/SwampTrailer/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98; Cox High Speed Internet Customer)|1|48|22|21|2|103|5|79|
+|ool-4355a1fd.dyn.optonline.net|67.85.161.253|http://www.deadbicycle.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|2|55|22|21|2|103|5|79|
+|cable-8-220.sssnet.com|24.140.8.220|http://dir.yahoo.com/new_additions/20030317/Arts/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; YComp 5.0.0.0)|14|33|23|21|2|103|5|79|
+|h-68-164-35-223.nycmny83.covad.net|68.164.35.223|http://3.avatarreview.com:8081/SwampTrailer/||Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|51|35|23|21|2|103|5|79|
+|adsl-81-174-56.mcn.bellsouth.net|65.81.174.56|http://3.avatarreview.com:8081/swamptrailer/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)|24|10|0|22|2|103|6|80|
+|218.25.35.68|218.25.35.68|http://www.coolstop.com/2003/best_of_the_cool/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0)|24|40|0|22|2|103|6|80|
+|pcp02219902pcs.echryh01.nj.comcast.net|68.46.108.56|http://dir.yahoo.com/new_additions/20030317/Arts/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|27|40|0|22|2|103|6|80|
+|pcp02219902pcs.echryh01.nj.comcast.net|68.46.108.56|http://dir.yahoo.com/new_additions/20030317/Arts/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|8|42|0|22|2|103|6|80|
+|cdm-66-213-188-slsp.cox-internet.com|66.76.213.188|http://www.alteredfocus.com/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows 98)|21|48|0|22|2|103|6|80|
+|212.74.15.138|212.74.15.138|http://uglyfatkid.violentnation.com/links.html|http://www.deadbicycle.com/|Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.0.0) Gecko/20020530|24|51|0|22|2|103|6|80|
+|202.155.49.178|202.155.49.178|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)|13|54|0|22|2|103|6|80|
+|evrtwa1-ar9-4-65-254-252.evrtwa1.dsl-verizon.net|4.65.254.252|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|11|14|2|22|2|103|6|80|
+|sdn-ap-010castocp0021.dialsprint.net|63.187.96.21|http://3.avatarreview.com:8081/SwampTrailer/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.01; Windows 98)|36|24|2|22|2|103|6|80|
+|adsl-67-39-177-122.dsl.chcgil.ameritech.net|67.39.177.122|http://www.coolstop.com/2003/news/news.shtml|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)|2|13|3|22|2|103|6|80|
+|adsl-67-39-177-122.dsl.chcgil.ameritech.net|67.39.177.122|http://www.coolstop.com/2003/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)|31|23|3|22|2|103|6|80|
+|adsl-67-39-177-122.dsl.chcgil.ameritech.net|67.39.177.122|http://www.coolstop.com/2003/reviews/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)|0|24|3|22|2|103|6|80|
+|j3170.inktomisearch.com|66.196.72.80|||Mozilla/5.0 (Slurp/cat; slurp@inktomi.com; http://www.inktomi.com/slurp.html)|35|14|3|25|2|103|2|83|
+|209.68.98.14|209.68.98.14|http://www.angelfire.com/sd/lou1/index.html|http://www.mtcnet.net/~nebulous/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 4.0)|39|21|14|26|2|103|3|84|
+|adsl-66-120-57-83.dsl.lsan03.pacbell.net|66.120.57.83|http://www.google.com/search?hl=en&lr=&ie=UTF-8&oe=UTF-8&q=deadbicycle|http://www.mtcnet.net/~nebulous/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|5|50|15|26|2|103|3|84|
+|0-1pool196-131.nas6.columbus1.oh.us.da.qwest.net|63.155.196.131|http://www.deadbicycle.com/noise/index.html|http://www.deadbicycle.com/noise/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|11|40|19|30|2|103|0|88|
+|nat43-81.mpoweredpc.net|142.177.43.81|http://www.deadbicycle.com/lost/index.html|http://www.deadbicycle.com/noise/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows 98; Win 9x 4.90)|5|47|20|30|2|103|0|88|
+|user-38ld96k.dsl.mindspring.com|209.86.164.212|http://www.deadbicycle.com/noise/index.html|http://www.deadbicycle.com/noise/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|35|20|5|31|2|103|1|89|
+|cache4-outside-b.fw-bc.sony.com|160.33.98.119|http://www.textbased.com/~minimalist/|http://www.deadbicycle.com/|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)|6|15|10|31|2|103|1|89|
+|crawl16-public.alexa.com|209.237.238.166|||ia_archiver|51|7|20|31|2|103|1|89|
+|12-219-109-72.client.mchsi.com|12.219.109.72|http://www.deadbicycle.com/lost/index.html|http://www.deadbicycle.com/noise/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0; Q312461)|3|13|19|1|3|103|2|90|
+|bgp01056159bgs.stclar01.mi.comcast.net|68.43.115.95|http://www.deadbicycle.com/lost/index.html|http://www.deadbicycle.com/noise/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Avant Browser [avantbrowser.com]; (R1 1.1))|32|17|21|2|3|103|3|91|
+|onetwentyone.dcr.uiuc.edu|128.174.67.184|http://books.dreambook.com/merrye/homepage.html|http://www.mtcnet.net/~nebulous/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)|28|28|20|6|3|103|0|95|
+|69.0.82.140.adsl.snet.net|69.0.82.140|http://search.yahoo.com/search?p=deadbicycle|http://www.mtcnet.net/~nebulous/|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; sbcydsl 3.12; YComp 5.0.0.0; Hotbar 4.2.8.0; .NET CLR 1.0.3705; yplus 3.01)|33|51|22|9|3|103|3|98|
+|new-on50-142.netcom.ca|142.154.153.14|http://www.angelfire.com/sd/lou1/index.html|http://www.mtcnet.net/~nebulous/|Mozilla/4.0 (compatible; MSIE 5.0; Windows 98; DigExt)|22|38|23|11|3|103|5|100|
+|cpe00062571a45a-cm014300106086.cpe.net.cable.rogers.com|24.114.158.223|http://www.deaddeaddead.com/lost/index.html|http://www.deaddeaddead.com/noise/index.html|Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705)|24|8|2|13|3|103|0|102|
+|138.28.9.229|138.28.9.229|http://www.deaddeaddead.com/lost/index.html|http://www.deaddeaddead.com/noise/index.html|Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)|27|51|3|13|3|103|0|102|

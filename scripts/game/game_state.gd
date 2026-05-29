@@ -9,9 +9,13 @@ signal xp_changed(value: float)
 signal panhandle_changed()
 signal message_requested(text: String)
 signal world_event_changed()
+signal life_changed(value: float)
+signal player_died
 
 const START_MONEY := 8
 const START_CLOCK := 1380
+const START_LIFE := 100.0
+const MAX_LIFE := 100.0
 const PANHANDLE_SECONDS := 300
 const SAVE_PATH := "user://doom_dance_save.cfg"
 const FENCE_MAN_CLOCK := 157
@@ -20,6 +24,7 @@ const MINUTES_PER_TRAVEL := 12
 var money: int = START_MONEY
 var clock_minutes: int = START_CLOCK
 var xp: float = 0.0
+var life: float = START_LIFE
 var inventory: Array[String] = []
 var collected_flags: Dictionary = {}
 var discovered_collectibles: Array[String] = []
@@ -38,6 +43,7 @@ func _serialize_run() -> Dictionary:
 		"money": money,
 		"clock_minutes": clock_minutes,
 		"xp": xp,
+		"life": life,
 		"inventory": inventory.duplicate(),
 		"collected_flags": collected_flags.duplicate(),
 		"discovered_collectibles": discovered_collectibles.duplicate(),
@@ -52,6 +58,7 @@ func _apply_save(data: Dictionary) -> void:
 	money = int(data.get("money", START_MONEY))
 	clock_minutes = int(data.get("clock_minutes", START_CLOCK))
 	xp = float(data.get("xp", 0.0))
+	life = float(data.get("life", START_LIFE))
 	inventory.clear()
 	var raw_inv: Variant = data.get("inventory", [])
 	if raw_inv is Array:
@@ -79,6 +86,7 @@ func reset_run() -> void:
 	money = START_MONEY
 	clock_minutes = START_CLOCK
 	xp = 0.0
+	life = START_LIFE
 	inventory.clear()
 	collected_flags.clear()
 	discovered_collectibles.clear()
@@ -97,6 +105,64 @@ func money_display() -> String:
 
 func time_display() -> String:
 	return DoomTypography.format_time(clock_minutes)
+
+func life_display() -> String:
+	return "LIFE %d" % int(roundf(life))
+
+func apply_page_life(page_id: String, page: Dictionary) -> void:
+	if page.has("life_delta"):
+		adjust_life(float(page.get("life_delta", 0.0)))
+		return
+	if page.has("life_min") and page.has("life_max"):
+		var lo: float = float(page.get("life_min", -10.0))
+		var hi: float = float(page.get("life_max", 5.0))
+		adjust_life(randf_range(lo, hi))
+		return
+	adjust_life(_default_page_life_roll(page_id, page))
+
+func _default_page_life_roll(page_id: String, page: Dictionary) -> float:
+	var low: float = -10.0
+	var high: float = 5.0
+	if bool(page.get("unstable", false)):
+		low -= 8.0
+		high -= 2.0
+	if bool(page.get("hidden", false)):
+		low -= 12.0
+		high -= 4.0
+	if page_id in _dangerous_page_ids():
+		low -= 18.0
+		high -= 6.0
+	elif page_id in _calm_page_ids():
+		low += 4.0
+		high += 8.0
+	return randf_range(low, high)
+
+func _dangerous_page_ids() -> Array[String]:
+	return [
+		"failure", "void", "murder", "broadcastpanic", "hidden", "bad",
+		"violent", "incisions", "lung", "mad", "deaddarkness", "no_exit",
+	]
+
+func _calm_page_ids() -> Array[String]:
+	return ["flowers", "happy", "money", "tea", "yard_sale"]
+
+func adjust_life(amount: float) -> void:
+	if amount == 0.0:
+		return
+	life = clampf(life + amount, 0.0, MAX_LIFE)
+	life_changed.emit(life)
+	_save()
+	if life <= 0.0:
+		_handle_death()
+
+func reset_life() -> void:
+	life = START_LIFE
+	life_changed.emit(life)
+	_save()
+
+func _handle_death() -> void:
+	reset_life()
+	player_died.emit()
 
 func inventory_display() -> String:
 	return DoomTypography.format_inventory(inventory)
@@ -320,6 +386,7 @@ func _emit_all() -> void:
 	money_changed.emit(money)
 	time_changed.emit(clock_minutes)
 	xp_changed.emit(xp)
+	life_changed.emit(life)
 	inventory_changed.emit(inventory.duplicate())
 	collections_changed.emit()
 	panhandle_changed.emit()
@@ -352,6 +419,7 @@ func _load_save() -> void:
 		"money": cfg.get_value("run", "money", START_MONEY),
 		"clock_minutes": cfg.get_value("run", "clock_minutes", START_CLOCK),
 		"xp": cfg.get_value("run", "xp", 0.0),
+		"life": cfg.get_value("run", "life", START_LIFE),
 		"inventory": cfg.get_value("run", "inventory", []),
 		"collected_flags": cfg.get_value("run", "collected_flags", {}),
 		"discovered_collectibles": cfg.get_value("run", "discovered_collectibles", []),

@@ -1,0 +1,52 @@
+al:Alabama
+ak:Alaska
+ar:Arkansas
+az:Arizona
+ca:California
+co:Colorado
+ct:Connecticut
+dc:District of Columbia
+de:Delaware
+fl:Florida
+ga:Georgia
+hi:Hawaii
+id:Idaho
+ia:Iowa
+il:Illinois
+in:Indiana
+ks:Kansas
+ky:Kentucky
+la:Louisiana
+ma:Massachusetts
+md:Maryland
+me:Maine
+mi:Michigan
+mo:Missouri
+mn:Minnesota
+ms:Mississippi
+mt:Montana
+nc:North Carolina
+nd:North Dakota
+ne:Nebraska
+nh:New Hampshire
+nj:New Jersey
+nm:New Mexico
+ny:New York
+nv:Nevada
+oh:Ohio
+ok:Oklahoma
+or:Oregon
+pa:Pennsylvania
+pr:Puerto Rico
+ri:Rhode Island
+sc:South Carolina
+sd:South Dakota
+tn:Tennessee
+tx:Texas
+ut:Utah
+va:Virginia
+vt:Vermont
+wa:Washington
+wi:Wisconsin
+wv:West Virginia
+wy:Wyoming

@@ -1,0 +1,8 @@
+com:Commercial
+co:Commercial
+edu:Educational
+gov:Government
+net:Network Infrastructure
+org:Nonprofit
+or:Nonprofit
+mil:Military

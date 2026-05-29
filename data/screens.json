@@ -2,7 +2,6 @@
   "screens": {
     "impound_lot": {
       "header": "KENSINGTON SALVAGE YARD",
-      "transition_title": "KENSINGTON\nSALVAGE YARD",
       "background_day": "res://generated images/kensington salvage yard day.png",
       "background_night": "res://generated images/doomdance impound wakeup.png",
       "overlays_day": [],
@@ -15,23 +14,21 @@
       "hotspots": [
         {
           "id": "body",
-          "label": "BODY",
           "rect": [0.08, 0.52, 0.38, 0.38],
           "action": "prompt",
-          "text": "You woke up drunk. It's raining again."
+          "text": "you woke up drunk. it's raining again."
         },
         {
           "id": "office",
-          "label": "OFFICE",
           "rect": [0.62, 0.32, 0.36, 0.55],
           "action": "goto",
-          "target": "liquor_store"
+          "target": "liquor_store",
+          "text": "where's ozzy?"
         }
       ]
     },
     "liquor_store": {
       "header": "KENSINGTON LIQUORS",
-      "transition_title": "KENSINGTON\nLIQUORS",
       "background_day": "res://generated images/kensington liquor store day.png",
       "background_night": "res://generated images/kensington liquor store night.png",
       "overlays_day": ["neon_lights"],
@@ -41,7 +38,21 @@
         {"center": [0.335, 0.47], "radius": 0.024, "color": [0.35, 0.55, 1.0, 1.0]},
         {"center": [0.735, 0.39], "radius": 0.028, "color": [0.15, 0.95, 0.42, 1.0]}
       ],
-      "hotspots": []
+      "hotspots": [
+        {
+          "id": "door",
+          "rect": [0.42, 0.38, 0.18, 0.48],
+          "action": "prompt",
+          "text": "locked. buzzer dead."
+        },
+        {
+          "id": "yard",
+          "rect": [0.0, 0.0, 0.12, 0.2],
+          "action": "goto",
+          "target": "impound_lot",
+          "text": "back toward the yard."
+        }
+      ]
     }
   }
 }

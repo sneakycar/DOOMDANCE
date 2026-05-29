@@ -9,6 +9,7 @@ const COLOR_INK := Color(0.92, 0.9, 0.86, 1.0)
 const COLOR_DIM := Color(0.62, 0.6, 0.56, 1.0)
 const COLOR_OBSERVATION := Color(0.88, 0.86, 0.82, 1.0)
 const COLOR_SYMBOL := Color(0.92, 0.9, 0.86, 0.55)
+const COLOR_FRAGMENT := Color(0.78, 0.76, 0.72, 0.92)
 const COLOR_TRANSITION := Color(0.95, 0.93, 0.88, 1.0)
 
 var game: Font
@@ -44,6 +45,19 @@ func stamp_happening(control: Control, size: int = 12) -> void:
 		control.add_theme_color_override("font_color", COLOR_OBSERVATION)
 	elif control is Button:
 		control.add_theme_color_override("font_color", COLOR_OBSERVATION)
+
+func stamp_fragment(control: Control, size: int = 12) -> void:
+	if game:
+		control.add_theme_font_override("font", game)
+	control.add_theme_font_size_override("font_size", size)
+	if control is Label:
+		control.add_theme_color_override("font_color", COLOR_FRAGMENT)
+		control.uppercase = false
+	elif control is Button:
+		control.add_theme_color_override("font_color", COLOR_FRAGMENT)
+
+func as_fragment(text: String) -> String:
+	return text.strip_edges().to_lower()
 
 func stamp_transition(label: Label, size: int = 28) -> void:
 	if transition:

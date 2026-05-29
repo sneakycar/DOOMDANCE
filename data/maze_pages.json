@@ -1,0 +1,5465 @@
+{
+  "generated": "DOOM DANCE maze builder",
+  "start_room": "dead",
+  "page_count": 100,
+  "pages": {
+    "15mph": {
+      "id": "15mph",
+      "title": "[deaddeaddead.com]",
+      "subtitle": "original /15mph",
+      "images": [
+        "res://archive/deadbicycle/img/blackline.gif",
+        "res://archive/deadbicycle/img/gap1.jpg",
+        "res://archive/deadbicycle/img/gap2.jpg",
+        "res://archive/deadbicycle/img/gap3.jpg",
+        "res://archive/deadbicycle/img/blackline.gif"
+      ],
+      "body": "[deaddeaddead.com] &nbsp;&nbsp;&nbsp;&nbsp;",
+      "fragments": [
+        {
+          "text": "BLACKLINE",
+          "image": "res://archive/deadbicycle/img/blackline.gif",
+          "destination": "vacuum",
+          "rarity": 0
+        },
+        {
+          "text": "GAP1",
+          "image": "res://archive/deadbicycle/img/gap1.jpg",
+          "destination": "urban",
+          "rarity": 0
+        },
+        {
+          "text": "GAP2",
+          "image": "res://archive/deadbicycle/img/gap2.jpg",
+          "destination": "redrobotlove",
+          "rarity": 0
+        },
+        {
+          "text": "GAP3",
+          "image": "res://archive/deadbicycle/img/gap3.jpg",
+          "destination": "vacuum",
+          "rarity": 0
+        },
+        {
+          "text": "BLACKLINE",
+          "image": "res://archive/deadbicycle/img/blackline.gif",
+          "destination": "urban",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "vacuum",
+          "destination": "vacuum",
+          "unstable": false
+        },
+        {
+          "label": "urban",
+          "destination": "urban",
+          "unstable": false
+        },
+        {
+          "label": "redrobotlove",
+          "destination": "redrobotlove",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "15MPH",
+      "location_screen": ""
+    },
+    "1962": {
+      "id": "1962",
+      "title": "deaddeaddead",
+      "subtitle": "original /1962",
+      "images": [],
+      "body": "deaddeaddead COWBOY&nbsp;FRIENDS | LOVE&nbsp;THE&nbsp;'L' | STAY&nbsp;ALONE DRIVE | DRAG&nbsp;RACE WEAR&nbsp;THE&nbsp;TIME&nbsp;ON&nbsp;YOUR&nbsp;WRIST SILLY, SAD, AND&nbsp;UNBELIEVABLE | HE&nbsp;HATE&nbsp;ME | ROAD&nbsp;CREW THE&nbsp;DIVORCE&nbsp;WAS&nbsp;HARD&nbsp;ON&nbsp;THE&nbsp;CHILDREN CHAPTER 11 |&nbsp; END TIME",
+      "fragments": [],
+      "links": [
+        {
+          "label": "COWBOY&nbsp;FRIENDS",
+          "destination": "cowboy",
+          "unstable": false
+        },
+        {
+          "label": "LOVE&nbsp;THE&nbsp;'L'",
+          "destination": "love",
+          "unstable": false
+        },
+        {
+          "label": "STAY&nbsp;ALONE",
+          "destination": "stereo",
+          "unstable": false
+        },
+        {
+          "label": "DRIVE",
+          "destination": "fast",
+          "unstable": false
+        },
+        {
+          "label": "DRAG&nbsp;RACE",
+          "destination": "lung",
+          "unstable": false
+        },
+        {
+          "label": "WEAR&nbsp;THE&nbsp;TIME&nbsp;ON&nbsp;YOUR&nbsp;W",
+          "destination": "bad",
+          "unstable": false
+        },
+        {
+          "label": "SILLY, SAD, AND&nbsp;UNBELIEVABLE",
+          "destination": "trash",
+          "unstable": false
+        },
+        {
+          "label": "HE&nbsp;HATE&nbsp;ME",
+          "destination": "policeman",
+          "unstable": false
+        },
+        {
+          "label": "ROAD&nbsp;CREW",
+          "destination": "grenades",
+          "unstable": false
+        },
+        {
+          "label": "THE&nbsp;DIVORCE&nbsp;WAS&nbsp;HARD&nbsp;ON&nbsp",
+          "destination": "candy",
+          "unstable": false
+        },
+        {
+          "label": "CHAPTER 11",
+          "destination": "chapter",
+          "unstable": false
+        },
+        {
+          "label": "END TIME",
+          "destination": "lost",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "1962",
+      "location_screen": ""
+    },
+    "xxvi": {
+      "id": "xxvi",
+      "title": "119 - 0",
+      "subtitle": "original /XXVI",
+      "images": [
+        "res://archive/deadbicycle/img/tecmo1.gif",
+        "res://archive/deadbicycle/img/tecmo2.gif"
+      ],
+      "body": "119 - 0 //",
+      "fragments": [
+        {
+          "text": "TECMO1",
+          "image": "res://archive/deadbicycle/img/tecmo1.gif",
+          "destination": "rodeo",
+          "rarity": 0
+        },
+        {
+          "text": "TECMO2",
+          "image": "res://archive/deadbicycle/img/tecmo2.gif",
+          "destination": "ambulence",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "rodeo",
+          "destination": "rodeo",
+          "unstable": false
+        },
+        {
+          "label": "ambulence",
+          "destination": "ambulence",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "XXVI",
+      "location_screen": ""
+    },
+    "acupuncture": {
+      "id": "acupuncture",
+      "title": "d e a d d e a d d e a d",
+      "subtitle": "original /acupuncture",
+      "images": [
+        "res://archive/deadbicycle/img/flower1b.jpg",
+        "res://archive/deadbicycle/img/flower1.jpg",
+        "res://archive/deadbicycle/img/in-love.jpg",
+        "res://archive/deadbicycle/img/flower3b.jpg",
+        "res://archive/deadbicycle/img/flower3.jpg",
+        "res://archive/deadbicycle/img/flower2b.jpg"
+      ],
+      "body": "d e a d d e a d d e a d",
+      "fragments": [
+        {
+          "text": "FLOWER1B",
+          "image": "res://archive/deadbicycle/img/flower1b.jpg",
+          "destination": "surrender",
+          "rarity": 0
+        },
+        {
+          "text": "FLOWER1",
+          "image": "res://archive/deadbicycle/img/flower1.jpg",
+          "destination": "cancer",
+          "rarity": 0
+        },
+        {
+          "text": "IN-LOVE",
+          "image": "res://archive/deadbicycle/img/in-love.jpg",
+          "destination": "headphones",
+          "rarity": 0
+        },
+        {
+          "text": "FLOWER3B",
+          "image": "res://archive/deadbicycle/img/flower3b.jpg",
+          "destination": "iron",
+          "rarity": 0
+        },
+        {
+          "text": "FLOWER3",
+          "image": "res://archive/deadbicycle/img/flower3.jpg",
+          "destination": "green",
+          "rarity": 0
+        },
+        {
+          "text": "FLOWER2B",
+          "image": "res://archive/deadbicycle/img/flower2b.jpg",
+          "destination": "arithmetic",
+          "rarity": 0
+        },
+        {
+          "text": "FLOWER2",
+          "image": "res://archive/deadbicycle/img/flower2.jpg",
+          "destination": "sunshine",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "surrender",
+          "destination": "surrender",
+          "unstable": false
+        },
+        {
+          "label": "cancer",
+          "destination": "cancer",
+          "unstable": false
+        },
+        {
+          "label": "headphones",
+          "destination": "headphones",
+          "unstable": false
+        },
+        {
+          "label": "iron",
+          "destination": "iron",
+          "unstable": false
+        },
+        {
+          "label": "green",
+          "destination": "green",
+          "unstable": false
+        },
+        {
+          "label": "arithmetic",
+          "destination": "arithmetic",
+          "unstable": false
+        },
+        {
+          "label": "sunshine",
+          "destination": "sunshine",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "ACUPUNCTURE",
+      "location_screen": ""
+    },
+    "airplanes": {
+      "id": "airplanes",
+      "title": "AIRPLANES",
+      "subtitle": "firebird / hovercraft",
+      "images": [
+        "res://archive/deadbicycle/img/firebird_08.gif",
+        "res://archive/deadbicycle/img/hovercraft.jpg"
+      ],
+      "body": "This room wants travel but only has image files.",
+      "fragments": [
+        {
+          "text": "FIREBIRD_08",
+          "image": "res://archive/deadbicycle/img/firebird_08.gif",
+          "destination": "roads",
+          "rarity": 0
+        },
+        {
+          "text": "HOVERCRAFT",
+          "image": "res://archive/deadbicycle/img/hovercraft.jpg",
+          "destination": "racecar",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "ROADS",
+          "destination": "roads",
+          "unstable": true
+        },
+        {
+          "label": "RACECAR",
+          "destination": "racecar",
+          "unstable": true
+        },
+        {
+          "label": "FIRE",
+          "destination": "fire",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "AIRPLANES",
+      "location_screen": ""
+    },
+    "ambulence": {
+      "id": "ambulence",
+      "title": "deaddeaddeaddotcom",
+      "subtitle": "original /ambulence",
+      "images": [
+        "res://archive/deadbicycle/img/notfound1.gif",
+        "res://archive/deadbicycle/img/notfound2.gif",
+        "res://archive/deadbicycle/img/notfound1.gif",
+        "res://archive/deadbicycle/img/notfound2.gif",
+        "res://archive/deadbicycle/img/notfound1.gif",
+        "res://archive/deadbicycle/img/notfound1.gif"
+      ],
+      "body": "deaddeaddeaddotcom var myimages=new Array() function preloadimages(){ for (i=0;i",
+      "fragments": [
+        {
+          "text": "NOTFOUND1",
+          "image": "res://archive/deadbicycle/img/notfound1.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "NOTFOUND2",
+          "image": "res://archive/deadbicycle/img/notfound2.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "NOTFOUND1",
+          "image": "res://archive/deadbicycle/img/notfound1.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "NOTFOUND2",
+          "image": "res://archive/deadbicycle/img/notfound2.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "NOTFOUND1",
+          "image": "res://archive/deadbicycle/img/notfound1.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "NOTFOUND1",
+          "image": "res://archive/deadbicycle/img/notfound1.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "NOTFOUND1",
+          "image": "res://archive/deadbicycle/img/notfound1.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "NOTFOUND2",
+          "image": "res://archive/deadbicycle/img/notfound2.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        }
+      ],
+      "links": [],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "AMBULENCE",
+      "location_screen": ""
+    },
+    "anti": {
+      "id": "anti",
+      "title": "ANTI",
+      "subtitle": "fake community / image buttons",
+      "images": [
+        "res://archive/deadbicycle/img/house2.jpg"
+      ],
+      "body": "The anti directory pretends to be infrastructure.",
+      "fragments": [
+        {
+          "text": "HOUSE2",
+          "image": "res://archive/deadbicycle/img/house2.jpg",
+          "destination": "feed",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "FEED",
+          "destination": "feed",
+          "unstable": true
+        },
+        {
+          "label": "GERALD",
+          "destination": "gerald",
+          "unstable": true
+        },
+        {
+          "label": "PROFILES",
+          "destination": "profiles",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "ANTI",
+      "location_screen": ""
+    },
+    "apple": {
+      "id": "apple",
+      "title": "//dead//dead//dead",
+      "subtitle": "original /apple",
+      "images": [
+        "res://archive/deadbicycle/img/billiards3.jpg",
+        "res://archive/deadbicycle/img/billiards4.jpg",
+        "res://archive/deadbicycle/img/billiards2.jpg"
+      ],
+      "body": "//dead//dead//dead",
+      "fragments": [
+        {
+          "text": "BILLIARDS3",
+          "image": "res://archive/deadbicycle/img/billiards3.jpg",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "BILLIARDS4",
+          "image": "res://archive/deadbicycle/img/billiards4.jpg",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "BILLIARDS2",
+          "image": "res://archive/deadbicycle/img/billiards2.jpg",
+          "destination": "randomroom",
+          "rarity": 0
+        }
+      ],
+      "links": [],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "APPLE",
+      "location_screen": ""
+    },
+    "arithmetic": {
+      "id": "arithmetic",
+      "title": "deaddeaddead",
+      "subtitle": "original /arithmetic",
+      "images": [
+        "res://archive/deadbicycle/img/dig5.gif",
+        "res://archive/deadbicycle/img/report1.jpg",
+        "res://archive/deadbicycle/img/report2.jpg",
+        "res://archive/deadbicycle/img/report3.jpg",
+        "res://archive/deadbicycle/img/report4.jpg",
+        "res://archive/deadbicycle/img/report5.jpg"
+      ],
+      "body": "deaddeaddead { alt0 = new Image(); alt0.src = \"../img/dig5.gif\"; alt1 = new Image(); alt1.src = \"../img/dig6.gif\"; alt2 = new Image(); alt2.src = \"../img/dig3.gif\"; alt3 = new Image(); alt3.src = \"../img/dig2.gif\"; alt4 = new Image(); alt4.src = \"../img/dig4.gif\"; alt5 = new Image(); alt5.src = \"../img/dig1.gif\"; graphic1= new Image(); graphic1.src = \"../img/report1.jpg\"; graphic1on = new Image(); graphic1on.src = \"../img/report1b.jpg\"; graphic2= new Image(); graphic2.src = \"../img/report2.jpg\"; graphic2on = new Image(); graphic2on.src = \"../img/report2b.jpg\"; graphic3= new Image(); graphic3.s...",
+      "fragments": [
+        {
+          "text": "DIG5",
+          "image": "res://archive/deadbicycle/img/dig5.gif",
+          "destination": "motorscooter",
+          "rarity": 0
+        },
+        {
+          "text": "REPORT1",
+          "image": "res://archive/deadbicycle/img/report1.jpg",
+          "destination": "sunshine",
+          "rarity": 0
+        },
+        {
+          "text": "REPORT2",
+          "image": "res://archive/deadbicycle/img/report2.jpg",
+          "destination": "ambulence",
+          "rarity": 0
+        },
+        {
+          "text": "REPORT3",
+          "image": "res://archive/deadbicycle/img/report3.jpg",
+          "destination": "bad",
+          "rarity": 0
+        },
+        {
+          "text": "REPORT4",
+          "image": "res://archive/deadbicycle/img/report4.jpg",
+          "destination": "bluejeans",
+          "rarity": 0
+        },
+        {
+          "text": "REPORT5",
+          "image": "res://archive/deadbicycle/img/report5.jpg",
+          "destination": "motorscooter",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "motorscooter",
+          "destination": "motorscooter",
+          "unstable": false
+        },
+        {
+          "label": "sunshine",
+          "destination": "sunshine",
+          "unstable": false
+        },
+        {
+          "label": "ambulence",
+          "destination": "ambulence",
+          "unstable": false
+        },
+        {
+          "label": "bad",
+          "destination": "bad",
+          "unstable": false
+        },
+        {
+          "label": "bluejeans",
+          "destination": "bluejeans",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "ARITHMETIC",
+      "location_screen": ""
+    },
+    "ashtray": {
+      "id": "ashtray",
+      "title": "[deaddeaddead.com]",
+      "subtitle": "original /ashtray",
+      "images": [],
+      "body": "[deaddeaddead.com] as if the matter of fact tone of voice you used when you told me about your 9:00 am trip to the doctor would stop me from waking you, eli . &quot;the velveeta slices are on special. 2 for $5.00. but the store is closed. it's 11:05pm.&quot; &quot;you're kidding.&quot; &quot; i am not .&quot; be sure to sit down on the brand new davenport, jimmy. your comfort means everything to us. but if you fail to ash your cigarette in the ashtray, we'll never speak to you again .",
+      "fragments": [],
+      "links": [
+        {
+          "label": "eli",
+          "destination": "barber",
+          "unstable": false
+        },
+        {
+          "label": "i am not",
+          "destination": "skull",
+          "unstable": false
+        },
+        {
+          "label": "never speak to you again.",
+          "destination": "kerosene",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "ASHTRAY",
+      "location_screen": ""
+    },
+    "bad": {
+      "id": "bad",
+      "title": ":::::::::::[dead]::::::::deaddead",
+      "subtitle": "original /bad",
+      "images": [
+        "res://archive/deadbicycle/img/jonny.jpg",
+        "res://archive/deadbicycle/img/jonny4.jpg",
+        "res://archive/deadbicycle/img/jonny5.jpg"
+      ],
+      "body": ":::::::::::[dead]::::::::deaddead",
+      "fragments": [
+        {
+          "text": "JONNY",
+          "image": "res://archive/deadbicycle/img/jonny.jpg",
+          "destination": "mind",
+          "rarity": 0
+        },
+        {
+          "text": "JONNY4",
+          "image": "res://archive/deadbicycle/img/jonny4.jpg",
+          "destination": "urban",
+          "rarity": 0
+        },
+        {
+          "text": "JONNY5",
+          "image": "res://archive/deadbicycle/img/jonny5.jpg",
+          "destination": "kerosene",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "mind",
+          "destination": "mind",
+          "unstable": false
+        },
+        {
+          "label": "urban",
+          "destination": "urban",
+          "unstable": false
+        },
+        {
+          "label": "kerosene",
+          "destination": "kerosene",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "BAD",
+      "location_screen": ""
+    },
+    "barber": {
+      "id": "barber",
+      "title": "[deaddeaddead.com]",
+      "subtitle": "original /barber",
+      "images": [],
+      "body": "[deaddeaddead.com] when i was a kid i asked my dad if i could have an ice cream cone. &quot;that's none of your business,&quot; he said. have a cigar",
+      "fragments": [],
+      "links": [
+        {
+          "label": "have a cigar",
+          "destination": "acupuncture",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "BARBER",
+      "location_screen": ""
+    },
+    "bluejeans": {
+      "id": "bluejeans",
+      "title": "deaddeaddead.com",
+      "subtitle": "original /bluejeans",
+      "images": [
+        "res://archive/deadbicycle/img/jeans4.gif",
+        "res://archive/deadbicycle/img/jeans4.gif"
+      ],
+      "body": "deaddeaddead.com i love cherry donuts but my doctor says cherry donuts are not good for my health &quot;stop eating those cherry donuts&quot; he says. but i do not listen to my doctor because i do not agree with my doctor that cherry donuts are not good for my health and i eat cherry donuts anyway.",
+      "fragments": [
+        {
+          "text": "JEANS4",
+          "image": "res://archive/deadbicycle/img/jeans4.gif",
+          "destination": "spy",
+          "rarity": 0
+        },
+        {
+          "text": "JEANS4",
+          "image": "res://archive/deadbicycle/img/jeans4.gif",
+          "destination": "room",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "spy",
+          "destination": "spy",
+          "unstable": false
+        },
+        {
+          "label": "room",
+          "destination": "room",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "BLUEJEANS",
+      "location_screen": ""
+    },
+    "blueprint": {
+      "id": "blueprint",
+      "title": "BLUEPRINT",
+      "subtitle": "diagram / impossible house",
+      "images": [
+        "res://archive/deadbicycle/img/blueprint_01.jpg",
+        "res://archive/deadbicycle/img/blueprint_05.jpg"
+      ],
+      "body": "Blueprints imply there was a plan.",
+      "fragments": [
+        {
+          "text": "BLUEPRINT_01",
+          "image": "res://archive/deadbicycle/img/blueprint_01.jpg",
+          "destination": "machine",
+          "rarity": 0
+        },
+        {
+          "text": "BLUEPRINT_05",
+          "image": "res://archive/deadbicycle/img/blueprint_05.jpg",
+          "destination": "room",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "MACHINE",
+          "destination": "machine",
+          "unstable": true
+        },
+        {
+          "label": "ROOM",
+          "destination": "room",
+          "unstable": true
+        },
+        {
+          "label": "POLICEMAN",
+          "destination": "policeman",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "BLUEPRINT",
+      "location_screen": ""
+    },
+    "cancer": {
+      "id": "cancer",
+      "title": "deaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddead",
+      "subtitle": "original /cancer",
+      "images": [
+        "res://archive/deadbicycle/img/tm.gif",
+        "res://archive/deadbicycle/img/havecancer.gif",
+        "res://archive/deadbicycle/img/cancerboy.gif",
+        "res://archive/deadbicycle/img/cancerboy.gif",
+        "res://archive/deadbicycle/img/cancerboy.jpg",
+        "res://archive/deadbicycle/img/cancerboy.jpg"
+      ],
+      "body": "deaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddeaddead",
+      "fragments": [
+        {
+          "text": "TM",
+          "image": "res://archive/deadbicycle/img/tm.gif",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "HAVECANCER",
+          "image": "res://archive/deadbicycle/img/havecancer.gif",
+          "destination": "feed",
+          "rarity": 0
+        },
+        {
+          "text": "CANCERBOY",
+          "image": "res://archive/deadbicycle/img/cancerboy.gif",
+          "destination": "stereo",
+          "rarity": 0
+        },
+        {
+          "text": "CANCERBOY",
+          "image": "res://archive/deadbicycle/img/cancerboy.gif",
+          "destination": "military",
+          "rarity": 0
+        },
+        {
+          "text": "CANCERBOY",
+          "image": "res://archive/deadbicycle/img/cancerboy.jpg",
+          "destination": "room",
+          "rarity": 0
+        },
+        {
+          "text": "CANCERBOY",
+          "image": "res://archive/deadbicycle/img/cancerboy.jpg",
+          "destination": "crayon",
+          "rarity": 0
+        },
+        {
+          "text": "CANCERBOY",
+          "image": "res://archive/deadbicycle/img/cancerboy.jpg",
+          "destination": "larry",
+          "rarity": 0
+        },
+        {
+          "text": "CANCERBOY",
+          "image": "res://archive/deadbicycle/img/cancerboy.jpg",
+          "destination": "expired",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "gerald",
+          "destination": "gerald",
+          "unstable": false
+        },
+        {
+          "label": "feed",
+          "destination": "feed",
+          "unstable": false
+        },
+        {
+          "label": "stereo",
+          "destination": "stereo",
+          "unstable": false
+        },
+        {
+          "label": "military",
+          "destination": "military",
+          "unstable": false
+        },
+        {
+          "label": "room",
+          "destination": "room",
+          "unstable": false
+        },
+        {
+          "label": "crayon",
+          "destination": "crayon",
+          "unstable": false
+        },
+        {
+          "label": "larry",
+          "destination": "larry",
+          "unstable": false
+        },
+        {
+          "label": "expired",
+          "destination": "expired",
+          "unstable": false
+        },
+        {
+          "label": "vacuum",
+          "destination": "vacuum",
+          "unstable": false
+        },
+        {
+          "label": "sunshine",
+          "destination": "sunshine",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "CANCER",
+      "location_screen": ""
+    },
+    "candy": {
+      "id": "candy",
+      "title": "deaddeaddead",
+      "subtitle": "original /candy",
+      "images": [
+        "res://archive/deadbicycle/img/littlechildren1.jpg",
+        "res://archive/deadbicycle/img/littlechildren2.gif",
+        "res://archive/deadbicycle/img/littlechildren3.jpg"
+      ],
+      "body": "deaddeaddead tim and hank saw a big tim and hank saw a big tim and hank saw a big tim and hank saw a big tim and hank saw a big tim and hank saw a big tim and hank saw a big tim and hank saw a big tim and hank saw a big tim and hank saw a big tim and hank saw a big",
+      "fragments": [
+        {
+          "text": "LITTLECHILDREN1",
+          "image": "res://archive/deadbicycle/img/littlechildren1.jpg",
+          "destination": "grenades",
+          "rarity": 0
+        },
+        {
+          "text": "LITTLECHILDREN2",
+          "image": "res://archive/deadbicycle/img/littlechildren2.gif",
+          "destination": "cowboy",
+          "rarity": 0
+        },
+        {
+          "text": "LITTLECHILDREN3",
+          "image": "res://archive/deadbicycle/img/littlechildren3.jpg",
+          "destination": "grenades",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "grenades",
+          "destination": "grenades",
+          "unstable": false
+        },
+        {
+          "label": "cowboy",
+          "destination": "cowboy",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "CANDY",
+      "location_screen": ""
+    },
+    "chapter": {
+      "id": "chapter",
+      "title": "deaddeaddead",
+      "subtitle": "original /chapter",
+      "images": [
+        "res://archive/deadbicycle/img/text.gif",
+        "res://archive/deadbicycle/img/text.gif",
+        "res://archive/deadbicycle/img/text.gif"
+      ],
+      "body": "deaddeaddead",
+      "fragments": [
+        {
+          "text": "TEXT",
+          "image": "res://archive/deadbicycle/img/text.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "TEXT",
+          "image": "res://archive/deadbicycle/img/text.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "TEXT",
+          "image": "res://archive/deadbicycle/img/text.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        }
+      ],
+      "links": [],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "CHAPTER",
+      "location_screen": ""
+    },
+    "church": {
+      "id": "church",
+      "title": "Dead Dead Dead Dot Com",
+      "subtitle": "original /church",
+      "images": [
+        "res://archive/deadbicycle/img/superstar1.gif",
+        "res://archive/deadbicycle/img/superstar3.gif",
+        "res://archive/deadbicycle/img/superstar3.gif",
+        "res://archive/deadbicycle/img/superstar2.gif",
+        "res://archive/deadbicycle/img/superstar1.gif",
+        "res://archive/deadbicycle/img/superstar2.gif"
+      ],
+      "body": "Dead Dead Dead Dot Com I really do like ice cream. I also have a really big family. It has a lot of people in it. We have nice neighbors. I sold them some lemonade once. It was 25 cents. They got mad at me when I accidentally broke their window with a baseball. I like baseball a lot. I like to collect baseball cards. It is fun. My favorite baseball player is Bo Jackson. He is good. My mom says I'm not good for her cholesterol. She moved up north with some fellow. I think his name is Bill. I don't mind. Bill seems like a nice enough fellow. Mom never did well with guys, see. I always felt bad b...",
+      "fragments": [
+        {
+          "text": "SUPERSTAR1",
+          "image": "res://archive/deadbicycle/img/superstar1.gif",
+          "destination": "ambulence",
+          "rarity": 0
+        },
+        {
+          "text": "SUPERSTAR3",
+          "image": "res://archive/deadbicycle/img/superstar3.gif",
+          "destination": "love",
+          "rarity": 0
+        },
+        {
+          "text": "SUPERSTAR3",
+          "image": "res://archive/deadbicycle/img/superstar3.gif",
+          "destination": "mind",
+          "rarity": 0
+        },
+        {
+          "text": "SUPERSTAR2",
+          "image": "res://archive/deadbicycle/img/superstar2.gif",
+          "destination": "candy",
+          "rarity": 0
+        },
+        {
+          "text": "SUPERSTAR1",
+          "image": "res://archive/deadbicycle/img/superstar1.gif",
+          "destination": "policeman",
+          "rarity": 0
+        },
+        {
+          "text": "SUPERSTAR2",
+          "image": "res://archive/deadbicycle/img/superstar2.gif",
+          "destination": "iron",
+          "rarity": 0
+        },
+        {
+          "text": "SUPERSTAR1",
+          "image": "res://archive/deadbicycle/img/superstar1.gif",
+          "destination": "green",
+          "rarity": 0
+        },
+        {
+          "text": "SUPERSTAR2",
+          "image": "res://archive/deadbicycle/img/superstar2.gif",
+          "destination": "machine",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "I really do like ice cream. I also have a really",
+          "destination": "ambulence",
+          "unstable": false
+        },
+        {
+          "label": "love",
+          "destination": "love",
+          "unstable": false
+        },
+        {
+          "label": "mind",
+          "destination": "mind",
+          "unstable": false
+        },
+        {
+          "label": "candy",
+          "destination": "candy",
+          "unstable": false
+        },
+        {
+          "label": "policeman",
+          "destination": "policeman",
+          "unstable": false
+        },
+        {
+          "label": "iron",
+          "destination": "iron",
+          "unstable": false
+        },
+        {
+          "label": "green",
+          "destination": "green",
+          "unstable": false
+        },
+        {
+          "label": "machine",
+          "destination": "machine",
+          "unstable": false
+        },
+        {
+          "label": "expired",
+          "destination": "expired",
+          "unstable": false
+        },
+        {
+          "label": "happy",
+          "destination": "happy",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "CHURCH",
+      "location_screen": ""
+    },
+    "cowboy": {
+      "id": "cowboy",
+      "title": "d//d.",
+      "subtitle": "original /cowboy",
+      "images": [
+        "res://archive/deadbicycle/img/db.gif",
+        "res://archive/deadbicycle/img/db.gif",
+        "res://archive/deadbicycle/img/db.gif",
+        "res://archive/deadbicycle/img/db.gif",
+        "res://archive/deadbicycle/img/tm.gif",
+        "res://archive/deadbicycle/img/db.gif"
+      ],
+      "body": "d//d. browser = (((navigator.appName == \"Netscape\") && (parseInt(navigator.appVersion) >= 3 )) || ((navigator.appName == \"Microsoft Internet Explorer\") && (parseInt(navigator.appVersion) >= 4 ))) browser = (((navigator.appName == \"Netscape\") && (parseInt(navigator.appVersion) >= 3 )) || ((navigator.appName == \"Microsoft Internet Explorer\") && (parseInt(navigator.appVersion) >= 4 ))) if (browser) { var theswitch = -1 var communist = '' var no = -1 CowboyTwo = new Array() { for (xx = 1; xx",
+      "fragments": [
+        {
+          "text": "DB",
+          "image": "res://archive/deadbicycle/img/db.gif",
+          "destination": "lost",
+          "rarity": 0
+        },
+        {
+          "text": "DB",
+          "image": "res://archive/deadbicycle/img/db.gif",
+          "destination": "military",
+          "rarity": 0
+        },
+        {
+          "text": "DB",
+          "image": "res://archive/deadbicycle/img/db.gif",
+          "destination": "pavement",
+          "rarity": 0
+        },
+        {
+          "text": "DB",
+          "image": "res://archive/deadbicycle/img/db.gif",
+          "destination": "vacuum",
+          "rarity": 0
+        },
+        {
+          "text": "TM",
+          "image": "res://archive/deadbicycle/img/tm.gif",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "DB",
+          "image": "res://archive/deadbicycle/img/db.gif",
+          "destination": "fast",
+          "rarity": 0
+        },
+        {
+          "text": "DB",
+          "image": "res://archive/deadbicycle/img/db.gif",
+          "destination": "fire",
+          "rarity": 0
+        },
+        {
+          "text": "DB",
+          "image": "res://archive/deadbicycle/img/db.gif",
+          "destination": "foursquare",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "lost",
+          "destination": "lost",
+          "unstable": false
+        },
+        {
+          "label": "military",
+          "destination": "military",
+          "unstable": false
+        },
+        {
+          "label": "pavement",
+          "destination": "pavement",
+          "unstable": false
+        },
+        {
+          "label": "vacuum",
+          "destination": "vacuum",
+          "unstable": false
+        },
+        {
+          "label": "gerald",
+          "destination": "gerald",
+          "unstable": false
+        },
+        {
+          "label": "fast",
+          "destination": "fast",
+          "unstable": false
+        },
+        {
+          "label": "fire",
+          "destination": "fire",
+          "unstable": false
+        },
+        {
+          "label": "foursquare",
+          "destination": "foursquare",
+          "unstable": false
+        },
+        {
+          "label": "ping",
+          "destination": "ping",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "COWBOY",
+      "location_screen": ""
+    },
+    "crayon": {
+      "id": "crayon",
+      "title": "deaddeaddead.com",
+      "subtitle": "original /crayon",
+      "images": [
+        "res://archive/deadbicycle/img/y.jpg",
+        "res://archive/deadbicycle/img/d.jpg",
+        "res://archive/deadbicycle/img/c.jpg",
+        "res://archive/deadbicycle/img/c.jpg",
+        "res://archive/deadbicycle/img/e.jpg",
+        "res://archive/deadbicycle/img/a.jpg"
+      ],
+      "body": "deaddeaddead.com",
+      "fragments": [
+        {
+          "text": "Y",
+          "image": "res://archive/deadbicycle/img/y.jpg",
+          "destination": "15mph",
+          "rarity": 0
+        },
+        {
+          "text": "D",
+          "image": "res://archive/deadbicycle/img/d.jpg",
+          "destination": "redrobotlove",
+          "rarity": 0
+        },
+        {
+          "text": "C",
+          "image": "res://archive/deadbicycle/img/c.jpg",
+          "destination": "mugshot",
+          "rarity": 0
+        },
+        {
+          "text": "C",
+          "image": "res://archive/deadbicycle/img/c.jpg",
+          "destination": "acupuncture",
+          "rarity": 0
+        },
+        {
+          "text": "E",
+          "image": "res://archive/deadbicycle/img/e.jpg",
+          "destination": "cowboy",
+          "rarity": 0
+        },
+        {
+          "text": "A",
+          "image": "res://archive/deadbicycle/img/a.jpg",
+          "destination": "green",
+          "rarity": 0
+        },
+        {
+          "text": "I",
+          "image": "res://archive/deadbicycle/img/i.jpg",
+          "destination": "urban",
+          "rarity": 0
+        },
+        {
+          "text": "L2",
+          "image": "res://archive/deadbicycle/img/l2.jpg",
+          "destination": "ashtray",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "15mph",
+          "destination": "15mph",
+          "unstable": false
+        },
+        {
+          "label": "redrobotlove",
+          "destination": "redrobotlove",
+          "unstable": false
+        },
+        {
+          "label": "mugshot",
+          "destination": "mugshot",
+          "unstable": false
+        },
+        {
+          "label": "acupuncture",
+          "destination": "acupuncture",
+          "unstable": false
+        },
+        {
+          "label": "cowboy",
+          "destination": "cowboy",
+          "unstable": false
+        },
+        {
+          "label": "green",
+          "destination": "green",
+          "unstable": false
+        },
+        {
+          "label": "urban",
+          "destination": "urban",
+          "unstable": false
+        },
+        {
+          "label": "ashtray",
+          "destination": "ashtray",
+          "unstable": false
+        },
+        {
+          "label": "happy",
+          "destination": "happy",
+          "unstable": false
+        },
+        {
+          "label": "kerosene",
+          "destination": "kerosene",
+          "unstable": false
+        },
+        {
+          "label": "airplanes",
+          "destination": "airplanes",
+          "unstable": false
+        },
+        {
+          "label": "arithmetic",
+          "destination": "arithmetic",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "CRAYON",
+      "location_screen": ""
+    },
+    "dayjob": {
+      "id": "dayjob",
+      "title": "deaddeaddead",
+      "subtitle": "original /dayjob",
+      "images": [
+        "res://archive/deadbicycle/img/beetle5.gif",
+        "res://archive/deadbicycle/img/beetle3.jpg",
+        "res://archive/deadbicycle/img/beetle5.gif"
+      ],
+      "body": "deaddeaddead",
+      "fragments": [
+        {
+          "text": "BEETLE5",
+          "image": "res://archive/deadbicycle/img/beetle5.gif",
+          "destination": "grenades",
+          "rarity": 0
+        },
+        {
+          "text": "BEETLE3",
+          "image": "res://archive/deadbicycle/img/beetle3.jpg",
+          "destination": "candy",
+          "rarity": 0
+        },
+        {
+          "text": "BEETLE5",
+          "image": "res://archive/deadbicycle/img/beetle5.gif",
+          "destination": "gerald",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "grenades",
+          "destination": "grenades",
+          "unstable": false
+        },
+        {
+          "label": "candy",
+          "destination": "candy",
+          "unstable": false
+        },
+        {
+          "label": "gerald",
+          "destination": "gerald",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "DAYJOB",
+      "location_screen": ""
+    },
+    "expired": {
+      "id": "expired",
+      "title": "deaddeaddead",
+      "subtitle": "original /expired",
+      "images": [
+        "res://archive/deadbicycle/img/tired.jpg"
+      ],
+      "body": "deaddeaddead",
+      "fragments": [
+        {
+          "text": "TIRED",
+          "image": "res://archive/deadbicycle/img/tired.jpg",
+          "destination": "grenades",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "grenades",
+          "destination": "grenades",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "EXPIRED",
+      "location_screen": ""
+    },
+    "failure": {
+      "id": "failure",
+      "title": "FAILURE",
+      "subtitle": "no clean resolution",
+      "images": [
+        "res://archive/deadbicycle/img/everyonedie.gif",
+        "res://archive/deadbicycle/img/deaddarkness.gif"
+      ],
+      "body": "Failure forgot to be funny.",
+      "fragments": [
+        {
+          "text": "EVERYONEDIE",
+          "image": "res://archive/deadbicycle/img/everyonedie.gif",
+          "destination": "hidden",
+          "rarity": 0
+        },
+        {
+          "text": "DEADDARKNESS",
+          "image": "res://archive/deadbicycle/img/deaddarkness.gif",
+          "destination": "larry",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "HIDDEN",
+          "destination": "hidden",
+          "unstable": true
+        },
+        {
+          "label": "LARRY",
+          "destination": "larry",
+          "unstable": true
+        },
+        {
+          "label": "DEAD",
+          "destination": "dead",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "FAILURE",
+      "location_screen": ""
+    },
+    "fast": {
+      "id": "fast",
+      "title": "d e a d d e a d",
+      "subtitle": "original /fast",
+      "images": [
+        "res://archive/deadbicycle/img/biglcarogo2.jpg"
+      ],
+      "body": "d e a d d e a d Please stay tuned for another all new episode of dead people driving and dancing!",
+      "fragments": [
+        {
+          "text": "BIGLCAROGO2",
+          "image": "res://archive/deadbicycle/img/biglcarogo2.jpg",
+          "destination": "notfast",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "dead people driving and dancing!",
+          "destination": "notfast",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "FAST",
+      "location_screen": ""
+    },
+    "fire": {
+      "id": "fire",
+      "title": "FIRE",
+      "subtitle": "television / firebird",
+      "images": [
+        "res://archive/deadbicycle/img/firebird_01.gif",
+        "res://archive/deadbicycle/img/larryface.jpg"
+      ],
+      "body": "Larry left the TV on. The page still smells warm.",
+      "fragments": [
+        {
+          "text": "FIREBIRD_01",
+          "image": "res://archive/deadbicycle/img/firebird_01.gif",
+          "destination": "larry",
+          "rarity": 0
+        },
+        {
+          "text": "LARRYFACE",
+          "image": "res://archive/deadbicycle/img/larryface.jpg",
+          "destination": "kerosene",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "LARRY",
+          "destination": "larry",
+          "unstable": true
+        },
+        {
+          "label": "KEROSENE",
+          "destination": "kerosene",
+          "unstable": true
+        },
+        {
+          "label": "AIRPLANES",
+          "destination": "airplanes",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "FIRE",
+      "location_screen": ""
+    },
+    "firebird": {
+      "id": "firebird",
+      "title": "dead dead dead dead dead dead deaddead dead dead dead dead dead deaddead dead dead dead dead dead dead",
+      "subtitle": "original /firebird",
+      "images": [
+        "res://archive/deadbicycle/img/firebird_02.gif",
+        "res://archive/deadbicycle/img/firebird_03.jpg",
+        "res://archive/deadbicycle/img/firebird_04.gif",
+        "res://archive/deadbicycle/img/firebird_05.jpg",
+        "res://archive/deadbicycle/img/firebird_06.gif",
+        "res://archive/deadbicycle/img/firebird11.jpg"
+      ],
+      "body": "dead dead dead dead dead dead deaddead dead dead dead dead dead deaddead dead dead dead dead dead dead",
+      "fragments": [
+        {
+          "text": "FIREBIRD 02",
+          "image": "res://archive/deadbicycle/img/firebird_02.gif",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "FIREBIRD 03",
+          "image": "res://archive/deadbicycle/img/firebird_03.jpg",
+          "destination": "stereo",
+          "rarity": 0
+        },
+        {
+          "text": "FIREBIRD 04",
+          "image": "res://archive/deadbicycle/img/firebird_04.gif",
+          "destination": "feed",
+          "rarity": 0
+        },
+        {
+          "text": "FIREBIRD 05",
+          "image": "res://archive/deadbicycle/img/firebird_05.jpg",
+          "destination": "fast",
+          "rarity": 0
+        },
+        {
+          "text": "FIREBIRD 06",
+          "image": "res://archive/deadbicycle/img/firebird_06.gif",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "FIREBIRD11",
+          "image": "res://archive/deadbicycle/img/firebird11.jpg",
+          "destination": "stereo",
+          "rarity": 0
+        },
+        {
+          "text": "FIREBIRD 08",
+          "image": "res://archive/deadbicycle/img/firebird_08.gif",
+          "destination": "feed",
+          "rarity": 0
+        },
+        {
+          "text": "FIREBIRD 09",
+          "image": "res://archive/deadbicycle/img/firebird_09.jpg",
+          "destination": "fast",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "gerald",
+          "destination": "gerald",
+          "unstable": false
+        },
+        {
+          "label": "stereo",
+          "destination": "stereo",
+          "unstable": false
+        },
+        {
+          "label": "feed",
+          "destination": "feed",
+          "unstable": false
+        },
+        {
+          "label": "fast",
+          "destination": "fast",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "FIREBIRD",
+      "location_screen": ""
+    },
+    "foursquare": {
+      "id": "foursquare",
+      "title": "d//d.dead",
+      "subtitle": "original /foursquare",
+      "images": [
+        "res://archive/deadbicycle/img/tm.gif",
+        "res://archive/deadbicycle/img/tm.gif",
+        "res://archive/deadbicycle/img/green1.gif",
+        "res://archive/deadbicycle/img/green1.gif",
+        "res://archive/deadbicycle/img/green1.gif"
+      ],
+      "body": "d//d.dead if (document.images) { alt0 = new Image(); alt0.src = \"../img/green1.gif\"; alt1 = new Image(); alt1.src = \"../img/green2.gif\"; alt2 = new Image(); alt2.src = \"../img/greenbicycles.gif\"; alt3 = new Image(); alt3.src = \"../img/greendead.gif\"; graphic1= new Image(); graphic1.src = \"../img/green1.gif\"; graphic1on = new Image(); graphic1on.src = \"../img/green2.gif\"; graphic2= new Image(); graphic2.src = \"../img/tm.gif\"; graphic2on = new Image(); graphic2on.src = \"../img/greendead.gif\"; graphic3= new Image(); graphic3.src = \"../img/tm.gif\"; graphic3on = new Image(); graphic3on.src = \"../im...",
+      "fragments": [
+        {
+          "text": "TM",
+          "image": "res://archive/deadbicycle/img/tm.gif",
+          "destination": "love",
+          "rarity": 0
+        },
+        {
+          "text": "TM",
+          "image": "res://archive/deadbicycle/img/tm.gif",
+          "destination": "happy",
+          "rarity": 0
+        },
+        {
+          "text": "GREEN1",
+          "image": "res://archive/deadbicycle/img/green1.gif",
+          "destination": "tea",
+          "rarity": 0
+        },
+        {
+          "text": "GREEN1",
+          "image": "res://archive/deadbicycle/img/green1.gif",
+          "destination": "love",
+          "rarity": 0
+        },
+        {
+          "text": "GREEN1",
+          "image": "res://archive/deadbicycle/img/green1.gif",
+          "destination": "happy",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "love",
+          "destination": "love",
+          "unstable": false
+        },
+        {
+          "label": "happy",
+          "destination": "happy",
+          "unstable": false
+        },
+        {
+          "label": "tea",
+          "destination": "tea",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "FOURSQUARE",
+      "location_screen": ""
+    },
+    "garden": {
+      "id": "garden",
+      "title": "dead",
+      "subtitle": "original /garden",
+      "images": [
+        "res://archive/deadbicycle/img/flowers.gif",
+        "res://archive/deadbicycle/img/blackflower2.gif",
+        "res://archive/deadbicycle/img/blackflower.gif",
+        "res://archive/deadbicycle/img/blackflower.gif",
+        "res://archive/deadbicycle/img/blackflower.gif",
+        "res://archive/deadbicycle/img/blackflower.gif"
+      ],
+      "body": "dead browser = (((navigator.appName == \"Netscape\") && (parseInt(navigator.appVersion) >= 3 )) || ((navigator.appName == \"Microsoft Internet Explorer\") && (parseInt(navigator.appVersion) >= 4 ))) if (document.images) { alt0 = new Image(); alt0.src = \"../img/tm.gif\"; alt1 = new Image(); alt1.src = \"../img/flowers.gif\"; alt2 = new Image(); alt2.src = \"../img/blackflower.gif\"; alt3 = new Image(); alt3.src = \"../img/whiteflower.gif\"; graphic1= new Image(); graphic1.src = \"../img/blackflower.gif\"; graphic1on = new Image(); graphic1on.src = \"../img/flowers.gif\"; graphic2= new Image(); graphic2.src = ...",
+      "fragments": [
+        {
+          "text": "FLOWERS",
+          "image": "res://archive/deadbicycle/img/flowers.gif",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "BLACKFLOWER2",
+          "image": "res://archive/deadbicycle/img/blackflower2.gif",
+          "destination": "pavement",
+          "rarity": 0
+        },
+        {
+          "text": "BLACKFLOWER",
+          "image": "res://archive/deadbicycle/img/blackflower.gif",
+          "destination": "pod",
+          "rarity": 0
+        },
+        {
+          "text": "BLACKFLOWER",
+          "image": "res://archive/deadbicycle/img/blackflower.gif",
+          "destination": "simple",
+          "rarity": 0
+        },
+        {
+          "text": "BLACKFLOWER",
+          "image": "res://archive/deadbicycle/img/blackflower.gif",
+          "destination": "tea",
+          "rarity": 0
+        },
+        {
+          "text": "BLACKFLOWER",
+          "image": "res://archive/deadbicycle/img/blackflower.gif",
+          "destination": "foursquare",
+          "rarity": 0
+        },
+        {
+          "text": "BLACKFLOWER",
+          "image": "res://archive/deadbicycle/img/blackflower.gif",
+          "destination": "trash",
+          "rarity": 0
+        },
+        {
+          "text": "BLACKFLOWER",
+          "image": "res://archive/deadbicycle/img/blackflower.gif",
+          "destination": "iron",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "gerald",
+          "destination": "gerald",
+          "unstable": false
+        },
+        {
+          "label": "pavement",
+          "destination": "pavement",
+          "unstable": false
+        },
+        {
+          "label": "pod",
+          "destination": "pod",
+          "unstable": false
+        },
+        {
+          "label": "simple",
+          "destination": "simple",
+          "unstable": false
+        },
+        {
+          "label": "tea",
+          "destination": "tea",
+          "unstable": false
+        },
+        {
+          "label": "foursquare",
+          "destination": "foursquare",
+          "unstable": false
+        },
+        {
+          "label": "trash",
+          "destination": "trash",
+          "unstable": false
+        },
+        {
+          "label": "iron",
+          "destination": "iron",
+          "unstable": false
+        },
+        {
+          "label": "fire",
+          "destination": "fire",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "GARDEN",
+      "location_screen": ""
+    },
+    "gentlemen": {
+      "id": "gentlemen",
+      "title": "d    e    a    d    d    e    a    d    d    e   a   d",
+      "subtitle": "original /gentlemen",
+      "images": [
+        "res://archive/deadbicycle/img/theman.jpg",
+        "res://archive/deadbicycle/img/thewoman.jpg"
+      ],
+      "body": "d e a d d e a d d e a d",
+      "fragments": [
+        {
+          "text": "THEMAN",
+          "image": "res://archive/deadbicycle/img/theman.jpg",
+          "destination": "skull",
+          "rarity": 0
+        },
+        {
+          "text": "THEWOMAN",
+          "image": "res://archive/deadbicycle/img/thewoman.jpg",
+          "destination": "redrobotlove",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "skull",
+          "destination": "skull",
+          "unstable": false
+        },
+        {
+          "label": "redrobotlove",
+          "destination": "redrobotlove",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "GENTLEMEN",
+      "location_screen": ""
+    },
+    "green": {
+      "id": "green",
+      "title": "GREEN",
+      "subtitle": "green dead / green road",
+      "images": [
+        "res://archive/deadbicycle/img/greendead.gif",
+        "res://archive/deadbicycle/img/greenbike.gif"
+      ],
+      "body": "Green is one of the archive's fake taxonomies.",
+      "fragments": [
+        {
+          "text": "GREENDEAD",
+          "image": "res://archive/deadbicycle/img/greendead.gif",
+          "destination": "tea",
+          "rarity": 0
+        },
+        {
+          "text": "GREENBIKE",
+          "image": "res://archive/deadbicycle/img/greenbike.gif",
+          "destination": "roads",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "TEA",
+          "destination": "tea",
+          "unstable": true
+        },
+        {
+          "label": "ROADS",
+          "destination": "roads",
+          "unstable": true
+        },
+        {
+          "label": "LOST",
+          "destination": "lost",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "GREEN",
+      "location_screen": ""
+    },
+    "grenades": {
+      "id": "grenades",
+      "title": "GRENADES",
+      "subtitle": "dropdown / sitemap residue",
+      "images": [
+        "res://archive/deadbicycle/img/grenade1.jpg",
+        "res://archive/deadbicycle/img/grenade3.jpg"
+      ],
+      "body": "A menu that should not resolve.",
+      "fragments": [
+        {
+          "text": "GRENADE1",
+          "image": "res://archive/deadbicycle/img/grenade1.jpg",
+          "destination": "military",
+          "rarity": 0
+        },
+        {
+          "text": "GRENADE3",
+          "image": "res://archive/deadbicycle/img/grenade3.jpg",
+          "destination": "reports",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "MILITARY",
+          "destination": "military",
+          "unstable": true
+        },
+        {
+          "label": "REPORTS",
+          "destination": "reports",
+          "unstable": true
+        },
+        {
+          "label": "SALVAGE_SITEMAP",
+          "destination": "salvage_sitemap",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "GRENADES",
+      "location_screen": ""
+    },
+    "hammer": {
+      "id": "hammer",
+      "title": "deaDdeaDdeaD",
+      "subtitle": "original /hammer",
+      "images": [
+        "res://archive/deadbicycle/img/traffic.jpg",
+        "res://archive/deadbicycle/img/Animation1.gif"
+      ],
+      "body": "deaDdeaDdeaD",
+      "fragments": [
+        {
+          "text": "TRAFFIC",
+          "image": "res://archive/deadbicycle/img/traffic.jpg",
+          "destination": "cowboy",
+          "rarity": 0
+        },
+        {
+          "text": "ANIMATION1",
+          "image": "res://archive/deadbicycle/img/Animation1.gif",
+          "destination": "cowboy",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "cowboy",
+          "destination": "cowboy",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "HAMMER",
+      "location_screen": ""
+    },
+    "happy": {
+      "id": "happy",
+      "title": "HAPPY",
+      "subtitle": "hooray / forced grin",
+      "images": [
+        "res://archive/deadbicycle/img/hooray.jpg",
+        "res://archive/deadbicycle/img/happyeverafter.jpg"
+      ],
+      "body": "Happy is suspicious.",
+      "fragments": [
+        {
+          "text": "HOORAY",
+          "image": "res://archive/deadbicycle/img/hooray.jpg",
+          "destination": "failure",
+          "rarity": 0
+        },
+        {
+          "text": "HAPPYEVERAFTER",
+          "image": "res://archive/deadbicycle/img/happyeverafter.jpg",
+          "destination": "lost",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "FAILURE",
+          "destination": "failure",
+          "unstable": true
+        },
+        {
+          "label": "LOST",
+          "destination": "lost",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "HAPPY",
+      "location_screen": ""
+    },
+    "headphones": {
+      "id": "headphones",
+      "title": "d    e    a    d    deaddead",
+      "subtitle": "original /headphones",
+      "images": [
+        "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+        "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+        "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+        "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+        "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+        "res://archive/deadbicycle/img/headphoneheadphone.jpg"
+      ],
+      "body": "d e a d deaddead if (document.images) { alt0 = new Image(); alt0.src = \"../img/tm.gif\"; alt1 = new Image(); alt1.src = \"../img/headphoneheadphone.jpg\"; alt2 = new Image(); alt2.src = \"../img/headphoneheadphone.jpg\"; alt3 = new Image(); alt3.src = \"../img/headphoneheadphone.jpg\"; alt4 = new Image(); alt4.src = \"../img/headphoneheadphone.jpg\"; alt5 = new Image(); alt5.src = \"../img/headphoneheadphone.jpg\"; alt6 = new Image(); alt6.src = \"../img/headphoneheadphone.jpg\"; alt7 = new Image(); alt7.src = \"../img/headphoneheadphone.jpg\"; alt8 = new Image(); alt8.src = \"../img/headphoneheadphone.jpg\"; ...",
+      "fragments": [
+        {
+          "text": "HEADPHONEHEADPHONE",
+          "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+          "destination": "15mph",
+          "rarity": 0
+        },
+        {
+          "text": "HEADPHONEHEADPHONE",
+          "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+          "destination": "arithmetic",
+          "rarity": 0
+        },
+        {
+          "text": "HEADPHONEHEADPHONE",
+          "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+          "destination": "ashtray",
+          "rarity": 0
+        },
+        {
+          "text": "HEADPHONEHEADPHONE",
+          "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+          "destination": "bad",
+          "rarity": 0
+        },
+        {
+          "text": "HEADPHONEHEADPHONE",
+          "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+          "destination": "lung",
+          "rarity": 0
+        },
+        {
+          "text": "HEADPHONEHEADPHONE",
+          "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+          "destination": "crayon",
+          "rarity": 0
+        },
+        {
+          "text": "HEADPHONEHEADPHONE",
+          "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+          "destination": "chapter",
+          "rarity": 0
+        },
+        {
+          "text": "HEADPHONEHEADPHONE",
+          "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
+          "destination": "blueprint",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "15mph",
+          "destination": "15mph",
+          "unstable": false
+        },
+        {
+          "label": "arithmetic",
+          "destination": "arithmetic",
+          "unstable": false
+        },
+        {
+          "label": "&quot;he's lost it. gone off his rocker.&quot;\n\t",
+          "destination": "ashtray",
+          "unstable": false
+        },
+        {
+          "label": "bad",
+          "destination": "bad",
+          "unstable": false
+        },
+        {
+          "label": "lung",
+          "destination": "lung",
+          "unstable": false
+        },
+        {
+          "label": "crayon",
+          "destination": "crayon",
+          "unstable": false
+        },
+        {
+          "label": "chapter",
+          "destination": "chapter",
+          "unstable": false
+        },
+        {
+          "label": "blueprint",
+          "destination": "blueprint",
+          "unstable": false
+        },
+        {
+          "label": "mugshot",
+          "destination": "mugshot",
+          "unstable": false
+        },
+        {
+          "label": "kerosene",
+          "destination": "kerosene",
+          "unstable": false
+        },
+        {
+          "label": "iron",
+          "destination": "iron",
+          "unstable": false
+        },
+        {
+          "label": "suburban",
+          "destination": "suburban",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "HEADPHONES",
+      "location_screen": ""
+    },
+    "hidden": {
+      "id": "hidden",
+      "title": "THE HIDDEN PAGE",
+      "subtitle": "hidden page hidden page hidden page",
+      "images": [
+        "res://archive/deadbicycle/img/filenotfound3.gif",
+        "res://archive/deadbicycle/img/notfound1.gif",
+        "res://archive/deadbicycle/img/notfound2.gif",
+        "res://archive/deadbicycle/img/404bg.gif"
+      ],
+      "body": "THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE! THE HIDDEN PAGE!",
+      "fragments": [
+        {
+          "text": "FILE NOT FOUND FOUND",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "void",
+          "rarity": 4
+        },
+        {
+          "text": "404 BG",
+          "image": "res://archive/deadbicycle/img/404bg.gif",
+          "destination": "dead",
+          "rarity": 0
+        },
+        {
+          "text": "LOCKED",
+          "image": "res://archive/deadbicycle/img/locked.gif",
+          "destination": "residue",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "wrong exit",
+          "destination": "randomroom",
+          "unstable": true
+        },
+        {
+          "label": "void",
+          "destination": "void",
+          "unstable": false
+        },
+        {
+          "label": "dead",
+          "destination": "dead",
+          "unstable": false
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "HIDDEN PAGE",
+      "location_screen": ""
+    },
+    "horsey": {
+      "id": "horsey",
+      "title": "deaddeaddead",
+      "subtitle": "original /horsey",
+      "images": [
+        "res://archive/deadbicycle/img/weirdohello.gif",
+        "res://archive/deadbicycle/img/weirdoarm.gif"
+      ],
+      "body": "deaddeaddead I was a good feller while I grew up. One of my friends played Dungeons and Dragons. What a weirdo, that fellow was. \"you are a weirdo.\" I would say to him. \"you are the weirdo.\" He would say to me.",
+      "fragments": [
+        {
+          "text": "WEIRDOHELLO",
+          "image": "res://archive/deadbicycle/img/weirdohello.gif",
+          "destination": "supermarket",
+          "rarity": 0
+        },
+        {
+          "text": "WEIRDOARM",
+          "image": "res://archive/deadbicycle/img/weirdoarm.gif",
+          "destination": "motorscooter",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "supermarket",
+          "destination": "supermarket",
+          "unstable": false
+        },
+        {
+          "label": "motorscooter",
+          "destination": "motorscooter",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "HORSEY",
+      "location_screen": ""
+    },
+    "dead": {
+      "id": "dead",
+      "title": "dead DEAD dead",
+      "subtitle": "recovered index / no tabs / no clean way out",
+      "images": [
+        "res://archive/deadbicycle/img/deadbicyclelogo.gif",
+        "res://archive/deadbicycle/img/deadbikelogo.jpg",
+        "res://archive/deadbicycle/img/deadcontact.gif"
+      ],
+      "body": "The archive has been rebuilt as a broken hallway. Nothing is a category anymore. Everything is a door. Tap image fragments, wrong labels, repeated words, faces, product names, and things that look dead.",
+      "fragments": [
+        {
+          "text": "LOST DIRECTORY",
+          "image": "res://archive/deadbicycle/img/lost.jpg",
+          "destination": "lost",
+          "rarity": 0
+        },
+        {
+          "text": "GERALD",
+          "image": "res://archive/deadbicycle/img/geraldstorybg.gif",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "SUPERMARKET",
+          "image": "res://archive/deadbicycle/img/mildred2.jpg",
+          "destination": "supermarket",
+          "rarity": 0
+        },
+        {
+          "text": "THE MACHINE",
+          "image": "res://archive/deadbicycle/img/deadmachine.gif",
+          "destination": "machine",
+          "rarity": 0
+        },
+        {
+          "text": "RANDOM WRONG ROOM",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "DOTS AND TELEVISIONS",
+          "image": "res://archive/deadbicycle/img/dotsandtelevisions.gif",
+          "destination": "dots",
+          "rarity": 0
+        },
+        {
+          "text": "BICYCLE MACHINE",
+          "image": "res://archive/deadbicycle/img/bikesandbikes.jpg",
+          "destination": "bicycles",
+          "rarity": 0
+        },
+        {
+          "text": "KENSINGTON YARD",
+          "image": "res://archive/deadbicycle/img/trash4b.gif",
+          "destination": "kensington_trash_yard",
+          "rarity": 4
+        }
+      ],
+      "links": [
+        {
+          "label": "start from the broken directory",
+          "destination": "lost",
+          "unstable": false
+        },
+        {
+          "label": "dead feed",
+          "destination": "feed",
+          "unstable": false
+        },
+        {
+          "label": "salvage index",
+          "destination": "salvage_sitemap",
+          "unstable": true
+        },
+        {
+          "label": "dig raw file",
+          "destination": "dig",
+          "unstable": false
+        },
+        {
+          "label": "dig site",
+          "destination": "digsite",
+          "unstable": false
+        },
+        {
+          "label": "unstable door",
+          "destination": "unstable",
+          "unstable": true
+        },
+        {
+          "label": "panic crawl",
+          "destination": "broadcastpanic",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "DEAD",
+      "location_screen": ""
+    },
+    "iron": {
+      "id": "iron",
+      "title": "d e a d d e a d",
+      "subtitle": "original /iron",
+      "images": [
+        "res://archive/deadbicycle/img/deadbikelogo.jpg",
+        "res://archive/deadbicycle/img/circle.gif",
+        "res://archive/deadbicycle/img/circle.gif",
+        "res://archive/deadbicycle/img/circle.gif",
+        "res://archive/deadbicycle/img/circle.gif",
+        "res://archive/deadbicycle/img/circle.gif"
+      ],
+      "body": "d e a d d e a d",
+      "fragments": [
+        {
+          "text": "DEADBIKELOGO",
+          "image": "res://archive/deadbicycle/img/deadbikelogo.jpg",
+          "destination": "violent",
+          "rarity": 0
+        },
+        {
+          "text": "CIRCLE",
+          "image": "res://archive/deadbicycle/img/circle.gif",
+          "destination": "horsey",
+          "rarity": 0
+        },
+        {
+          "text": "CIRCLE",
+          "image": "res://archive/deadbicycle/img/circle.gif",
+          "destination": "skull",
+          "rarity": 0
+        },
+        {
+          "text": "CIRCLE",
+          "image": "res://archive/deadbicycle/img/circle.gif",
+          "destination": "pleased",
+          "rarity": 0
+        },
+        {
+          "text": "CIRCLE",
+          "image": "res://archive/deadbicycle/img/circle.gif",
+          "destination": "rodeo",
+          "rarity": 0
+        },
+        {
+          "text": "CIRCLE",
+          "image": "res://archive/deadbicycle/img/circle.gif",
+          "destination": "love",
+          "rarity": 0
+        },
+        {
+          "text": "CIRCLE",
+          "image": "res://archive/deadbicycle/img/circle.gif",
+          "destination": "machine",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "violent",
+          "destination": "violent",
+          "unstable": false
+        },
+        {
+          "label": "horsey",
+          "destination": "horsey",
+          "unstable": false
+        },
+        {
+          "label": "skull",
+          "destination": "skull",
+          "unstable": false
+        },
+        {
+          "label": "pleased",
+          "destination": "pleased",
+          "unstable": false
+        },
+        {
+          "label": "rodeo",
+          "destination": "rodeo",
+          "unstable": false
+        },
+        {
+          "label": "love",
+          "destination": "love",
+          "unstable": false
+        },
+        {
+          "label": "machine",
+          "destination": "machine",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "IRON",
+      "location_screen": ""
+    },
+    "kerosene": {
+      "id": "kerosene",
+      "title": "d e a d",
+      "subtitle": "original /kerosene",
+      "images": [
+        "res://archive/deadbicycle/img/mepicture.jpg",
+        "res://archive/deadbicycle/img/mepicture.jpg",
+        "res://archive/deadbicycle/img/mepicture.jpg",
+        "res://archive/deadbicycle/img/mepicture.jpg",
+        "res://archive/deadbicycle/img/mepicture.jpg",
+        "res://archive/deadbicycle/img/mepicture.jpg"
+      ],
+      "body": "d e a d when i was zero, i was born. AND&nbsp;THEN ! when i was two, i made a friend. his name was jeffrey. AND&nbsp;THEN ! when i was three, i hid in the closet. it was dark. &nbsp; AND&nbsp;THEN ! when i was four, i wished i was a muppet. AND&nbsp;THEN! when i was five, i ate KEROSENE . AND&nbsp;THEN ! when i was eight, i played a game of basketball. jeffrey won. AND&nbsp;THEN ! when i was thirteen, i ate a sandwich. it had ham on it. but no mayonnaise. i dislike mayonnaise. AND&nbsp;THEN ! when i was seventeen, i lost my head. AND&nbsp;THEN ! when i was thirty-four, i found it. AND&nbsp;THE...",
+      "fragments": [
+        {
+          "text": "MEPICTURE",
+          "image": "res://archive/deadbicycle/img/mepicture.jpg",
+          "destination": "gentlemen",
+          "rarity": 0
+        },
+        {
+          "text": "MEPICTURE",
+          "image": "res://archive/deadbicycle/img/mepicture.jpg",
+          "destination": "mind",
+          "rarity": 0
+        },
+        {
+          "text": "MEPICTURE",
+          "image": "res://archive/deadbicycle/img/mepicture.jpg",
+          "destination": "fast",
+          "rarity": 0
+        },
+        {
+          "text": "MEPICTURE",
+          "image": "res://archive/deadbicycle/img/mepicture.jpg",
+          "destination": "suburban",
+          "rarity": 0
+        },
+        {
+          "text": "MEPICTURE",
+          "image": "res://archive/deadbicycle/img/mepicture.jpg",
+          "destination": "vacuum",
+          "rarity": 0
+        },
+        {
+          "text": "MEPICTURE",
+          "image": "res://archive/deadbicycle/img/mepicture.jpg",
+          "destination": "failure",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "gentlemen",
+          "destination": "gentlemen",
+          "unstable": false
+        },
+        {
+          "label": "mind",
+          "destination": "mind",
+          "unstable": false
+        },
+        {
+          "label": "fast",
+          "destination": "fast",
+          "unstable": false
+        },
+        {
+          "label": "AND&nbsp;THEN",
+          "destination": "suburban",
+          "unstable": false
+        },
+        {
+          "label": "AND&nbsp;THEN",
+          "destination": "vacuum",
+          "unstable": false
+        },
+        {
+          "label": "AND&nbsp;THEN",
+          "destination": "failure",
+          "unstable": false
+        },
+        {
+          "label": "AND&nbsp;THEN!",
+          "destination": "happy",
+          "unstable": false
+        },
+        {
+          "label": "KEROSENE",
+          "destination": "violent",
+          "unstable": false
+        },
+        {
+          "label": "AND&nbsp;THEN",
+          "destination": "bad",
+          "unstable": false
+        },
+        {
+          "label": "AND&nbsp;THEN",
+          "destination": "blueprint",
+          "unstable": false
+        },
+        {
+          "label": "AND&nbsp;THEN",
+          "destination": "iron",
+          "unstable": false
+        },
+        {
+          "label": "AND&nbsp;THEN",
+          "destination": "chapter",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "KEROSENE",
+      "location_screen": ""
+    },
+    "knife": {
+      "id": "knife",
+      "title": "dead.",
+      "subtitle": "original /knife",
+      "images": [
+        "res://archive/deadbicycle/img/tm.gif"
+      ],
+      "body": "dead.",
+      "fragments": [
+        {
+          "text": "TM",
+          "image": "res://archive/deadbicycle/img/tm.gif",
+          "destination": "incisions",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "incisions",
+          "destination": "incisions",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "KNIFE",
+      "location_screen": ""
+    },
+    "larry": {
+      "id": "larry",
+      "title": "LARRY SUSAN JIM",
+      "subtitle": "biographical fire / television",
+      "images": [
+        "res://archive/deadbicycle/img/larry_01.jpg",
+        "res://archive/deadbicycle/img/larryeye3.jpg",
+        "res://archive/deadbicycle/img/larryface11.jpg"
+      ],
+      "body": "Susan was born in 1931. She never left her home town of Farmington. Larry loved television. He left it on one night, and it started the house on fire. He died in that fire. The show he was watching was Rescue 911.",
+      "fragments": [
+        {
+          "text": "LARRY_01",
+          "image": "res://archive/deadbicycle/img/larry_01.jpg",
+          "destination": "fire",
+          "rarity": 0
+        },
+        {
+          "text": "LARRYEYE3",
+          "image": "res://archive/deadbicycle/img/larryeye3.jpg",
+          "destination": "failure",
+          "rarity": 0
+        },
+        {
+          "text": "LARRYFACE11",
+          "image": "res://archive/deadbicycle/img/larryface11.jpg",
+          "destination": "gerald",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "FIRE",
+          "destination": "fire",
+          "unstable": true
+        },
+        {
+          "label": "FAILURE",
+          "destination": "failure",
+          "unstable": true
+        },
+        {
+          "label": "GERALD",
+          "destination": "gerald",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "LARRY",
+      "location_screen": ""
+    },
+    "lost": {
+      "id": "lost",
+      "title": "LOST",
+      "subtitle": "KEY / APPAREL / ENTERTAINMENT / SPORTING GOODS / ELECTRONICS / SHOES / TOYS / HOBBY",
+      "images": [
+        "res://archive/deadbicycle/img/lost.jpg",
+        "res://archive/deadbicycle/img/lost.gif"
+      ],
+      "body": "IF YOU WOULD LIKE TO RENT OUT A BUILDING, DON'T HESITATE TO EMAIL US OR GIVE US A CALL: 1-800-DIE-DEAD    gerald@deadbicycle.com",
+      "fragments": [
+        {
+          "text": "Green [25]",
+          "image": "res://archive/deadbicycle/img/greendead.gif",
+          "destination": "green",
+          "rarity": 0
+        },
+        {
+          "text": "Airplanes [50]",
+          "image": "res://archive/deadbicycle/img/firebird_08.gif",
+          "destination": "airplanes",
+          "rarity": 0
+        },
+        {
+          "text": "Urban [48a]",
+          "image": "res://archive/deadbicycle/img/urban-loco.jpg",
+          "destination": "urban",
+          "rarity": 0
+        },
+        {
+          "text": "Supermarket [43]",
+          "image": "res://archive/deadbicycle/img/george.jpg",
+          "destination": "supermarket",
+          "rarity": 0
+        },
+        {
+          "text": "Military [46]",
+          "image": "res://archive/deadbicycle/img/policemanfellow.jpg",
+          "destination": "military",
+          "rarity": 0
+        },
+        {
+          "text": "Larry [47]",
+          "image": "res://archive/deadbicycle/img/larry_01.jpg",
+          "destination": "larry",
+          "rarity": 0
+        },
+        {
+          "text": "Hidden [?]",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "hidden",
+          "rarity": 3
+        }
+      ],
+      "links": [
+        {
+          "label": "trash",
+          "destination": "trash",
+          "unstable": false
+        },
+        {
+          "label": "tea",
+          "destination": "tea",
+          "unstable": false
+        },
+        {
+          "label": "failure",
+          "destination": "failure",
+          "unstable": false
+        },
+        {
+          "label": "bicycles",
+          "destination": "bicycles",
+          "unstable": false
+        },
+        {
+          "label": "money",
+          "destination": "money",
+          "unstable": false
+        },
+        {
+          "label": "wrong random aisle",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": false,
+      "residue_key": "LOST",
+      "location_screen": ""
+    },
+    "love": {
+      "id": "love",
+      "title": "()dead()dead() ------------------------------dead))",
+      "subtitle": "original /love",
+      "images": [
+        "res://archive/deadbicycle/img/wedding.gif",
+        "res://archive/deadbicycle/img/wedding2.jpg",
+        "res://archive/deadbicycle/img/wedding4b.jpg",
+        "res://archive/deadbicycle/img/wedding6.jpg"
+      ],
+      "body": "()dead()dead() ------------------------------dead)) Meeting Engagement Wedding Honeymoon Children Divorce Meeting Engagement Wedding Honeymoon Children Divorce Meeting Engagement Wedding Honeymoon Children Divorce Meeting Engagement Wedding Honeymoon Children Divorce Meeting Engagement Wedding Honeymoon Children Divorce Meeting Engagement Wedding Honeymoon Children Divorce Meeting Engagement Wedding Honeymoon Children Divorce Meeting Engagement Wedding Honeymoon Children Divorce Meeting Engagement Wedding Honeymoon Children Divorce Meeting Engagement Wedding Honeymoon Children Divorce Meeting ...",
+      "fragments": [
+        {
+          "text": "WEDDING",
+          "image": "res://archive/deadbicycle/img/wedding.gif",
+          "destination": "mind",
+          "rarity": 0
+        },
+        {
+          "text": "WEDDING2",
+          "image": "res://archive/deadbicycle/img/wedding2.jpg",
+          "destination": "bad",
+          "rarity": 0
+        },
+        {
+          "text": "WEDDING4B",
+          "image": "res://archive/deadbicycle/img/wedding4b.jpg",
+          "destination": "vacuum",
+          "rarity": 0
+        },
+        {
+          "text": "WEDDING6",
+          "image": "res://archive/deadbicycle/img/wedding6.jpg",
+          "destination": "supermarket",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "mind",
+          "destination": "mind",
+          "unstable": false
+        },
+        {
+          "label": "bad",
+          "destination": "bad",
+          "unstable": false
+        },
+        {
+          "label": "vacuum",
+          "destination": "vacuum",
+          "unstable": false
+        },
+        {
+          "label": "Meeting Engagement Wedding Honeymoon Children Di",
+          "destination": "supermarket",
+          "unstable": false
+        },
+        {
+          "label": "urban",
+          "destination": "urban",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "LOVE",
+      "location_screen": ""
+    },
+    "lung": {
+      "id": "lung",
+      "title": "d e a d D E A D d e a d",
+      "subtitle": "original /lung",
+      "images": [
+        "res://archive/deadbicycle/img/smokerlady.jpg",
+        "res://archive/deadbicycle/img/smokerhand.jpg",
+        "res://archive/deadbicycle/img/smokerhand.jpg",
+        "res://archive/deadbicycle/img/smokerhand.jpg",
+        "res://archive/deadbicycle/img/smokerhand.jpg",
+        "res://archive/deadbicycle/img/smokerhand.jpg"
+      ],
+      "body": "d e a d D E A D d e a d",
+      "fragments": [
+        {
+          "text": "SMOKERLADY",
+          "image": "res://archive/deadbicycle/img/smokerlady.jpg",
+          "destination": "machine",
+          "rarity": 0
+        },
+        {
+          "text": "SMOKERHAND",
+          "image": "res://archive/deadbicycle/img/smokerhand.jpg",
+          "destination": "ambulence",
+          "rarity": 0
+        },
+        {
+          "text": "SMOKERHAND",
+          "image": "res://archive/deadbicycle/img/smokerhand.jpg",
+          "destination": "knife",
+          "rarity": 0
+        },
+        {
+          "text": "SMOKERHAND",
+          "image": "res://archive/deadbicycle/img/smokerhand.jpg",
+          "destination": "surrender",
+          "rarity": 0
+        },
+        {
+          "text": "SMOKERHAND",
+          "image": "res://archive/deadbicycle/img/smokerhand.jpg",
+          "destination": "cancer",
+          "rarity": 0
+        },
+        {
+          "text": "SMOKERHAND",
+          "image": "res://archive/deadbicycle/img/smokerhand.jpg",
+          "destination": "spy",
+          "rarity": 0
+        },
+        {
+          "text": "SMOKERHAND",
+          "image": "res://archive/deadbicycle/img/smokerhand.jpg",
+          "destination": "union",
+          "rarity": 0
+        },
+        {
+          "text": "SMOKERHAND",
+          "image": "res://archive/deadbicycle/img/smokerhand.jpg",
+          "destination": "room",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "machine",
+          "destination": "machine",
+          "unstable": false
+        },
+        {
+          "label": "ambulence",
+          "destination": "ambulence",
+          "unstable": false
+        },
+        {
+          "label": "knife",
+          "destination": "knife",
+          "unstable": false
+        },
+        {
+          "label": "surrender",
+          "destination": "surrender",
+          "unstable": false
+        },
+        {
+          "label": "cancer",
+          "destination": "cancer",
+          "unstable": false
+        },
+        {
+          "label": "spy",
+          "destination": "spy",
+          "unstable": false
+        },
+        {
+          "label": "union",
+          "destination": "union",
+          "unstable": false
+        },
+        {
+          "label": "room",
+          "destination": "room",
+          "unstable": false
+        },
+        {
+          "label": "fast",
+          "destination": "fast",
+          "unstable": false
+        },
+        {
+          "label": "green",
+          "destination": "green",
+          "unstable": false
+        },
+        {
+          "label": "military",
+          "destination": "military",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "LUNG",
+      "location_screen": ""
+    },
+    "machine": {
+      "id": "machine",
+      "title": "DEAD MACHINE",
+      "subtitle": "buttons / load / display diagram",
+      "images": [
+        "res://archive/deadbicycle/img/deadmachine.gif",
+        "res://archive/deadbicycle/img/machines3.gif",
+        "res://archive/deadbicycle/img/displaydiagram.gif"
+      ],
+      "body": "The machine is not a device. It is the part of the old site that still tries to operate.",
+      "fragments": [
+        {
+          "text": "DISPLAY DIAGRAM",
+          "image": "res://archive/deadbicycle/img/displaydiagram.gif",
+          "destination": "blueprint",
+          "rarity": 0
+        },
+        {
+          "text": "CONTROL",
+          "image": "res://archive/deadbicycle/img/control.gif",
+          "destination": "puzzle",
+          "rarity": 0
+        },
+        {
+          "text": "MACHINEX",
+          "image": "res://archive/deadbicycle/img/machinex.jpg",
+          "destination": "reports",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "blueprint",
+          "destination": "blueprint",
+          "unstable": false
+        },
+        {
+          "label": "puzzle",
+          "destination": "puzzle",
+          "unstable": false
+        },
+        {
+          "label": "wrong machine output",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MACHINE",
+      "location_screen": ""
+    },
+    "mad": {
+      "id": "mad",
+      "title": "MAD",
+      "subtitle": "original /mad",
+      "images": [],
+      "body": "you battery hiding on a purple moon all tranced out all liquid sorrow is a sad display like it's any different than yesterday set the dial to self-destruct and be aware synthetic like your smile all rolled up in paper wings it's too bad i found out how you're just a machine i won't get in the car this too smooth it's like silk falling down like sand castles do it's tricky like velvet and blue misery when it's alone it saw plastic in the sky and shot it down i talk with tired teeth but not so tired as they could be and when i saw bad luck in your eyes i laughed cuz i've got no lungs for you any...",
+      "fragments": [],
+      "links": [],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MAD",
+      "location_screen": ""
+    },
+    "massive": {
+      "id": "massive",
+      "title": "deadDEADdead",
+      "subtitle": "original /massive",
+      "images": [],
+      "body": "deadDEADdead .",
+      "fragments": [],
+      "links": [
+        {
+          "label": ".",
+          "destination": "motorscooter",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MASSIVE",
+      "location_screen": ""
+    },
+    "military": {
+      "id": "military",
+      "title": "MILITARY",
+      "subtitle": "the 24 minute song / sheriff jake",
+      "images": [
+        "res://archive/deadbicycle/img/policemanfellow.jpg",
+        "res://archive/deadbicycle/img/camo2.gif",
+        "res://archive/deadbicycle/img/grenade1.jpg"
+      ],
+      "body": "gerald have all gone away. please help me dispose of my bicycle. where has this gerald gone? we have never seen so many bicycles on fire. it is 5 a.m. and we are listening to a song. it is 24 minutes in length. everything has to be set in stone. the bicycle is still on fire. where is gerald?",
+      "fragments": [
+        {
+          "text": "POLICEMANFELLOW",
+          "image": "res://archive/deadbicycle/img/policemanfellow.jpg",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "CAMO2",
+          "image": "res://archive/deadbicycle/img/camo2.gif",
+          "destination": "reports",
+          "rarity": 0
+        },
+        {
+          "text": "GRENADE1",
+          "image": "res://archive/deadbicycle/img/grenade1.jpg",
+          "destination": "ashtray",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "GERALD",
+          "destination": "gerald",
+          "unstable": true
+        },
+        {
+          "label": "REPORTS",
+          "destination": "reports",
+          "unstable": true
+        },
+        {
+          "label": "ASHTRAY",
+          "destination": "ashtray",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MILITARY",
+      "location_screen": ""
+    },
+    "mind": {
+      "id": "mind",
+      "title": "d e a d D e a d dead",
+      "subtitle": "original /mind",
+      "images": [
+        "res://archive/deadbicycle/img/boy2b.gif"
+      ],
+      "body": "d e a d D e a d dead dead.life//i told you.to/ / do the ( Chores ). jack said // i never.saw him. he lied. i tell you. dead/dancing.life. () life ()that.//are.dead. all is DEADlife&nbsp;FOR&nbsp;/EVERYONE/ DEAD.//&gt;life. --------dead-------()life(). ...d(ead)b(icycle).com dead.dead life. dancing the night//away. the dead. life have never left the house. lonely//bicycle. DEAD&nbsp;SCHIZOPHRENIC&nbsp;life&nbsp;HAVE&nbsp;LOST&nbsp;THEIR&nbsp;MIND! --00))-0-0(()))))))---))///.)))..///)))(--//))\\\\\\\\\\\\\\))//.((--))---)(----(///----/",
+      "fragments": [
+        {
+          "text": "BOY2B",
+          "image": "res://archive/deadbicycle/img/boy2b.gif",
+          "destination": "gentlemen",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "gentlemen",
+          "destination": "gentlemen",
+          "unstable": false
+        },
+        {
+          "label": "Chores",
+          "destination": "motorscooter",
+          "unstable": false
+        },
+        {
+          "label": "life",
+          "destination": "sunshine",
+          "unstable": false
+        },
+        {
+          "label": "DEAD&nbsp;SCHIZOPHRENIC&nbsp;life&nbsp;HAVE&nbsp",
+          "destination": "fast",
+          "unstable": false
+        },
+        {
+          "label": "--00))-0-0(()))))))---))///.)))..///)))(--//))\\\\",
+          "destination": "racecar",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MIND",
+      "location_screen": ""
+    },
+    "motorscooter": {
+      "id": "motorscooter",
+      "title": "d e a d d e a d d e a d",
+      "subtitle": "original /motorscooter",
+      "images": [
+        "res://archive/deadbicycle/img/lookatusgo.gif",
+        "res://archive/deadbicycle/img/hooray.jpg",
+        "res://archive/deadbicycle/img/powbloodymess.gif"
+      ],
+      "body": "d e a d d e a d d e a d Old Man Jenkins rode his motor scooter to work until one day he crashed",
+      "fragments": [
+        {
+          "text": "LOOKATUSGO",
+          "image": "res://archive/deadbicycle/img/lookatusgo.gif",
+          "destination": "ashtray",
+          "rarity": 0
+        },
+        {
+          "text": "HOORAY",
+          "image": "res://archive/deadbicycle/img/hooray.jpg",
+          "destination": "spy",
+          "rarity": 0
+        },
+        {
+          "text": "POWBLOODYMESS",
+          "image": "res://archive/deadbicycle/img/powbloodymess.gif",
+          "destination": "ping",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "ashtray",
+          "destination": "ashtray",
+          "unstable": false
+        },
+        {
+          "label": "spy",
+          "destination": "spy",
+          "unstable": false
+        },
+        {
+          "label": "ping",
+          "destination": "ping",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MOTORSCOOTER",
+      "location_screen": ""
+    },
+    "moved": {
+      "id": "moved",
+      "title": "deadbicycle.com is not deaddeaddead.com",
+      "subtitle": "original /moved",
+      "images": [],
+      "body": "deadbicycle.com is not deaddeaddead.com DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddeaddead.com update links DEADBICYCLE.COM IS NOT deaddea...",
+      "fragments": [],
+      "links": [],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MOVED",
+      "location_screen": ""
+    },
+    "mugshot": {
+      "id": "mugshot",
+      "title": "d e a d deaddeaddeaddead d e a d",
+      "subtitle": "original /mugshot",
+      "images": [
+        "res://archive/deadbicycle/img/mugshotface.gif"
+      ],
+      "body": "d e a d deaddeaddeaddead d e a d",
+      "fragments": [
+        {
+          "text": "MUGSHOTFACE",
+          "image": "res://archive/deadbicycle/img/mugshotface.gif",
+          "destination": "murderer",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "murderer",
+          "destination": "murderer",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MUGSHOT",
+      "location_screen": ""
+    },
+    "murder": {
+      "id": "murder",
+      "title": "():::::deaddeaddead:::::()",
+      "subtitle": "original /murder",
+      "images": [],
+      "body": "():::::deaddeaddead:::::() here we were (all alone). the television was on again. here we were (all alone). the television was on again. here we were (all alone). the television was on again. here we were (all alone). the television was on again. here we were (all alone). the television was on again. here we were (all alone). the television was on again. here we were (all alone). the television was on again. here we were (all alone). the television was on again. here we were (all alone). the television was on again. here we were (all alone). the television was on again. joe : &quot;Mr. Schoute...",
+      "fragments": [],
+      "links": [
+        {
+          "label": "here we were (all alone). the television was on ",
+          "destination": "knife",
+          "unstable": false
+        },
+        {
+          "label": "(1)",
+          "destination": "grenades",
+          "unstable": false
+        },
+        {
+          "label": "(2)",
+          "destination": "larry",
+          "unstable": false
+        },
+        {
+          "label": "(3)",
+          "destination": "barber",
+          "unstable": false
+        },
+        {
+          "label": "(4)",
+          "destination": "apple",
+          "unstable": false
+        },
+        {
+          "label": "(5)",
+          "destination": "lung",
+          "unstable": false
+        },
+        {
+          "label": "(6)",
+          "destination": "bluejeans",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MURDER",
+      "location_screen": ""
+    },
+    "noise": {
+      "id": "noise",
+      "title": "//dead//dead  _____________________________",
+      "subtitle": "original /noise",
+      "images": [
+        "res://archive/deadbicycle/img/djgerald.gif",
+        "res://archive/deadbicycle/img/trees.jpg",
+        "res://archive/deadbicycle/cgi-bin/axs/ax.cgi?trans.gif"
+      ],
+      "body": "//dead//dead _____________________________ \"); // -->",
+      "fragments": [
+        {
+          "text": "DJGERALD",
+          "image": "res://archive/deadbicycle/img/djgerald.gif",
+          "destination": "stereo",
+          "rarity": 0
+        },
+        {
+          "text": "TREES",
+          "image": "res://archive/deadbicycle/img/trees.jpg",
+          "destination": "stereo",
+          "rarity": 0
+        },
+        {
+          "text": "AX.CGI?TRANS",
+          "image": "res://archive/deadbicycle/cgi-bin/axs/ax.cgi?trans.gif",
+          "destination": "stereo",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "stereo",
+          "destination": "stereo",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "NOISE",
+      "location_screen": ""
+    },
+    "pavement": {
+      "id": "pavement",
+      "title": "evil red alien eyes.",
+      "subtitle": "original /pavement",
+      "images": [
+        "res://archive/deadbicycle/img/handprint.jpg",
+        "res://archive/deadbicycle/img/handprint.jpg",
+        "res://archive/deadbicycle/img/handprint.jpg",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "evil red alien eyes.",
+      "fragments": [
+        {
+          "text": "HANDPRINT",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "town",
+          "rarity": 0
+        },
+        {
+          "text": "HANDPRINT",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "urban",
+          "rarity": 0
+        },
+        {
+          "text": "HANDPRINT",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "skull",
+          "rarity": 0
+        },
+        {
+          "text": "HANDPRINT",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "supermarket",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "town",
+          "destination": "town",
+          "unstable": false
+        },
+        {
+          "label": "urban",
+          "destination": "urban",
+          "unstable": false
+        },
+        {
+          "label": "skull",
+          "destination": "skull",
+          "unstable": false
+        },
+        {
+          "label": "supermarket",
+          "destination": "supermarket",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "PAVEMENT",
+      "location_screen": ""
+    },
+    "ping": {
+      "id": "ping",
+      "title": "dead",
+      "subtitle": "original /ping",
+      "images": [
+        "res://archive/deadbicycle/img/tm.gif"
+      ],
+      "body": "dead &nbsp;&nbsp;&nbsp;&nbsp;",
+      "fragments": [
+        {
+          "text": "TM",
+          "image": "res://archive/deadbicycle/img/tm.gif",
+          "destination": "soldier",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "soldier",
+          "destination": "soldier",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "PING",
+      "location_screen": ""
+    },
+    "pleased": {
+      "id": "pleased",
+      "title": "():::::deaddeaddead:::::()",
+      "subtitle": "original /pleased",
+      "images": [
+        "res://archive/deadbicycle/img/jman.gif"
+      ],
+      "body": "():::::deaddeaddead:::::() ctrl+alt+z ctrl+x ctrl+v ctrl+alt+shft+s CTRL+Z ctrl+alt+del",
+      "fragments": [
+        {
+          "text": "JMAN",
+          "image": "res://archive/deadbicycle/img/jman.gif",
+          "destination": "anti",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "anti",
+          "destination": "anti",
+          "unstable": false
+        },
+        {
+          "label": "ctrl+alt+z",
+          "destination": "larry",
+          "unstable": false
+        },
+        {
+          "label": "ctrl+x",
+          "destination": "happy",
+          "unstable": false
+        },
+        {
+          "label": "ctrl+v",
+          "destination": "bluejeans",
+          "unstable": false
+        },
+        {
+          "label": "ctrl+alt+shft+s",
+          "destination": "stereo",
+          "unstable": false
+        },
+        {
+          "label": "CTRL+Z",
+          "destination": "gerald",
+          "unstable": false
+        },
+        {
+          "label": "ctrl+alt+del",
+          "destination": "barber",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "PLEASED",
+      "location_screen": ""
+    },
+    "pod": {
+      "id": "pod",
+      "title": "POD",
+      "subtitle": "container with no contents",
+      "images": [
+        "res://archive/deadbicycle/img/pod.jpg",
+        "res://archive/deadbicycle/img/podbg.gif"
+      ],
+      "body": "Touching it feels like opening something that would rather stay shut.",
+      "fragments": [
+        {
+          "text": "POD",
+          "image": "res://archive/deadbicycle/img/pod.jpg",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "PODBG",
+          "image": "res://archive/deadbicycle/img/podbg.gif",
+          "destination": "room",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "GERALD",
+          "destination": "gerald",
+          "unstable": true
+        },
+        {
+          "label": "ROOM",
+          "destination": "room",
+          "unstable": true
+        },
+        {
+          "label": "MACHINE",
+          "destination": "machine",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "POD",
+      "location_screen": ""
+    },
+    "policeman": {
+      "id": "policeman",
+      "title": "POLICEMAN",
+      "subtitle": "fellow / report",
+      "images": [
+        "res://archive/deadbicycle/img/policemanfellow.jpg",
+        "res://archive/deadbicycle/img/policebox.gif"
+      ],
+      "body": "The police have been contacted.",
+      "fragments": [
+        {
+          "text": "POLICEMANFELLOW",
+          "image": "res://archive/deadbicycle/img/policemanfellow.jpg",
+          "destination": "reports",
+          "rarity": 0
+        },
+        {
+          "text": "POLICEBOX",
+          "image": "res://archive/deadbicycle/img/policebox.gif",
+          "destination": "gerald",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "REPORTS",
+          "destination": "reports",
+          "unstable": true
+        },
+        {
+          "label": "GERALD",
+          "destination": "gerald",
+          "unstable": true
+        },
+        {
+          "label": "MILITARY",
+          "destination": "military",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "POLICEMAN",
+      "location_screen": ""
+    },
+    "racecar": {
+      "id": "racecar",
+      "title": "d e a d D E A D d e a d",
+      "subtitle": "original /racecar",
+      "images": [
+        "res://archive/deadbicycle/img/tm.gif"
+      ],
+      "body": "d e a d D E A D d e a d",
+      "fragments": [
+        {
+          "text": "TM",
+          "image": "res://archive/deadbicycle/img/tm.gif",
+          "destination": "redrobotlove",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "redrobotlove",
+          "destination": "redrobotlove",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "RACECAR",
+      "location_screen": ""
+    },
+    "redrobotlove": {
+      "id": "redrobotlove",
+      "title": "d e a d DEAD d e a d",
+      "subtitle": "original /redrobotlove",
+      "images": [
+        "res://archive/deadbicycle/img/redloverobot.gif",
+        "res://archive/deadbicycle/img/redloverobotarm.gif"
+      ],
+      "body": "d e a d DEAD d e a d sometimes i cut onions and it makes me cry because one time i had a dream that an onion robbed my house and murdered my children",
+      "fragments": [
+        {
+          "text": "REDLOVEROBOT",
+          "image": "res://archive/deadbicycle/img/redloverobot.gif",
+          "destination": "motorscooter",
+          "rarity": 0
+        },
+        {
+          "text": "REDLOVEROBOTARM",
+          "image": "res://archive/deadbicycle/img/redloverobotarm.gif",
+          "destination": "arithmetic",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "motorscooter",
+          "destination": "motorscooter",
+          "unstable": false
+        },
+        {
+          "label": "arithmetic",
+          "destination": "arithmetic",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "REDROBOTLOVE",
+      "location_screen": ""
+    },
+    "rodeo": {
+      "id": "rodeo",
+      "title": "DeadBicycleDotCom",
+      "subtitle": "original /rodeo",
+      "images": [
+        "res://archive/deadbicycle/img/paint2.jpg"
+      ],
+      "body": "DeadBicycleDotCom",
+      "fragments": [
+        {
+          "text": "PAINT2",
+          "image": "res://archive/deadbicycle/img/paint2.jpg",
+          "destination": "randomroom",
+          "rarity": 0
+        }
+      ],
+      "links": [],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "RODEO",
+      "location_screen": ""
+    },
+    "room": {
+      "id": "room",
+      "title": "ROOM",
+      "subtitle": "house / chair / temperature",
+      "images": [
+        "res://archive/deadbicycle/img/chair.gif",
+        "res://archive/deadbicycle/img/bg.jpg"
+      ],
+      "body": "He sat in a dark room all by himself.",
+      "fragments": [
+        {
+          "text": "CHAIR",
+          "image": "res://archive/deadbicycle/img/chair.gif",
+          "destination": "military",
+          "rarity": 0
+        },
+        {
+          "text": "BG",
+          "image": "res://archive/deadbicycle/img/bg.jpg",
+          "destination": "pod",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "MILITARY",
+          "destination": "military",
+          "unstable": true
+        },
+        {
+          "label": "POD",
+          "destination": "pod",
+          "unstable": true
+        },
+        {
+          "label": "COMPUTERS",
+          "destination": "computers",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "ROOM",
+      "location_screen": ""
+    },
+    "simple": {
+      "id": "simple",
+      "title": "d    e    a    d    d    e    a    d    d    e    a    d",
+      "subtitle": "original /simple",
+      "images": [],
+      "body": "d e a d d e a d d e a d you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple life. you lead a very simple li...",
+      "fragments": [],
+      "links": [
+        {
+          "label": "you lead a very simple life. you lead a very sim",
+          "destination": "machine",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "SIMPLE",
+      "location_screen": ""
+    },
+    "skull": {
+      "id": "skull",
+      "title": "skull and crossbones.  you are doomed.",
+      "subtitle": "original /skull",
+      "images": [
+        "res://archive/deadbicycle/img/skullandcrossbones2.gif"
+      ],
+      "body": "skull and crossbones. you are doomed.",
+      "fragments": [
+        {
+          "text": "SKULLANDCROSSBONES2",
+          "image": "res://archive/deadbicycle/img/skullandcrossbones2.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        }
+      ],
+      "links": [],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "SKULL",
+      "location_screen": ""
+    },
+    "spy": {
+      "id": "spy",
+      "title": "DEADdeadDEAD",
+      "subtitle": "original /spy",
+      "images": [
+        "res://archive/deadbicycle/img/candid.jpg",
+        "res://archive/deadbicycle/img/candidfeed.gif",
+        "res://archive/deadbicycle/img/candidanti.gif",
+        "res://archive/deadbicycle/img/candidgerald.gif",
+        "res://archive/deadbicycle/img/candidflowers.gif",
+        "res://archive/deadbicycle/img/candidfeed.gif"
+      ],
+      "body": "DEADdeadDEAD",
+      "fragments": [
+        {
+          "text": "CANDID",
+          "image": "res://archive/deadbicycle/img/candid.jpg",
+          "destination": "feed",
+          "rarity": 0
+        },
+        {
+          "text": "CANDIDFEED",
+          "image": "res://archive/deadbicycle/img/candidfeed.gif",
+          "destination": "anti",
+          "rarity": 0
+        },
+        {
+          "text": "CANDIDANTI",
+          "image": "res://archive/deadbicycle/img/candidanti.gif",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "CANDIDGERALD",
+          "image": "res://archive/deadbicycle/img/candidgerald.gif",
+          "destination": "garden",
+          "rarity": 0
+        },
+        {
+          "text": "CANDIDFLOWERS",
+          "image": "res://archive/deadbicycle/img/candidflowers.gif",
+          "destination": "feed",
+          "rarity": 0
+        },
+        {
+          "text": "CANDIDFEED",
+          "image": "res://archive/deadbicycle/img/candidfeed.gif",
+          "destination": "anti",
+          "rarity": 0
+        },
+        {
+          "text": "CANDIDFEED",
+          "image": "res://archive/deadbicycle/img/candidfeed.gif",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "CANDIDFEED",
+          "image": "res://archive/deadbicycle/img/candidfeed.gif",
+          "destination": "garden",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "feed",
+          "destination": "feed",
+          "unstable": false
+        },
+        {
+          "label": "anti",
+          "destination": "anti",
+          "unstable": false
+        },
+        {
+          "label": "gerald",
+          "destination": "gerald",
+          "unstable": false
+        },
+        {
+          "label": "garden",
+          "destination": "garden",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "SPY",
+      "location_screen": ""
+    },
+    "stereo": {
+      "id": "stereo",
+      "title": "STEREO",
+      "subtitle": "glass / hifi",
+      "images": [
+        "res://archive/deadbicycle/img/theglassofstereo.jpg",
+        "res://archive/deadbicycle/img/hifi1x42.gif"
+      ],
+      "body": "The stereo room is a promise that sound was withheld.",
+      "fragments": [
+        {
+          "text": "THEGLASSOFSTEREO",
+          "image": "res://archive/deadbicycle/img/theglassofstereo.jpg",
+          "destination": "headphones",
+          "rarity": 0
+        },
+        {
+          "text": "HIFI1X42",
+          "image": "res://archive/deadbicycle/img/hifi1x42.gif",
+          "destination": "computers",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "HEADPHONES",
+          "destination": "headphones",
+          "unstable": true
+        },
+        {
+          "label": "COMPUTERS",
+          "destination": "computers",
+          "unstable": true
+        },
+        {
+          "label": "FEED",
+          "destination": "feed",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "STEREO",
+      "location_screen": ""
+    },
+    "suburban": {
+      "id": "suburban",
+      "title": "d e a d d e a d d e a d",
+      "subtitle": "original /suburban",
+      "images": [
+        "res://archive/deadbicycle/img/tm.gif"
+      ],
+      "body": "d e a d d e a d d e a d",
+      "fragments": [
+        {
+          "text": "TM",
+          "image": "res://archive/deadbicycle/img/tm.gif",
+          "destination": "expired",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "expired",
+          "destination": "expired",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "SUBURBAN",
+      "location_screen": ""
+    },
+    "sunshine": {
+      "id": "sunshine",
+      "title": "www.deaddeaddead.com",
+      "subtitle": "original /sunshine",
+      "images": [
+        "res://archive/deadbicycle/img/genteman.gif"
+      ],
+      "body": "www.deaddeaddead.com",
+      "fragments": [
+        {
+          "text": "GENTEMAN",
+          "image": "res://archive/deadbicycle/img/genteman.gif",
+          "destination": "pavement",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "pavement",
+          "destination": "pavement",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "SUNSHINE",
+      "location_screen": ""
+    },
+    "supermarket": {
+      "id": "supermarket",
+      "title": "SUPERMARKET",
+      "subtitle": "we have no milk for our cereal",
+      "images": [
+        "res://archive/deadbicycle/img/mildred2.jpg",
+        "res://archive/deadbicycle/img/henry.jpg",
+        "res://archive/deadbicycle/img/george.jpg"
+      ],
+      "body": "mildred went to buy groceries one day and she never returned. henry went to buy groceries one day and he never returned. george went to buy groceries one day and he never returned. maybe we will have pancakes.",
+      "fragments": [
+        {
+          "text": "MILDRED / hot green tea",
+          "image": "res://archive/deadbicycle/img/mildred2.jpg",
+          "destination": "tea",
+          "rarity": 0
+        },
+        {
+          "text": "HENRY / 1987 ford tempo",
+          "image": "res://archive/deadbicycle/img/henry.jpg",
+          "destination": "military",
+          "rarity": 0
+        },
+        {
+          "text": "GEORGE / laundry",
+          "image": "res://archive/deadbicycle/img/george.jpg",
+          "destination": "gerald",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "bad aisle",
+          "destination": "bad",
+          "unstable": false
+        },
+        {
+          "label": "trash behind store",
+          "destination": "trash",
+          "unstable": false
+        },
+        {
+          "label": "return to lost",
+          "destination": "lost",
+          "unstable": false
+        },
+        {
+          "label": "random shelf",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "SUPERMARKET",
+      "location_screen": ""
+    },
+    "surrender": {
+      "id": "surrender",
+      "title": "deadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEAD",
+      "subtitle": "original /surrender",
+      "images": [
+        "res://archive/deadbicycle/img/please.gif",
+        "res://archive/deadbicycle/img/let.gif",
+        "res://archive/deadbicycle/img/us.gif",
+        "res://archive/deadbicycle/img/live.gif"
+      ],
+      "body": "deadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEADdeadDEAD",
+      "fragments": [
+        {
+          "text": "PLEASE",
+          "image": "res://archive/deadbicycle/img/please.gif",
+          "destination": "feed",
+          "rarity": 0
+        },
+        {
+          "text": "LET",
+          "image": "res://archive/deadbicycle/img/let.gif",
+          "destination": "gerald",
+          "rarity": 0
+        },
+        {
+          "text": "US",
+          "image": "res://archive/deadbicycle/img/us.gif",
+          "destination": "15mph",
+          "rarity": 0
+        },
+        {
+          "text": "LIVE",
+          "image": "res://archive/deadbicycle/img/live.gif",
+          "destination": "dayjob",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "feed",
+          "destination": "feed",
+          "unstable": false
+        },
+        {
+          "label": "gerald",
+          "destination": "gerald",
+          "unstable": false
+        },
+        {
+          "label": "15mph",
+          "destination": "15mph",
+          "unstable": false
+        },
+        {
+          "label": "dayjob",
+          "destination": "dayjob",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "SURRENDER",
+      "location_screen": ""
+    },
+    "tea": {
+      "id": "tea",
+      "title": "TEA",
+      "subtitle": "green tea / gun tea",
+      "images": [
+        "res://archive/deadbicycle/img/teagun.jpg",
+        "res://archive/deadbicycle/img/mildred.gif"
+      ],
+      "body": "Mildred was last seen drinking hot green tea.",
+      "fragments": [
+        {
+          "text": "TEAGUN",
+          "image": "res://archive/deadbicycle/img/teagun.jpg",
+          "destination": "supermarket",
+          "rarity": 0
+        },
+        {
+          "text": "MILDRED",
+          "image": "res://archive/deadbicycle/img/mildred.gif",
+          "destination": "green",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "SUPERMARKET",
+          "destination": "supermarket",
+          "unstable": true
+        },
+        {
+          "label": "GREEN",
+          "destination": "green",
+          "unstable": true
+        },
+        {
+          "label": "MILITARY",
+          "destination": "military",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "TEA",
+      "location_screen": ""
+    },
+    "town": {
+      "id": "town",
+      "title": "TOWN",
+      "subtitle": "municipal death list",
+      "images": [
+        "res://archive/deadbicycle/img/city3bg.jpg",
+        "res://archive/deadbicycle/img/traffic.jpg",
+        "res://archive/deadbicycle/img/skullandcrossbones.gif"
+      ],
+      "body": "Charlie was murdered by Joe. Kevin died of bone cancer. This is the archive as a town ledger.",
+      "fragments": [
+        {
+          "text": "CITY3BG",
+          "image": "res://archive/deadbicycle/img/city3bg.jpg",
+          "destination": "violent",
+          "rarity": 0
+        },
+        {
+          "text": "TRAFFIC",
+          "image": "res://archive/deadbicycle/img/traffic.jpg",
+          "destination": "caseoffice",
+          "rarity": 0
+        },
+        {
+          "text": "SKULLANDCROSSBONES",
+          "image": "res://archive/deadbicycle/img/skullandcrossbones.gif",
+          "destination": "pavement",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "VIOLENT",
+          "destination": "violent",
+          "unstable": true
+        },
+        {
+          "label": "CASEOFFICE",
+          "destination": "caseoffice",
+          "unstable": true
+        },
+        {
+          "label": "PAVEMENT",
+          "destination": "pavement",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "TOWN",
+      "location_screen": ""
+    },
+    "trash": {
+      "id": "trash",
+      "title": "TRASH",
+      "subtitle": "lego / circle / bins",
+      "images": [
+        "res://archive/deadbicycle/img/trash.gif",
+        "res://archive/deadbicycle/img/biglegotrash.jpg"
+      ],
+      "body": "The trash room is the archive admitting what it is.",
+      "fragments": [
+        {
+          "text": "TRASH",
+          "image": "res://archive/deadbicycle/img/trash.gif",
+          "destination": "anti",
+          "rarity": 0
+        },
+        {
+          "text": "BIGLEGOTRASH",
+          "image": "res://archive/deadbicycle/img/biglegotrash.jpg",
+          "destination": "supermarket",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "ANTI",
+          "destination": "anti",
+          "unstable": true
+        },
+        {
+          "label": "SUPERMARKET",
+          "destination": "supermarket",
+          "unstable": true
+        },
+        {
+          "label": "REDROBOTLOVE",
+          "destination": "redrobotlove",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "TRASH",
+      "location_screen": ""
+    },
+    "union": {
+      "id": "union",
+      "title": "deaddeaddead",
+      "subtitle": "original /union",
+      "images": [
+        "res://archive/deadbicycle/img/tm.gif"
+      ],
+      "body": "deaddeaddead",
+      "fragments": [
+        {
+          "text": "TM",
+          "image": "res://archive/deadbicycle/img/tm.gif",
+          "destination": "feed",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "feed",
+          "destination": "feed",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "UNION",
+      "location_screen": ""
+    },
+    "urban": {
+      "id": "urban",
+      "title": "URBAN",
+      "subtitle": "loco / city / road",
+      "images": [
+        "res://archive/deadbicycle/img/urban-loco.jpg",
+        "res://archive/deadbicycle/img/city3bg.jpg"
+      ],
+      "body": "Urban tried to become a city and only found a background.",
+      "fragments": [
+        {
+          "text": "URBAN-LOCO",
+          "image": "res://archive/deadbicycle/img/urban-loco.jpg",
+          "destination": "roads",
+          "rarity": 0
+        },
+        {
+          "text": "CITY3BG",
+          "image": "res://archive/deadbicycle/img/city3bg.jpg",
+          "destination": "town",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "ROADS",
+          "destination": "roads",
+          "unstable": true
+        },
+        {
+          "label": "TOWN",
+          "destination": "town",
+          "unstable": true
+        },
+        {
+          "label": "LOST",
+          "destination": "lost",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "URBAN",
+      "location_screen": ""
+    },
+    "vacuum": {
+      "id": "vacuum",
+      "title": "VACUUM",
+      "subtitle": "new carpet / muddy boots",
+      "images": [
+        "res://archive/deadbicycle/img/redman.jpg",
+        "res://archive/deadbicycle/img/children1.jpg"
+      ],
+      "body": "henry walked on the new carpet with his muddy boots.",
+      "fragments": [
+        {
+          "text": "REDMAN",
+          "image": "res://archive/deadbicycle/img/redman.jpg",
+          "destination": "machine",
+          "rarity": 0
+        },
+        {
+          "text": "CHILDREN1",
+          "image": "res://archive/deadbicycle/img/children1.jpg",
+          "destination": "children",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "MACHINE",
+          "destination": "machine",
+          "unstable": true
+        },
+        {
+          "label": "CHILDREN",
+          "destination": "children",
+          "unstable": true
+        },
+        {
+          "label": "CASEOFFICE",
+          "destination": "caseoffice",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "VACUUM",
+      "location_screen": ""
+    },
+    "violent": {
+      "id": "violent",
+      "title": "d e a d d e a d d e a d",
+      "subtitle": "original /violent",
+      "images": [
+        "res://archive/deadbicycle/img/machinex.jpg",
+        "res://archive/deadbicycle/img/plex.gif",
+        "res://archive/deadbicycle/img/plexline2.gif",
+        "res://archive/deadbicycle/img/plex3.gif",
+        "res://archive/deadbicycle/img/plex4.gif"
+      ],
+      "body": "d e a d d e a d d e a d",
+      "fragments": [
+        {
+          "text": "MACHINEX",
+          "image": "res://archive/deadbicycle/img/machinex.jpg",
+          "destination": "blueprint",
+          "rarity": 0
+        },
+        {
+          "text": "PLEX",
+          "image": "res://archive/deadbicycle/img/plex.gif",
+          "destination": "crayon",
+          "rarity": 0
+        },
+        {
+          "text": "PLEXLINE2",
+          "image": "res://archive/deadbicycle/img/plexline2.gif",
+          "destination": "mugshot",
+          "rarity": 0
+        },
+        {
+          "text": "PLEX3",
+          "image": "res://archive/deadbicycle/img/plex3.gif",
+          "destination": "blueprint",
+          "rarity": 0
+        },
+        {
+          "text": "PLEX4",
+          "image": "res://archive/deadbicycle/img/plex4.gif",
+          "destination": "crayon",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "blueprint",
+          "destination": "blueprint",
+          "unstable": false
+        },
+        {
+          "label": "crayon",
+          "destination": "crayon",
+          "unstable": false
+        },
+        {
+          "label": "mugshot",
+          "destination": "mugshot",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "VIOLENT",
+      "location_screen": ""
+    },
+    "feed": {
+      "id": "feed",
+      "title": "DEAD FEED",
+      "subtitle": "old forum / dead social network / anti residue",
+      "images": [
+        "res://archive/deadbicycle/img/newfeed.gif",
+        "res://archive/deadbicycle/img/profilescreen.gif",
+        "res://archive/deadbicycle/anti/img/phorum.gif"
+      ],
+      "body": "The feed is not chronological. It is whatever survived in the wrong order.",
+      "fragments": [
+        {
+          "text": "profile screen",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "profiles",
+          "rarity": 0
+        },
+        {
+          "text": "dead comments",
+          "image": "res://archive/deadbicycle/img/deadcomments.gif",
+          "destination": "failure",
+          "rarity": 0
+        },
+        {
+          "text": "AIM icon still signed in",
+          "image": "res://archive/deadbicycle/anti/img/icon_aim.gif",
+          "destination": "anti",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "anti",
+          "destination": "anti",
+          "unstable": false
+        },
+        {
+          "label": "gerald",
+          "destination": "gerald",
+          "unstable": false
+        },
+        {
+          "label": "dig",
+          "destination": "dig",
+          "unstable": false
+        },
+        {
+          "label": "random user",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "DEAD FEED",
+      "location_screen": ""
+    },
+    "gerald": {
+      "id": "gerald",
+      "title": "WHERE HAVE GERALD GO?",
+      "subtitle": "dear friends / update / police contacted",
+      "images": [
+        "res://archive/deadbicycle/img/geraldstorybg.gif",
+        "res://archive/deadbicycle/img/djgerald.gif",
+        "res://archive/deadbicycle/img/candidgerald.gif"
+      ],
+      "body": "Dear Friends, our dear son Gerald has never returned from his fishing trip. UPDATE. GERALD HAS DIED. AND SO WILL YOU. the police have been contacted.",
+      "fragments": [
+        {
+          "text": "FISHING TRIP",
+          "image": "res://archive/deadbicycle/img/goldfish.gif",
+          "destination": "pod",
+          "rarity": 0
+        },
+        {
+          "text": "THE POLICE HAVE BEEN CONTACTED",
+          "image": "res://archive/deadbicycle/img/policemanfellow.jpg",
+          "destination": "policeman",
+          "rarity": 0
+        },
+        {
+          "text": "DJ GERALD",
+          "image": "res://archive/deadbicycle/img/djgerald.gif",
+          "destination": "redrobotlove",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "where has this gerald gone?",
+          "destination": "military",
+          "unstable": false
+        },
+        {
+          "label": "larry knew somebody",
+          "destination": "larry",
+          "unstable": false
+        },
+        {
+          "label": "return to directory",
+          "destination": "lost",
+          "unstable": false
+        },
+        {
+          "label": "gerald is elsewhere",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "GERALD",
+      "location_screen": ""
+    },
+    "void": {
+      "id": "void",
+      "title": "FILE NOT FOUND",
+      "subtitle": "but it loaded",
+      "images": [
+        "res://archive/deadbicycle/img/notfound1.gif",
+        "res://archive/deadbicycle/img/notfound2.gif",
+        "res://archive/deadbicycle/img/filenotfound3.gif"
+      ],
+      "body": "The app opened a missing file. This counts as progress. No one should know why.",
+      "fragments": [
+        {
+          "text": "return image",
+          "image": "res://archive/deadbicycle/img/deadcontact.gif",
+          "destination": "dead",
+          "rarity": 0
+        },
+        {
+          "text": "missing image",
+          "image": "res://archive/deadbicycle/img/file.gif",
+          "destination": "dig",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "back into site",
+          "destination": "dead",
+          "unstable": false
+        },
+        {
+          "label": "random broken redirect",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "VOID",
+      "location_screen": ""
+    },
+    "residue": {
+      "id": "residue",
+      "title": "RESIDUE",
+      "subtitle": "local memory / recovered stains",
+      "images": [
+        "res://archive/deadbicycle/img/deadstar.gif",
+        "res://archive/deadbicycle/img/deadstar8.gif",
+        "res://archive/deadbicycle/img/deadstar9.gif"
+      ],
+      "body": "Residue is the app remembering what you touched. It is not score. It is contamination.",
+      "fragments": [
+        {
+          "text": "DEAD STAR",
+          "image": "res://archive/deadbicycle/img/deadstar.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "DEAD MOOD",
+          "image": "res://archive/deadbicycle/img/deadmood.gif",
+          "destination": "feed",
+          "rarity": 0
+        },
+        {
+          "text": "DEAD MACHINE",
+          "image": "res://archive/deadbicycle/img/deadmachine.gif",
+          "destination": "machine",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "feed",
+          "destination": "feed",
+          "unstable": false
+        },
+        {
+          "label": "dead",
+          "destination": "dead",
+          "unstable": false
+        },
+        {
+          "label": "hidden",
+          "destination": "hidden",
+          "unstable": false
+        }
+      ],
+      "hidden": true,
+      "unstable": false,
+      "residue_key": "RESIDUE",
+      "location_screen": ""
+    },
+    "broadcastpanic": {
+      "id": "broadcastpanic",
+      "title": "EMERGENCY BROADCAST",
+      "subtitle": "this is not a test / this is not a conclusion",
+      "images": [
+        "res://archive/deadbicycle/img/warning.gif",
+        "res://archive/deadbicycle/img/report.gif",
+        "res://archive/deadbicycle/img/notfound2.gif",
+        "res://archive/deadbicycle/img/deaddarkness.gif"
+      ],
+      "body": "If you are seeing this, the station has confused you with the local signal. Do not seek shelter. The shelter is one of the rooms. The crawl will now repeat until the app forgets what television was.",
+      "fragments": [
+        {
+          "text": "NOT A TEST",
+          "image": "res://archive/deadbicycle/img/warning.gif",
+          "destination": "caseoffice",
+          "rarity": 5
+        },
+        {
+          "text": "REPORT SIGNAL",
+          "image": "res://archive/deadbicycle/img/report.gif",
+          "destination": "reports",
+          "rarity": 5
+        },
+        {
+          "text": "BLACK SCREEN CONTINUES",
+          "image": "res://archive/deadbicycle/img/deaddarkness.gif",
+          "destination": "void",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "stand by",
+          "destination": "channelstatic",
+          "unstable": true
+        },
+        {
+          "label": "wrong shelter",
+          "destination": "randomroom",
+          "unstable": true
+        },
+        {
+          "label": "turn it off",
+          "destination": "dead",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "EBS",
+      "location_screen": ""
+    },
+    "channelstatic": {
+      "id": "channelstatic",
+      "title": "CHANNEL STATIC",
+      "subtitle": "not maze / not television / wrong layer",
+      "images": [
+        "res://archive/deadbicycle/img/dotsandtelevisions.gif",
+        "res://archive/deadbicycle/img/dotsandtelevisions2.gif",
+        "res://archive/deadbicycle/img/theglassofstereo.jpg"
+      ],
+      "body": "The archive stops being a website and becomes whatever was left on after midnight.",
+      "fragments": [
+        {
+          "text": "GLASS OF STEREO",
+          "image": "res://archive/deadbicycle/img/theglassofstereo.jpg",
+          "destination": "stereo",
+          "rarity": 0
+        },
+        {
+          "text": "PUBLIC ACCESS DOOR",
+          "image": "res://archive/deadbicycle/img/hifi1x42.gif",
+          "destination": "commercialbreak",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "commercial break",
+          "destination": "commercialbreak",
+          "unstable": true
+        },
+        {
+          "label": "panic crawl",
+          "destination": "broadcastpanic",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "CHANNEL STATIC",
+      "location_screen": ""
+    },
+    "dig": {
+      "id": "dig",
+      "title": "DIG",
+      "subtitle": "raw file excavation",
+      "images": [
+        "res://archive/deadbicycle/img/dig1.gif",
+        "res://archive/deadbicycle/img/dig2.gif",
+        "res://archive/deadbicycle/img/file.gif",
+        "res://archive/deadbicycle/img/file2.gif"
+      ],
+      "body": "You dug up a file the site forgot it had. The filename may not match the room.",
+      "fragments": [
+        {
+          "text": "OPEN FILE",
+          "image": "res://archive/deadbicycle/img/file.gif",
+          "destination": "randomroom",
+          "rarity": 0
+        },
+        {
+          "text": "SOURCE",
+          "image": "res://archive/deadbicycle/img/file2.gif",
+          "destination": "sourceleak",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "dig site",
+          "destination": "digsite",
+          "unstable": false
+        },
+        {
+          "label": "lost",
+          "destination": "lost",
+          "unstable": false
+        },
+        {
+          "label": "dead",
+          "destination": "dead",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "DIG",
+      "location_screen": ""
+    },
+    "digsite": {
+      "id": "digsite",
+      "title": "DIG SITE",
+      "subtitle": "dig1 / dig2 / dig3 / local excavation",
+      "images": [
+        "res://archive/deadbicycle/img/dig1.gif",
+        "res://archive/deadbicycle/img/dig2.gif",
+        "res://archive/deadbicycle/img/dig3.gif",
+        "res://archive/deadbicycle/img/dig4.gif"
+      ],
+      "body": "The DIG button is now a place too. Excavation as navigation.",
+      "fragments": [
+        {
+          "text": "DIG ONE",
+          "image": "res://archive/deadbicycle/img/digione.jpg",
+          "destination": "dig",
+          "rarity": 0
+        },
+        {
+          "text": "DIG THREE",
+          "image": "res://archive/deadbicycle/img/digithree.jpg",
+          "destination": "sourceleak",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "dig raw file",
+          "destination": "dig",
+          "unstable": false
+        },
+        {
+          "label": "source leak",
+          "destination": "sourceleak",
+          "unstable": false
+        },
+        {
+          "label": "lost",
+          "destination": "lost",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "DIGSITE",
+      "location_screen": ""
+    },
+    "kensington_trash_yard": {
+      "id": "kensington_trash_yard",
+      "title": "KENSINGTON TRASH YARD",
+      "subtitle": "salvage / impound / rain again",
+      "images": [
+        "res://archive/deadbicycle/img/trash4b.gif",
+        "res://archive/deadbicycle/img/circletrash4.gif",
+        "res://archive/deadbicycle/img/biglegotrash.jpg"
+      ],
+      "body": "The yard is real now. You woke up outside again. The office door might still be open.",
+      "fragments": [
+        {
+          "text": "ENTER YARD",
+          "image": "res://archive/deadbicycle/img/trash4b.gif",
+          "destination": "impound_lot",
+          "rarity": 0
+        },
+        {
+          "text": "LIQUOR CORNER",
+          "image": "res://archive/deadbicycle/img/circletrash4.gif",
+          "destination": "liquor_store",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "enter salvage yard",
+          "destination": "impound_lot",
+          "unstable": false
+        },
+        {
+          "label": "liquor store",
+          "destination": "liquor_store",
+          "unstable": false
+        },
+        {
+          "label": "back to maze",
+          "destination": "lost",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "KENSINGTON YARD",
+      "location_screen": "impound_lot"
+    },
+    "impound_lot": {
+      "id": "impound_lot",
+      "title": "KENSINGTON SALVAGE YARD",
+      "subtitle": "impound lot / day-night / rain",
+      "images": [],
+      "body": "you woke up drunk. it's raining again.",
+      "fragments": [
+        {
+          "text": "LOOK AROUND",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "impound_lot",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "office",
+          "destination": "liquor_store",
+          "unstable": false
+        },
+        {
+          "label": "back to archive",
+          "destination": "kensington_trash_yard",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": false,
+      "residue_key": "IMPOUND_LOT",
+      "location_screen": "impound_lot"
+    },
+    "liquor_store": {
+      "id": "liquor_store",
+      "title": "KENSINGTON LIQUORS",
+      "subtitle": "neon / atm / coors",
+      "images": [],
+      "body": "where's ozzy?",
+      "fragments": [
+        {
+          "text": "DOOR",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "impound_lot",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "yard corner",
+          "destination": "impound_lot",
+          "unstable": false
+        },
+        {
+          "label": "archive",
+          "destination": "dead",
+          "unstable": false
+        }
+      ],
+      "hidden": false,
+      "unstable": false,
+      "residue_key": "LIQUOR_STORE",
+      "location_screen": "liquor_store"
+    },
+    "salvage_sitemap": {
+      "id": "salvage_sitemap",
+      "title": "SALVAGE INDEX",
+      "subtitle": "unopened folder / grenades residue",
+      "images": [
+        "res://archive/deadbicycle/img/filenotfound3.gif",
+        "res://archive/deadbicycle/img/grenade1.jpg",
+        "res://archive/deadbicycle/img/trash.gif"
+      ],
+      "body": "A folder that should not exist on the original site. It routes into Philadelphia debris and salvage logic.",
+      "fragments": [
+        {
+          "text": "TRASH YARD",
+          "image": "res://archive/deadbicycle/img/trash4b.gif",
+          "destination": "kensington_trash_yard",
+          "rarity": 0
+        },
+        {
+          "text": "GRENADES",
+          "image": "res://archive/deadbicycle/img/grenade1.jpg",
+          "destination": "grenades",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "kensington yard",
+          "destination": "kensington_trash_yard",
+          "unstable": false
+        },
+        {
+          "label": "grenades",
+          "destination": "grenades",
+          "unstable": true
+        },
+        {
+          "label": "lost",
+          "destination": "lost",
+          "unstable": false
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "SALVAGE_SITEMAP",
+      "location_screen": ""
+    },
+    "caseoffice": {
+      "id": "caseoffice",
+      "title": "CASE OFFICE",
+      "subtitle": "municipal domestic incident board",
+      "images": [
+        "res://archive/deadbicycle/img/report.gif",
+        "res://archive/deadbicycle/img/report1.jpg",
+        "res://archive/deadbicycle/img/policebox.gif"
+      ],
+      "body": "Lesser-used archive pages filed as evidence. VACUUM. TOWN. INCISION. LOVE.",
+      "fragments": [
+        {
+          "text": "REPORT FORM",
+          "image": "res://archive/deadbicycle/img/report.gif",
+          "destination": "reports",
+          "rarity": 0
+        },
+        {
+          "text": "OPEN VACUUM",
+          "image": "res://archive/deadbicycle/img/displaydiagram.gif",
+          "destination": "vacuum",
+          "rarity": 0
+        },
+        {
+          "text": "OPEN TOWN",
+          "image": "res://archive/deadbicycle/img/policebox.gif",
+          "destination": "town",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "vacuum bureau",
+          "destination": "vacuum",
+          "unstable": false
+        },
+        {
+          "label": "town list",
+          "destination": "town",
+          "unstable": false
+        },
+        {
+          "label": "broadcast test",
+          "destination": "broadcastpanic",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "CASE OFFICE",
+      "location_screen": ""
+    },
+    "profiles": {
+      "id": "profiles",
+      "title": "PROFILES",
+      "subtitle": "dead social layer",
+      "images": [
+        "res://archive/deadbicycle/img/profilescreen.gif",
+        "res://archive/deadbicycle/img/candidfeed.gif"
+      ],
+      "body": "These profiles are rooms wearing names.",
+      "fragments": [
+        {
+          "text": "PROFILESCREEN",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "feed",
+          "rarity": 0
+        },
+        {
+          "text": "CANDIDFEED",
+          "image": "res://archive/deadbicycle/img/candidfeed.gif",
+          "destination": "anti",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "FEED",
+          "destination": "feed",
+          "unstable": true
+        },
+        {
+          "label": "ANTI",
+          "destination": "anti",
+          "unstable": true
+        },
+        {
+          "label": "GERALD",
+          "destination": "gerald",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "PROFILES",
+      "location_screen": ""
+    },
+    "reports": {
+      "id": "reports",
+      "title": "REPORTS",
+      "subtitle": "police / paper",
+      "images": [
+        "res://archive/deadbicycle/img/report.gif",
+        "res://archive/deadbicycle/img/report1.jpg"
+      ],
+      "body": "A report exists. That does not mean anyone filed it.",
+      "fragments": [
+        {
+          "text": "REPORT",
+          "image": "res://archive/deadbicycle/img/report.gif",
+          "destination": "policeman",
+          "rarity": 0
+        },
+        {
+          "text": "REPORT1",
+          "image": "res://archive/deadbicycle/img/report1.jpg",
+          "destination": "gerald",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "POLICEMAN",
+          "destination": "policeman",
+          "unstable": true
+        },
+        {
+          "label": "GERALD",
+          "destination": "gerald",
+          "unstable": true
+        },
+        {
+          "label": "MILITARY",
+          "destination": "military",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "REPORTS",
+      "location_screen": ""
+    },
+    "dots": {
+      "id": "dots",
+      "title": "DOTS AND TELEVISIONS",
+      "subtitle": "circles / loops / broadcast static",
+      "images": [
+        "res://archive/deadbicycle/img/dotsandtelevisions.gif",
+        "res://archive/deadbicycle/img/dotsandcircles.gif"
+      ],
+      "body": "The archive as a screensaver.",
+      "fragments": [
+        {
+          "text": "DOTSANDTELEVISIONS",
+          "image": "res://archive/deadbicycle/img/dotsandtelevisions.gif",
+          "destination": "stereo",
+          "rarity": 0
+        },
+        {
+          "text": "DOTSANDCIRCLES",
+          "image": "res://archive/deadbicycle/img/dotsandcircles.gif",
+          "destination": "circles",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "STEREO",
+          "destination": "stereo",
+          "unstable": true
+        },
+        {
+          "label": "CIRCLES",
+          "destination": "circles",
+          "unstable": true
+        },
+        {
+          "label": "VOID",
+          "destination": "void",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "DOTS",
+      "location_screen": ""
+    },
+    "bicycles": {
+      "id": "bicycles",
+      "title": "BICYCLES",
+      "subtitle": "logo / green bike",
+      "images": [
+        "res://archive/deadbicycle/img/bikesandbikes.jpg",
+        "res://archive/deadbicycle/img/greenbike.gif"
+      ],
+      "body": "The bicycle is the original machine.",
+      "fragments": [
+        {
+          "text": "BIKESANDBIKES",
+          "image": "res://archive/deadbicycle/img/bikesandbikes.jpg",
+          "destination": "roads",
+          "rarity": 0
+        },
+        {
+          "text": "GREENBIKE",
+          "image": "res://archive/deadbicycle/img/greenbike.gif",
+          "destination": "green",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "ROADS",
+          "destination": "roads",
+          "unstable": true
+        },
+        {
+          "label": "GREEN",
+          "destination": "green",
+          "unstable": true
+        },
+        {
+          "label": "FIRE",
+          "destination": "fire",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "BICYCLES",
+      "location_screen": ""
+    },
+    "money": {
+      "id": "money",
+      "title": "MONEY",
+      "subtitle": "bill roll / dollar",
+      "images": [
+        "res://archive/deadbicycle/img/billroll1.jpg",
+        "res://archive/deadbicycle/img/dollar.jpg"
+      ],
+      "body": "Money exists here as a JPEG and nothing else.",
+      "fragments": [
+        {
+          "text": "BILLROLL1",
+          "image": "res://archive/deadbicycle/img/billroll1.jpg",
+          "destination": "lost",
+          "rarity": 0
+        },
+        {
+          "text": "DOLLAR",
+          "image": "res://archive/deadbicycle/img/dollar.jpg",
+          "destination": "supermarket",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "LOST",
+          "destination": "lost",
+          "unstable": true
+        },
+        {
+          "label": "SUPERMARKET",
+          "destination": "supermarket",
+          "unstable": true
+        },
+        {
+          "label": "ANTI",
+          "destination": "anti",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "MONEY",
+      "location_screen": ""
+    },
+    "children": {
+      "id": "children",
+      "title": "CHILDREN",
+      "subtitle": "four images / four wrong exits",
+      "images": [
+        "res://archive/deadbicycle/img/children1.jpg",
+        "res://archive/deadbicycle/img/children3.jpg"
+      ],
+      "body": "Faces without explanation, exits without comfort.",
+      "fragments": [
+        {
+          "text": "CHILDREN1",
+          "image": "res://archive/deadbicycle/img/children1.jpg",
+          "destination": "mugshot",
+          "rarity": 0
+        },
+        {
+          "text": "CHILDREN3",
+          "image": "res://archive/deadbicycle/img/children3.jpg",
+          "destination": "supermarket",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "MUGSHOT",
+          "destination": "mugshot",
+          "unstable": true
+        },
+        {
+          "label": "SUPERMARKET",
+          "destination": "supermarket",
+          "unstable": true
+        },
+        {
+          "label": "MILITARY",
+          "destination": "military",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "CHILDREN",
+      "location_screen": ""
+    },
+    "puzzle": {
+      "id": "puzzle",
+      "title": "PUZZLE",
+      "subtitle": "pieces out of order",
+      "images": [
+        "res://archive/deadbicycle/img/puzzle1.jpg",
+        "res://archive/deadbicycle/img/puzzle5.jpg"
+      ],
+      "body": "Numbered pieces with no promised complete image.",
+      "fragments": [
+        {
+          "text": "PUZZLE1",
+          "image": "res://archive/deadbicycle/img/puzzle1.jpg",
+          "destination": "machine",
+          "rarity": 0
+        },
+        {
+          "text": "PUZZLE5",
+          "image": "res://archive/deadbicycle/img/puzzle5.jpg",
+          "destination": "reports",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "MACHINE",
+          "destination": "machine",
+          "unstable": true
+        },
+        {
+          "label": "REPORTS",
+          "destination": "reports",
+          "unstable": true
+        },
+        {
+          "label": "HIDDEN",
+          "destination": "hidden",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "PUZZLE",
+      "location_screen": ""
+    },
+    "roads": {
+      "id": "roads",
+      "title": "ROADS",
+      "subtitle": "green / gray / orange",
+      "images": [
+        "res://archive/deadbicycle/img/greenroad.jpg",
+        "res://archive/deadbicycle/img/grayroad.jpg",
+        "res://archive/deadbicycle/img/orangeroad.jpg"
+      ],
+      "body": "All roads are image files.",
+      "fragments": [
+        {
+          "text": "GREENROAD",
+          "image": "res://archive/deadbicycle/img/greenroad.jpg",
+          "destination": "green",
+          "rarity": 0
+        },
+        {
+          "text": "GRAYROAD",
+          "image": "res://archive/deadbicycle/img/grayroad.jpg",
+          "destination": "urban",
+          "rarity": 0
+        },
+        {
+          "text": "ORANGEROAD",
+          "image": "res://archive/deadbicycle/img/orangeroad.jpg",
+          "destination": "fire",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "GREEN",
+          "destination": "green",
+          "unstable": true
+        },
+        {
+          "label": "URBAN",
+          "destination": "urban",
+          "unstable": true
+        },
+        {
+          "label": "FIRE",
+          "destination": "fire",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "ROADS",
+      "location_screen": ""
+    },
+    "sourceleak": {
+      "id": "sourceleak",
+      "title": "SOURCE LEAK",
+      "subtitle": "php / sql guts",
+      "images": [
+        "res://archive/deadbicycle/img/file.gif",
+        "res://archive/deadbicycle/img/loading.gif"
+      ],
+      "body": "The site accidentally opened its own stomach.",
+      "fragments": [
+        {
+          "text": "FILE",
+          "image": "res://archive/deadbicycle/img/file.gif",
+          "destination": "anti",
+          "rarity": 0
+        },
+        {
+          "text": "LOADING",
+          "image": "res://archive/deadbicycle/img/loading.gif",
+          "destination": "gerald",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "ANTI",
+          "destination": "anti",
+          "unstable": true
+        },
+        {
+          "label": "GERALD",
+          "destination": "gerald",
+          "unstable": true
+        },
+        {
+          "label": "COMPUTERS",
+          "destination": "computers",
+          "unstable": true
+        },
+        {
+          "label": "wrong door",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "SOURCELEAK",
+      "location_screen": ""
+    }
+  }
+}

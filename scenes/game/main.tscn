@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cphillymaingame01"]
+[gd_scene load_steps=10 format=3 uid="uid://cphillymaingame01"]
 
 [ext_resource type="Script" path="res://scripts/game/game_main.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/game/hud_panel.gd" id="2"]
@@ -6,6 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cphillyobservation01" path="res://scenes/game/observation_panel.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://cphillyinventory01" path="res://scenes/game/inventory_panel.tscn" id="5"]
 [ext_resource type="Script" path="res://scripts/game/music_mute_button.gd" id="6"]
+[ext_resource type="Script" path="res://scripts/game/fragment_bar.gd" id="7"]
+[ext_resource type="Script" path="res://scripts/game/archive_page.gd" id="8"]
+[ext_resource type="PackedScene" uid="uid://dstatusstrip01" path="res://scenes/game/status_strip.tscn" id="9"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -20,10 +23,8 @@ script = ExtResource("1")
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
-anchor_left = 0.05
-anchor_top = 0.05
-anchor_right = 0.95
-anchor_bottom = 0.95
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -43,6 +44,13 @@ color = Color(0, 0, 0, 1)
 unique_name_in_owner = true
 layer = 10
 
+[node name="StatusStrip" parent="HUD" instance=ExtResource("9")]
+layout_mode = 0
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 28.0
+grow_horizontal = 2
+
 [node name="TransitionLabel" type="Label" parent="HUD"]
 unique_name_in_owner = true
 visible = false
@@ -59,9 +67,6 @@ offset_bottom = 44.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
-theme_override_font_sizes/font_size = 32
-text = "KENSINGTON\nLIQUORS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -71,16 +76,66 @@ z_index = 200
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -36.0
-offset_top = 8.0
-offset_right = -8.0
-offset_bottom = 32.0
+offset_left = -52.0
+offset_top = 6.0
+offset_right = -6.0
+offset_bottom = 22.0
 grow_horizontal = 0
 focus_mode = 0
+text = "sound"
 script = ExtResource("6")
+
+[node name="FragmentBar" type="PanelContainer" parent="HUD"]
+unique_name_in_owner = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -52.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("7")
+
+[node name="FragmentLabel" type="Label" parent="HUD/FragmentBar"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+autowrap_mode = 3
+
+[node name="ArchivePage" type="PanelContainer" parent="HUD"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8")
+
+[node name="VBox" type="VBoxContainer" parent="HUD/ArchivePage"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="ArchiveBody" type="Label" parent="HUD/ArchivePage/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+autowrap_mode = 3
+
+[node name="ArchiveClose" type="Button" parent="HUD/ArchivePage/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+text = "ok"
 
 [node name="LocationBadge" type="PanelContainer" parent="HUD"]
 unique_name_in_owner = true
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -93,8 +148,6 @@ grow_horizontal = 0
 [node name="LocationLabel" type="Label" parent="HUD/LocationBadge"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.92, 0.9, 0.86, 0.55)
-theme_override_font_sizes/font_size = 11
 text = "IMPOUND LOT"
 horizontal_alignment = 2
 
@@ -106,7 +159,7 @@ anchor_bottom = 1.0
 offset_left = 8.0
 offset_top = -220.0
 offset_right = 180.0
-offset_bottom = -8.0
+offset_bottom = -44.0
 grow_vertical = 0
 mouse_filter = 2
 script = ExtResource("2")
@@ -158,19 +211,17 @@ offset_top = 52.0
 offset_right = 180.0
 offset_bottom = 92.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.92, 0.9, 0.86, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
-theme_override_constants/shadow_offset_x = 1
-theme_override_constants/shadow_offset_y = 1
-theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="ObservationPanel" parent="HUD" instance=ExtResource("4")]
 unique_name_in_owner = true
+visible = false
 
 [node name="CollectionsPanel" parent="HUD" instance=ExtResource("3")]
 unique_name_in_owner = true
+visible = false
 
 [node name="InventoryPanel" parent="HUD" instance=ExtResource("5")]
 unique_name_in_owner = true
+visible = false

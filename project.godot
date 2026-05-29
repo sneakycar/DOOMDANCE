@@ -24,6 +24,7 @@ MobileUI="*res://scripts/game/mobile_ui.gd"
 GameState="*res://scripts/game/game_state.gd"
 DoomMusic="*res://scripts/game/doom_music.gd"
 DayNight="*res://scripts/game/day_night.gd"
+MazeStore="*res://scripts/game/maze_store.gd"
 
 [display]
 
