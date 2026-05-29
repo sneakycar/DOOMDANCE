@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cphillymaingame01"]
+[gd_scene load_steps=5 format=3 uid="uid://cphillymaingame01"]
 
 [ext_resource type="Script" path="res://scripts/game/game_main.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://cphillycollections01" path="res://scenes/game/collections_panel.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cphillyobservation01" path="res://scenes/game/observation_panel.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cphillyinventory01" path="res://scenes/game/inventory_panel.tscn" id="4"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -63,7 +64,7 @@ horizontal_alignment = 2
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 168.0
-offset_bottom = 96.0
+offset_bottom = 118.0
 
 [node name="VBox" type="VBoxContainer" parent="HUD/HudPanel"]
 layout_mode = 2
@@ -81,17 +82,27 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 12
 text = "11:00 PM"
 
-[node name="InventoryLabel" type="Label" parent="HUD/HudPanel/VBox"]
+[node name="XpLabel" type="Label" parent="HUD/HudPanel/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
-text = "—"
-autowrap_mode = 0
+text = "0.00"
+
+[node name="InventoryButton" type="Button" parent="HUD/HudPanel/VBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 11
+flat = true
+text = "INVENTORY"
 
 [node name="CollectionsButton" type="Button" parent="HUD/HudPanel/VBox"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 28)
+visible = false
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
+focus_mode = 0
 theme_override_font_sizes/font_size = 11
 flat = true
 text = "COLLECTIONS"
@@ -119,4 +130,7 @@ autowrap_mode = 2
 unique_name_in_owner = true
 
 [node name="CollectionsPanel" parent="HUD" instance=ExtResource("2")]
+unique_name_in_owner = true
+
+[node name="InventoryPanel" parent="HUD" instance=ExtResource("4")]
 unique_name_in_owner = true

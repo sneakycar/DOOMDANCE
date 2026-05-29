@@ -4,6 +4,7 @@ extends Control
 @onready var _fade: ColorRect = %Fade
 @onready var _message_label: Label = %MessageLabel
 @onready var _collections: PanelContainer = %CollectionsPanel
+@onready var _inventory: PanelContainer = %InventoryPanel
 @onready var _observation: PanelContainer = %ObservationPanel
 @onready var _location_label: Label = %LocationLabel
 
@@ -12,6 +13,7 @@ const LocationScreenScene := preload("res://scenes/game/location_screen.tscn")
 var _current_screen: LocationScreen
 var _current_id: String = ""
 var _fade_busy := false
+var _xp: float = 0.0
 
 func _ready() -> void:
 	_fade.color = Color(0, 0, 0, 1)
@@ -19,14 +21,21 @@ func _ready() -> void:
 	_apply_corner_ui()
 	_apply_hud_typography()
 	GameState.money_changed.connect(_on_hud_refresh)
-	GameState.time_changed.connect(_on_hud_refresh)
 	GameState.inventory_changed.connect(_on_hud_refresh)
+	GameState.collections_changed.connect(_on_collections_changed)
 	GameState.message_requested.connect(_show_message)
 	GameState.panhandle_changed.connect(_on_panhandle_changed)
-	%CollectionsButton.pressed.connect(func() -> void: _collections.toggle())
+	%InventoryButton.pressed.connect(_on_inventory_pressed)
+	%CollectionsButton.pressed.connect(_on_collections_pressed)
 	_observation.action_confirmed.connect(_execute_hotspot)
 	_on_hud_refresh()
+	_on_collections_changed()
+	_refresh_live_hud()
 	_go_to_screen("impound_lot", true)
+
+func _process(delta: float) -> void:
+	_xp += delta
+	_refresh_live_hud()
 
 func _apply_corner_ui() -> void:
 	var panel_style := StyleBoxFlat.new()
@@ -41,24 +50,54 @@ func _apply_corner_ui() -> void:
 	location_style.bg_color = Color(0, 0, 0, 0.6)
 	%LocationBadge.add_theme_stylebox_override("panel", location_style)
 	_observation.add_theme_stylebox_override("panel", panel_style.duplicate())
+	var overlay_style := panel_style.duplicate()
+	overlay_style.bg_color = Color(0, 0, 0, 0.72)
+	_collections.add_theme_stylebox_override("panel", overlay_style)
+	_inventory.add_theme_stylebox_override("panel", overlay_style)
 
 func _apply_hud_typography() -> void:
 	DoomTypography.stamp_mono(%TimeLabel, 12)
+	DoomTypography.stamp_mono(%XpLabel, 11, true)
 	DoomTypography.stamp_mono(%MoneyLabel, 13)
-	DoomTypography.stamp_mono(%InventoryLabel, 10)
 	DoomTypography.stamp_observation(%MessageLabel, 12)
 	DoomTypography.stamp_signage(_location_label, 16)
 	var signage := DoomTypography.COLOR_SIGNAGE
 	_location_label.add_theme_color_override("font_color", Color(signage.r, signage.g, signage.b, 0.6))
 	_location_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	%InventoryLabel.vertical_alignment = VERTICAL_ALIGNMENT_TOP
-	%CollectionsButton.add_theme_font_override("font", DoomTypography.mono)
-	%CollectionsButton.add_theme_font_size_override("font_size", 11)
+	_style_hud_button(%InventoryButton)
+	_style_hud_button(%CollectionsButton)
+
+func _style_hud_button(btn: Button) -> void:
+	btn.add_theme_font_override("font", DoomTypography.mono)
+	btn.add_theme_font_size_override("font_size", 11)
+
+func _refresh_live_hud() -> void:
+	var now := Time.get_datetime_dict_from_system()
+	var h: int = int(now.hour)
+	var m: int = int(now.minute)
+	var s: int = int(now.second)
+	var suffix := "AM" if h < 12 else "PM"
+	var h12: int = h % 12
+	if h12 == 0:
+		h12 = 12
+	%TimeLabel.text = "%02d:%02d:%02d %s" % [h12, m, s, suffix]
+	%XpLabel.text = "%.2f" % _xp
 
 func _on_hud_refresh(_value = null) -> void:
 	%MoneyLabel.text = GameState.money_display()
-	%TimeLabel.text = GameState.time_display()
-	%InventoryLabel.text = GameState.inventory_display()
+
+func _on_collections_changed(_value = null) -> void:
+	%CollectionsButton.visible = _collections.has_method("has_any") and _collections.has_any()
+
+func _on_inventory_pressed() -> void:
+	_inventory.toggle()
+	if _collections.visible:
+		_collections.visible = false
+
+func _on_collections_pressed() -> void:
+	_collections.toggle()
+	if _inventory.visible:
+		_inventory.visible = false
 
 func _on_panhandle_changed() -> void:
 	if _current_id == "alley" and _current_screen:
@@ -75,6 +114,8 @@ func _go_to_screen(screen_id: String, instant: bool = false) -> void:
 	if _fade_busy and not instant:
 		return
 	_observation.hide_panel()
+	_inventory.visible = false
+	_collections.visible = false
 	_fade_busy = true
 	_fade.mouse_filter = Control.MOUSE_FILTER_STOP
 
@@ -106,7 +147,6 @@ func _swap_screen(screen_id: String) -> void:
 		_current_screen = null
 	_current_id = screen_id
 	GameState.mark_screen_visited(screen_id)
-	var data := ScreenData.get_screen(screen_id)
 	_location_label.text = DoomTypography.header_for_screen(screen_id)
 	var screen: LocationScreen = LocationScreenScene.instantiate()
 	screen.set_anchors_preset(Control.PRESET_FULL_RECT)
