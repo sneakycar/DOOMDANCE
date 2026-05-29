@@ -15,7 +15,7 @@ static func load_all() -> void:
 	if typeof(parsed) == TYPE_DICTIONARY:
 		_copy = parsed
 
-static func get(path: String, fallback: String = "") -> String:
+static func lookup(path: String, fallback: String = "") -> String:
 	load_all()
 	var parts := path.split("/")
 	var node: Variant = _copy

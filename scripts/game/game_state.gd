@@ -110,7 +110,7 @@ func note_fence_man_witnessed() -> void:
 	if fence_man_seen:
 		return
 	fence_man_seen = true
-	message_requested.emit(CopyData.get("world/fence_man", "SOMETHING MOVED.\n\nBEHIND THE FENCE."))
+	message_requested.emit(CopyData.lookup("world/fence_man", "SOMETHING MOVED.\n\nBEHIND THE FENCE."))
 	world_event_changed.emit()
 	_save()
 
@@ -194,7 +194,7 @@ func start_panhandle() -> void:
 		return
 	panhandling_until = int(Time.get_unix_time_from_system()) + PANHANDLE_SECONDS
 	panhandle_changed.emit()
-	message_requested.emit(CopyData.get("panhandle/start", "SIT.\nASK."))
+	message_requested.emit(CopyData.lookup("panhandle/start", "SIT.\nASK."))
 	_save()
 
 func _grant_panhandle_legendary() -> void:
@@ -202,7 +202,7 @@ func _grant_panhandle_legendary() -> void:
 		_grant_panhandle_uncommon()
 		return
 	add_collectible("bus_pass")
-	message_requested.emit(CopyData.get("panhandle/bus_pass", "BUS PASS."))
+	message_requested.emit(CopyData.lookup("panhandle/bus_pass", "BUS PASS."))
 
 func _grant_panhandle_uncommon() -> void:
 	var pool: Array[String] = ["old_receipt", "crushed_beer_can"]
@@ -214,12 +214,12 @@ func _grant_panhandle_uncommon() -> void:
 			continue
 		add_collectible(cid)
 		if cid == "old_receipt":
-			message_requested.emit(CopyData.get("panhandle/receipt", "OLD RECEIPT."))
+			message_requested.emit(CopyData.lookup("panhandle/receipt", "OLD RECEIPT."))
 		else:
-			message_requested.emit(CopyData.get("panhandle/beer_can", "CRUSHED CAN."))
+			message_requested.emit(CopyData.lookup("panhandle/beer_can", "CRUSHED CAN."))
 		return
 	add_money(randi_range(1, 2))
-	message_requested.emit(CopyData.get("panhandle/cash_one", "$1."))
+	message_requested.emit(CopyData.lookup("panhandle/cash_one", "$1."))
 
 func collect_panhandle() -> void:
 	if not is_panhandle_ready_to_collect():
@@ -232,16 +232,16 @@ func collect_panhandle() -> void:
 		_:
 			var cash := randi_range(0, 4)
 			add_money(cash)
-			message_requested.emit(CopyData.get("panhandle/cash", "$%d.") % cash)
+			message_requested.emit(CopyData.lookup("panhandle/cash", "$%d.") % cash)
 	panhandling_until = 0
 	panhandle_changed.emit()
 	_save()
 
 func panhandle_status_line() -> String:
 	if is_panhandling_active():
-		return CopyData.get("panhandle/active", "PANHANDLING.")
+		return CopyData.lookup("panhandle/active", "PANHANDLING.")
 	if is_panhandle_ready_to_collect():
-		return CopyData.get("panhandle/ready", "COLLECT EARNINGS.")
+		return CopyData.lookup("panhandle/ready", "COLLECT EARNINGS.")
 	return ""
 
 func _emit_all() -> void:

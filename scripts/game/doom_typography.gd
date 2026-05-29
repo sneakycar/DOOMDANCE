@@ -54,7 +54,7 @@ func format_time(clock_minutes: int) -> String:
 
 func format_inventory(items: Array) -> String:
 	if items.is_empty():
-		return CopyData.get("hud/inventory_empty", "—")
+		return CopyData.lookup("hud/inventory_empty", "—")
 	var lines: PackedStringArray = []
 	for item in items:
 		lines.append(str(item).to_upper())

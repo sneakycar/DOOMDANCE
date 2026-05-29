@@ -2,6 +2,8 @@ extends Node
 class_name GameClock
 
 enum Phase { NIGHT, DAWN, MORNING, AFTERNOON, EVENING }
+## Legacy name used by first-alley scripts (`LATE_NIGHT` = `NIGHT`).
+enum TimePhase { LATE_NIGHT = 0, DAWN = 1, MORNING = 2, AFTERNOON = 3, EVENING = 4 }
 
 signal phase_changed(phase: Phase, phase_name: String)
 

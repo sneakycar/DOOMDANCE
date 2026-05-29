@@ -9,7 +9,7 @@ func _ready() -> void:
 	%CloseButton.custom_minimum_size = Vector2(120, 48)
 	DoomTypography.stamp_signage(%Title, 16)
 	DoomTypography.stamp_mono(%CloseButton, 12)
-	%Title.text = CopyData.get("hud/collections_title", "COLLECTIONS")
+	%Title.text = CopyData.lookup("hud/collections_title", "COLLECTIONS")
 	GameState.collections_changed.connect(_refresh)
 	%CloseButton.pressed.connect(_on_close)
 

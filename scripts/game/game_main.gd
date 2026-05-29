@@ -125,13 +125,13 @@ func _on_hotspot(hotspot: Dictionary) -> void:
 				if _current_screen:
 					_current_screen.setup("alley")
 			else:
-				_show_message(CopyData.get("panhandle/blocked", "NOT NOW."))
+				_show_message(CopyData.lookup("panhandle/blocked", "NOT NOW."))
 		"collect_panhandle":
 			GameState.collect_panhandle()
 			if _current_screen:
 				_current_screen.setup("alley")
 		_:
-			_show_message(CopyData.get("affordance/nothing_happens", "—"))
+			_show_message(CopyData.lookup("affordance/nothing_happens", "—"))
 
 func _try_buy(hotspot: Dictionary) -> void:
 	var cost: int = int(hotspot.get("cost", 0))
@@ -139,10 +139,10 @@ func _try_buy(hotspot: Dictionary) -> void:
 	var data := CollectibleData.get(cid)
 	var name: String = data.get("name", hotspot.get("item", "Item"))
 	if cid != "" and cid in GameState.discovered_collectibles and GameState.has_item(name):
-		_show_message(CopyData.get("affordance/already_have", "ALREADY HAVE."))
+		_show_message(CopyData.lookup("affordance/already_have", "ALREADY HAVE."))
 		return
 	if not GameState.can_afford(cost):
-		_show_message(CopyData.get("affordance/no_money", "SHORT."))
+		_show_message(CopyData.lookup("affordance/no_money", "SHORT."))
 		return
 	GameState.spend(cost)
 	if cid != "":
@@ -150,7 +150,7 @@ func _try_buy(hotspot: Dictionary) -> void:
 	else:
 		GameState.add_item(name)
 	var label := DoomTypography.format_item_label(name)
-	_show_message(CopyData.get("commerce/bought", "$%d.\n%s.") % [cost, label])
+	_show_message(CopyData.lookup("commerce/bought", "$%d.\n%s.") % [cost, label])
 
 func _try_collect(hotspot: Dictionary) -> void:
 	var flag: String = hotspot.get("flag", "")
@@ -158,10 +158,10 @@ func _try_collect(hotspot: Dictionary) -> void:
 	var data := CollectibleData.get(cid)
 	var name: String = data.get("name", hotspot.get("item", "Item"))
 	if flag != "" and GameState.is_collected(flag):
-		_show_message(CopyData.get("affordance/nothing_here", "NOTHING."))
+		_show_message(CopyData.lookup("affordance/nothing_here", "NOTHING."))
 		return
 	if cid != "" and GameState.has_item(name):
-		_show_message(CopyData.get("affordance/already_taken", "GONE."))
+		_show_message(CopyData.lookup("affordance/already_taken", "GONE."))
 		return
 	if cid != "":
 		GameState.add_collectible(cid)
@@ -169,14 +169,14 @@ func _try_collect(hotspot: Dictionary) -> void:
 		GameState.add_item(name)
 	if flag != "":
 		GameState.mark_collected(flag)
-	_show_message(CopyData.get("commerce/picked_up", "%s.") % DoomTypography.format_item_label(name))
+	_show_message(CopyData.lookup("commerce/picked_up", "%s.") % DoomTypography.format_item_label(name))
 	if _current_screen:
 		_current_screen.setup(_current_id)
 
 func _try_pay_message(hotspot: Dictionary) -> void:
 	var cost: int = int(hotspot.get("cost", 0))
 	if not GameState.can_afford(cost):
-		_show_message(CopyData.get("affordance/no_money", "SHORT."))
+		_show_message(CopyData.lookup("affordance/no_money", "SHORT."))
 		return
 	GameState.spend(cost)
 	_show_message(hotspot.get("text", ""))
