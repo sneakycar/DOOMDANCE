@@ -13,16 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: firebelley/setup-godot@v1
+
+      - uses: chickensoft-games/setup-godot@v2
+        name: Setup Godot
         with:
-          godot-version: "4.4.1"
-          cache: true
+          version: 4.4.1
+          use-dotnet: false
+          include-templates: true
+
       - name: Export HTML5
         run: |
+          godot --version
           godot --headless --import
           mkdir -p public
           godot --headless --export-release "Web" public/index.html
           cp -f web/manifest.webmanifest public/manifest.webmanifest
+          ls -la public/
+
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: export web build"
