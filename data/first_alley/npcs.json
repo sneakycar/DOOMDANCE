@@ -1,0 +1,31 @@
+{
+  "npcs": [
+    {
+      "id": "night_walker",
+      "label": "Night Walker",
+      "spawn_phases": ["late_night", "dawn"],
+      "spawn_weight": 14,
+      "body_color": [0.14, 0.14, 0.18, 1],
+      "coat_color": [0.22, 0.2, 0.28, 1],
+      "greeting": "Keeps walking. Doesn't look back."
+    },
+    {
+      "id": "morning_smoker",
+      "label": "Morning Smoker",
+      "spawn_phases": ["dawn", "morning"],
+      "spawn_weight": 12,
+      "body_color": [0.24, 0.2, 0.22, 1],
+      "coat_color": [0.42, 0.28, 0.24, 1],
+      "greeting": "Exhales smoke. Nods once."
+    },
+    {
+      "id": "alley_kid",
+      "label": "Alley Kid",
+      "spawn_phases": ["afternoon", "evening"],
+      "spawn_weight": 10,
+      "body_color": [0.28, 0.32, 0.38, 1],
+      "coat_color": [0.48, 0.38, 0.52, 1],
+      "greeting": "Sits on a milk crate. Watching."
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://alley_segment_mod"]
+
+[ext_resource type="Script" path="res://scripts/segment/alley_segment.gd" id="1_seg"]
+
+[node name="AlleySegment" type="Node2D"]
+script = ExtResource("1_seg")
+
+[node name="Backdrop" type="Sprite2D" parent="."]
+z_index = -20
+texture_filter = 0
+centered = false
+
+[node name="Layers" type="Node2D" parent="."]
+z_index = -10
+
+[node name="Sky" type="Sprite2D" parent="Layers"]
+visible = false
+texture_filter = 0
+centered = false
+
+[node name="Buildings" type="Sprite2D" parent="Layers"]
+visible = false
+texture_filter = 0
+centered = false
+
+[node name="Walls" type="Node2D" parent="Layers"]
+
+[node name="Sidewalks" type="Node2D" parent="Layers"]
+
+[node name="StreetTiles" type="Node2D" parent="Layers"]
+
+[node name="Street" type="ColorRect" parent="Layers"]
+visible = false
+offset_right = 480.0
+offset_bottom = 48.0
+color = Color(0.06, 0.07, 0.1, 1)
+
+[node name="Props" type="Node2D" parent="."]
+z_index = 40
+
+[node name="DebugLabel" type="Label" parent="."]
+visible = false
+z_index = 30
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 420.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.96, 0.86, 0.52, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 11
+text = "#0 Segment"

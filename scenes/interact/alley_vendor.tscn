@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://alley_vendor_philly"]
+
+[ext_resource type="Script" path="res://scripts/interact/alley_vendor.gd" id="1_vendor"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vendor"]
+size = Vector2(22, 26)
+
+[node name="AlleyVendor" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_vendor")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_vendor")
+
+[node name="Marker" type="Polygon2D" parent="."]
+color = Color(0.72, 0.55, 0.32, 1)
+polygon = PackedVector2Array(-6, 4, -5, -12, 5, -12, 6, 4, 0, 8)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -32.0
+offset_top = -26.0
+offset_right = 32.0
+offset_bottom = -14.0
+theme_override_colors/font_color = Color(0.96, 0.86, 0.52, 1)
+theme_override_font_sizes/font_size = 7
+text = "Vendor"
+horizontal_alignment = 1

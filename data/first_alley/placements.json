@@ -1,0 +1,84 @@
+{
+  "segments": [
+    {
+      "segment": "auto_garage",
+      "doors": [{ "id": "garage_bay", "x": -18 }],
+      "vendors": [],
+      "money": [],
+      "time_events": [],
+      "npc_slots": [{ "id": "alley_kid", "chance": 0.35, "x_offset": 12 }]
+    },
+    {
+      "segment": "boarded_storefront",
+      "doors": [{ "id": "boarded_loft", "x": 0 }],
+      "vendors": [],
+      "money": [{ "id": "donation_box", "x": -24 }],
+      "time_events": [{ "id": "evening_block_smoke", "x": 20 }],
+      "npc_slots": [{ "id": "night_walker", "chance": 0.4, "x_offset": 0 }]
+    },
+    {
+      "segment": "loading_dock",
+      "doors": [{ "id": "dock_gate", "x": 24 }],
+      "vendors": [],
+      "money": [{ "id": "laundry_slot", "x": -8 }],
+      "time_events": [{ "id": "afternoon_sunbreak", "x": 0 }],
+      "npc_slots": []
+    },
+    {
+      "segment": "bodega_exterior",
+      "doors": [],
+      "vendors": [{ "id": "corner_bodega", "x": -28 }],
+      "money": [{ "id": "gumball_rig", "x": 18 }],
+      "time_events": [{ "id": "morning_pickup", "x": 8 }],
+      "npc_slots": [{ "id": "morning_smoker", "chance": 0.5, "x_offset": -10 }]
+    },
+    {
+      "segment": "vacant_lot",
+      "doors": [],
+      "vendors": [{ "id": "night_dealer", "x": 0, "spawn_chance": 0.55 }],
+      "money": [],
+      "time_events": [{ "id": "late_night_siren", "x": -16 }],
+      "npc_slots": [{ "id": "night_walker", "chance": 0.45, "x_offset": 0 }]
+    },
+    {
+      "segment": "graffiti_wall",
+      "doors": [],
+      "vendors": [{ "id": "pawn_flip", "x": 14 }],
+      "money": [{ "id": "rust_payphone", "x": -20 }],
+      "time_events": [],
+      "npc_slots": [{ "id": "alley_kid", "chance": 0.3, "x_offset": 6 }]
+    },
+    {
+      "segment": "chainlink_fence",
+      "doors": [],
+      "vendors": [],
+      "money": [{ "id": "parking_meter", "x": 10 }],
+      "time_events": [{ "id": "dawn_pigeons", "x": -12 }],
+      "npc_slots": [{ "id": "morning_smoker", "chance": 0.35, "x_offset": 0 }]
+    },
+    {
+      "segment": "dumpster_alley",
+      "doors": [],
+      "vendors": [],
+      "money": [],
+      "time_events": [],
+      "npc_slots": [{ "id": "night_walker", "chance": 0.25, "x_offset": 0 }]
+    },
+    {
+      "segment": "septa_underpass",
+      "doors": [],
+      "vendors": [],
+      "money": [],
+      "time_events": [],
+      "npc_slots": [{ "id": "morning_smoker", "chance": 0.3, "x_offset": 0 }]
+    },
+    {
+      "segment": "dead_end_alley",
+      "doors": [],
+      "vendors": [],
+      "money": [],
+      "time_events": [],
+      "npc_slots": []
+    }
+  ]
+}

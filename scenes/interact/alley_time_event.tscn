@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://alley_time_event"]
+
+[ext_resource type="Script" path="res://scripts/interact/alley_time_event.gd" id="1_event"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_event"]
+size = Vector2(20, 22)
+
+[node name="AlleyTimeEvent" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_event")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_event")
+
+[node name="Marker" type="Polygon2D" parent="."]
+color = Color(0.72, 0.68, 0.58, 1)
+polygon = PackedVector2Array(-6, 2, 0, -8, 6, 2, 0, 6)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -32.0
+offset_top = -24.0
+offset_right = 32.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(0.96, 0.86, 0.52, 1)
+theme_override_font_sizes/font_size = 7
+text = "Event"
+horizontal_alignment = 1

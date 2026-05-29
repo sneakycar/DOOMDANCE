@@ -1,0 +1,31 @@
+{
+  "hud": {
+    "inventory_empty": "—",
+    "collections_title": "COLLECTIONS"
+  },
+  "affordance": {
+    "no_money": "SHORT.",
+    "already_have": "ALREADY HAVE.",
+    "nothing_here": "NOTHING.",
+    "already_taken": "GONE.",
+    "nothing_happens": "—"
+  },
+  "panhandle": {
+    "start": "SIT.\nASK.",
+    "active": "PANHANDLING.",
+    "ready": "COLLECT EARNINGS.",
+    "blocked": "NOT NOW.",
+    "receipt": "OLD RECEIPT.",
+    "bus_pass": "BUS PASS.",
+    "beer_can": "CRUSHED CAN.",
+    "cash": "$%d.",
+    "cash_one": "$1."
+  },
+  "commerce": {
+    "bought": "$%d.\n%s.",
+    "picked_up": "%s."
+  },
+  "world": {
+    "fence_man": "SOMETHING MOVED.\n\nBEHIND THE FENCE."
+  }
+}

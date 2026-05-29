@@ -1,0 +1,147 @@
+{
+  "props": [
+    {
+      "id": "broken_window",
+      "label": "Broken Window",
+      "kind": "static",
+      "texture": "res://assets/abandon_city/props/broken_window.png",
+      "spawn_weight": 4,
+      "phases": ["night", "evening", "afternoon"],
+      "min_luck": 0.0,
+      "size": [40, 48],
+      "y_offset": -48
+    },
+    {
+      "id": "plank",
+      "label": "Boarded Plank",
+      "kind": "static",
+      "texture": "res://assets/abandon_city/props/plank.png",
+      "spawn_weight": 5,
+      "phases": ["night", "morning", "evening"],
+      "min_luck": 0.0,
+      "size": [56, 24],
+      "y_offset": -24
+    },
+    {
+      "id": "poster_1",
+      "label": "Torn Poster",
+      "kind": "static",
+      "texture": "res://assets/abandon_city/props/poster_1.png",
+      "spawn_weight": 3,
+      "phases": ["afternoon", "evening", "night"],
+      "min_luck": 0.0,
+      "size": [24, 48],
+      "y_offset": -52
+    },
+    {
+      "id": "poster_2",
+      "label": "Faded Poster",
+      "kind": "static",
+      "texture": "res://assets/abandon_city/props/poster_2.png",
+      "spawn_weight": 3,
+      "phases": ["morning", "afternoon", "evening"],
+      "min_luck": 0.0,
+      "size": [28, 52],
+      "y_offset": -54
+    },
+    {
+      "id": "damage_wall",
+      "label": "Wall Damage",
+      "kind": "static",
+      "texture": "res://assets/abandon_city/props/damage_wall.png",
+      "spawn_weight": 4,
+      "phases": ["morning", "afternoon", "evening", "night"],
+      "min_luck": 0.0,
+      "size": [64, 20],
+      "y_offset": -72
+    },
+    {
+      "id": "damage_ground",
+      "label": "Broken Pavement",
+      "kind": "static",
+      "texture": "res://assets/abandon_city/props/damage_ground.png",
+      "spawn_weight": 3,
+      "phases": ["morning", "afternoon", "evening"],
+      "min_luck": 0.0,
+      "size": [40, 12],
+      "y_offset": -8
+    },
+    {
+      "id": "papers_1",
+      "label": "Scattered Papers",
+      "kind": "pickup",
+      "texture": "res://assets/abandon_city/props/papers_1.png",
+      "spawn_weight": 5,
+      "phases": ["night", "evening", "morning"],
+      "min_luck": 0.0,
+      "size": [32, 14],
+      "y_offset": -10
+    },
+    {
+      "id": "papers_2",
+      "label": "Trash Papers",
+      "kind": "pickup",
+      "texture": "res://assets/abandon_city/props/papers_2.png",
+      "spawn_weight": 4,
+      "phases": ["morning", "afternoon"],
+      "min_luck": 0.0,
+      "size": [40, 12],
+      "y_offset": -8
+    },
+    {
+      "id": "papers_3",
+      "label": "Folded Papers",
+      "kind": "pickup",
+      "texture": "res://assets/abandon_city/props/papers_3.png",
+      "spawn_weight": 3,
+      "phases": ["night", "evening"],
+      "min_luck": 0.2,
+      "size": [28, 14],
+      "y_offset": -10
+    },
+    {
+      "id": "street_lamp",
+      "label": "Street Lamp",
+      "kind": "static",
+      "texture": "res://assets/abandon_city/props/street_lamp.png",
+      "spawn_weight": 3,
+      "phases": ["night", "evening"],
+      "min_luck": 0.0,
+      "size": [24, 80],
+      "y_offset": -80
+    },
+    {
+      "id": "beer_can",
+      "label": "Beer Can",
+      "kind": "pickup",
+      "texture": "res://assets/abandon_city/props/beer_can.png",
+      "spawn_weight": 5,
+      "phases": ["night", "evening"],
+      "min_luck": 0.0,
+      "size": [24, 14],
+      "y_offset": -10
+    },
+    {
+      "id": "dumpster",
+      "label": "Dumpster",
+      "kind": "static",
+      "texture": "res://assets/abandon_city/props/dumpster.png",
+      "spawn_weight": 4,
+      "phases": ["night", "evening"],
+      "min_luck": 0.0,
+      "size": [64, 48],
+      "y_offset": -48
+    },
+    {
+      "id": "dumpster_open",
+      "label": "Full Dumpster",
+      "kind": "static",
+      "texture": "res://assets/abandon_city/props/dumpster_open.png",
+      "spawn_weight": 3,
+      "phases": ["night", "evening"],
+      "min_luck": 0.0,
+      "size": [64, 48],
+      "y_offset": -48
+    }
+  ]
+}

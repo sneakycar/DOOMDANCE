@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://alley_door_philly"]
+
+[ext_resource type="Script" path="res://scripts/interact/alley_door.gd" id="1_door"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_door"]
+size = Vector2(18, 28)
+
+[node name="AlleyDoor" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_door")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_door")
+
+[node name="Marker" type="Polygon2D" parent="."]
+color = Color(0.55, 0.38, 0.22, 1)
+polygon = PackedVector2Array(-8, 4, -7, -14, 7, -14, 8, 4, 0, 8)
+
+[node name="Label" type="Label" parent="."]
+offset_left = -28.0
+offset_top = -28.0
+offset_right = 28.0
+offset_bottom = -16.0
+theme_override_colors/font_color = Color(0.94, 0.72, 0.38, 1)
+theme_override_font_sizes/font_size = 7
+text = "Door"
+horizontal_alignment = 1

@@ -1,0 +1,158 @@
+[gd_scene load_steps=10 format=3 uid="uid://alley_philly_night"]
+
+[ext_resource type="Script" path="res://scripts/alley.gd" id="1_alley"]
+[ext_resource type="Script" path="res://scripts/game/game_clock.gd" id="2_clock"]
+[ext_resource type="Script" path="res://scripts/segment/segment_manager.gd" id="3_manager"]
+[ext_resource type="Script" path="res://scripts/alley_state.gd" id="4_state"]
+[ext_resource type="PackedScene" uid="uid://player_philly_alley" path="res://scenes/player.tscn" id="5_player"]
+[ext_resource type="Script" path="res://scripts/ui/touch_controls.gd" id="6_touch"]
+[ext_resource type="Shader" path="res://shaders/grayscale_screen.gdshader" id="7_gray_shader"]
+
+[sub_resource type="Resource" id="AlleyState_default"]
+script = ExtResource("4_state")
+luck = 0.5
+happiness = 0.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ground"]
+size = Vector2(3360, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_grayscale"]
+shader = ExtResource("7_gray_shader")
+shader_parameter/contrast = 1.08
+
+[node name="Alley" type="Node2D"]
+script = ExtResource("1_alley")
+
+[node name="GameClock" type="Node" parent="." groups=["game_clock"]]
+script = ExtResource("2_clock")
+alley_state = SubResource("AlleyState_default")
+seconds_per_phase = 90.0
+start_phase = 4
+
+[node name="SegmentManager" type="Node2D" parent="."]
+script = ExtResource("3_manager")
+alley_state = SubResource("AlleyState_default")
+
+[node name="Ground" type="StaticBody2D" parent="SegmentManager"]
+collision_layer = 1
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SegmentManager/Ground"]
+shape = SubResource("RectangleShape2D_ground")
+
+[node name="Player" parent="." instance=ExtResource("5_player")]
+unique_name_in_owner = true
+position = Vector2(1680, 228)
+
+[node name="GrayscalePost" type="CanvasLayer" parent="."]
+layer = 1
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="GrayscalePost"]
+copy_mode = 2
+
+[node name="Pass" type="ColorRect" parent="GrayscalePost"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+material = SubResource("ShaderMaterial_grayscale")
+
+[node name="UI" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PhaseLabel" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 10.0
+offset_right = 460.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.94, 0.72, 0.38, 1)
+theme_override_font_sizes/font_size = 12
+text = "Late Night"
+
+[node name="SegmentLabel" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 28.0
+offset_right = 460.0
+offset_bottom = 44.0
+theme_override_colors/font_color = Color(0.82, 0.86, 0.92, 1)
+theme_override_font_sizes/font_size = 11
+text = "Bodega Block"
+
+[node name="LogLabel" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 46.0
+offset_right = 468.0
+offset_bottom = 66.0
+theme_override_colors/font_color = Color(0.96, 0.86, 0.52, 1)
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 3
+text = "…"
+
+[node name="BagLabel" type="Label" parent="UI/HUD"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 10.0
+offset_right = 468.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(0.82, 0.86, 0.92, 1)
+theme_override_font_sizes/font_size = 10
+text = "Bag: empty"
+horizontal_alignment = 2
+
+[node name="TouchControls" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("6_touch")
+
+[node name="WalkTap" type="Control" parent="UI/TouchControls"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+
+[node name="InteractButton" type="Button" parent="UI/TouchControls"]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 214.0
+offset_right = 284.0
+offset_bottom = 254.0
+theme_override_font_sizes/font_size = 14
+text = "Hand"
+
+[node name="Dialogue" type="PanelContainer" parent="UI"]
+visible = false
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="DialogueText" type="Label" parent="UI/Dialogue"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "..."
+autowrap_mode = 3

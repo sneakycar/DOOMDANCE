@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://alley_npc_philly"]
+
+[ext_resource type="Script" path="res://scripts/segment/alley_npc.gd" id="1_npc"]
+
+[node name="AlleyNpc" type="Node2D"]
+z_index = 50
+script = ExtResource("1_npc")
+
+[node name="Coat" type="Polygon2D" parent="."]
+color = Color(0.32, 0.3, 0.38, 1)
+polygon = PackedVector2Array(-5, 2, -4, -10, 4, -10, 5, 2, 0, 4)
+
+[node name="Body" type="Polygon2D" parent="."]
+color = Color(0.2, 0.22, 0.28, 1)
+polygon = PackedVector2Array(-3, 2, -2, -8, 2, -8, 3, 2)
+
+[node name="Tag" type="Label" parent="."]
+offset_left = -24.0
+offset_top = -22.0
+offset_right = 24.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(0.82, 0.86, 0.92, 0.85)
+theme_override_font_sizes/font_size = 6
+text = "NPC"
+horizontal_alignment = 1
+visible = false

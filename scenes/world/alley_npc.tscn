@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://alley_npc_mod"]
+
+[ext_resource type="Script" path="res://scripts/world/alley_npc.gd" id="1_npc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_npc"]
+size = Vector2(24, 48)
+
+[node name="AlleyNpc" type="Area2D"]
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("1_npc")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 0
+centered = false
+
+[node name="Body" type="Polygon2D" parent="."]
+color = Color(0.3, 0.3, 0.35, 1)
+
+[node name="Tag" type="Label" parent="."]
+visible = false
+offset_left = -30.0
+offset_top = -58.0
+offset_right = 30.0
+offset_bottom = -44.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -24)
+shape = SubResource("RectangleShape2D_npc")

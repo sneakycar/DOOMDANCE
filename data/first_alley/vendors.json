@@ -1,0 +1,34 @@
+{
+  "vendors": [
+    {
+      "id": "corner_bodega",
+      "label": "Corner Bodega",
+      "active_phases": ["morning", "afternoon"],
+      "buy_item": "loose_cigarettes",
+      "buy_price": 2,
+      "sell_item": "beer_can",
+      "sell_payout": 1,
+      "marker_color": [0.72, 0.55, 0.32, 1]
+    },
+    {
+      "id": "night_dealer",
+      "label": "Night Dealer",
+      "active_phases": ["late_night"],
+      "buy_item": "pill_bottle",
+      "buy_price": 5,
+      "sell_item": "baseball_card",
+      "sell_payout": 4,
+      "marker_color": [0.32, 0.28, 0.42, 1]
+    },
+    {
+      "id": "pawn_flip",
+      "label": "Pawn Flip",
+      "active_phases": ["afternoon", "evening"],
+      "buy_item": "septa_token",
+      "buy_price": 3,
+      "sell_item": "gold_chain",
+      "sell_payout": 10,
+      "marker_color": [0.58, 0.48, 0.32, 1]
+    }
+  ]
+}

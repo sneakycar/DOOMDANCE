@@ -1,0 +1,383 @@
+{
+  "items": [
+    {
+      "id": "trash_bag",
+      "label": "Trash Bag",
+      "spawn_weight": 18,
+      "rare": false,
+      "spawn_phases": ["dawn", "morning", "evening"],
+      "sell": 1,
+      "usable": false,
+      "visual": {
+        "color": [0.32, 0.34, 0.3, 1],
+        "polygon": [[-5, 2], [-4, -3], [4, -3], [5, 2], [0, 4]],
+        "scale": 1.0
+      }
+    },
+    {
+      "id": "beer_can",
+      "label": "Beer Can",
+      "spawn_weight": 16,
+      "rare": false,
+      "spawn_phases": ["evening", "late_night"],
+      "sell": 1,
+      "usable": true,
+      "consume_on_use": true,
+      "use_msg": "Warm beer. The alley tastes like regret.",
+      "visual": {
+        "color": [0.72, 0.22, 0.18, 1],
+        "polygon": [[-2, 3], [-2, -4], [2, -4], [2, 3]],
+        "scale": 1.0
+      }
+    },
+    {
+      "id": "cigarette_pack",
+      "label": "Cigarette Pack",
+      "spawn_weight": 14,
+      "rare": false,
+      "spawn_phases": ["morning", "evening"],
+      "sell": 2,
+      "usable": true,
+      "consume_on_use": true,
+      "use_msg": "You smoke. Brick walls feel farther away.",
+      "visual": {
+        "color": [0.88, 0.82, 0.72, 1],
+        "polygon": [[-4, 2], [-4, -2], [4, -2], [4, 2]],
+        "scale": 0.95
+      }
+    },
+    {
+      "id": "pill_bottle",
+      "label": "Pill Bottle",
+      "spawn_weight": 8,
+      "rare": false,
+      "spawn_phases": ["late_night", "dawn"],
+      "sell": 4,
+      "usable": true,
+      "consume_on_use": true,
+      "use_msg": "Colors soften. You forget what you were looking for.",
+      "visual": {
+        "color": [0.72, 0.78, 0.92, 1],
+        "polygon": [[-2, 3], [-3, -2], [0, -4], [3, -2], [2, 3]],
+        "scale": 1.0
+      }
+    },
+    {
+      "id": "jacket",
+      "label": "Jacket",
+      "spawn_weight": 7,
+      "rare": false,
+      "spawn_phases": ["late_night", "dawn"],
+      "sell": 3,
+      "usable": false,
+      "visual": {
+        "color": [0.22, 0.24, 0.32, 1],
+        "polygon": [[-6, 3], [-5, -4], [0, -5], [5, -4], [6, 3], [0, 1]],
+        "scale": 1.05
+      }
+    },
+    {
+      "id": "dead_phone",
+      "label": "Dead Phone",
+      "spawn_weight": 7,
+      "rare": false,
+      "spawn_phases": ["afternoon", "evening"],
+      "sell": 3,
+      "usable": true,
+      "consume_on_use": false,
+      "use_msg": "Screen flickers. No signal down here.",
+      "visual": {
+        "color": [0.18, 0.2, 0.24, 1],
+        "polygon": [[-3, 4], [-3, -4], [3, -4], [3, 4]],
+        "scale": 0.9
+      }
+    },
+    {
+      "id": "folded_note",
+      "label": "Folded Note",
+      "spawn_weight": 6,
+      "rare": false,
+      "spawn_phases": ["late_night", "evening"],
+      "sell": 0,
+      "usable": false,
+      "visual": {
+        "color": [0.92, 0.88, 0.7, 1],
+        "polygon": [[-4, 3], [0, -3], [4, 3], [0, 5]],
+        "scale": 0.9
+      }
+    },
+    {
+      "id": "baseball_card",
+      "label": "Baseball Card",
+      "spawn_weight": 5,
+      "rare": false,
+      "spawn_phases": ["morning", "afternoon"],
+      "sell": 5,
+      "usable": false,
+      "visual": {
+        "color": [0.94, 0.72, 0.38, 1],
+        "polygon": [[-3, 4], [-3, -4], [3, -4], [3, 4]],
+        "scale": 0.85
+      }
+    },
+    {
+      "id": "vinyl_single",
+      "label": "Vinyl Single",
+      "spawn_weight": 5,
+      "rare": false,
+      "spawn_phases": ["afternoon", "evening"],
+      "sell": 4,
+      "usable": false,
+      "visual": {
+        "color": [0.12, 0.1, 0.14, 1],
+        "polygon": [[-5, 0], [0, -5], [5, 0], [0, 5]],
+        "scale": 1.05
+      }
+    },
+    {
+      "id": "shopping_cart_wheel",
+      "label": "Cart Wheel",
+      "spawn_weight": 4,
+      "rare": false,
+      "spawn_phases": ["morning"],
+      "sell": 2,
+      "usable": false,
+      "visual": {
+        "color": [0.52, 0.54, 0.58, 1],
+        "polygon": [[-4, 4], [-4, -2], [4, -2], [4, 4]],
+        "scale": 0.9
+      }
+    },
+    {
+      "id": "loose_change",
+      "label": "Loose Change",
+      "spawn_weight": 12,
+      "rare": false,
+      "spawn_phases": ["morning", "afternoon", "evening"],
+      "sell": 2,
+      "usable": false,
+      "visual": {
+        "color": [0.78, 0.72, 0.42, 1],
+        "polygon": [[-2, 2], [0, -2], [2, 2]],
+        "scale": 0.85
+      }
+    },
+    {
+      "id": "lottery_ticket",
+      "label": "Lottery Ticket",
+      "spawn_weight": 6,
+      "rare": false,
+      "spawn_phases": ["afternoon", "evening"],
+      "sell": 1,
+      "usable": false,
+      "visual": {
+        "color": [0.9, 0.42, 0.38, 1],
+        "polygon": [[-4, 3], [4, 3], [4, -3], [-4, -3]],
+        "scale": 0.9
+      }
+    },
+    {
+      "id": "busted_umbrella",
+      "label": "Busted Umbrella",
+      "spawn_weight": 5,
+      "rare": false,
+      "spawn_phases": ["dawn", "morning"],
+      "sell": 1,
+      "usable": false,
+      "visual": {
+        "color": [0.38, 0.22, 0.48, 1],
+        "polygon": [[-6, 2], [0, -6], [6, 2], [0, 4]],
+        "scale": 1.0
+      }
+    },
+    {
+      "id": "takeout_menu",
+      "label": "Takeout Menu",
+      "spawn_weight": 8,
+      "rare": false,
+      "spawn_phases": ["evening", "late_night"],
+      "sell": 0,
+      "usable": false,
+      "visual": {
+        "color": [0.95, 0.9, 0.82, 1],
+        "polygon": [[-3, 4], [3, 4], [3, -4], [-3, -4]],
+        "scale": 0.88
+      }
+    },
+    {
+      "id": "septa_token",
+      "label": "SEPTA Token",
+      "spawn_weight": 6,
+      "rare": false,
+      "spawn_phases": ["morning", "afternoon"],
+      "sell": 3,
+      "usable": false,
+      "visual": {
+        "color": [0.22, 0.48, 0.72, 1],
+        "polygon": [[-3, 0], [0, -3], [3, 0], [0, 3]],
+        "scale": 0.8
+      }
+    },
+    {
+      "id": "hubcap",
+      "label": "Hubcap",
+      "spawn_weight": 5,
+      "rare": false,
+      "spawn_phases": ["afternoon"],
+      "sell": 4,
+      "usable": false,
+      "visual": {
+        "color": [0.62, 0.64, 0.68, 1],
+        "polygon": [[-5, 0], [0, -5], [5, 0], [0, 5]],
+        "scale": 1.1
+      }
+    },
+    {
+      "id": "spray_cap",
+      "label": "Spray Cap",
+      "spawn_weight": 7,
+      "rare": false,
+      "spawn_phases": ["afternoon", "evening"],
+      "sell": 1,
+      "usable": false,
+      "visual": {
+        "color": [0.92, 0.18, 0.42, 1],
+        "polygon": [[-2, 3], [2, 3], [1, -3], [-1, -3]],
+        "scale": 0.85
+      }
+    },
+    {
+      "id": "dog_leash",
+      "label": "Dog Leash",
+      "spawn_weight": 4,
+      "rare": false,
+      "spawn_phases": ["dawn", "morning"],
+      "sell": 2,
+      "usable": false,
+      "visual": {
+        "color": [0.48, 0.32, 0.22, 1],
+        "polygon": [[-5, 1], [5, -1], [4, 2], [-4, 0]],
+        "scale": 0.95
+      }
+    },
+    {
+      "id": "coffee_cup",
+      "label": "Coffee Cup",
+      "spawn_weight": 9,
+      "rare": false,
+      "spawn_phases": ["dawn", "morning"],
+      "sell": 1,
+      "usable": true,
+      "consume_on_use": true,
+      "use_msg": "Cold coffee. Still wakes you up.",
+      "visual": {
+        "color": [0.72, 0.58, 0.42, 1],
+        "polygon": [[-3, 3], [-2, -3], [2, -3], [3, 3]],
+        "scale": 0.9
+      }
+    },
+    {
+      "id": "brick_chip",
+      "label": "Brick Chip",
+      "spawn_weight": 10,
+      "rare": false,
+      "spawn_phases": ["dawn", "afternoon", "evening"],
+      "sell": 0,
+      "usable": false,
+      "visual": {
+        "color": [0.58, 0.32, 0.28, 1],
+        "polygon": [[-3, 2], [2, -2], [4, 1], [-1, 3]],
+        "scale": 0.9
+      }
+    },
+    {
+      "id": "loose_cigarettes",
+      "label": "Loose Cigarettes",
+      "spawn_weight": 0,
+      "vendor_only": true,
+      "rare": false,
+      "spawn_phases": [],
+      "sell": 1,
+      "usable": true,
+      "consume_on_use": true,
+      "use_msg": "You smoke a loose cigarette.",
+      "visual": {
+        "color": [0.85, 0.78, 0.62, 1],
+        "polygon": [[-3, 2], [3, 2], [2, -2], [-2, -2]],
+        "scale": 0.85
+      }
+    },
+    {
+      "id": "gold_chain",
+      "label": "Gold Chain",
+      "spawn_weight": 2,
+      "rare": true,
+      "spawn_phases": ["late_night", "evening"],
+      "sell": 12,
+      "usable": false,
+      "visual": {
+        "color": [0.92, 0.78, 0.28, 1],
+        "polygon": [[-4, 0], [-2, -3], [2, -3], [4, 0], [0, 3]],
+        "scale": 0.75
+      }
+    },
+    {
+      "id": "vintage_zippo",
+      "label": "Vintage Zippo",
+      "spawn_weight": 2,
+      "rare": true,
+      "spawn_phases": ["evening", "late_night"],
+      "sell": 10,
+      "usable": true,
+      "consume_on_use": false,
+      "use_msg": "It still lights. You feel lucky.",
+      "visual": {
+        "color": [0.72, 0.52, 0.22, 1],
+        "polygon": [[-2, 4], [2, 4], [2, -4], [-2, -4]],
+        "scale": 0.8
+      }
+    },
+    {
+      "id": "pharmacy_bag",
+      "label": "Pharmacy Bag",
+      "spawn_weight": 2,
+      "rare": true,
+      "spawn_phases": ["morning", "dawn"],
+      "sell": 8,
+      "usable": false,
+      "visual": {
+        "color": [0.88, 0.92, 0.95, 1],
+        "polygon": [[-4, 3], [4, 3], [3, -4], [-3, -4]],
+        "scale": 0.95
+      }
+    },
+    {
+      "id": "busker_cd",
+      "label": "Busker CD",
+      "spawn_weight": 2,
+      "rare": true,
+      "spawn_phases": ["afternoon", "evening"],
+      "sell": 7,
+      "usable": false,
+      "visual": {
+        "color": [0.18, 0.72, 0.82, 1],
+        "polygon": [[-4, 0], [0, -4], [4, 0], [0, 4]],
+        "scale": 0.85
+      }
+    },
+    {
+      "id": "holy_card",
+      "label": "Holy Card",
+      "spawn_weight": 2,
+      "rare": true,
+      "spawn_phases": ["dawn", "morning"],
+      "sell": 6,
+      "usable": false,
+      "visual": {
+        "color": [0.95, 0.92, 0.75, 1],
+        "polygon": [[-2, 5], [2, 5], [2, -5], [-2, -5]],
+        "scale": 0.8
+      }
+    }
+  ]
+}

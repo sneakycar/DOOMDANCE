@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://corridor_segment_philly"]
+
+[ext_resource type="Script" path="res://scripts/corridor/corridor_segment.gd" id="1_segment"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
+size = Vector2(160, 15)
+
+[node name="CorridorSegment" type="Node2D"]
+z_index = -50
+script = ExtResource("1_segment")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+collision_layer = 1
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(80, 211)
+shape = SubResource("RectangleShape2D_floor")

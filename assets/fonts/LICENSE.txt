@@ -1,0 +1,4 @@
+IBM Plex Mono and IBM Plex Sans Condensed are licensed under the SIL Open Font License 1.1.
+Source: https://github.com/IBM/plex
+
+Signage layer uses IBM Plex Sans Condensed Bold as the stand-in for industrial condensed sans (Haas Grotesk family).

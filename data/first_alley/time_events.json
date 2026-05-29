@@ -1,0 +1,54 @@
+{
+  "time_events": [
+    {
+      "id": "dawn_pigeons",
+      "label": "Dawn Pigeons",
+      "active_phases": ["dawn"],
+      "reward_money": 0,
+      "reward_item": "",
+      "success_message": "Pigeons scatter. The alley exhales.",
+      "wrong_phase_message": "Just bricks now. Come back at dawn.",
+      "marker_color": [0.72, 0.68, 0.58, 1]
+    },
+    {
+      "id": "morning_pickup",
+      "label": "Trash Pickup",
+      "active_phases": ["morning"],
+      "reward_money": 1,
+      "reward_item": "",
+      "success_message": "Truck rumbles past. A dollar blows your way.",
+      "wrong_phase_message": "Quiet curb. Trucks come in the morning.",
+      "marker_color": [0.48, 0.52, 0.42, 1]
+    },
+    {
+      "id": "afternoon_sunbreak",
+      "label": "Sun On Brick",
+      "active_phases": ["afternoon"],
+      "reward_money": 2,
+      "reward_item": "",
+      "success_message": "Light hits the wall. You find change in a crack.",
+      "wrong_phase_message": "Shadows are wrong. Wait for afternoon.",
+      "marker_color": [0.92, 0.78, 0.42, 1]
+    },
+    {
+      "id": "evening_block_smoke",
+      "label": "Block Smoke",
+      "active_phases": ["evening"],
+      "reward_money": 0,
+      "reward_item": "cigarette_pack",
+      "success_message": "Someone left a pack on the stoop.",
+      "wrong_phase_message": "Air is still. Evening brings the smokers.",
+      "marker_color": [0.58, 0.42, 0.38, 1]
+    },
+    {
+      "id": "late_night_siren",
+      "label": "Distant Siren",
+      "active_phases": ["late_night"],
+      "reward_money": 0,
+      "reward_item": "",
+      "success_message": "Siren fades. You feel watched, then alone.",
+      "wrong_phase_message": "Too quiet. Sirens find this place late.",
+      "marker_color": [0.32, 0.36, 0.52, 1]
+    }
+  ]
+}

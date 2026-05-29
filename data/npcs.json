@@ -1,0 +1,55 @@
+{
+  "npcs": [
+    {
+      "id": "morning_smoker",
+      "label": "Smoker",
+      "spawn_weight": 3,
+      "phases": ["morning", "dawn"],
+      "min_luck": 0.0,
+      "size": [22, 48],
+      "color": [0.32, 0.28, 0.26, 1],
+      "y_offset": -42,
+      "lines": {
+        "dawn": "They nod. Coffee steam and diesel.",
+        "morning": "Got a light? Don't tell nobody.",
+        "afternoon": "...",
+        "evening": "...",
+        "night": "..."
+      }
+    },
+    {
+      "id": "night_walker",
+      "label": "Night Walker",
+      "spawn_weight": 3,
+      "phases": ["night", "evening"],
+      "min_luck": 0.0,
+      "size": [22, 50],
+      "color": [0.18, 0.18, 0.22, 1],
+      "y_offset": -44,
+      "lines": {
+        "night": "Keep moving. Ain't safe to stare.",
+        "evening": "Evening comes fast down here.",
+        "morning": "...",
+        "dawn": "...",
+        "afternoon": "..."
+      }
+    },
+    {
+      "id": "alley_kid",
+      "label": "Alley Kid",
+      "spawn_weight": 2,
+      "phases": ["afternoon", "evening"],
+      "min_luck": 0.3,
+      "size": [20, 40],
+      "color": [0.38, 0.42, 0.48, 1],
+      "y_offset": -36,
+      "lines": {
+        "afternoon": "You see a gold chain anywhere?",
+        "evening": "My mom says come inside.",
+        "morning": "...",
+        "dawn": "...",
+        "night": "..."
+      }
+    }
+  ]
+}

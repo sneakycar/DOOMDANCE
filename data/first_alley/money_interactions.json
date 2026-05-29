@@ -1,0 +1,44 @@
+{
+  "money_interactions": [
+    {
+      "id": "rust_payphone",
+      "label": "Rust Payphone",
+      "cost": 1,
+      "success_message": "Dead dial tone. Quarter gone.",
+      "fail_message": "Need $1 for the payphone.",
+      "marker_color": [0.52, 0.48, 0.44, 1]
+    },
+    {
+      "id": "laundry_slot",
+      "label": "Laundry Slot",
+      "cost": 2,
+      "success_message": "Dryer spins empty. Your socks aren't in there.",
+      "fail_message": "Need $2 for the laundry slot.",
+      "marker_color": [0.42, 0.44, 0.5, 1]
+    },
+    {
+      "id": "parking_meter",
+      "label": "Parking Meter",
+      "cost": 1,
+      "success_message": "Timer clicks. No car is coming.",
+      "fail_message": "Need $1 for the meter.",
+      "marker_color": [0.62, 0.58, 0.22, 1]
+    },
+    {
+      "id": "gumball_rig",
+      "label": "Gumball Rig",
+      "cost": 1,
+      "success_message": "Plastic capsule: nothing inside.",
+      "fail_message": "Need $1 for the gumball rig.",
+      "marker_color": [0.82, 0.32, 0.38, 1]
+    },
+    {
+      "id": "donation_box",
+      "label": "Donation Box",
+      "cost": 3,
+      "success_message": "You drop bills in. Someone whispers thanks.",
+      "fail_message": "Need $3 for the donation box.",
+      "marker_color": [0.38, 0.52, 0.38, 1]
+    }
+  ]
+}

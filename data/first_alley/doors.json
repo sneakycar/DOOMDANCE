@@ -1,0 +1,37 @@
+{
+  "doors": [
+    {
+      "id": "garage_bay",
+      "label": "Garage Bay",
+      "open_phases": ["afternoon", "evening"],
+      "cost_money": 3,
+      "required_item": "",
+      "reward_money": 0,
+      "reward_item": "",
+      "success_message": "Roll door groans open. Oil and old tires.",
+      "marker_color": [0.45, 0.42, 0.38, 1]
+    },
+    {
+      "id": "boarded_loft",
+      "label": "Boarded Loft",
+      "open_phases": ["evening", "late_night"],
+      "cost_money": 0,
+      "required_item": "folded_note",
+      "reward_money": 2,
+      "reward_item": "",
+      "success_message": "A board pops loose. Two dollars in the crack.",
+      "marker_color": [0.38, 0.28, 0.2, 1]
+    },
+    {
+      "id": "dock_gate",
+      "label": "Dock Gate",
+      "open_phases": ["morning", "afternoon"],
+      "cost_money": 2,
+      "required_item": "",
+      "reward_money": 0,
+      "reward_item": "",
+      "success_message": "Chain rattles. Pallets and river smell.",
+      "marker_color": [0.32, 0.38, 0.42, 1]
+    }
+  ]
+}

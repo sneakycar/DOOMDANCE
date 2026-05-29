@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://alley_prop_mod"]
+
+[ext_resource type="Script" path="res://scripts/world/alley_prop.gd" id="1_prop"]
+
+[node name="AlleyProp" type="Node2D"]
+z_index = 35
+script = ExtResource("1_prop")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 0
+centered = false
+
+[node name="Body" type="Polygon2D" parent="."]
+color = Color(0.4, 0.4, 0.4, 1)
+
+[node name="Tag" type="Label" parent="."]
+visible = false
+offset_left = -28.0
+offset_top = -52.0
+offset_right = 28.0
+offset_bottom = -38.0
+theme_override_font_sizes/font_size = 8
+horizontal_alignment = 1

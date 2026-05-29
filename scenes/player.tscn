@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://player_philly_alley"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_player"]
+[ext_resource type="Texture2D" path="res://assets/pixel/player_idle.png" id="2_idle"]
+[ext_resource type="Texture2D" path="res://assets/pixel/player_walk_0.png" id="3_walk_0"]
+[ext_resource type="Texture2D" path="res://assets/pixel/player_walk_1.png" id="4_walk_1"]
+[ext_resource type="Texture2D" path="res://assets/pixel/player_walk_2.png" id="5_walk_2"]
+[ext_resource type="Texture2D" path="res://assets/pixel/player_walk_3.png" id="6_walk_3"]
+[ext_resource type="Texture2D" path="res://assets/pixel/player_shadow.png" id="7_shadow"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_player"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_idle")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_walk_0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_walk_1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_walk_2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_walk_3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_body"]
+radius = 4.0
+height = 10.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+z_index = 50
+collision_layer = 2
+collision_mask = 1
+script = ExtResource("1_player")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+show_behind_parent = true
+texture_filter = 0
+position = Vector2(0, -1)
+texture = ExtResource("7_shadow")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 0
+position = Vector2(0, -52)
+centered = false
+sprite_frames = SubResource("SpriteFrames_player")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CapsuleShape2D_body")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -52)
+zoom = Vector2(0.88, 0.88)
+position_smoothing_enabled = false
