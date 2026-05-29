@@ -100,7 +100,7 @@ func _on_tap_hint(text: String) -> void:
 
 func _on_hotspot(hotspot: Dictionary) -> void:
 	if MobileUI.is_touch_device:
-		var hint := hotspot.get("label", "")
+		var hint: String = str(hotspot.get("label", ""))
 		if not hint.is_empty():
 			_on_tap_hint(hint)
 			get_tree().create_timer(1.2).timeout.connect(func() -> void:
