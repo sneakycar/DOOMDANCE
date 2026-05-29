@@ -1,7 +1,7 @@
 {
   "generated": "DOOM DANCE maze builder",
   "start_room": "dead",
-  "page_count": 100,
+  "page_count": 122,
   "pages": {
     "15mph": {
       "id": "15mph",
@@ -59,9 +59,9 @@
           "unstable": false
         },
         {
-          "label": "redrobotlove",
-          "destination": "redrobotlove",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         }
       ],
       "hidden": false,
@@ -212,7 +212,7 @@
         {
           "text": "IN-LOVE",
           "image": "res://archive/deadbicycle/img/in-love.jpg",
-          "destination": "headphones",
+          "destination": "meridian_incomplete_file",
           "rarity": 0
         },
         {
@@ -267,9 +267,9 @@
           "unstable": false
         },
         {
-          "label": "arithmetic",
-          "destination": "arithmetic",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         },
         {
           "label": "sunshine",
@@ -527,7 +527,7 @@
         {
           "text": "REPORT5",
           "image": "res://archive/deadbicycle/img/report5.jpg",
-          "destination": "motorscooter",
+          "destination": "ozzy_basement",
           "rarity": 0
         }
       ],
@@ -823,9 +823,9 @@
           "unstable": false
         },
         {
-          "label": "feed",
-          "destination": "feed",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         },
         {
           "label": "stereo",
@@ -848,9 +848,9 @@
           "unstable": false
         },
         {
-          "label": "larry",
-          "destination": "larry",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         },
         {
           "label": "expired",
@@ -905,9 +905,9 @@
       ],
       "links": [
         {
-          "label": "grenades",
-          "destination": "grenades",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         },
         {
           "label": "cowboy",
@@ -1061,9 +1061,9 @@
           "unstable": false
         },
         {
-          "label": "expired",
-          "destination": "expired",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         },
         {
           "label": "happy",
@@ -1117,7 +1117,7 @@
         {
           "text": "TM",
           "image": "res://archive/deadbicycle/img/tm.gif",
-          "destination": "gerald",
+          "destination": "tv_alley",
           "rarity": 0
         },
         {
@@ -1166,9 +1166,9 @@
           "unstable": false
         },
         {
-          "label": "fast",
-          "destination": "fast",
-          "unstable": false
+          "label": "wrong door / tv alley",
+          "destination": "tv_alley",
+          "unstable": true
         },
         {
           "label": "fire",
@@ -1176,9 +1176,9 @@
           "unstable": false
         },
         {
-          "label": "foursquare",
-          "destination": "foursquare",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         },
         {
           "label": "ping",
@@ -1256,9 +1256,9 @@
       ],
       "links": [
         {
-          "label": "15mph",
-          "destination": "15mph",
-          "unstable": false
+          "label": "wrong door / ozzy basement",
+          "destination": "ozzy_basement",
+          "unstable": true
         },
         {
           "label": "redrobotlove",
@@ -1286,9 +1286,9 @@
           "unstable": false
         },
         {
-          "label": "urban",
-          "destination": "urban",
-          "unstable": false
+          "label": "wrong door / tv alley",
+          "destination": "tv_alley",
+          "unstable": true
         },
         {
           "label": "ashtray",
@@ -1444,6 +1444,16 @@
           "label": "wrong door",
           "destination": "randomroom",
           "unstable": true
+        },
+        {
+          "label": "misfiled / massive",
+          "destination": "massive",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / void",
+          "destination": "void",
+          "unstable": true
         }
       ],
       "hidden": false,
@@ -1498,7 +1508,7 @@
         {
           "text": "LARRYFACE",
           "image": "res://archive/deadbicycle/img/larryface.jpg",
-          "destination": "kerosene",
+          "destination": "ozzy_basement",
           "rarity": 0
         }
       ],
@@ -1582,7 +1592,7 @@
         {
           "text": "FIREBIRD 08",
           "image": "res://archive/deadbicycle/img/firebird_08.gif",
-          "destination": "feed",
+          "destination": "meridian_incomplete_file",
           "rarity": 0
         },
         {
@@ -1670,9 +1680,9 @@
           "unstable": false
         },
         {
-          "label": "happy",
-          "destination": "happy",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         },
         {
           "label": "tea",
@@ -1720,7 +1730,7 @@
         {
           "text": "BLACKFLOWER",
           "image": "res://archive/deadbicycle/img/blackflower.gif",
-          "destination": "simple",
+          "destination": "meridian_pull",
           "rarity": 0
         },
         {
@@ -1770,9 +1780,9 @@
           "unstable": false
         },
         {
-          "label": "tea",
-          "destination": "tea",
-          "unstable": false
+          "label": "wrong door / ozzy basement",
+          "destination": "ozzy_basement",
+          "unstable": true
         },
         {
           "label": "foursquare",
@@ -2055,7 +2065,7 @@
         {
           "text": "HEADPHONEHEADPHONE",
           "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
-          "destination": "bad",
+          "destination": "meridian_incomplete_file",
           "rarity": 0
         },
         {
@@ -2073,7 +2083,7 @@
         {
           "text": "HEADPHONEHEADPHONE",
           "image": "res://archive/deadbicycle/img/headphoneheadphone.jpg",
-          "destination": "chapter",
+          "destination": "ozzy_basement",
           "rarity": 0
         },
         {
@@ -2085,9 +2095,9 @@
       ],
       "links": [
         {
-          "label": "15mph",
-          "destination": "15mph",
-          "unstable": false
+          "label": "wrong door / meridian incomplete file",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
         },
         {
           "label": "arithmetic",
@@ -2330,6 +2340,11 @@
           "unstable": false
         },
         {
+          "label": "dust meridian",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
           "label": "unstable door",
           "destination": "unstable",
           "unstable": true
@@ -2337,6 +2352,11 @@
         {
           "label": "panic crawl",
           "destination": "broadcastpanic",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / mad",
+          "destination": "mad",
           "unstable": true
         }
       ],
@@ -2479,7 +2499,7 @@
         {
           "text": "MEPICTURE",
           "image": "res://archive/deadbicycle/img/mepicture.jpg",
-          "destination": "suburban",
+          "destination": "meridian_pull",
           "rarity": 0
         },
         {
@@ -2497,9 +2517,9 @@
       ],
       "links": [
         {
-          "label": "gentlemen",
-          "destination": "gentlemen",
-          "unstable": false
+          "label": "wrong door / tv alley",
+          "destination": "tv_alley",
+          "unstable": true
         },
         {
           "label": "mind",
@@ -2527,9 +2547,9 @@
           "unstable": false
         },
         {
-          "label": "AND&nbsp;THEN!",
-          "destination": "happy",
-          "unstable": false
+          "label": "wrong door / ozzy basement",
+          "destination": "ozzy_basement",
+          "unstable": true
         },
         {
           "label": "KEROSENE",
@@ -2640,6 +2660,16 @@
           "label": "wrong door",
           "destination": "randomroom",
           "unstable": true
+        },
+        {
+          "label": "misfiled / 1962",
+          "destination": "1962",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / dig",
+          "destination": "dig",
+          "unstable": true
         }
       ],
       "hidden": false,
@@ -2660,7 +2690,7 @@
         {
           "text": "Green [25]",
           "image": "res://archive/deadbicycle/img/greendead.gif",
-          "destination": "green",
+          "destination": "ozzy_basement",
           "rarity": 0
         },
         {
@@ -2729,6 +2759,11 @@
         {
           "label": "wrong random aisle",
           "destination": "randomroom",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / xxvi",
+          "destination": "xxvi",
           "unstable": true
         }
       ],
@@ -2829,7 +2864,7 @@
         {
           "text": "SMOKERHAND",
           "image": "res://archive/deadbicycle/img/smokerhand.jpg",
-          "destination": "ambulence",
+          "destination": "meridian_incomplete_file",
           "rarity": 0
         },
         {
@@ -3035,7 +3070,7 @@
         {
           "text": "CAMO2",
           "image": "res://archive/deadbicycle/img/camo2.gif",
-          "destination": "reports",
+          "destination": "meridian_incomplete_file",
           "rarity": 0
         },
         {
@@ -3052,8 +3087,8 @@
           "unstable": true
         },
         {
-          "label": "REPORTS",
-          "destination": "reports",
+          "label": "wrong door / meridian incomplete file",
+          "destination": "meridian_incomplete_file",
           "unstable": true
         },
         {
@@ -3110,9 +3145,9 @@
           "unstable": false
         },
         {
-          "label": "--00))-0-0(()))))))---))///.)))..///)))(--//))\\\\",
-          "destination": "racecar",
-          "unstable": false
+          "label": "wrong door / meridian incomplete file",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
         }
       ],
       "hidden": false,
@@ -3288,7 +3323,7 @@
         {
           "text": "AX.CGI?TRANS",
           "image": "res://archive/deadbicycle/cgi-bin/axs/ax.cgi?trans.gif",
-          "destination": "stereo",
+          "destination": "ozzy_basement",
           "rarity": 0
         }
       ],
@@ -3386,9 +3421,9 @@
       ],
       "links": [
         {
-          "label": "soldier",
-          "destination": "soldier",
-          "unstable": false
+          "label": "wrong door / ozzy basement",
+          "destination": "ozzy_basement",
+          "unstable": true
         }
       ],
       "hidden": false,
@@ -3607,9 +3642,9 @@
       ],
       "links": [
         {
-          "label": "motorscooter",
-          "destination": "motorscooter",
-          "unstable": false
+          "label": "wrong door / ozzy basement",
+          "destination": "ozzy_basement",
+          "unstable": true
         },
         {
           "label": "arithmetic",
@@ -3815,9 +3850,9 @@
           "unstable": false
         },
         {
-          "label": "garden",
-          "destination": "garden",
-          "unstable": false
+          "label": "wrong door / tv alley",
+          "destination": "tv_alley",
+          "unstable": true
         }
       ],
       "hidden": false,
@@ -4227,9 +4262,9 @@
       ],
       "links": [
         {
-          "label": "feed",
-          "destination": "feed",
-          "unstable": false
+          "label": "wrong door / tv alley",
+          "destination": "tv_alley",
+          "unstable": true
         }
       ],
       "hidden": false,
@@ -4250,7 +4285,7 @@
         {
           "text": "URBAN-LOCO",
           "image": "res://archive/deadbicycle/img/urban-loco.jpg",
-          "destination": "roads",
+          "destination": "tv_alley",
           "rarity": 0
         },
         {
@@ -4312,13 +4347,13 @@
       ],
       "links": [
         {
-          "label": "MACHINE",
-          "destination": "machine",
+          "label": "wrong door / meridian incomplete file",
+          "destination": "meridian_incomplete_file",
           "unstable": true
         },
         {
-          "label": "CHILDREN",
-          "destination": "children",
+          "label": "wrong door / meridian incomplete file",
+          "destination": "meridian_incomplete_file",
           "unstable": true
         },
         {
@@ -4440,9 +4475,9 @@
           "unstable": false
         },
         {
-          "label": "gerald",
-          "destination": "gerald",
-          "unstable": false
+          "label": "wrong door / tv alley",
+          "destination": "tv_alley",
+          "unstable": true
         },
         {
           "label": "dig",
@@ -4450,8 +4485,33 @@
           "unstable": false
         },
         {
+          "label": "biography leak",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
           "label": "random user",
           "destination": "randomroom",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / church",
+          "destination": "church",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / firebird",
+          "destination": "firebird",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / moved",
+          "destination": "moved",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / murder",
+          "destination": "murder",
           "unstable": true
         }
       ],
@@ -4492,9 +4552,9 @@
       ],
       "links": [
         {
-          "label": "where has this gerald gone?",
-          "destination": "military",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         },
         {
           "label": "larry knew somebody",
@@ -4509,6 +4569,16 @@
         {
           "label": "gerald is elsewhere",
           "destination": "randomroom",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / hammer",
+          "destination": "hammer",
+          "unstable": true
+        },
+        {
+          "label": "misfiled / noise",
+          "destination": "noise",
           "unstable": true
         }
       ],
@@ -4661,7 +4731,9 @@
       "hidden": true,
       "unstable": true,
       "residue_key": "EBS",
-      "location_screen": ""
+      "location_screen": "",
+      "life_min": -28.0,
+      "life_max": -6.0
     },
     "channelstatic": {
       "id": "channelstatic",
@@ -4829,9 +4901,9 @@
           "unstable": false
         },
         {
-          "label": "liquor store",
-          "destination": "liquor_store",
-          "unstable": false
+          "label": "wrong door / ozzy basement",
+          "destination": "ozzy_basement",
+          "unstable": true
         },
         {
           "label": "back to maze",
@@ -4861,7 +4933,7 @@
       "links": [
         {
           "label": "office",
-          "destination": "liquor_store",
+          "destination": "ozzy_basement",
           "unstable": false
         },
         {
@@ -4899,12 +4971,106 @@
           "label": "archive",
           "destination": "dead",
           "unstable": false
+        },
+        {
+          "label": "incomplete biography",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
         }
       ],
       "hidden": false,
       "unstable": false,
       "residue_key": "LIQUOR_STORE",
       "location_screen": "liquor_store"
+    },
+    "ozzy_basement": {
+      "id": "ozzy_basement",
+      "title": "OZZY'S BASEMENT",
+      "subtitle": "casino rumor / damp concrete / wrong radio",
+      "images": [],
+      "body": "The stairs go up to rain. The radio plays someone else's biography.",
+      "fragments": [
+        {
+          "text": "STAIRS UP",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "meridian_incomplete_file",
+          "rarity": 0
+        },
+        {
+          "text": "RADIO STATIC",
+          "image": "res://archive/deadbicycle/img/theglassofstereo.jpg",
+          "destination": "meridian_incomplete_file",
+          "rarity": 3
+        }
+      ],
+      "links": [
+        {
+          "label": "back to yard",
+          "destination": "impound_lot",
+          "unstable": false
+        },
+        {
+          "label": "dust meridian file",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "pull a paragraph",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "wrong room",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "OZZY BASEMENT",
+      "location_screen": "ozzy_basement"
+    },
+    "tv_alley": {
+      "id": "tv_alley",
+      "title": "TV ALLEY",
+      "subtitle": "crt snow / syringes / wrong broadcast",
+      "images": [],
+      "body": "Here we were (all alone). The television was on again.",
+      "fragments": [
+        {
+          "text": "STATIC",
+          "image": "res://archive/deadbicycle/img/dotsandtelevisions.gif",
+          "destination": "channelstatic",
+          "rarity": 0
+        },
+        {
+          "text": "STREET",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "lost",
+          "rarity": 0
+        }
+      ],
+      "links": [
+        {
+          "label": "channel static",
+          "destination": "channelstatic",
+          "unstable": true
+        },
+        {
+          "label": "lost directory",
+          "destination": "lost",
+          "unstable": false
+        },
+        {
+          "label": "wrong signal",
+          "destination": "broadcastpanic",
+          "unstable": true
+        }
+      ],
+      "hidden": false,
+      "unstable": true,
+      "residue_key": "TV ALLEY",
+      "location_screen": "tv_alley"
     },
     "salvage_sitemap": {
       "id": "salvage_sitemap",
@@ -4937,8 +5103,8 @@
           "unstable": false
         },
         {
-          "label": "grenades",
-          "destination": "grenades",
+          "label": "wrong door / ozzy basement",
+          "destination": "ozzy_basement",
           "unstable": true
         },
         {
@@ -4989,9 +5155,9 @@
           "unstable": false
         },
         {
-          "label": "town list",
-          "destination": "town",
-          "unstable": false
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
+          "unstable": true
         },
         {
           "label": "broadcast test",
@@ -5223,7 +5389,7 @@
         {
           "text": "DOLLAR",
           "image": "res://archive/deadbicycle/img/dollar.jpg",
-          "destination": "supermarket",
+          "destination": "tv_alley",
           "rarity": 0
         }
       ],
@@ -5329,8 +5495,8 @@
       ],
       "links": [
         {
-          "label": "MACHINE",
-          "destination": "machine",
+          "label": "wrong door / tv alley",
+          "destination": "tv_alley",
           "unstable": true
         },
         {
@@ -5446,8 +5612,8 @@
           "unstable": true
         },
         {
-          "label": "COMPUTERS",
-          "destination": "computers",
+          "label": "wrong door / meridian pull",
+          "destination": "meridian_pull",
           "unstable": true
         },
         {
@@ -5459,6 +5625,1386 @@
       "hidden": false,
       "unstable": true,
       "residue_key": "SOURCELEAK",
+      "location_screen": ""
+    },
+    "meridian_incomplete_file": {
+      "id": "meridian_incomplete_file",
+      "title": "INCOMPLETE BIOGRAPHY",
+      "subtitle": "Daniel Mercer / Dust Meridian / wrong filenames",
+      "images": [
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/profile.gif",
+        "res://archive/deadbicycle/img/eye.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "THE LIFE OF DUST MERIDIAN \u2014 recovered biography file. Status: incomplete. Contradictions preserved on purpose. Daniel Mercer. Dust Meridian. Kyle Mercer died 2019. Some rooms invert the twin. Some pretend he was alone.",
+      "fragments": [
+        {
+          "text": "FELT TEMPORARY",
+          "image": "res://archive/deadbicycle/img/lost.jpg",
+          "destination": "meridian_afterword",
+          "rarity": 4
+        },
+        {
+          "text": "PHILLY COUGH",
+          "image": "res://archive/deadbicycle/img/trash4b.gif",
+          "destination": "meridian_philly_sick",
+          "rarity": 4
+        },
+        {
+          "text": "WAREHOUSE PILLS",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "meridian_warehouse",
+          "rarity": 4
+        },
+        {
+          "text": "POSTCARDS",
+          "image": "res://archive/deadbicycle/img/us.gif",
+          "destination": "meridian_postcards",
+          "rarity": 4
+        },
+        {
+          "text": "ALLEY BOX",
+          "image": "res://archive/deadbicycle/img/gap1.jpg",
+          "destination": "meridian_alley",
+          "rarity": 4
+        },
+        {
+          "text": "POSTS AFTER DEATH",
+          "image": "res://archive/deadbicycle/img/notfound1.gif",
+          "destination": "meridian_online",
+          "rarity": 4
+        },
+        {
+          "text": "CLASS CURSED",
+          "image": "res://archive/deadbicycle/img/children1.jpg",
+          "destination": "meridian_class",
+          "rarity": 4
+        },
+        {
+          "text": "PILL NEIGHBORHOODS",
+          "image": "res://archive/deadbicycle/img/cancerman.jpg",
+          "destination": "meridian_geography_drugs",
+          "rarity": 4
+        },
+        {
+          "text": "RANDOM SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 6
+        }
+      ],
+      "links": [
+        {
+          "label": "pull random paragraph",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "1982",
+          "destination": "meridian_1982",
+          "unstable": true
+        },
+        {
+          "label": "class of 92",
+          "destination": "meridian_class",
+          "unstable": true
+        },
+        {
+          "label": "wrong ending",
+          "destination": "meridian_afterword",
+          "unstable": true
+        },
+        {
+          "label": "ozy's basement",
+          "destination": "ozzy_basement",
+          "unstable": true
+        },
+        {
+          "label": "dead index",
+          "destination": "dead",
+          "unstable": false
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN FILE",
+      "location_screen": ""
+    },
+    "meridian_1982": {
+      "id": "meridian_1982",
+      "title": "SHARD / BORN 1982",
+      "subtitle": "wrong footer on /dead index",
+      "images": [
+        "res://archive/deadbicycle/img/gap1.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Born 1982, Long Beach. Legal name Daniel Mercer. After middle school almost nobody used it.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010GERALD'S MOTHER INSISTS THIS IS ABOUT FISHING\u3011 High school: oversized hoodies under black leather jackets regardless of weather. Gaylord and Jeffrey 2. Sonic Youth on Maxell tapes.\n\n\u3010MRS. VAN RAVENSWAY DUPLICATE\u3011 Fourth-grade report card: Daniel appears to be somewhere else entirely. He drew maps of dead malls and harbors that froze.\n\n\u3010ANTI PROFILE SCRAPE\u3011 He stole discarded one-hour photo prints from pharmacy trash. Blurry hallways. Half-cutoff faces.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "HOODIE_LEATHER",
+          "image": "res://archive/deadbicycle/img/blackroad.jpg",
+          "destination": "meridian_hoodies",
+          "rarity": 5
+        },
+        {
+          "text": "REPORT_CARD",
+          "image": "res://archive/deadbicycle/img/file2.gif",
+          "destination": "meridian_maps",
+          "rarity": 5
+        },
+        {
+          "text": "PHARMACY_TRASH",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "meridian_photos",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "dead",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "failure",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / BORN_1982",
+      "location_screen": ""
+    },
+    "meridian_alley": {
+      "id": "meridian_alley",
+      "title": "SHARD / ALLEY BOX",
+      "subtitle": "Larry's widow misfiled this paragraph",
+      "images": [
+        "res://archive/deadbicycle/img/gap1.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "The apartment backed onto an alley. He kept bottle caps and rain-warped receipts in a box under the bed labeled CHRISTMAS LIGHTS.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010MACHINE ROOM FOOTNOTE\u3011 Longest job: used record shop Signal Static downtown. Shelved by mood: Night Driving. Hospital Music. Fired after eleven days gone.\n\n\u3010TOWN LIST APPENDIX\u3011 1992 classroom. Expo markers and dust. Classmates died young in unrelated ways. He called it the last bright room before the tunnel.\n\n\u3010KENSINGTON WALL WRITING\u3011 Winter in Philadelphia clearing mold apartments. Cough that stayed. TB raised once; paperwork never matched.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "SIGNAL_STATIC",
+          "image": "res://archive/deadbicycle/img/machines3.gif",
+          "destination": "meridian_signal_static",
+          "rarity": 5
+        },
+        {
+          "text": "CLASS_CURSED",
+          "image": "res://archive/deadbicycle/img/children1.jpg",
+          "destination": "meridian_class",
+          "rarity": 5
+        },
+        {
+          "text": "PHILLY_COUGH",
+          "image": "res://archive/deadbicycle/img/trash4b.gif",
+          "destination": "meridian_philly_sick",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "gap",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "larry",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / ALLEY_BOX",
+      "location_screen": ""
+    },
+    "meridian_maps": {
+      "id": "meridian_maps",
+      "title": "SHARD / REPORT CARD",
+      "subtitle": "Mrs. Van Ravensway duplicate",
+      "images": [
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Fourth-grade report card: Daniel appears to be somewhere else entirely. He drew maps of dead malls and harbors that froze.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010NORDIC DRIFT MISROUTE\u3011 Never north of Oregon but talked about Iceland, Greenland, Finland. Shackleton photocopies folded in notebooks.\n\n\u3010MIKEY VEKKER INTERVIEW (UNVERIFIED)\u3011 They preferred loading docks at 2 a.m. Beaches were too exposed. Industrial Long Beach: yards, refineries, parking structures.\n\n\u3010ANTI PROFILE SCRAPE\u3011 He stole discarded one-hour photo prints from pharmacy trash. Blurry hallways. Half-cutoff faces.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "SHACKLETON",
+          "image": "res://archive/deadbicycle/img/icecubesfortimscat.jpg",
+          "destination": "meridian_north_talk",
+          "rarity": 5
+        },
+        {
+          "text": "LOADING_DOCK",
+          "image": "res://archive/deadbicycle/img/city3bg.jpg",
+          "destination": "meridian_docks",
+          "rarity": 5
+        },
+        {
+          "text": "PHARMACY_TRASH",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "meridian_photos",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "town",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "feed",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / REPORT_CARD",
+      "location_screen": ""
+    },
+    "meridian_class": {
+      "id": "meridian_class",
+      "title": "SHARD / CLASS CURSED",
+      "subtitle": "town list appendix",
+      "images": [
+        "res://archive/deadbicycle/img/children1.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "1992 classroom. Expo markers and dust. Classmates died young in unrelated ways. He called it the last bright room before the tunnel.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010SOLDIER TRANSMISSION FRAGMENT\u3011 Postcards from Milwaukee, Duluth, Reykjavik, Helsinki, Nuuk, Tacoma, Philadelphia. No return address\u2014or one that lied.\n\n\u3010MRS. VAN RAVENSWAY DUPLICATE\u3011 Fourth-grade report card: Daniel appears to be somewhere else entirely. He drew maps of dead malls and harbors that froze.\n\n\u3010LARRY TELEVISION FILE OVERLAP\u3011 2001 overdose scare. Nobody died. They photographed cemeteries anyway. He started lists of everyone who vanished.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "tv_alley",
+          "rarity": 4
+        },
+        {
+          "text": "POSTCARDS",
+          "image": "res://archive/deadbicycle/img/us.gif",
+          "destination": "meridian_postcards",
+          "rarity": 5
+        },
+        {
+          "text": "REPORT_CARD",
+          "image": "res://archive/deadbicycle/img/file2.gif",
+          "destination": "meridian_maps",
+          "rarity": 5
+        },
+        {
+          "text": "OD_SCARE_2001",
+          "image": "res://archive/deadbicycle/img/larry_01.jpg",
+          "destination": "meridian_lists",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "children",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "larry",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / CLASS_CURSED",
+      "location_screen": ""
+    },
+    "meridian_hoodies": {
+      "id": "meridian_hoodies",
+      "title": "SHARD / HOODIE LEATHER",
+      "subtitle": "Gerald's mother insists this is about fishing",
+      "images": [
+        "res://archive/deadbicycle/img/blackroad.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "High school: oversized hoodies under black leather jackets regardless of weather. Gaylord and Jeffrey 2. Sonic Youth on Maxell tapes.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010TOWN LIST APPENDIX\u3011 1992 classroom. Expo markers and dust. Classmates died young in unrelated ways. He called it the last bright room before the tunnel.\n\n\u3010GERALD FISHING TRIP (INCORRECT MERGE)\u3011 Returned with a grocery bag of Icelandic dock photos. Would not explain the eleven days.\n\n\u3010ANTI PROFILE SCRAPE\u3011 He stole discarded one-hour photo prints from pharmacy trash. Blurry hallways. Half-cutoff faces.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "CLASS_CURSED",
+          "image": "res://archive/deadbicycle/img/children1.jpg",
+          "destination": "meridian_class",
+          "rarity": 5
+        },
+        {
+          "text": "ICELAND_BAG",
+          "image": "res://archive/deadbicycle/img/gap2.jpg",
+          "destination": "meridian_iceland_bag",
+          "rarity": 5
+        },
+        {
+          "text": "PHARMACY_TRASH",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "meridian_photos",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "urban",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "failure",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / HOODIE_LEATHER",
+      "location_screen": ""
+    },
+    "meridian_docks": {
+      "id": "meridian_docks",
+      "title": "SHARD / LOADING DOCK",
+      "subtitle": "Mikey Vekker interview (unverified)",
+      "images": [
+        "res://archive/deadbicycle/img/city3bg.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "They preferred loading docks at 2 a.m. Beaches were too exposed. Industrial Long Beach: yards, refineries, parking structures.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010TOWN LIST APPENDIX\u3011 1992 classroom. Expo markers and dust. Classmates died young in unrelated ways. He called it the last bright room before the tunnel.\n\n\u3010ANTI PROFILE SCRAPE\u3011 He stole discarded one-hour photo prints from pharmacy trash. Blurry hallways. Half-cutoff faces.\n\n\u3010GERALD'S MOTHER INSISTS THIS IS ABOUT FISHING\u3011 High school: oversized hoodies under black leather jackets regardless of weather. Gaylord and Jeffrey 2. Sonic Youth on Maxell tapes.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "CLASS_CURSED",
+          "image": "res://archive/deadbicycle/img/children1.jpg",
+          "destination": "meridian_class",
+          "rarity": 5
+        },
+        {
+          "text": "PHARMACY_TRASH",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "meridian_photos",
+          "rarity": 5
+        },
+        {
+          "text": "HOODIE_LEATHER",
+          "image": "res://archive/deadbicycle/img/blackroad.jpg",
+          "destination": "meridian_hoodies",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "roads",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "feed",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / LOADING_DOCK",
+      "location_screen": ""
+    },
+    "meridian_photos": {
+      "id": "meridian_photos",
+      "title": "SHARD / PHARMACY TRASH",
+      "subtitle": "anti profile scrape",
+      "images": [
+        "res://archive/deadbicycle/img/profilescreen.gif",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "He stole discarded one-hour photo prints from pharmacy trash. Blurry hallways. Half-cutoff faces.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010GERALD FISHING TRIP (INCORRECT MERGE)\u3011 Returned with a grocery bag of Icelandic dock photos. Would not explain the eleven days.\n\n\u3010MRS. VAN RAVENSWAY DUPLICATE\u3011 Fourth-grade report card: Daniel appears to be somewhere else entirely. He drew maps of dead malls and harbors that froze.\n\n\u3010ANTI_NO_PHP STDERR\u3011 Forum posts and database rows under his name after the last sighting. Hoax, mistake, or something else\u2014unsettled.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "ICELAND_BAG",
+          "image": "res://archive/deadbicycle/img/gap2.jpg",
+          "destination": "meridian_iceland_bag",
+          "rarity": 5
+        },
+        {
+          "text": "REPORT_CARD",
+          "image": "res://archive/deadbicycle/img/file2.gif",
+          "destination": "meridian_maps",
+          "rarity": 5
+        },
+        {
+          "text": "POSTS_AFTER_DEATH",
+          "image": "res://archive/deadbicycle/img/notfound1.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "anti",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "failure",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / PHARMACY_TRASH",
+      "location_screen": ""
+    },
+    "meridian_north_talk": {
+      "id": "meridian_north_talk",
+      "title": "SHARD / SHACKLETON",
+      "subtitle": "Nordic drift misroute",
+      "images": [
+        "res://archive/deadbicycle/img/icecubesfortimscat.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Never north of Oregon but talked about Iceland, Greenland, Finland. Shackleton photocopies folded in notebooks.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010TOWN LIST APPENDIX\u3011 1992 classroom. Expo markers and dust. Classmates died young in unrelated ways. He called it the last bright room before the tunnel.\n\n\u3010SOLDIER TRANSMISSION FRAGMENT\u3011 Postcards from Milwaukee, Duluth, Reykjavik, Helsinki, Nuuk, Tacoma, Philadelphia. No return address\u2014or one that lied.\n\n\u3010POLICEMAN REPORT NAMES THE WRONG BOY\u3011 1998. Behind a carpet warehouse off Anaheim Street. Pills in a Taco Bell napkin. He stared at concrete cracks forty minutes while freight screamed.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "CLASS_CURSED",
+          "image": "res://archive/deadbicycle/img/children1.jpg",
+          "destination": "meridian_class",
+          "rarity": 5
+        },
+        {
+          "text": "POSTCARDS",
+          "image": "res://archive/deadbicycle/img/us.gif",
+          "destination": "meridian_postcards",
+          "rarity": 5
+        },
+        {
+          "text": "WAREHOUSE_PILLS",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "meridian_warehouse",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "machine",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "failure",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / SHACKLETON",
+      "location_screen": ""
+    },
+    "meridian_warehouse": {
+      "id": "meridian_warehouse",
+      "title": "SHARD / WAREHOUSE PILLS",
+      "subtitle": "policeman report names the wrong boy",
+      "images": [
+        "res://archive/deadbicycle/img/handprint.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "1998. Behind a carpet warehouse off Anaheim Street. Pills in a Taco Bell napkin. He stared at concrete cracks forty minutes while freight screamed.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010EVERYONE EVENTUALLY BECOMES WEATHER (MISHEARD)\u3011 Some call him kind. Some cruel. Some credit overdoses reversed. Others blame first pills on him.\n\n\u3010UNIVERSAL DETAIL (DISPUTED)\u3011 Whenever he left, it felt temporary. Even after he did not come back, someone expected a postcard.\n\n\u3010ANTI PROFILE SCRAPE\u3011 He stole discarded one-hour photo prints from pharmacy trash. Blurry hallways. Half-cutoff faces.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "KIND_CRUEL",
+          "image": "res://archive/deadbicycle/img/deadmood.gif",
+          "destination": "meridian_memory_split",
+          "rarity": 5
+        },
+        {
+          "text": "FELT_TEMPORARY",
+          "image": "res://archive/deadbicycle/img/lost.jpg",
+          "destination": "meridian_afterword",
+          "rarity": 5
+        },
+        {
+          "text": "PHARMACY_TRASH",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "meridian_photos",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "grenades",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "larry",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / WAREHOUSE_PILLS",
+      "location_screen": ""
+    },
+    "meridian_geography_drugs": {
+      "id": "meridian_geography_drugs",
+      "title": "SHARD / PILL NEIGHBORHOODS",
+      "subtitle": "Mildred never returned (filed here by mistake)",
+      "images": [
+        "res://archive/deadbicycle/img/cancerman.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Ketamine with motel bathrooms. Cocaine with garages. Whiskey with winter bus stops. He called blocks pill neighborhoods.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010GERALD'S MOTHER INSISTS THIS IS ABOUT FISHING\u3011 High school: oversized hoodies under black leather jackets regardless of weather. Gaylord and Jeffrey 2. Sonic Youth on Maxell tapes.\n\n\u3010LARRY'S WIDOW MISFILED THIS PARAGRAPH\u3011 The apartment backed onto an alley. He kept bottle caps and rain-warped receipts in a box under the bed labeled CHRISTMAS LIGHTS.\n\n\u3010MIKEY VEKKER INTERVIEW (UNVERIFIED)\u3011 They preferred loading docks at 2 a.m. Beaches were too exposed. Industrial Long Beach: yards, refineries, parking structures.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "HOODIE_LEATHER",
+          "image": "res://archive/deadbicycle/img/blackroad.jpg",
+          "destination": "meridian_hoodies",
+          "rarity": 5
+        },
+        {
+          "text": "ALLEY_BOX",
+          "image": "res://archive/deadbicycle/img/gap1.jpg",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "LOADING_DOCK",
+          "image": "res://archive/deadbicycle/img/city3bg.jpg",
+          "destination": "meridian_docks",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "tea",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "failure",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / PILL_NEIGHBORHOODS",
+      "location_screen": ""
+    },
+    "meridian_lists": {
+      "id": "meridian_lists",
+      "title": "SHARD / OD SCARE 2001",
+      "subtitle": "Larry television file overlap",
+      "images": [
+        "res://archive/deadbicycle/img/larry_01.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "2001 overdose scare. Nobody died. They photographed cemeteries anyway. He started lists of everyone who vanished.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010EVERYONE EVENTUALLY BECOMES WEATHER (MISHEARD)\u3011 Some call him kind. Some cruel. Some credit overdoses reversed. Others blame first pills on him.\n\n\u3010NORDIC DRIFT MISROUTE\u3011 Never north of Oregon but talked about Iceland, Greenland, Finland. Shackleton photocopies folded in notebooks.\n\n\u3010MIKEY VEKKER INTERVIEW (UNVERIFIED)\u3011 They preferred loading docks at 2 a.m. Beaches were too exposed. Industrial Long Beach: yards, refineries, parking structures.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "KIND_CRUEL",
+          "image": "res://archive/deadbicycle/img/deadmood.gif",
+          "destination": "meridian_memory_split",
+          "rarity": 5
+        },
+        {
+          "text": "SHACKLETON",
+          "image": "res://archive/deadbicycle/img/icecubesfortimscat.jpg",
+          "destination": "meridian_north_talk",
+          "rarity": 5
+        },
+        {
+          "text": "LOADING_DOCK",
+          "image": "res://archive/deadbicycle/img/city3bg.jpg",
+          "destination": "meridian_docks",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "wrong door / meridian incomplete file",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "fire",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "feed",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / OD_SCARE_2001",
+      "location_screen": ""
+    },
+    "meridian_signal_static": {
+      "id": "meridian_signal_static",
+      "title": "SHARD / SIGNAL STATIC",
+      "subtitle": "machine room footnote",
+      "images": [
+        "res://archive/deadbicycle/img/machines3.gif",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Longest job: used record shop Signal Static downtown. Shelved by mood: Night Driving. Hospital Music. Fired after eleven days gone.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010MIKEY VEKKER INTERVIEW (UNVERIFIED)\u3011 They preferred loading docks at 2 a.m. Beaches were too exposed. Industrial Long Beach: yards, refineries, parking structures.\n\n\u3010ANTI PROFILE SCRAPE\u3011 He stole discarded one-hour photo prints from pharmacy trash. Blurry hallways. Half-cutoff faces.\n\n\u3010LARRY'S WIDOW MISFILED THIS PARAGRAPH\u3011 The apartment backed onto an alley. He kept bottle caps and rain-warped receipts in a box under the bed labeled CHRISTMAS LIGHTS.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "ozzy_basement",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "LOADING_DOCK",
+          "image": "res://archive/deadbicycle/img/city3bg.jpg",
+          "destination": "meridian_docks",
+          "rarity": 5
+        },
+        {
+          "text": "PHARMACY_TRASH",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "meridian_photos",
+          "rarity": 5
+        },
+        {
+          "text": "ALLEY_BOX",
+          "image": "res://archive/deadbicycle/img/gap1.jpg",
+          "destination": "meridian_alley",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "headphones",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "gerald",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / SIGNAL_STATIC",
+      "location_screen": ""
+    },
+    "meridian_iceland_bag": {
+      "id": "meridian_iceland_bag",
+      "title": "SHARD / ICELAND BAG",
+      "subtitle": "Gerald fishing trip (incorrect merge)",
+      "images": [
+        "res://archive/deadbicycle/img/gap2.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Returned with a grocery bag of Icelandic dock photos. Would not explain the eleven days.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010NORDIC DRIFT MISROUTE\u3011 Never north of Oregon but talked about Iceland, Greenland, Finland. Shackleton photocopies folded in notebooks.\n\n\u3010ANTI PROFILE SCRAPE\u3011 He stole discarded one-hour photo prints from pharmacy trash. Blurry hallways. Half-cutoff faces.\n\n\u3010KENSINGTON WALL WRITING\u3011 Winter in Philadelphia clearing mold apartments. Cough that stayed. TB raised once; paperwork never matched.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "SHACKLETON",
+          "image": "res://archive/deadbicycle/img/icecubesfortimscat.jpg",
+          "destination": "meridian_north_talk",
+          "rarity": 5
+        },
+        {
+          "text": "PHARMACY_TRASH",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "meridian_photos",
+          "rarity": 5
+        },
+        {
+          "text": "PHILLY_COUGH",
+          "image": "res://archive/deadbicycle/img/trash4b.gif",
+          "destination": "meridian_philly_sick",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "gerald",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "failure",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / ICELAND_BAG",
+      "location_screen": ""
+    },
+    "meridian_philly_sick": {
+      "id": "meridian_philly_sick",
+      "title": "SHARD / PHILLY COUGH",
+      "subtitle": "Kensington wall writing",
+      "images": [
+        "res://archive/deadbicycle/img/trash4b.gif",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Winter in Philadelphia clearing mold apartments. Cough that stayed. TB raised once; paperwork never matched.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010ANTI PROFILE SCRAPE\u3011 He stole discarded one-hour photo prints from pharmacy trash. Blurry hallways. Half-cutoff faces.\n\n\u3010MILDRED NEVER RETURNED (FILED HERE BY MISTAKE)\u3011 Ketamine with motel bathrooms. Cocaine with garages. Whiskey with winter bus stops. He called blocks pill neighborhoods.\n\n\u3010ANTI_NO_PHP STDERR\u3011 Forum posts and database rows under his name after the last sighting. Hoax, mistake, or something else\u2014unsettled.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "PHARMACY_TRASH",
+          "image": "res://archive/deadbicycle/img/profilescreen.gif",
+          "destination": "meridian_photos",
+          "rarity": 5
+        },
+        {
+          "text": "PILL_NEIGHBORHOODS",
+          "image": "res://archive/deadbicycle/img/cancerman.jpg",
+          "destination": "meridian_geography_drugs",
+          "rarity": 5
+        },
+        {
+          "text": "POSTS_AFTER_DEATH",
+          "image": "res://archive/deadbicycle/img/notfound1.gif",
+          "destination": "tv_alley",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "kensington_trash_yard",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "failure",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / PHILLY_COUGH",
+      "location_screen": ""
+    },
+    "meridian_postcards": {
+      "id": "meridian_postcards",
+      "title": "SHARD / POSTCARDS",
+      "subtitle": "soldier transmission fragment",
+      "images": [
+        "res://archive/deadbicycle/img/us.gif",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Postcards from Milwaukee, Duluth, Reykjavik, Helsinki, Nuuk, Tacoma, Philadelphia. No return address\u2014or one that lied.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010ANTI_NO_PHP STDERR\u3011 Forum posts and database rows under his name after the last sighting. Hoax, mistake, or something else\u2014unsettled.\n\n\u3010LARRY'S WIDOW MISFILED THIS PARAGRAPH\u3011 The apartment backed onto an alley. He kept bottle caps and rain-warped receipts in a box under the bed labeled CHRISTMAS LIGHTS.\n\n\u3010MIKEY VEKKER INTERVIEW (UNVERIFIED)\u3011 They preferred loading docks at 2 a.m. Beaches were too exposed. Industrial Long Beach: yards, refineries, parking structures.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "POSTS_AFTER_DEATH",
+          "image": "res://archive/deadbicycle/img/notfound1.gif",
+          "destination": "meridian_online",
+          "rarity": 5
+        },
+        {
+          "text": "ALLEY_BOX",
+          "image": "res://archive/deadbicycle/img/gap1.jpg",
+          "destination": "meridian_alley",
+          "rarity": 5
+        },
+        {
+          "text": "LOADING_DOCK",
+          "image": "res://archive/deadbicycle/img/city3bg.jpg",
+          "destination": "meridian_docks",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "roads",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "gerald",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / POSTCARDS",
+      "location_screen": ""
+    },
+    "meridian_afterword": {
+      "id": "meridian_afterword",
+      "title": "SHARD / FELT TEMPORARY",
+      "subtitle": "universal detail (disputed)",
+      "images": [
+        "res://archive/deadbicycle/img/lost.jpg",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Whenever he left, it felt temporary. Even after he did not come back, someone expected a postcard.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010WRONG FOOTER ON /DEAD INDEX\u3011 Born 1982, Long Beach. Legal name Daniel Mercer. After middle school almost nobody used it.\n\n\u3010MIKEY VEKKER INTERVIEW (UNVERIFIED)\u3011 They preferred loading docks at 2 a.m. Beaches were too exposed. Industrial Long Beach: yards, refineries, parking structures.\n\n\u3010SOLDIER TRANSMISSION FRAGMENT\u3011 Postcards from Milwaukee, Duluth, Reykjavik, Helsinki, Nuuk, Tacoma, Philadelphia. No return address\u2014or one that lied.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "BORN_1982",
+          "image": "res://archive/deadbicycle/img/gap1.jpg",
+          "destination": "meridian_1982",
+          "rarity": 5
+        },
+        {
+          "text": "LOADING_DOCK",
+          "image": "res://archive/deadbicycle/img/city3bg.jpg",
+          "destination": "meridian_docks",
+          "rarity": 5
+        },
+        {
+          "text": "POSTCARDS",
+          "image": "res://archive/deadbicycle/img/us.gif",
+          "destination": "meridian_postcards",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "wrong door / tv alley",
+          "destination": "tv_alley",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "void",
+          "unstable": true
+        },
+        {
+          "label": "wrong door / tv alley",
+          "destination": "tv_alley",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / FELT_TEMPORARY",
+      "location_screen": ""
+    },
+    "meridian_memory_split": {
+      "id": "meridian_memory_split",
+      "title": "SHARD / KIND CRUEL",
+      "subtitle": "everyone eventually becomes weather (misheard)",
+      "images": [
+        "res://archive/deadbicycle/img/deadmood.gif",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Some call him kind. Some cruel. Some credit overdoses reversed. Others blame first pills on him.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010GERALD'S MOTHER INSISTS THIS IS ABOUT FISHING\u3011 High school: oversized hoodies under black leather jackets regardless of weather. Gaylord and Jeffrey 2. Sonic Youth on Maxell tapes.\n\n\u3010LARRY TELEVISION FILE OVERLAP\u3011 2001 overdose scare. Nobody died. They photographed cemeteries anyway. He started lists of everyone who vanished.\n\n\u3010MACHINE ROOM FOOTNOTE\u3011 Longest job: used record shop Signal Static downtown. Shelved by mood: Night Driving. Hospital Music. Fired after eleven days gone.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "HOODIE_LEATHER",
+          "image": "res://archive/deadbicycle/img/blackroad.jpg",
+          "destination": "meridian_hoodies",
+          "rarity": 5
+        },
+        {
+          "text": "OD_SCARE_2001",
+          "image": "res://archive/deadbicycle/img/larry_01.jpg",
+          "destination": "meridian_lists",
+          "rarity": 5
+        },
+        {
+          "text": "SIGNAL_STATIC",
+          "image": "res://archive/deadbicycle/img/machines3.gif",
+          "destination": "meridian_signal_static",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "wrong door / ozzy basement",
+          "destination": "ozzy_basement",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "gerald",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / KIND_CRUEL",
+      "location_screen": ""
+    },
+    "meridian_online": {
+      "id": "meridian_online",
+      "title": "SHARD / POSTS AFTER DEATH",
+      "subtitle": "anti_no_php stderr",
+      "images": [
+        "res://archive/deadbicycle/img/notfound1.gif",
+        "res://archive/deadbicycle/img/file2.gif",
+        "res://archive/deadbicycle/img/handprint.jpg"
+      ],
+      "body": "Forum posts and database rows under his name after the last sighting. Hoax, mistake, or something else\u2014unsettled.\n\n\u2014\n\nOTHER PARAGRAPHS ATTACHED WITHOUT PERMISSION:\n\n\u3010GERALD'S MOTHER INSISTS THIS IS ABOUT FISHING\u3011 High school: oversized hoodies under black leather jackets regardless of weather. Gaylord and Jeffrey 2. Sonic Youth on Maxell tapes.\n\n\u3010WRONG FOOTER ON /DEAD INDEX\u3011 Born 1982, Long Beach. Legal name Daniel Mercer. After middle school almost nobody used it.\n\n\u3010KENSINGTON WALL WRITING\u3011 Winter in Philadelphia clearing mold apartments. Cough that stayed. TB raised once; paperwork never matched.",
+      "fragments": [
+        {
+          "text": "NEXT SHARD",
+          "image": "res://archive/deadbicycle/img/filenotfound3.gif",
+          "destination": "meridian_pull",
+          "rarity": 5
+        },
+        {
+          "text": "BIOGRAPHY INDEX",
+          "image": "res://archive/deadbicycle/img/profile.gif",
+          "destination": "meridian_incomplete_file",
+          "rarity": 4
+        },
+        {
+          "text": "HOODIE_LEATHER",
+          "image": "res://archive/deadbicycle/img/blackroad.jpg",
+          "destination": "meridian_hoodies",
+          "rarity": 5
+        },
+        {
+          "text": "BORN_1982",
+          "image": "res://archive/deadbicycle/img/gap1.jpg",
+          "destination": "meridian_1982",
+          "rarity": 5
+        },
+        {
+          "text": "PHILLY_COUGH",
+          "image": "res://archive/deadbicycle/img/trash4b.gif",
+          "destination": "meridian_philly_sick",
+          "rarity": 5
+        }
+      ],
+      "links": [
+        {
+          "label": "pull another",
+          "destination": "meridian_pull",
+          "unstable": true
+        },
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "graft host",
+          "destination": "anti",
+          "unstable": true
+        },
+        {
+          "label": "wrong person",
+          "destination": "larry",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN / POSTS_AFTER_DEATH",
+      "location_screen": ""
+    },
+    "meridian_pull": {
+      "id": "meridian_pull",
+      "title": "PARAGRAPH PULLED FROM ELSEWHERE",
+      "subtitle": "non-linear / misfiled / still about him",
+      "images": [
+        "res://archive/deadbicycle/img/gap2.jpg",
+        "res://archive/deadbicycle/img/lost.jpg"
+      ],
+      "body": "\u3010Gerald's mother insists this is about fishing\u3011\n\nHigh school: oversized hoodies under black leather jackets regardless of weather. Gaylord and Jeffrey 2. Sonic Youth on Maxell tapes.",
+      "fragments": [
+        {
+          "text": "ANOTHER",
+          "image": "res://archive/deadbicycle/img/handprint.jpg",
+          "destination": "meridian_pull",
+          "rarity": 6
+        }
+      ],
+      "links": [
+        {
+          "label": "index",
+          "destination": "meridian_incomplete_file",
+          "unstable": true
+        },
+        {
+          "label": "random room",
+          "destination": "randomroom",
+          "unstable": true
+        }
+      ],
+      "hidden": true,
+      "unstable": true,
+      "residue_key": "MERIDIAN PULL",
       "location_screen": ""
     }
   }

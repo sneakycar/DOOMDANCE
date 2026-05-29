@@ -36,6 +36,8 @@ static func _make_effect(name: String, size: Vector2, extras: Dictionary = {}) -
 			return _lamp_buzz(size, extras.get("lamp_spots", []))
 		"train_flash", "passing_train_flash":
 			return _train_flash(size)
+		"tv_static":
+			return _tv_static(size, extras.get("tv_static_rect", []))
 		_:
 			return null
 
@@ -246,3 +248,20 @@ static func _train_flash(size: Vector2) -> ColorRect:
 	tween.tween_property(rect, "color:a", 0.14, 0.06)
 	tween.tween_property(rect, "color:a", 0.0, 0.25)
 	return rect
+
+static func _tv_static(size: Vector2, rect_norm: Array) -> Control:
+	if rect_norm.is_empty() or rect_norm.size() < 4:
+		return null
+	var host := Control.new()
+	host.name = "TvStaticHost"
+	host.set_anchors_preset(Control.PRESET_FULL_RECT)
+	host.offset_right = size.x
+	host.offset_bottom = size.y
+	host.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var panel := TvStatic.new()
+	panel.name = "TvStaticPanel"
+	panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	panel.position = Vector2(float(rect_norm[0]), float(rect_norm[1])) * size
+	panel.size = Vector2(float(rect_norm[2]), float(rect_norm[3])) * size
+	host.add_child(panel)
+	return host

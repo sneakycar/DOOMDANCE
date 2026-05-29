@@ -12,6 +12,14 @@ ARCHIVE = ROOT / "archive" / "deadbicycle"
 OUT = ROOT / "data" / "maze_pages.json"
 IMG_PREFIX = "res://archive/deadbicycle/img/"
 
+# New location/story page ids — builder randomly grafts these onto existing links.
+WEAVE_TARGETS: list[str] = [
+    "ozzy_basement",
+    "meridian_incomplete_file",
+    "meridian_pull",
+    "tv_alley",
+]
+
 
 def img(name: str) -> str:
     return IMG_PREFIX + name
@@ -120,6 +128,7 @@ def authored_pages() -> dict[str, dict]:
             link("salvage index", "salvage_sitemap", True),
             link("dig raw file", "dig"),
             link("dig site", "digsite"),
+            link("dust meridian", "meridian_incomplete_file", True),
             link("unstable door", "unstable", True),
             link("panic crawl", "broadcastpanic", True),
         ],
@@ -162,7 +171,7 @@ def authored_pages() -> dict[str, dict]:
             frag("dead comments", img("deadcomments.gif"), "failure"),
             frag("AIM icon still signed in", anti("icon_aim.gif"), "anti"),
         ],
-        [link("anti", "anti"), link("gerald", "gerald"), link("dig", "dig"), link("random user", "randomroom", True)],
+        [link("anti", "anti"), link("gerald", "gerald"), link("dig", "dig"), link("biography leak", "meridian_pull", True), link("random user", "randomroom", True)],
         unstable=True,
         residue_key="DEAD FEED",
     )
@@ -365,7 +374,7 @@ def authored_pages() -> dict[str, dict]:
         [],
         "you woke up drunk. it's raining again.",
         [frag("LOOK AROUND", img("handprint.jpg"), "impound_lot")],
-        [link("office", "liquor_store"), link("back to archive", "kensington_trash_yard")],
+        [link("office", "ozzy_basement"), link("back to archive", "kensington_trash_yard")],
         location_screen="impound_lot",
     )
 
@@ -376,8 +385,43 @@ def authored_pages() -> dict[str, dict]:
         [],
         "where's ozzy?",
         [frag("DOOR", img("handprint.jpg"), "impound_lot")],
-        [link("yard corner", "impound_lot"), link("archive", "dead")],
+        [link("yard corner", "impound_lot"), link("archive", "dead"), link("incomplete biography", "meridian_incomplete_file", True)],
         location_screen="liquor_store",
+    )
+
+    pages["ozzy_basement"] = page(
+        "ozzy_basement",
+        "OZZY'S BASEMENT",
+        "casino rumor / damp concrete / wrong radio",
+        [],
+        "The stairs go up to rain. The radio plays someone else's biography.",
+        [frag("STAIRS UP", img("handprint.jpg"), "impound_lot"), frag("RADIO STATIC", img("theglassofstereo.jpg"), "meridian_incomplete_file", 3)],
+        [
+            link("back to yard", "impound_lot"),
+            link("dust meridian file", "meridian_incomplete_file", True),
+            link("pull a paragraph", "meridian_pull", True),
+            link("wrong room", "randomroom", True),
+        ],
+        unstable=True,
+        residue_key="OZZY BASEMENT",
+        location_screen="ozzy_basement",
+    )
+
+    pages["tv_alley"] = page(
+        "tv_alley",
+        "TV ALLEY",
+        "crt snow / syringes / wrong broadcast",
+        [],
+        "Here we were (all alone). The television was on again.",
+        [frag("STATIC", img("dotsandtelevisions.gif"), "channelstatic"), frag("STREET", img("handprint.jpg"), "lost")],
+        [
+            link("channel static", "channelstatic", True),
+            link("lost directory", "lost"),
+            link("wrong signal", "broadcastpanic", True),
+        ],
+        unstable=True,
+        residue_key="TV ALLEY",
+        location_screen="tv_alley",
     )
 
     pages["salvage_sitemap"] = page(
@@ -554,9 +598,76 @@ def pages_from_html() -> dict[str, dict]:
     return out
 
 
+def weave_targets(pages: dict[str, dict], targets: list[str], replacements_per_target: int = 14) -> None:
+    import random
+
+    slots: list[tuple[str, int, str]] = []
+    skip_dest = {"randomroom", "unstable", "dig", "void"}
+    for pid, pdata in pages.items():
+        for i, entry in enumerate(pdata.get("links", [])):
+            dest = str(entry.get("destination", ""))
+            if dest in skip_dest or pid == dest:
+                continue
+            slots.append((pid, i, "links"))
+        for i, entry in enumerate(pdata.get("fragments", [])):
+            dest = str(entry.get("destination", ""))
+            if dest in skip_dest or pid == dest:
+                continue
+            slots.append((pid, i, "fragments"))
+
+    if not slots:
+        return
+
+    random.shuffle(slots)
+    slot_idx = 0
+    for target in targets:
+        if target not in pages:
+            continue
+        for _ in range(replacements_per_target):
+            if slot_idx >= len(slots):
+                slot_idx = 0
+                random.shuffle(slots)
+            pid, idx, kind = slots[slot_idx]
+            slot_idx += 1
+            if kind == "links":
+                pages[pid]["links"][idx]["destination"] = target
+                pages[pid]["links"][idx]["label"] = f"wrong door / {target.replace('_', ' ')}"
+                pages[pid]["links"][idx]["unstable"] = True
+            else:
+                pages[pid]["fragments"][idx]["destination"] = target
+
+
+def ensure_inbound_links(pages: dict[str, dict]) -> None:
+    import random
+
+    inbound: dict[str, int] = {pid: 0 for pid in pages}
+    skip = {"randomroom", "unstable", "dig", "void"}
+    for pdata in pages.values():
+        for entry in pdata.get("links", []):
+            dest = str(entry.get("destination", ""))
+            if dest in inbound and dest not in skip:
+                inbound[dest] += 1
+        for entry in pdata.get("fragments", []):
+            dest = str(entry.get("destination", ""))
+            if dest in inbound and dest not in skip:
+                inbound[dest] += 1
+
+    hubs = ["dead", "lost", "feed", "gerald", "larry", "failure"]
+    for pid, count in inbound.items():
+        if count > 0 or pid == "dead":
+            continue
+        hub = random.choice(hubs)
+        pages[hub]["links"].append(link(f"misfiled / {pid.replace('_', ' ')}", pid, True))
+
+
 def main() -> None:
+    from meridian_pages import meridian_pages
+
     pages = pages_from_html()
     pages.update(authored_pages())  # authored wins
+    pages.update(meridian_pages(page, link, frag, img))
+    weave_targets(pages, WEAVE_TARGETS)
+    ensure_inbound_links(pages)
 
     payload = {
         "generated": "DOOM DANCE maze builder",

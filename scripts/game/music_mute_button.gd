@@ -5,7 +5,7 @@ func _ready() -> void:
 	flat = true
 	focus_mode = Control.FOCUS_NONE
 	custom_minimum_size = Vector2(36, 16)
-	modulate = Color(1, 1, 1, 0.35)
+	modulate = Color(1, 1, 1, 0.72)
 	mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	var empty := StyleBoxEmpty.new()
 	add_theme_stylebox_override("normal", empty)

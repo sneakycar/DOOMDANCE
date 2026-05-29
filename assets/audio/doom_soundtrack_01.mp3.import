@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/doom_soundtrack_01.mp3-091da64de29b2c705380bc
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

@@ -75,6 +75,8 @@ func resolve_destination(dest: String, from_id: String) -> String:
 	if dest == "unstable":
 		var opts := ["feed", "hidden", "puzzle", "machine", "reports", "failure", "void", "dots", "digsite", "bicycles"]
 		return opts[randi() % opts.size()]
+	if dest == "meridian_pull":
+		return _meridian_pull_destination()
 	if pages.has(dest):
 		return dest
 	return random_room_id(from_id)
@@ -214,6 +216,15 @@ func status_line(page_id: String) -> String:
 
 func location_screen_for(page_id: String) -> String:
 	return str(page(page_id).get("location_screen", ""))
+
+func _meridian_pull_destination() -> String:
+	var pool: Array[String] = []
+	for rid in all_room_ids():
+		if rid.begins_with("meridian_") and rid != "meridian_pull" and rid != "meridian_incomplete_file":
+			pool.append(rid)
+	if pool.is_empty():
+		return "meridian_incomplete_file"
+	return pool[randi() % pool.size()]
 
 func filtered_fragments(page_id: String) -> Array:
 	var p: Dictionary = page(page_id)

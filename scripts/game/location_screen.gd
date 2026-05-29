@@ -5,19 +5,26 @@ signal hotspot_pressed(hotspot: Dictionary)
 
 @onready var _background: TextureRect = %Background
 @onready var _overlay_layer: Control = %OverlayLayer
+@onready var _decay_layer: Control = %DecayLayer
 @onready var _event_layer: Control = %EventLayer
 @onready var _hotspot_layer: Control = %HotspotLayer
 @onready var _status_label: Label = %StatusLabel
+@onready var _dialogue: PanelContainer = %DialogueBox
+@onready var _dialogue_text: Label = %DialogueText
+@onready var _dialogue_dismiss: Button = %DialogueDismiss
 
 var screen_id: String = ""
 var _pending_data: Dictionary = {}
 var _hotspot_rects: Dictionary = {}
 var _showing_night: bool = false
 var _last_minute_check := -1
+var _inverted := false
 
 func _ready() -> void:
 	resized.connect(_on_resized)
 	GameState.world_event_changed.connect(_refresh_world_events)
+	_style_dialogue()
+	_dialogue_dismiss.pressed.connect(_hide_dialogue)
 	if not _pending_data.is_empty():
 		_apply_setup(_pending_data)
 		_pending_data.clear()
@@ -37,11 +44,66 @@ func setup(id: String) -> void:
 func _apply_setup(data: Dictionary) -> void:
 	DoomTypography.stamp_mono(_status_label, 11)
 	_status_label.add_theme_color_override("font_color", DoomTypography.COLOR_DIM)
+	_inverted = false
+	modulate = Color(1, 1, 1, 1)
+	_hide_dialogue()
 	_showing_night = DayNight.is_night()
 	_apply_background(data)
 	_build_overlays(_overlays_for(data), data)
 	_rebuild_hotspots(data)
+	_apply_on_enter(data)
+	_apply_decay(data)
 	_refresh_world_events()
+
+func _apply_decay(data: Dictionary) -> void:
+	if not bool(data.get("decay", false)):
+		_background.modulate = Color(1, 1, 1, 1)
+		_clear_decay_layer()
+		return
+	var visits := GameState.location_visit_count(screen_id)
+	var size := _decay_layer_size()
+	ScreenDecay.apply(_decay_layer, _background, visits, size)
+	var line := ScreenDecay.status_line(visits)
+	_status_label.visible = not line.is_empty()
+	_status_label.text = line
+	if visits > 1:
+		var whisper := ScreenDecay.whisper(visits)
+		if whisper != "":
+			GameState.message_requested.emit(whisper)
+	var erosion := ScreenDecay.life_erosion(visits)
+	if erosion < 0.0:
+		GameState.adjust_life(erosion)
+
+func _clear_decay_layer() -> void:
+	for child in _decay_layer.get_children():
+		child.queue_free()
+
+func _decay_layer_size() -> Vector2:
+	var layer_size := _decay_layer.size
+	if layer_size.x > 1.0 and layer_size.y > 1.0:
+		return layer_size
+	return get_viewport_rect().size
+
+func _apply_on_enter(data: Dictionary) -> void:
+	var on_enter: Variant = data.get("on_enter", {})
+	if typeof(on_enter) != TYPE_DICTIONARY:
+		return
+	var oe: Dictionary = on_enter
+	var flag: String = str(oe.get("flag", ""))
+	if flag != "" and GameState.is_collected(flag):
+		return
+	var msg: String = str(oe.get("message", ""))
+	if msg != "":
+		GameState.message_requested.emit(msg.to_upper())
+	if oe.has("life_delta"):
+		GameState.adjust_life(float(oe.get("life_delta", 0.0)))
+	if oe.has("xp"):
+		GameState.award_xp(float(oe.get("xp", 0.0)))
+	var rumor: String = str(oe.get("discover_rumor", ""))
+	if rumor != "":
+		GameState.discover_rumor(rumor)
+	if flag != "":
+		GameState.mark_collected(flag)
 
 func _overlays_for(data: Dictionary) -> Array:
 	if DayNight.is_night():
@@ -53,7 +115,8 @@ func _apply_background(data: Dictionary) -> void:
 	var tex: Texture2D = load(bg_path) as Texture2D
 	if tex:
 		_background.texture = tex
-		_background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+		_background.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		_background.stretch_mode = TextureRect.STRETCH_SCALE
 	elif not bg_path.is_empty():
 		push_warning("Missing background: %s" % bg_path)
 
@@ -61,6 +124,10 @@ func _on_resized() -> void:
 	_relayout_hotspots()
 	var data := ScreenData.get_screen(screen_id)
 	_build_overlays(_overlays_for(data), data)
+	if bool(data.get("decay", false)):
+		var visits := GameState.location_visit_count(screen_id)
+		if visits > 0:
+			ScreenDecay.apply(_decay_layer, _background, visits, _decay_layer_size())
 
 func _process(_delta: float) -> void:
 	var now := Time.get_datetime_dict_from_system()
@@ -74,6 +141,10 @@ func _process(_delta: float) -> void:
 				var data := ScreenData.get_screen(screen_id)
 				_apply_background(data)
 				_build_overlays(_overlays_for(data), data)
+				if bool(data.get("decay", false)):
+					var visits := GameState.location_visit_count(screen_id)
+					if visits > 0:
+						ScreenDecay.apply(_decay_layer, _background, visits, _decay_layer_size())
 
 func _refresh_alley_status() -> void:
 	if screen_id != "alley":
@@ -114,6 +185,7 @@ func _build_overlays(names: Array, data: Dictionary = {}) -> void:
 	var extras := {
 		"lamp_spots": data.get("lamp_spots", []),
 		"neon_spots": data.get("neon_spots", []),
+		"tv_static_rect": data.get("tv_static_rect", []),
 	}
 	ScreenOverlays.build(_overlay_layer, names, size, extras)
 
@@ -132,13 +204,15 @@ func _finish_rebuild_hotspots(data: Dictionary) -> void:
 			continue
 		_add_hotspot_button(hotspot)
 
+	await get_tree().process_frame
 	_relayout_hotspots()
+	if _hotspot_layer.get_child_count() > 0:
+		call_deferred("_relayout_hotspots")
 
 func _should_skip_hotspot(hotspot: Dictionary) -> bool:
 	if hotspot.get("action", "") == "collect":
-		var flag: String = hotspot.get("flag", "")
-		if flag != "" and GameState.is_collected(flag):
-			return true
+		var hotspot_id: String = str(hotspot.get("id", ""))
+		return not GameState.is_repeat_collect_available(screen_id, hotspot_id)
 	return false
 
 func _add_hotspot_button(hotspot: Dictionary) -> void:
@@ -160,8 +234,17 @@ func _add_hotspot_button(hotspot: Dictionary) -> void:
 	btn.pressed.connect(_on_hotspot_pressed.bind(hotspot.duplicate()))
 	_hotspot_layer.add_child(btn)
 
-func _relayout_hotspots() -> void:
+func _hotspot_layer_size() -> Vector2:
 	var layer_size := _hotspot_layer.size
+	if layer_size.x > 1.0 and layer_size.y > 1.0:
+		return layer_size
+	var host_size := size
+	if host_size.x > 1.0 and host_size.y > 1.0:
+		return host_size
+	return get_viewport_rect().size
+
+func _relayout_hotspots() -> void:
+	var layer_size := _hotspot_layer_size()
 	if layer_size.x <= 1.0 or layer_size.y <= 1.0:
 		return
 	for child in _hotspot_layer.get_children():
@@ -180,4 +263,43 @@ func _relayout_hotspots() -> void:
 		child.size = rect.size
 
 func _on_hotspot_pressed(hotspot: Dictionary) -> void:
+	var action: String = str(hotspot.get("action", "prompt"))
+	if action == "invert_page":
+		_toggle_invert()
+		return
+	if action == "dialogue":
+		_show_dialogue(str(hotspot.get("dialogue", hotspot.get("text", ""))))
+		return
 	hotspot_pressed.emit(hotspot)
+
+func _toggle_invert() -> void:
+	_inverted = not _inverted
+	modulate = Color(-1, -1, -1, 1) if _inverted else Color(1, 1, 1, 1)
+
+func _style_dialogue() -> void:
+	var panel := StyleBoxFlat.new()
+	panel.bg_color = Color(0.93, 0.91, 0.86, 0.96)
+	panel.border_color = Color(0.55, 0.52, 0.48, 1.0)
+	panel.set_border_width_all(1)
+	panel.set_content_margin_all(16)
+	panel.set_corner_radius_all(1)
+	_dialogue.add_theme_stylebox_override("panel", panel)
+	DoomTypography.stamp_fragment(_dialogue_text, 13)
+	_dialogue_dismiss.flat = true
+	_dialogue_dismiss.focus_mode = Control.FOCUS_NONE
+	DoomTypography.stamp_fragment(_dialogue_dismiss, 11)
+	var empty := StyleBoxEmpty.new()
+	_dialogue_dismiss.add_theme_stylebox_override("normal", empty)
+	_dialogue_dismiss.add_theme_stylebox_override("hover", empty)
+	_dialogue_dismiss.add_theme_stylebox_override("pressed", empty)
+	_dialogue_dismiss.add_theme_stylebox_override("focus", empty)
+
+func _show_dialogue(text: String) -> void:
+	if text.is_empty():
+		return
+	_dialogue_text.text = text
+	_dialogue.visible = true
+
+func _hide_dialogue() -> void:
+	_dialogue.visible = false
+	_dialogue_text.text = ""

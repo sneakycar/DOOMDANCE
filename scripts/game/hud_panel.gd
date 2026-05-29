@@ -1,7 +1,7 @@
 extends PanelContainer
 ## Permanent lower-left receipt HUD — artwork stays dominant.
 
-const WIDTH_RATIO := 0.20
+const STRIP_WIDTH := 118.0
 const MAX_PREVIEW_ITEMS := 4
 const OVERFLOW_THRESHOLD := 5
 
@@ -63,8 +63,8 @@ func _style_text_button(btn: Button) -> void:
 	btn.add_theme_stylebox_override("focus", empty)
 
 func _clamp_width() -> void:
-	var vw := get_viewport().get_visible_rect().size.x
-	custom_minimum_size.x = vw * WIDTH_RATIO
+	custom_minimum_size.x = STRIP_WIDTH
+	offset_left = 0.0
 
 func _refresh_all() -> void:
 	_refresh_money()

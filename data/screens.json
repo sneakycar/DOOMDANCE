@@ -14,16 +14,22 @@
       "hotspots": [
         {
           "id": "body",
-          "rect": [0.08, 0.52, 0.38, 0.38],
+          "rect": [0.06, 0.48, 0.42, 0.44],
           "action": "prompt",
           "text": "you woke up drunk. it's raining again."
         },
         {
           "id": "office",
-          "rect": [0.62, 0.32, 0.36, 0.55],
+          "rect": [0.58, 0.22, 0.4, 0.62],
           "action": "goto",
-          "target": "liquor_store",
+          "target": "ozzy_basement",
           "text": "where's ozzy?"
+        },
+        {
+          "id": "sign",
+          "rect": [0.02, 0.08, 0.48, 0.28],
+          "action": "prompt",
+          "text": "215-634-junk. nobody picks up."
         }
       ]
     },
@@ -40,17 +46,150 @@
       ],
       "hotspots": [
         {
+          "id": "coors",
+          "rect": [0.2, 0.34, 0.12, 0.28],
+          "action": "goto",
+          "target": "tea",
+          "text": "coors light hums through the bars."
+        },
+        {
+          "id": "atm",
+          "rect": [0.66, 0.34, 0.1, 0.22],
+          "action": "goto",
+          "target": "money",
+          "text": "atm screen frozen on insert card."
+        },
+        {
+          "id": "ebt",
+          "rect": [0.72, 0.42, 0.14, 0.22],
+          "action": "goto",
+          "target": "supermarket",
+          "text": "we accept ebt food stamps."
+        },
+        {
           "id": "door",
-          "rect": [0.42, 0.38, 0.18, 0.48],
-          "action": "prompt",
+          "rect": [0.4, 0.32, 0.18, 0.52],
+          "action": "goto",
+          "target": "room",
           "text": "locked. buzzer dead."
         },
         {
+          "id": "no_parking",
+          "rect": [0.0, 0.22, 0.1, 0.22],
+          "action": "goto",
+          "target": "racecar",
+          "text": "tow away zone. your car is already gone."
+        },
+        {
+          "id": "trash",
+          "rect": [0.04, 0.58, 0.14, 0.22],
+          "action": "collect",
+          "collect_chance": 0.42,
+          "collectible_id": "beer_can",
+          "pickup_text": "you pulled a warm beer can from the trash.",
+          "miss_text": "someone already dug through the trash.",
+          "text": "dent in the can. still cold somehow."
+        },
+        {
+          "id": "ground_score",
+          "rect": [0.74, 0.72, 0.26, 0.28],
+          "action": "collect",
+          "collect_chance": 0.38,
+          "collectible_id": "cocaine",
+          "pickup_text": "YOU FOUND A GROUND SCORE [+1 cocaine]",
+          "miss_text": "wet grit. nothing glints.",
+          "text": "something glints in the wet grit by the fence."
+        },
+        {
           "id": "yard",
-          "rect": [0.0, 0.0, 0.12, 0.2],
+          "rect": [0.0, 0.0, 0.16, 0.35],
           "action": "goto",
           "target": "impound_lot",
           "text": "back toward the yard."
+        },
+        {
+          "id": "sidewalk",
+          "rect": [0.0, 0.82, 0.55, 0.18],
+          "action": "goto",
+          "target": "impound_lot",
+          "text": "wet pavement back to the yard."
+        }
+      ]
+    },
+    "ozzy_basement": {
+      "header": "BASEMENT",
+      "decay": true,
+      "background_day": "res://generated images/ozzy basement.png",
+      "background_night": "res://generated images/ozzy basement.png",
+      "overlays_day": ["lamp_buzz"],
+      "overlays_night": ["lamp_buzz", "rain"],
+      "lamp_spots": [
+        {"center": [0.42, 0.08], "radius": 0.05, "kind": "bulb"}
+      ],
+      "on_enter": {
+        "message": "Ozzy's not dead, he killed someone in an Atlantic City casino",
+        "life_delta": -22,
+        "xp": 120,
+        "flag": "ozzy_atlantic_revealed",
+        "discover_rumor": "ozzy atlantic city"
+      },
+      "hotspots": [
+        {
+          "id": "stairs",
+          "rect": [0.0, 0.0, 0.34, 0.55],
+          "action": "goto",
+          "target": "impound_lot",
+          "text": "wet steps back to the yard."
+        },
+        {
+          "id": "radio",
+          "rect": [0.72, 0.42, 0.22, 0.18],
+          "action": "goto",
+          "target": "meridian_incomplete_file",
+          "text": "the radio plays a biography filed under the wrong name."
+        },
+        {
+          "id": "couch",
+          "rect": [0.58, 0.48, 0.38, 0.34],
+          "action": "prompt",
+          "text": "corduroy still smells like clove cigarettes and salt."
+        },
+        {
+          "id": "coffee_table",
+          "rect": [0.48, 0.62, 0.28, 0.22],
+          "action": "goto",
+          "target": "meridian_pull",
+          "text": "papers on the table are someone else's missing paragraphs."
+        },
+        {
+          "id": "washer",
+          "rect": [0.34, 0.34, 0.18, 0.28],
+          "action": "goto",
+          "target": "liquor_store",
+          "text": "through the back way to the liquor corner."
+        }
+      ]
+    },
+    "tv_alley": {
+      "header": "TV ALLEY",
+      "background_day": "res://generated images/kensington tv alley.png",
+      "background_night": "res://generated images/kensington tv alley.png",
+      "tv_static_rect": [0.405, 0.472, 0.192, 0.245],
+      "overlays_day": ["tv_static"],
+      "overlays_night": ["tv_static", "rain"],
+      "hotspots": [
+        {
+          "id": "tv",
+          "rect": [0.32, 0.38, 0.36, 0.4],
+          "action": "invert_page",
+          "text": "the crawl is not a test."
+        },
+        {
+          "id": "syringes",
+          "rect": [0.22, 0.68, 0.52, 0.3],
+          "action": "dialogue",
+          "dialogue": "Kyle died...",
+          "text": "orange caps in the cracks."
         }
       ]
     }

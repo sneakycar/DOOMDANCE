@@ -5,6 +5,7 @@ signal tool_pressed(tool: String)
 const TOOLS := ["BACK", "LOST", "RND", "DIG", "TEST"]
 
 func _ready() -> void:
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_theme_constant_override("separation", 4)
 	for tool in TOOLS:
 		add_child(_make_button(tool))
@@ -20,6 +21,7 @@ func _make_button(label: String) -> Button:
 	var btn := Button.new()
 	btn.text = label.to_lower()
 	btn.focus_mode = Control.FOCUS_NONE
+	btn.mouse_filter = Control.MOUSE_FILTER_STOP
 	btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	btn.custom_minimum_size = Vector2(0, 28)
 	btn.pressed.connect(func() -> void: tool_pressed.emit(label))

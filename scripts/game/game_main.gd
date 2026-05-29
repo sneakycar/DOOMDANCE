@@ -34,14 +34,14 @@ func _ready() -> void:
 func _mount_maze() -> void:
 	_maze_shell = MazeShellScene.instantiate()
 	_maze_shell.set_anchors_preset(Control.PRESET_FULL_RECT)
-	_maze_shell.offset_top = 28.0
 	_screen_host.add_child(_maze_shell)
 
 func _play_opening_intro() -> void:
 	_fade.color.a = 1.0
 	_fade.mouse_filter = Control.MOUSE_FILTER_STOP
 	_fade_busy = true
-	DoomMusic.unlock()
+	if not OS.has_feature("web"):
+		DoomMusic.unlock()
 	_transition_label.text = "KENSINGTON"
 	_transition_label.visible = true
 	_transition_label.modulate.a = 0.0
@@ -63,10 +63,21 @@ func _process(delta: float) -> void:
 	GameState.tick_xp(delta)
 
 func _input(event: InputEvent) -> void:
+	if _is_user_gesture(event):
+		DoomMusic.unlock()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if _is_user_gesture(event):
+		DoomMusic.unlock()
+
+func _is_user_gesture(event: InputEvent) -> bool:
 	if event is InputEventMouseButton and event.pressed:
-		DoomMusic.unlock()
-	elif event is InputEventScreenTouch and event.pressed:
-		DoomMusic.unlock()
+		return true
+	if event is InputEventScreenTouch and event.pressed:
+		return true
+	if event is InputEventKey and event.pressed and not event.echo:
+		return true
+	return false
 
 func _apply_transition_label() -> void:
 	DoomTypography.stamp_transition(_transition_label, 42)

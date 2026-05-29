@@ -13,16 +13,13 @@ signal life_changed(value: float)
 signal player_died
 
 const START_MONEY := 8
-const START_CLOCK := 1380
 const START_LIFE := 100.0
 const MAX_LIFE := 100.0
 const PANHANDLE_SECONDS := 300
+const DEFAULT_COLLECT_CHANCE := 0.38
 const SAVE_PATH := "user://doom_dance_save.cfg"
-const FENCE_MAN_CLOCK := 157
-const MINUTES_PER_TRAVEL := 12
-
 var money: int = START_MONEY
-var clock_minutes: int = START_CLOCK
+var clock_minutes: int = 0
 var xp: float = 0.0
 var life: float = START_LIFE
 var inventory: Array[String] = []
@@ -32,16 +29,34 @@ var discovered_rumors: Array[String] = []
 var panhandling_until: int = 0
 var fence_man_seen: bool = false
 var screens_visited: Dictionary = {}
+var location_visit_counts: Dictionary = {}
 var hidden_metrics: Dictionary = HiddenMetrics.from_dict({})
+var _repeat_collect_available: Dictionary = {}
 
 func _ready() -> void:
 	CollectibleData.load_all()
 	_load_save()
+	_sync_local_clock(true)
+
+func _process(_delta: float) -> void:
+	_sync_local_clock(false)
+
+func _local_clock_minutes() -> int:
+	var now := Time.get_datetime_dict_from_system()
+	return int(now.hour) * 60 + int(now.minute)
+
+func _sync_local_clock(force: bool) -> void:
+	var local := _local_clock_minutes()
+	if not force and local == clock_minutes:
+		return
+	clock_minutes = local
+	time_changed.emit(clock_minutes)
+	_check_fence_man_window()
 
 func _serialize_run() -> Dictionary:
 	return {
 		"money": money,
-		"clock_minutes": clock_minutes,
+		"clock_minutes": _local_clock_minutes(),
 		"xp": xp,
 		"life": life,
 		"inventory": inventory.duplicate(),
@@ -51,12 +66,12 @@ func _serialize_run() -> Dictionary:
 		"panhandling_until": panhandling_until,
 		"fence_man_seen": fence_man_seen,
 		"screens_visited": screens_visited.duplicate(),
+		"location_visit_counts": location_visit_counts.duplicate(),
 		"hidden_metrics": HiddenMetrics.to_dict(hidden_metrics),
 	}
 
 func _apply_save(data: Dictionary) -> void:
 	money = int(data.get("money", START_MONEY))
-	clock_minutes = int(data.get("clock_minutes", START_CLOCK))
 	xp = float(data.get("xp", 0.0))
 	life = float(data.get("life", START_LIFE))
 	inventory.clear()
@@ -80,11 +95,11 @@ func _apply_save(data: Dictionary) -> void:
 	panhandling_until = int(data.get("panhandling_until", 0))
 	fence_man_seen = bool(data.get("fence_man_seen", false))
 	screens_visited = data.get("screens_visited", {})
+	location_visit_counts = data.get("location_visit_counts", {})
 	hidden_metrics = HiddenMetrics.from_dict(data.get("hidden_metrics", {}))
 
 func reset_run() -> void:
 	money = START_MONEY
-	clock_minutes = START_CLOCK
 	xp = 0.0
 	life = START_LIFE
 	inventory.clear()
@@ -94,7 +109,9 @@ func reset_run() -> void:
 	panhandling_until = 0
 	fence_man_seen = false
 	screens_visited.clear()
+	location_visit_counts.clear()
 	hidden_metrics = HiddenMetrics.from_dict({})
+	_sync_local_clock(true)
 	_emit_all()
 	if WebSave.is_web():
 		WebSave.clear()
@@ -104,7 +121,7 @@ func money_display() -> String:
 	return DoomTypography.format_money(money)
 
 func time_display() -> String:
-	return DoomTypography.format_time(clock_minutes)
+	return DoomTypography.format_time(_local_clock_minutes())
 
 func life_display() -> String:
 	return "LIFE %d" % int(roundf(life))
@@ -167,12 +184,8 @@ func _handle_death() -> void:
 func inventory_display() -> String:
 	return DoomTypography.format_inventory(inventory)
 
-func advance_time(minutes: int = MINUTES_PER_TRAVEL) -> void:
-	clock_minutes = (clock_minutes + minutes) % (24 * 60)
-	_check_fence_man_window()
-	time_changed.emit(clock_minutes)
-	world_event_changed.emit()
-	_save()
+func advance_time(_minutes: int = 0) -> void:
+	_sync_local_clock(true)
 
 func mark_screen_visited(screen_id: String) -> void:
 	var first_visit: bool = not bool(screens_visited.get(screen_id, false))
@@ -181,6 +194,15 @@ func mark_screen_visited(screen_id: String) -> void:
 		award_xp(25.0)
 		collections_changed.emit()
 	_save()
+
+func mark_location_visit(location_id: String) -> int:
+	var count: int = int(location_visit_counts.get(location_id, 0)) + 1
+	location_visit_counts[location_id] = count
+	_save()
+	return count
+
+func location_visit_count(location_id: String) -> int:
+	return int(location_visit_counts.get(location_id, 0))
 
 func tick_xp(delta: float) -> void:
 	if delta <= 0.0:
@@ -229,8 +251,9 @@ func is_fence_man_visible() -> bool:
 	return is_fence_man_hour() and not fence_man_seen
 
 func is_fence_man_hour() -> bool:
-	var h: int = (clock_minutes / 60) % 24
-	var m: int = clock_minutes % 60
+	var local := _local_clock_minutes()
+	var h: int = (local / 60) % 24
+	var m: int = local % 60
 	return h == 2 and m >= 36 and m <= 39
 
 func _check_fence_man_window() -> void:
@@ -300,6 +323,17 @@ func add_item(item_name: String) -> void:
 	inventory_changed.emit(inventory.duplicate())
 	_save()
 
+func add_item_stack(item_name: String) -> void:
+	if item_name.is_empty():
+		return
+	inventory.append(item_name)
+	var cid := CollectibleData.id_for_name(item_name)
+	if cid != "":
+		discover_collectible(cid)
+	award_xp(8.0)
+	inventory_changed.emit(inventory.duplicate())
+	_save()
+
 func add_collectible(collectible_id: String) -> void:
 	var data := CollectibleData.lookup(collectible_id)
 	if data.is_empty():
@@ -310,6 +344,38 @@ func add_collectible(collectible_id: String) -> void:
 	discover_collectible(collectible_id)
 	inventory_changed.emit(inventory.duplicate())
 	_save()
+
+func add_collectible_stack(collectible_id: String) -> void:
+	var data := CollectibleData.lookup(collectible_id)
+	if data.is_empty():
+		return
+	var name: String = data.get("name", collectible_id)
+	inventory.append(name)
+	discover_collectible(collectible_id)
+	award_xp(8.0)
+	inventory_changed.emit(inventory.duplicate())
+	_save()
+
+func prepare_location_collects(screen_id: String) -> void:
+	var data := ScreenData.get_screen(screen_id)
+	for raw in data.get("hotspots", []):
+		if raw is not Dictionary or str(raw.get("action", "")) != "collect":
+			continue
+		var hotspot: Dictionary = raw
+		var hotspot_id: String = str(hotspot.get("id", ""))
+		if hotspot_id.is_empty():
+			continue
+		var chance: float = float(hotspot.get("collect_chance", DEFAULT_COLLECT_CHANCE))
+		_repeat_collect_available[_repeat_collect_key(screen_id, hotspot_id)] = randf() < chance
+
+func is_repeat_collect_available(screen_id: String, hotspot_id: String) -> bool:
+	return bool(_repeat_collect_available.get(_repeat_collect_key(screen_id, hotspot_id), false))
+
+func consume_repeat_collect(screen_id: String, hotspot_id: String) -> void:
+	_repeat_collect_available[_repeat_collect_key(screen_id, hotspot_id)] = false
+
+func _repeat_collect_key(screen_id: String, hotspot_id: String) -> String:
+	return "%s:%s" % [screen_id, hotspot_id]
 
 func is_collected(flag: String) -> bool:
 	return collected_flags.get(flag, false)
@@ -417,7 +483,7 @@ func _load_save() -> void:
 		return
 	_apply_save({
 		"money": cfg.get_value("run", "money", START_MONEY),
-		"clock_minutes": cfg.get_value("run", "clock_minutes", START_CLOCK),
+		"clock_minutes": cfg.get_value("run", "clock_minutes", 0),
 		"xp": cfg.get_value("run", "xp", 0.0),
 		"life": cfg.get_value("run", "life", START_LIFE),
 		"inventory": cfg.get_value("run", "inventory", []),
@@ -427,6 +493,7 @@ func _load_save() -> void:
 		"panhandling_until": cfg.get_value("run", "panhandling_until", 0),
 		"fence_man_seen": cfg.get_value("run", "fence_man_seen", false),
 		"screens_visited": cfg.get_value("run", "screens_visited", {}),
+		"location_visit_counts": cfg.get_value("run", "location_visit_counts", {}),
 		"hidden_metrics": cfg.get_value("run", "hidden_metrics", {}),
 	})
 	_emit_all()
