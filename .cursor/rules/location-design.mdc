@@ -1,0 +1,13 @@
+---
+description: DOOM DANCE location design — scrapbook screens, not open world
+alwaysApply: true
+---
+
+# Location design (LOCKED)
+
+Read `LOCATION_DESIGN.md` before adding or changing any location.
+
+- One illustrated screen = one visitable scene. No scrolling maps, procedural cities, or open-world systems.
+- Every new location requires: **visual anchor**, **pseudo-animation** (overlay), **interaction** (hotspot), **observation** (short fragment in copy).
+- Add locations one at a time via `data/screens.json` + background art. Update `DOOM_DANCE.md`.
+- Atmosphere over mechanics. Places should feel like they existed before the player and will after they leave.

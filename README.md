@@ -21,5 +21,6 @@ Requires Godot with **Web** export templates. Output: `public/index.html` (+ was
 ## Docs
 
 - `DOOM_DANCE.md` — living index (locations, items, rules)
+- `LOCATION_DESIGN.md` — location system (LOCKED): one screen at a time
 - `TYPOGRAPHY.md` / `WEIGHTED_REALISM.md` — design locks
 - `DEPLOY.md` — Git + Vercel + DNS

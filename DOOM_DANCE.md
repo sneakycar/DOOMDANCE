@@ -57,6 +57,7 @@ Fence Man (2:37 AM, alley fence)
 
 ## RULES
 
+Location design: **one screen at a time** — anchor · animation · interaction · observation — see `LOCATION_DESIGN.md` (LOCKED)  
 Weighted realism: **85% ordinary · 14% uncommon · 1% legendary** — see `WEIGHTED_REALISM.md`  
 Panhandle = 5 minutes (real time); earnings use rarity tiers (cash / receipt·can / bus pass)  
 Start money = $8.00  
