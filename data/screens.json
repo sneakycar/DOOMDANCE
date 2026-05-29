@@ -8,6 +8,7 @@
         {
           "id": "gate",
           "label": "GATE",
+          "observation": "Exit to alley.",
           "rect": [0.02, 0.28, 0.48, 0.62],
           "action": "goto",
           "target": "alley"
@@ -15,6 +16,7 @@
         {
           "id": "office",
           "label": "OFFICE",
+          "observation": "Light on inside. Locked.",
           "rect": [0.62, 0.32, 0.36, 0.55],
           "action": "message",
           "text": "LOCKED.\n\nLight on inside."

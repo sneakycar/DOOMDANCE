@@ -2,13 +2,11 @@ extends Control
 class_name LocationScreen
 
 signal hotspot_pressed(hotspot: Dictionary)
-signal tap_hint_changed(text: String)
 
 @onready var _background: TextureRect = %Background
 @onready var _overlay_layer: Control = %OverlayLayer
 @onready var _event_layer: Control = %EventLayer
 @onready var _hotspot_layer: Control = %HotspotLayer
-@onready var _location_header: Label = %LocationHeader
 @onready var _status_label: Label = %StatusLabel
 
 var screen_id: String = ""
@@ -35,8 +33,6 @@ func setup(id: String) -> void:
 	_apply_setup(data)
 
 func _apply_setup(data: Dictionary) -> void:
-	_location_header.text = DoomTypography.header_for_screen(screen_id)
-	DoomTypography.stamp_signage(_location_header, 20)
 	DoomTypography.stamp_mono(_status_label, 11)
 	_status_label.add_theme_color_override("font_color", DoomTypography.COLOR_DIM)
 	var bg_path: String = data.get("background", "")
@@ -144,39 +140,19 @@ func _add_alley_panhandle_hotspots() -> void:
 func _add_hotspot_button(hotspot: Dictionary) -> void:
 	var id: String = hotspot.get("id", "unknown")
 	_hotspot_rects[id] = hotspot.get("rect", [])
-	var label_text: String = str(hotspot.get("label", "???")).to_upper()
 	var btn := Button.new()
 	btn.name = "Hotspot_%s" % id
-	btn.text = label_text if MobileUI.is_touch_device else ""
+	btn.text = ""
 	btn.focus_mode = Control.FOCUS_NONE
 	btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	btn.flat = not MobileUI.is_touch_device
-	var style := StyleBoxFlat.new()
-	style.bg_color = Color(0.05, 0.05, 0.08, 0.38 if MobileUI.is_touch_device else 0.28)
-	style.border_color = Color(1, 1, 1, 0.35)
-	style.set_border_width_all(1)
-	style.set_corner_radius_all(4)
-	style.content_margin_left = 6
-	style.content_margin_right = 6
-	style.content_margin_top = 4
-	style.content_margin_bottom = 4
-	var pressed := style.duplicate()
-	pressed.bg_color = Color(0.2, 0.18, 0.12, 0.65)
-	pressed.border_color = Color(1, 0.9, 0.5, 0.85)
-	btn.add_theme_stylebox_override("normal", style)
-	btn.add_theme_stylebox_override("pressed", pressed)
-	btn.add_theme_stylebox_override("focus", style)
-	btn.add_theme_font_size_override("font_size", 12 if MobileUI.is_touch_device else 11)
-	if DoomTypography.mono:
-		btn.add_theme_font_override("font", DoomTypography.mono)
-	if not MobileUI.is_touch_device:
-		var hover := style.duplicate()
-		hover.bg_color = Color(0.15, 0.14, 0.2, 0.55)
-		hover.border_color = Color(1, 0.9, 0.5, 0.65)
-		btn.add_theme_stylebox_override("hover", hover)
-		btn.mouse_entered.connect(func() -> void: tap_hint_changed.emit(label_text))
-		btn.mouse_exited.connect(func() -> void: tap_hint_changed.emit(""))
-	btn.button_down.connect(func() -> void: tap_hint_changed.emit(label_text))
+	btn.flat = true
+	var invisible := StyleBoxEmpty.new()
+	btn.add_theme_stylebox_override("normal", invisible)
+	btn.add_theme_stylebox_override("hover", invisible)
+	btn.add_theme_stylebox_override("pressed", invisible)
+	btn.add_theme_stylebox_override("focus", invisible)
+	btn.add_theme_stylebox_override("disabled", invisible)
+	btn.modulate = Color(1, 1, 1, 0)
 	btn.pressed.connect(_on_hotspot_pressed.bind(hotspot.duplicate()))
 	_hotspot_layer.add_child(btn)
 

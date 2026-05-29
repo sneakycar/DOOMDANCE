@@ -4,6 +4,8 @@ extends Control
 @onready var _fade: ColorRect = %Fade
 @onready var _message_label: Label = %MessageLabel
 @onready var _collections: PanelContainer = %CollectionsPanel
+@onready var _observation: PanelContainer = %ObservationPanel
+@onready var _location_label: Label = %LocationLabel
 
 const LocationScreenScene := preload("res://scenes/game/location_screen.tscn")
 
@@ -14,6 +16,7 @@ var _fade_busy := false
 func _ready() -> void:
 	_fade.color = Color(0, 0, 0, 1)
 	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_apply_corner_ui()
 	_apply_hud_typography()
 	GameState.money_changed.connect(_on_hud_refresh)
 	GameState.time_changed.connect(_on_hud_refresh)
@@ -21,18 +24,32 @@ func _ready() -> void:
 	GameState.message_requested.connect(_show_message)
 	GameState.panhandle_changed.connect(_on_panhandle_changed)
 	%CollectionsButton.pressed.connect(func() -> void: _collections.toggle())
+	_observation.action_confirmed.connect(_execute_hotspot)
 	_on_hud_refresh()
 	_go_to_screen("impound_lot", true)
 
+func _apply_corner_ui() -> void:
+	var panel_style := StyleBoxFlat.new()
+	panel_style.bg_color = Color(0, 0, 0, 0.4)
+	panel_style.set_corner_radius_all(2)
+	panel_style.content_margin_left = 10
+	panel_style.content_margin_right = 10
+	panel_style.content_margin_top = 6
+	panel_style.content_margin_bottom = 6
+	%HudPanel.add_theme_stylebox_override("panel", panel_style)
+	%LocationBadge.add_theme_stylebox_override("panel", panel_style.duplicate())
+	_observation.add_theme_stylebox_override("panel", panel_style.duplicate())
+
 func _apply_hud_typography() -> void:
-	DoomTypography.stamp_mono(%TimeLabel, 13)
-	DoomTypography.stamp_mono(%MoneyLabel, 14)
-	DoomTypography.stamp_mono(%InventoryLabel, 11)
-	DoomTypography.stamp_observation(%MessageLabel, 13)
-	DoomTypography.stamp_mono(%TapHintLabel, 12)
+	DoomTypography.stamp_mono(%TimeLabel, 12)
+	DoomTypography.stamp_mono(%MoneyLabel, 13)
+	DoomTypography.stamp_mono(%InventoryLabel, 10)
+	DoomTypography.stamp_observation(%MessageLabel, 12)
+	DoomTypography.stamp_signage(_location_label, 16)
+	_location_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	%InventoryLabel.vertical_alignment = VERTICAL_ALIGNMENT_TOP
 	%CollectionsButton.add_theme_font_override("font", DoomTypography.mono)
-	%CollectionsButton.add_theme_font_size_override("font_size", 12)
+	%CollectionsButton.add_theme_font_size_override("font_size", 11)
 
 func _on_hud_refresh(_value = null) -> void:
 	%MoneyLabel.text = GameState.money_display()
@@ -53,6 +70,7 @@ func _show_message(text: String) -> void:
 func _go_to_screen(screen_id: String, instant: bool = false) -> void:
 	if _fade_busy and not instant:
 		return
+	_observation.hide_panel()
 	_fade_busy = true
 	_fade.mouse_filter = Control.MOUSE_FILTER_STOP
 
@@ -84,36 +102,26 @@ func _swap_screen(screen_id: String) -> void:
 		_current_screen = null
 	_current_id = screen_id
 	GameState.mark_screen_visited(screen_id)
+	var data := ScreenData.get_screen(screen_id)
+	_location_label.text = DoomTypography.header_for_screen(screen_id)
 	var screen: LocationScreen = LocationScreenScene.instantiate()
 	screen.set_anchors_preset(Control.PRESET_FULL_RECT)
 	screen.hotspot_pressed.connect(_on_hotspot)
-	screen.tap_hint_changed.connect(_on_tap_hint)
 	_screen_host.add_child(screen)
 	screen.setup(screen_id)
 	_current_screen = screen
 
-func _on_tap_hint(text: String) -> void:
-	if MobileUI.is_touch_device and text.is_empty():
-		return
-	%TapHintLabel.text = text
-	%TapHintLabel.visible = not text.is_empty()
-
 func _on_hotspot(hotspot: Dictionary) -> void:
 	DoomMusic.unlock()
-	if MobileUI.is_touch_device:
-		var hint: String = str(hotspot.get("label", ""))
-		if not hint.is_empty():
-			_on_tap_hint(hint)
-			get_tree().create_timer(1.2).timeout.connect(func() -> void:
-				if is_instance_valid(self):
-					%TapHintLabel.visible = false
-			)
+	_observation.show_hotspot(hotspot)
+
+func _execute_hotspot(hotspot: Dictionary) -> void:
 	var action: String = hotspot.get("action", "")
 	match action:
 		"goto":
 			_go_to_screen(hotspot.get("target", "alley"))
 		"message":
-			_show_message(hotspot.get("text", ""))
+			pass
 		"buy":
 			_try_buy(hotspot)
 		"collect":
