@@ -109,7 +109,7 @@ func format_xp(value: float) -> String:
 		var whole_k := int(round(value / 1000.0))
 		if is_equal_approx(value, float(whole_k * 1000)):
 			return "XP %dk" % whole_k
-	var k := round(value / 100.0) / 10.0
+	var k: float = round(value / 100.0) / 10.0
 	if is_equal_approx(k, floor(k)):
 		return "XP %dk" % int(k)
 	return "XP %.1fk" % k

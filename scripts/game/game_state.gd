@@ -109,7 +109,7 @@ func advance_time(minutes: int = MINUTES_PER_TRAVEL) -> void:
 	_save()
 
 func mark_screen_visited(screen_id: String) -> void:
-	var first_visit := not screens_visited.get(screen_id, false)
+	var first_visit: bool = not bool(screens_visited.get(screen_id, false))
 	screens_visited[screen_id] = true
 	if first_visit:
 		award_xp(25.0)

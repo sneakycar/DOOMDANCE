@@ -1,4 +1,5 @@
 extends Control
+class_name LampFlicker
 ## Soft sodium glow — radial falloff, buzz, brownout. No hard edges.
 
 enum Kind { STREET, BULB, WINDOW }
@@ -33,7 +34,9 @@ static func glow_texture() -> ImageTexture:
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	blend_mode = CanvasItem.BLEND_MODE_ADD
+	var mat := CanvasItemMaterial.new()
+	mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+	material = mat
 	set_process(true)
 	_buzz_step()
 

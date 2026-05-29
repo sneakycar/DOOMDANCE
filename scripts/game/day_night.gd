@@ -6,7 +6,7 @@ const LONGITUDE := -75.1652
 
 func is_night() -> bool:
 	var now := Time.get_datetime_dict_from_system()
-	var minute_of_day := now.hour * 60 + now.minute
+	var minute_of_day: int = int(now.hour) * 60 + int(now.minute)
 	var sun := sunrise_sunset_minutes(now.year, now.month, now.day)
 	return minute_of_day >= sun.sunset or minute_of_day < sun.sunrise
 
@@ -51,10 +51,13 @@ func _minutes_from_julian(julian: float, utc_offset_hours: float) -> int:
 	return minutes
 
 func _utc_offset_hours() -> float:
-	var unix := Time.get_unix_time_from_system()
-	var utc := Time.get_datetime_dict_from_unix_time(unix, true)
 	var local := Time.get_datetime_dict_from_system()
-	return float(local.hour - utc.hour) + float(local.minute - utc.minute) / 60.0
+	var unix := Time.get_unix_time_from_system()
+	var utc := Time.get_datetime_dict_from_unix_time(unix)
+	var local_minutes: int = int(local.hour) * 60 + int(local.minute)
+	var utc_minutes: int = int(utc.hour) * 60 + int(utc.minute)
+	var day_diff: int = int(local.day) - int(utc.day)
+	return float(local_minutes - utc_minutes + day_diff * 1440) / 60.0
 
 func _julian_day(year: int, month: int, day: int) -> float:
 	var y := year

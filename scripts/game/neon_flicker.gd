@@ -9,7 +9,9 @@ var _hum := 0.0
 
 func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
-	blend_mode = CanvasItem.BLEND_MODE_ADD
+	var mat := CanvasItemMaterial.new()
+	mat.blend_mode = CanvasItemMaterial.BLEND_MODE_ADD
+	material = mat
 	set_process(true)
 	_gentle_step()
 
@@ -41,7 +43,7 @@ func _gentle_step() -> void:
 	tween.finished.connect(_gentle_step)
 
 func _draw() -> void:
-	var tex := LampFlicker.glow_texture()
+	var tex: ImageTexture = LampFlicker.glow_texture()
 	var strength := clampf(_intensity + _hum, 0.0, 1.1)
 	var hot := base_color
 	hot.r = clampf(hot.r + _hum * 1.8, 0.0, 1.0)

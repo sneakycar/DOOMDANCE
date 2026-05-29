@@ -64,7 +64,7 @@ func _on_resized() -> void:
 
 func _process(_delta: float) -> void:
 	var now := Time.get_datetime_dict_from_system()
-	var minute_key := now.hour * 60 + now.minute
+	var minute_key: int = int(now.hour) * 60 + int(now.minute)
 	if minute_key != _last_minute_check:
 		_last_minute_check = minute_key
 		var night := DayNight.is_night()
