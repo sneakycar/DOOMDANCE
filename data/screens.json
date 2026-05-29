@@ -27,125 +27,55 @@
       "header": "ALLEY",
       "background": "res://generated images/night time alley 1.png",
       "overlays": ["rain", "light_flicker"],
-      "hotspots": [
-        { "id": "liquor_store", "label": "LIQUOR STORE", "rect": [0.02, 0.14, 0.22, 0.42], "action": "goto", "target": "liquor_store" },
-        { "id": "pawn_shop", "label": "PAWN SHOP", "rect": [0.20, 0.16, 0.18, 0.38], "action": "goto", "target": "pawn_shop" },
-        { "id": "vacant_lot", "label": "VACANT LOT", "rect": [0.36, 0.20, 0.18, 0.40], "action": "goto", "target": "vacant_lot" },
-        { "id": "movie_theater", "label": "THEATER", "rect": [0.52, 0.12, 0.18, 0.42], "action": "goto", "target": "movie_theater" },
-        { "id": "western_union", "label": "WESTERN UNION", "rect": [0.68, 0.14, 0.16, 0.36], "action": "goto", "target": "western_union" },
-        { "id": "septa", "label": "SEPTA", "rect": [0.82, 0.18, 0.16, 0.45], "action": "goto", "target": "septa" },
-        { "id": "underpass", "label": "UNDERPASS", "rect": [0.02, 0.48, 0.20, 0.28], "action": "goto", "target": "underpass" },
-        {
-          "id": "rowhouse",
-          "label": "ROWHOUSE",
-          "rect": [0.72, 0.48, 0.24, 0.32],
-          "action": "message",
-          "text": "CHAINED.\n\nBasement door.\nNot yet."
-        },
-        { "id": "rowhouse_path", "label": "STOOP", "rect": [0.58, 0.50, 0.12, 0.26], "action": "goto", "target": "rowhouse" }
-      ]
+      "hotspots": []
     },
     "liquor_store": {
       "header": "LIQUOR STORE",
       "background": "res://generated images/liquor store.png",
       "overlays": ["fluorescent_flicker", "neon_buzz"],
-      "hotspots": [
-        { "id": "beer", "label": "BEER $3", "rect": [0.08, 0.38, 0.16, 0.22], "action": "buy", "collectible_id": "beer", "cost": 3 },
-        { "id": "whiskey", "label": "WHISKEY $8", "rect": [0.26, 0.38, 0.16, 0.22], "action": "buy", "collectible_id": "whiskey", "cost": 8 },
-        { "id": "old_crow", "label": "OLD CROW $5", "rect": [0.44, 0.38, 0.16, 0.22], "action": "buy", "collectible_id": "old_crow", "cost": 5 },
-        { "id": "steel_reserve", "label": "STEEL RESERVE $4", "rect": [0.62, 0.38, 0.16, 0.22], "action": "buy", "collectible_id": "steel_reserve", "cost": 4 },
-        { "id": "evan_williams", "label": "EVAN WILLIAMS $6", "rect": [0.44, 0.58, 0.16, 0.18], "action": "buy", "collectible_id": "evan_williams", "cost": 6 },
-        { "id": "leave", "label": "LEAVE", "rect": [0.78, 0.72, 0.18, 0.22], "action": "goto", "target": "alley" }
-      ]
+      "hotspots": []
     },
     "pawn_shop": {
       "header": "PAWN SHOP",
       "background": "res://assets/segments/painted/night/storefront_row_night_02.png",
       "overlays": ["light_flicker", "fluorescent_flicker"],
-      "hotspots": [
-        { "id": "griffey", "label": "GRIFFEY CARD", "rect": [0.30, 0.42, 0.22, 0.22], "action": "collect", "collectible_id": "griffey_card", "flag": "pawn_griffey" },
-        { "id": "key", "label": "RUSTY KEY", "rect": [0.55, 0.50, 0.18, 0.18], "action": "collect", "collectible_id": "rusty_key", "flag": "pawn_key" },
-        { "id": "leave", "label": "LEAVE", "rect": [0.78, 0.72, 0.18, 0.22], "action": "goto", "target": "alley" }
-      ]
+      "hotspots": []
     },
     "vacant_lot": {
       "header": "VACANT LOT",
       "background": "res://generated images/vacant lot.png",
       "overlays": ["wind_trash", "distant_light_sweep"],
-      "hotspots": [
-        { "id": "beer_can", "label": "BEER CAN", "rect": [0.35, 0.55, 0.30, 0.25], "action": "collect", "collectible_id": "crushed_beer_can", "flag": "vacant_lot_beer_can" },
-        { "id": "matchbook", "label": "MATCHBOOK", "rect": [0.12, 0.62, 0.18, 0.18], "action": "collect", "collectible_id": "matchbook", "flag": "vacant_lot_match" },
-        { "id": "leave", "label": "LEAVE", "rect": [0.78, 0.72, 0.18, 0.22], "action": "goto", "target": "alley" }
-      ]
+      "hotspots": []
     },
     "septa": {
       "header": "SEPTA ENTRANCE",
       "background": "res://assets/segments/painted/night/septa_entrance_night_02.png",
       "overlays": ["fluorescent_flicker", "train_flash"],
-      "hotspots": [
-        {
-          "id": "turnstile",
-          "label": "TURNSTILE $2",
-          "rect": [0.38, 0.30, 0.28, 0.45],
-          "action": "pay_message",
-          "cost": 2,
-          "text": "NOT IMPLEMENTED."
-        },
-        { "id": "map", "label": "TRANSIT MAP", "rect": [0.08, 0.35, 0.18, 0.30], "action": "collect", "collectible_id": "transit_map", "flag": "septa_map" },
-        { "id": "leave", "label": "LEAVE", "rect": [0.78, 0.72, 0.18, 0.22], "action": "goto", "target": "alley" }
-      ]
+      "hotspots": []
     },
     "movie_theater": {
       "header": "MOVIE THEATER",
       "background": "res://assets/segments/painted/night/rialto_theater_night_02.png",
       "overlays": ["light_flicker", "distant_light_sweep"],
-      "hotspots": [
-        { "id": "ticket", "label": "LOTTERY TICKET", "rect": [0.42, 0.68, 0.22, 0.18], "action": "collect", "collectible_id": "lottery_ticket", "flag": "theater_ticket" },
-        {
-          "id": "door",
-          "label": "DOOR",
-          "rect": [0.38, 0.28, 0.28, 0.45],
-          "action": "message",
-          "text": "BOARDED.\n\nMarquee still on."
-        },
-        { "id": "leave", "label": "LEAVE", "rect": [0.78, 0.72, 0.18, 0.22], "action": "goto", "target": "alley" }
-      ]
+      "hotspots": []
     },
     "western_union": {
       "header": "WESTERN UNION",
       "background": "res://assets/segments/painted/night/jewelers_western_union_night_02.png",
       "overlays": ["fluorescent_flicker", "light_flicker"],
-      "hotspots": [
-        { "id": "receipt", "label": "RECEIPT", "rect": [0.48, 0.62, 0.20, 0.16], "action": "collect", "collectible_id": "old_receipt", "flag": "wu_receipt" },
-        { "id": "photo", "label": "PHOTO", "rect": [0.22, 0.45, 0.18, 0.20], "action": "collect", "collectible_id": "photo", "flag": "wu_photo" },
-        { "id": "leave", "label": "LEAVE", "rect": [0.78, 0.72, 0.18, 0.22], "action": "goto", "target": "alley" }
-      ]
+      "hotspots": []
     },
     "rowhouse": {
       "header": "ROWHOUSE",
       "background": "res://assets/segments/painted/night/alley_fence_night_02.png",
       "overlays": ["rain", "light_flicker"],
-      "hotspots": [
-        {
-          "id": "basement",
-          "label": "BASEMENT",
-          "rect": [0.32, 0.45, 0.36, 0.35],
-          "action": "message",
-          "text": "PADLOCKED.\n\nChain rusted through."
-        },
-        { "id": "newspaper", "label": "NEWSPAPER", "rect": [0.08, 0.70, 0.22, 0.18], "action": "collect", "collectible_id": "newspaper", "flag": "rowhouse_paper" },
-        { "id": "leave", "label": "LEAVE", "rect": [0.78, 0.72, 0.18, 0.22], "action": "goto", "target": "alley" }
-      ]
+      "hotspots": []
     },
     "underpass": {
       "header": "UNDERPASS",
       "background": "res://assets/segments/07_septa_underpass.png",
       "overlays": ["rain", "distant_light_sweep", "puddle_shimmer"],
-      "hotspots": [
-        { "id": "flyer", "label": "FLYER", "rect": [0.55, 0.58, 0.20, 0.18], "action": "collect", "collectible_id": "neon_flyer", "flag": "underpass_flyer" },
-        { "id": "bottle", "label": "BOTTLE", "rect": [0.18, 0.65, 0.16, 0.16], "action": "collect", "collectible_id": "liquor_bottle", "flag": "underpass_bottle" },
-        { "id": "leave", "label": "LEAVE", "rect": [0.78, 0.72, 0.18, 0.22], "action": "goto", "target": "alley" }
-      ]
+      "hotspots": []
     }
   }
 }

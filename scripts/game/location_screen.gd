@@ -109,9 +109,6 @@ func _finish_rebuild_hotspots(data: Dictionary) -> void:
 			continue
 		_add_hotspot_button(hotspot)
 
-	if screen_id == "alley":
-		_add_alley_panhandle_hotspots()
-
 	_relayout_hotspots()
 
 func _should_skip_hotspot(hotspot: Dictionary) -> bool:
@@ -120,22 +117,6 @@ func _should_skip_hotspot(hotspot: Dictionary) -> bool:
 		if flag != "" and GameState.is_collected(flag):
 			return true
 	return false
-
-func _add_alley_panhandle_hotspots() -> void:
-	if GameState.is_panhandle_ready_to_collect():
-		_add_hotspot_button({
-			"id": "collect_earnings",
-			"label": "Collect Earnings",
-			"rect": [0.02, 0.62, 0.28, 0.28],
-			"action": "collect_panhandle"
-		})
-	elif GameState.can_start_panhandle():
-		_add_hotspot_button({
-			"id": "panhandle",
-			"label": "PANHANDLE",
-			"rect": [0.02, 0.62, 0.28, 0.28],
-			"action": "panhandle"
-		})
 
 func _add_hotspot_button(hotspot: Dictionary) -> void:
 	var id: String = hotspot.get("id", "unknown")
