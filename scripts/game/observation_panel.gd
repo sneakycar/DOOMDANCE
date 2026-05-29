@@ -17,15 +17,13 @@ func _ready() -> void:
 	_close_btn.pressed.connect(hide_panel)
 
 func _apply_typography() -> void:
-	DoomTypography.stamp_signage(_name_label, 16)
+	DoomTypography.stamp_happening(_name_label, 14)
 	_name_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	DoomTypography.stamp_observation(_body_label, 12)
+	DoomTypography.stamp_happening(_body_label, 12)
 	_body_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
-	if DoomTypography.mono:
-		_primary_btn.add_theme_font_override("font", DoomTypography.mono)
-		_close_btn.add_theme_font_override("font", DoomTypography.mono)
-	_primary_btn.add_theme_font_size_override("font_size", 12)
-	_close_btn.add_theme_font_size_override("font_size", 12)
+	_body_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	DoomTypography.stamp_happening(_primary_btn, 12)
+	DoomTypography.stamp_happening(_close_btn, 12)
 	_style_button(_primary_btn)
 	_style_button(_close_btn)
 

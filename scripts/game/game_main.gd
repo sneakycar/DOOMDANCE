@@ -48,7 +48,8 @@ func _apply_corner_ui() -> void:
 	_observation.add_theme_stylebox_override("panel", overlay)
 	_collections.add_theme_stylebox_override("panel", overlay)
 	_inventory.add_theme_stylebox_override("panel", overlay)
-	DoomTypography.stamp_observation(_message_label, 12)
+	DoomTypography.stamp_happening(_message_label, 12)
+	_message_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
 func _apply_location_badge() -> void:
 	var badge := StyleBoxFlat.new()
@@ -56,8 +57,7 @@ func _apply_location_badge() -> void:
 	badge.set_corner_radius_all(1)
 	badge.set_content_margin_all(6)
 	%LocationBadge.add_theme_stylebox_override("panel", badge)
-	DoomTypography.stamp_mono(_location_label, 11)
-	_location_label.add_theme_color_override("font_color", Color(0.92, 0.9, 0.86, 0.55))
+	DoomTypography.stamp_location(_location_label, 12)
 	_location_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 
 func _on_inventory_pressed() -> void:

@@ -1,24 +1,33 @@
 extends Node
-## Locked type system — field notes, receipts, signage.
+## Locked type system — receipt HUD, location card, happenings, symbols.
 
 const MONO_PATH := "res://assets/fonts/IBMPlexMono-Regular.ttf"
-const SIGNAGE_PATH := "res://assets/fonts/IBMPlexSansCondensed-Bold.ttf"
+const PIXEL_PATH := "res://assets/fonts/PixelOperator.ttf"
+const LOCATION_PATH := "res://assets/fonts/NeueHaasGrotDisp-95Black.otf"
+const SYMBOL_PATH := "res://assets/fonts/Symbola.ttf"
 
 const COLOR_INK := Color(0.92, 0.9, 0.86, 1.0)
 const COLOR_DIM := Color(0.62, 0.6, 0.56, 1.0)
 const COLOR_SIGNAGE := Color(0.95, 0.93, 0.88, 1.0)
 const COLOR_OBSERVATION := Color(0.88, 0.86, 0.82, 1.0)
+const COLOR_SYMBOL := Color(0.92, 0.9, 0.86, 0.55)
 
 var mono: Font
-var signage: Font
+var pixel: Font
+var location: Font
+var symbol: Font
 
 func _ready() -> void:
-	mono = load(MONO_PATH) as Font
-	signage = load(SIGNAGE_PATH) as Font
-	if mono == null:
-		push_warning("Missing IBM Plex Mono at %s" % MONO_PATH)
-	if signage == null:
-		push_warning("Missing signage font at %s" % SIGNAGE_PATH)
+	mono = _load_font(MONO_PATH, "IBM Plex Mono")
+	pixel = _load_font(PIXEL_PATH, "Pixel Operator")
+	location = _load_font(LOCATION_PATH, "Neue Haas Grotesk Display Black")
+	symbol = _load_font(SYMBOL_PATH, "Symbola")
+
+func _load_font(path: String, label: String) -> Font:
+	var font := load(path) as Font
+	if font == null:
+		push_warning("Missing %s at %s" % [label, path])
+	return font
 
 func stamp_mono(control: Control, size: int = 12, dimmed: bool = false) -> void:
 	if mono:
@@ -26,19 +35,41 @@ func stamp_mono(control: Control, size: int = 12, dimmed: bool = false) -> void:
 	control.add_theme_font_size_override("font_size", size)
 	if control is Label:
 		control.add_theme_color_override("font_color", COLOR_DIM if dimmed else COLOR_INK)
+	elif control is Button:
+		control.add_theme_color_override("font_color", COLOR_DIM if dimmed else COLOR_INK)
 
-func stamp_signage(label: Label, size: int = 20) -> void:
-	if signage:
-		label.add_theme_font_override("font", signage)
+func stamp_happening(control: Control, size: int = 12) -> void:
+	if pixel:
+		control.add_theme_font_override("font", pixel)
+	control.add_theme_font_size_override("font_size", size)
+	if control is Label:
+		control.add_theme_color_override("font_color", COLOR_OBSERVATION)
+	elif control is Button:
+		control.add_theme_color_override("font_color", COLOR_OBSERVATION)
+
+func stamp_location(label: Label, size: int = 13) -> void:
+	if location:
+		label.add_theme_font_override("font", location)
 	label.add_theme_font_size_override("font_size", size)
-	label.add_theme_color_override("font_color", COLOR_SIGNAGE)
+	label.add_theme_color_override("font_color", Color(COLOR_SIGNAGE.r, COLOR_SIGNAGE.g, COLOR_SIGNAGE.b, 0.85))
 	label.uppercase = true
 
+func stamp_symbol(control: Control, size: int = 14) -> void:
+	if symbol:
+		control.add_theme_font_override("font", symbol)
+	control.add_theme_font_size_override("font_size", size)
+	if control is Label or control is Button:
+		control.add_theme_color_override("font_color", COLOR_SYMBOL)
+		control.add_theme_color_override("font_hover_color", Color(0.95, 0.93, 0.88, 0.82))
+		control.add_theme_color_override("font_pressed_color", COLOR_DIM)
+
 func stamp_observation(label: Label, size: int = 13) -> void:
-	stamp_mono(label, size)
-	label.add_theme_color_override("font_color", COLOR_OBSERVATION)
+	stamp_happening(label, size)
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+
+func stamp_signage(label: Label, size: int = 20) -> void:
+	stamp_location(label, size)
 
 func format_money(amount: int) -> String:
 	return "$%d.00" % amount
@@ -82,3 +113,9 @@ func header_for_screen(screen_id: String) -> String:
 	if data.has("header"):
 		return str(data.get("header", "")).to_upper()
 	return str(data.get("title", screen_id)).to_upper().replace("_", " ")
+
+func symbol_mute_on() -> String:
+	return char(0x1F50A)
+
+func symbol_mute_off() -> String:
+	return char(0x1F507)
