@@ -25,12 +25,12 @@ jobs:
         run: |
           TPL_DIR="$HOME/.local/share/godot/export_templates/4.4.1.stable"
           mkdir -p "$TPL_DIR"
-          if [ ! -f "$TPL_DIR/web_nothreads_release.zip" ]; then
+          if [ ! -f "$TPL_DIR/web_release.zip" ]; then
             curl -fsSL -o /tmp/godot-templates.tpz \
               "https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_export_templates.tpz"
             unzip -qo /tmp/godot-templates.tpz -d "$TPL_DIR"
           fi
-          ls -la "$TPL_DIR" | head -20
+          ls -la "$TPL_DIR"/web*.zip
 
       - name: Export HTML5
         run: |
