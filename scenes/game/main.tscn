@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cphillymaingame01"]
+[gd_scene load_steps=6 format=3 uid="uid://cphillymaingame01"]
 
 [ext_resource type="Script" path="res://scripts/game/game_main.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://cphillycollections01" path="res://scenes/game/collections_panel.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://cphillyobservation01" path="res://scenes/game/observation_panel.tscn" id="3"]
-[ext_resource type="PackedScene" uid="uid://cphillyinventory01" path="res://scenes/game/inventory_panel.tscn" id="4"]
+[ext_resource type="Script" path="res://scripts/game/hud_panel.gd" id="2"]
+[ext_resource type="PackedScene" uid="uid://cphillycollections01" path="res://scenes/game/collections_panel.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://cphillyobservation01" path="res://scenes/game/observation_panel.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://cphillyinventory01" path="res://scenes/game/inventory_panel.tscn" id="5"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -46,65 +47,67 @@ unique_name_in_owner = true
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -220.0
+offset_left = -168.0
 offset_top = 8.0
 offset_right = -8.0
-offset_bottom = 40.0
+offset_bottom = 30.0
 grow_horizontal = 0
 
 [node name="LocationLabel" type="Label" parent="HUD/LocationBadge"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 0.6)
-theme_override_font_sizes/font_size = 16
+theme_override_colors/font_color = Color(0.92, 0.9, 0.86, 0.55)
+theme_override_font_sizes/font_size = 11
 text = "IMPOUND LOT"
 horizontal_alignment = 2
 
 [node name="HudPanel" type="PanelContainer" parent="HUD"]
+unique_name_in_owner = true
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = 8.0
-offset_right = 168.0
-offset_bottom = 118.0
+offset_top = -220.0
+offset_right = 180.0
+offset_bottom = -8.0
+grow_vertical = 0
+mouse_filter = 2
+script = ExtResource("2")
 
 [node name="VBox" type="VBoxContainer" parent="HUD/HudPanel"]
 layout_mode = 2
-theme_override_constants/separation = 2
+theme_override_constants/separation = 1
 
 [node name="MoneyLabel" type="Label" parent="HUD/HudPanel/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 14
 text = "$8.00"
 
 [node name="TimeLabel" type="Label" parent="HUD/HudPanel/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 12
 text = "11:00 PM"
 
 [node name="XpLabel" type="Label" parent="HUD/HudPanel/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_font_sizes/font_size = 11
-text = "0.00"
+text = "XP 0.00"
 
 [node name="InventoryButton" type="Button" parent="HUD/HudPanel/VBox"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 focus_mode = 0
-theme_override_font_sizes/font_size = 11
-flat = true
-text = "INVENTORY"
+text = "INV"
+
+[node name="InventoryPreview" type="VBoxContainer" parent="HUD/HudPanel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 0
 
 [node name="CollectionsButton" type="Button" parent="HUD/HudPanel/VBox"]
 unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 focus_mode = 0
-theme_override_font_sizes/font_size = 11
-flat = true
 text = "COLLECTIONS"
 
 [node name="MessageLabel" type="Label" parent="HUD"]
@@ -118,7 +121,7 @@ offset_top = 52.0
 offset_right = 180.0
 offset_bottom = 92.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.92, 0.9, 0.86, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
 theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
@@ -126,11 +129,11 @@ theme_override_font_sizes/font_size = 12
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="ObservationPanel" parent="HUD" instance=ExtResource("3")]
+[node name="ObservationPanel" parent="HUD" instance=ExtResource("4")]
 unique_name_in_owner = true
 
-[node name="CollectionsPanel" parent="HUD" instance=ExtResource("2")]
+[node name="CollectionsPanel" parent="HUD" instance=ExtResource("3")]
 unique_name_in_owner = true
 
-[node name="InventoryPanel" parent="HUD" instance=ExtResource("4")]
+[node name="InventoryPanel" parent="HUD" instance=ExtResource("5")]
 unique_name_in_owner = true

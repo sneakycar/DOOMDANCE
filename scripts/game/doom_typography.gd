@@ -63,6 +63,20 @@ func format_inventory(items: Array) -> String:
 func format_item_label(item_name: String) -> String:
 	return item_name.to_upper()
 
+func format_xp(value: float) -> String:
+	if value < 1000.0:
+		if is_equal_approx(value, floor(value)):
+			return "XP %d" % int(value)
+		return "XP %.2f" % value
+	if value >= 10000.0:
+		var whole_k := int(round(value / 1000.0))
+		if is_equal_approx(value, float(whole_k * 1000)):
+			return "XP %dk" % whole_k
+	var k := round(value / 100.0) / 10.0
+	if is_equal_approx(k, floor(k)):
+		return "XP %dk" % int(k)
+	return "XP %.1fk" % k
+
 func header_for_screen(screen_id: String) -> String:
 	var data := ScreenData.get_screen(screen_id)
 	if data.has("header"):

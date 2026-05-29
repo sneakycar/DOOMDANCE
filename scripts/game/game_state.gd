@@ -5,6 +5,7 @@ signal money_changed(amount: int)
 signal time_changed(clock_minutes: int)
 signal inventory_changed(items: Array[String])
 signal collections_changed()
+signal xp_changed(value: float)
 signal panhandle_changed()
 signal message_requested(text: String)
 signal world_event_changed()
@@ -18,12 +19,15 @@ const MINUTES_PER_TRAVEL := 12
 
 var money: int = START_MONEY
 var clock_minutes: int = START_CLOCK
+var xp: float = 0.0
 var inventory: Array[String] = []
 var collected_flags: Dictionary = {}
 var discovered_collectibles: Array[String] = []
+var discovered_rumors: Array[String] = []
 var panhandling_until: int = 0
 var fence_man_seen: bool = false
 var screens_visited: Dictionary = {}
+var hidden_metrics: Dictionary = HiddenMetrics.from_dict({})
 
 func _ready() -> void:
 	CollectibleData.load_all()
@@ -33,17 +37,21 @@ func _serialize_run() -> Dictionary:
 	return {
 		"money": money,
 		"clock_minutes": clock_minutes,
+		"xp": xp,
 		"inventory": inventory.duplicate(),
 		"collected_flags": collected_flags.duplicate(),
 		"discovered_collectibles": discovered_collectibles.duplicate(),
+		"discovered_rumors": discovered_rumors.duplicate(),
 		"panhandling_until": panhandling_until,
 		"fence_man_seen": fence_man_seen,
 		"screens_visited": screens_visited.duplicate(),
+		"hidden_metrics": HiddenMetrics.to_dict(hidden_metrics),
 	}
 
 func _apply_save(data: Dictionary) -> void:
 	money = int(data.get("money", START_MONEY))
 	clock_minutes = int(data.get("clock_minutes", START_CLOCK))
+	xp = float(data.get("xp", 0.0))
 	inventory.clear()
 	var raw_inv: Variant = data.get("inventory", [])
 	if raw_inv is Array:
@@ -55,21 +63,30 @@ func _apply_save(data: Dictionary) -> void:
 	if raw_disc is Array:
 		for id in raw_disc:
 			discovered_collectibles.append(str(id))
+	discovered_rumors.clear()
+	var raw_rumors: Variant = data.get("discovered_rumors", [])
+	if raw_rumors is Array:
+		for rumor in raw_rumors:
+			discovered_rumors.append(str(rumor))
 	for item_name in inventory:
 		discover_by_name(item_name)
 	panhandling_until = int(data.get("panhandling_until", 0))
 	fence_man_seen = bool(data.get("fence_man_seen", false))
 	screens_visited = data.get("screens_visited", {})
+	hidden_metrics = HiddenMetrics.from_dict(data.get("hidden_metrics", {}))
 
 func reset_run() -> void:
 	money = START_MONEY
 	clock_minutes = START_CLOCK
+	xp = 0.0
 	inventory.clear()
 	collected_flags.clear()
 	discovered_collectibles.clear()
+	discovered_rumors.clear()
 	panhandling_until = 0
 	fence_man_seen = false
 	screens_visited.clear()
+	hidden_metrics = HiddenMetrics.from_dict({})
 	_emit_all()
 	if WebSave.is_web():
 		WebSave.clear()
@@ -92,7 +109,55 @@ func advance_time(minutes: int = MINUTES_PER_TRAVEL) -> void:
 	_save()
 
 func mark_screen_visited(screen_id: String) -> void:
+	var first_visit := not screens_visited.get(screen_id, false)
 	screens_visited[screen_id] = true
+	if first_visit:
+		award_xp(25.0)
+		collections_changed.emit()
+	_save()
+
+func tick_xp(delta: float) -> void:
+	if delta <= 0.0:
+		return
+	xp += delta
+	xp_changed.emit(xp)
+
+func award_xp(amount: float) -> void:
+	if amount <= 0.0:
+		return
+	xp += amount
+	xp_changed.emit(xp)
+	_save()
+
+func persist() -> void:
+	_save()
+
+func set_metric(key: String, value: float) -> void:
+	if not hidden_metrics.has(key):
+		return
+	hidden_metrics[key] = HiddenMetrics.clamp_metric(value)
+	_save()
+
+func adjust_metric(key: String, delta: float) -> void:
+	if not hidden_metrics.has(key):
+		return
+	set_metric(key, float(hidden_metrics[key]) + delta)
+
+func discover_rumor(rumor_id: String) -> void:
+	if rumor_id == "" or rumor_id in discovered_rumors:
+		return
+	discovered_rumors.append(rumor_id)
+	award_xp(20.0)
+	collections_changed.emit()
+	_save()
+
+func visited_places() -> Array[String]:
+	var out: Array[String] = []
+	for screen_id in screens_visited.keys():
+		if screens_visited[screen_id]:
+			out.append(str(screen_id))
+	out.sort()
+	return out
 
 func is_fence_man_visible() -> bool:
 	return is_fence_man_hour() and not fence_man_seen
@@ -110,6 +175,7 @@ func note_fence_man_witnessed() -> void:
 	if fence_man_seen:
 		return
 	fence_man_seen = true
+	award_xp(50.0)
 	message_requested.emit(CopyData.lookup("world/fence_man", "SOMETHING MOVED.\n\nBEHIND THE FENCE."))
 	world_event_changed.emit()
 	_save()
@@ -129,6 +195,7 @@ func discover_collectible(collectible_id: String) -> void:
 	if collectible_id == "" or collectible_id in discovered_collectibles:
 		return
 	discovered_collectibles.append(collectible_id)
+	award_xp(15.0)
 	collections_changed.emit()
 	_save()
 
@@ -158,7 +225,12 @@ func add_item(item_name: String) -> void:
 	if item_name in inventory:
 		return
 	inventory.append(item_name)
-	discover_by_name(item_name)
+	var cid := CollectibleData.id_for_name(item_name)
+	if cid != "":
+		if cid not in discovered_collectibles:
+			discover_collectible(cid)
+	else:
+		award_xp(10.0)
 	inventory_changed.emit(inventory.duplicate())
 	_save()
 
@@ -247,6 +319,7 @@ func panhandle_status_line() -> String:
 func _emit_all() -> void:
 	money_changed.emit(money)
 	time_changed.emit(clock_minutes)
+	xp_changed.emit(xp)
 	inventory_changed.emit(inventory.duplicate())
 	collections_changed.emit()
 	panhandle_changed.emit()
@@ -278,11 +351,14 @@ func _load_save() -> void:
 	_apply_save({
 		"money": cfg.get_value("run", "money", START_MONEY),
 		"clock_minutes": cfg.get_value("run", "clock_minutes", START_CLOCK),
+		"xp": cfg.get_value("run", "xp", 0.0),
 		"inventory": cfg.get_value("run", "inventory", []),
 		"collected_flags": cfg.get_value("run", "collected_flags", {}),
 		"discovered_collectibles": cfg.get_value("run", "discovered_collectibles", []),
+		"discovered_rumors": cfg.get_value("run", "discovered_rumors", []),
 		"panhandling_until": cfg.get_value("run", "panhandling_until", 0),
 		"fence_man_seen": cfg.get_value("run", "fence_man_seen", false),
 		"screens_visited": cfg.get_value("run", "screens_visited", {}),
+		"hidden_metrics": cfg.get_value("run", "hidden_metrics", {}),
 	})
 	_emit_all()

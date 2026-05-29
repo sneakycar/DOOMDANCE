@@ -6,12 +6,21 @@ signal closed()
 
 func _ready() -> void:
 	visible = false
-	%CloseButton.custom_minimum_size = Vector2(120, 48)
-	DoomTypography.stamp_signage(%Title, 16)
-	DoomTypography.stamp_mono(%CloseButton, 12)
+	_apply_style()
+	%CloseButton.custom_minimum_size = Vector2(0, 32)
+	%CloseButton.focus_mode = Control.FOCUS_NONE
+	DoomTypography.stamp_mono(%Title, 13)
+	DoomTypography.stamp_mono(%CloseButton, 11)
 	%Title.text = "INVENTORY"
 	GameState.inventory_changed.connect(_refresh)
 	%CloseButton.pressed.connect(_on_close)
+
+func _apply_style() -> void:
+	var panel := StyleBoxFlat.new()
+	panel.bg_color = Color(0, 0, 0, 0.68)
+	panel.set_content_margin_all(16)
+	panel.set_corner_radius_all(1)
+	add_theme_stylebox_override("panel", panel)
 
 func toggle() -> void:
 	visible = not visible
@@ -24,13 +33,13 @@ func _refresh() -> void:
 	if GameState.inventory.is_empty():
 		var empty := Label.new()
 		empty.text = "—"
-		DoomTypography.stamp_mono(empty, 12, true)
+		DoomTypography.stamp_mono(empty, 11, true)
 		_list.add_child(empty)
 		return
 	for item in GameState.inventory:
 		var lbl := Label.new()
 		lbl.text = DoomTypography.format_item_label(str(item))
-		DoomTypography.stamp_mono(lbl, 12)
+		DoomTypography.stamp_mono(lbl, 11)
 		_list.add_child(lbl)
 
 func _on_close() -> void:
