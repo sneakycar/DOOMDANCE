@@ -2,17 +2,17 @@ extends RefCounted
 class_name ScreenOverlays
 ## Subtle looping overlays — no character animation.
 
-static func build(parent: Control, effect_names: Array, size: Vector2) -> void:
+static func build(parent: Control, effect_names: Array, size: Vector2, extras: Dictionary = {}) -> void:
 	for child in parent.get_children():
 		child.queue_free()
 	if size.x < 2.0:
 		size = parent.get_viewport_rect().size
 	for effect_name in effect_names:
-		var node := _make_effect(str(effect_name), size)
+		var node := _make_effect(str(effect_name), size, extras)
 		if node:
 			parent.add_child(node)
 
-static func _make_effect(name: String, size: Vector2) -> Node:
+static func _make_effect(name: String, size: Vector2, extras: Dictionary = {}) -> Node:
 	match name:
 		"rain":
 			return _rain(size)
@@ -30,6 +30,8 @@ static func _make_effect(name: String, size: Vector2) -> Node:
 			return _light_flicker(size, Color(0.75, 0.95, 1.0, 0.09), 0.35)
 		"neon_buzz":
 			return _neon_buzz(size)
+		"lamp_buzz":
+			return _lamp_buzz(size, extras.get("lamp_spots", []))
 		"train_flash", "passing_train_flash":
 			return _train_flash(size)
 		_:
@@ -140,6 +142,33 @@ static func _neon_buzz(size: Vector2) -> ColorRect:
 	tween.tween_property(rect, "modulate", Color(0.85, 0.25, 0.7, 1.0), 0.18)
 	tween.tween_property(rect, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.22)
 	return rect
+
+static func _lamp_buzz(size: Vector2, spots: Array) -> Node2D:
+	var root := Node2D.new()
+	root.name = "LampBuzz"
+	if spots.is_empty():
+		spots = [
+			{"rect": [0.04, 0.06, 0.16, 0.22]},
+			{"rect": [0.64, 0.06, 0.14, 0.18]},
+		]
+	var flicker_script: Script = load("res://scripts/game/lamp_flicker.gd")
+	for i in spots.size():
+		var spot: Dictionary = spots[i]
+		var rect_norm: Array = spot.get("rect", [0.0, 0.0, 0.1, 0.1])
+		var glow := ColorRect.new()
+		glow.set_script(flicker_script)
+		glow.set("buzz_seed", float(i) * 0.37)
+		glow.position = Vector2(rect_norm[0], rect_norm[1]) * size
+		glow.size = Vector2(rect_norm[2], rect_norm[3]) * size
+		var tint: Variant = spot.get("color", Color(1.0, 0.78, 0.42, 0.26))
+		if tint is Array and tint.size() >= 4:
+			glow.color = Color(float(tint[0]), float(tint[1]), float(tint[2]), float(tint[3]))
+		elif tint is Color:
+			glow.color = tint
+		else:
+			glow.color = Color(1.0, 0.78, 0.42, 0.26)
+		root.add_child(glow)
+	return root
 
 static func _train_flash(size: Vector2) -> ColorRect:
 	var rect := ColorRect.new()

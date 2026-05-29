@@ -3,7 +3,11 @@
     "impound_lot": {
       "header": "IMPOUND LOT",
       "background": "res://generated images/doomdance impound wakeup.png",
-      "overlays": ["rain", "light_flicker", "puddle_shimmer"],
+      "overlays": ["rain", "lamp_buzz", "puddle_shimmer"],
+      "lamp_spots": [
+        {"rect": [0.03, 0.05, 0.18, 0.24]},
+        {"rect": [0.63, 0.06, 0.15, 0.20]}
+      ],
       "hotspots": [
         {
           "id": "gate",
@@ -26,7 +30,10 @@
     "alley": {
       "header": "ALLEY",
       "background": "res://generated images/night time alley 1.png",
-      "overlays": ["rain", "light_flicker"],
+      "overlays": ["rain", "lamp_buzz"],
+      "lamp_spots": [
+        {"rect": [0.38, 0.06, 0.14, 0.30]}
+      ],
       "hotspots": []
     },
     "liquor_store": {

@@ -42,7 +42,7 @@ func _apply_setup(data: Dictionary) -> void:
 		_background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
 	else:
 		push_warning("Missing background: %s" % bg_path)
-	_build_overlays(data.get("overlays", []))
+	_build_overlays(data.get("overlays", []), data)
 	_rebuild_hotspots(data)
 	_refresh_alley_status()
 	_refresh_world_events()
@@ -50,7 +50,7 @@ func _apply_setup(data: Dictionary) -> void:
 func _on_resized() -> void:
 	_relayout_hotspots()
 	var data := ScreenData.get_screen(screen_id)
-	_build_overlays(data.get("overlays", []))
+	_build_overlays(data.get("overlays", []), data)
 
 func _process(_delta: float) -> void:
 	if screen_id == "alley":
@@ -88,11 +88,12 @@ func _refresh_world_events() -> void:
 				_refresh_world_events()
 		)
 
-func _build_overlays(names: Array) -> void:
+func _build_overlays(names: Array, data: Dictionary = {}) -> void:
 	var size := _overlay_layer.size
 	if size.x < 2.0:
 		size = get_viewport_rect().size
-	ScreenOverlays.build(_overlay_layer, names, size)
+	var extras := {"lamp_spots": data.get("lamp_spots", [])}
+	ScreenOverlays.build(_overlay_layer, names, size, extras)
 
 func _rebuild_hotspots(data: Dictionary) -> void:
 	for child in _hotspot_layer.get_children():

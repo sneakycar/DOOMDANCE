@@ -37,6 +37,12 @@ func _process(delta: float) -> void:
 	_xp += delta
 	_refresh_live_hud()
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.pressed:
+		DoomMusic.unlock()
+	elif event is InputEventScreenTouch and event.pressed:
+		DoomMusic.unlock()
+
 func _apply_corner_ui() -> void:
 	var panel_style := StyleBoxFlat.new()
 	panel_style.bg_color = Color(0, 0, 0, 0.4)
