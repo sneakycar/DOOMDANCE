@@ -31,7 +31,11 @@ git push -u origin main
 1. [vercel.com/new](https://vercel.com/new) → import **`YOUR_USERNAME/DOOMDANCE`**
 2. Project name: **doomdance**
 3. Framework: **Other** (uses `vercel.json`)
-4. Deploy
+4. Deploy — Vercel serves the committed **`public/`** web build (no Godot on Vercel)
+
+**Build flow:** push to `main` → GitHub Action exports Godot → commits `public/**` → Vercel redeploys static files.
+
+To rebuild locally on Mac: `./scripts/export-web.sh` then commit `public/`.
 
 Play at: **`https://doomdance.vercel.app`** (or your custom domain at repo root).
 
