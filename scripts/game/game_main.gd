@@ -99,6 +99,7 @@ func _on_tap_hint(text: String) -> void:
 	%TapHintLabel.visible = not text.is_empty()
 
 func _on_hotspot(hotspot: Dictionary) -> void:
+	DoomMusic.unlock()
 	if MobileUI.is_touch_device:
 		var hint: String = str(hotspot.get("label", ""))
 		if not hint.is_empty():

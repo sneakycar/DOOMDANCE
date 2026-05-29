@@ -9,6 +9,12 @@
       ]
     },
     {
+      "source": "/doom_soundtrack_01.mp3",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
       "source": "/index.(wasm|js|pck)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }

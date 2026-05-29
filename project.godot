@@ -22,6 +22,7 @@ DoomRarity="*res://scripts/game/doom_rarity.gd"
 DoomTypography="*res://scripts/game/doom_typography.gd"
 MobileUI="*res://scripts/game/mobile_ui.gd"
 GameState="*res://scripts/game/game_state.gd"
+DoomMusic="*res://scripts/game/doom_music.gd"
 
 [display]
 
