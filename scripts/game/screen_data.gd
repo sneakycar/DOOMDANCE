@@ -23,6 +23,9 @@ static func get_screen(screen_id: String) -> Dictionary:
 	load_all()
 	return _screens.get(screen_id, {})
 
+static func background_path(data: Dictionary) -> String:
+	return DayNight.background_path(data)
+
 static func screen_ids() -> Array:
 	load_all()
 	return _screens.keys()

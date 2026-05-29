@@ -2,7 +2,8 @@
   "screens": {
     "impound_lot": {
       "header": "IMPOUND LOT",
-      "background": "res://generated images/doomdance impound wakeup.png",
+      "background_day": "res://generated images/kensington salvage yard day.png",
+      "background_night": "res://generated images/doomdance impound wakeup.png",
       "overlays": ["rain", "lamp_buzz", "puddle_shimmer"],
       "lamp_spots": [
         {"center": [0.56, 0.1], "radius": 0.042, "kind": "street"},
@@ -30,7 +31,8 @@
     },
     "alley": {
       "header": "ALLEY",
-      "background": "res://generated images/night time alley 1.png",
+      "background_day": "res://generated images/daylight alley 1.png",
+      "background_night": "res://generated images/night time alley 1.png",
       "overlays": ["rain", "lamp_buzz"],
       "lamp_spots": [
         {"center": [0.41, 0.075], "radius": 0.038, "kind": "street"}
@@ -40,49 +42,57 @@
     "liquor_store": {
       "header": "KENSINGTON LIQUORS",
       "transition_title": "KENSINGTON\nLIQUORS",
-      "background": "res://generated images/liquor store.png",
+      "background_day": "res://generated images/liquor store.png",
+      "background_night": "res://generated images/liquor store.png",
       "overlays": ["fluorescent_flicker", "neon_buzz"],
       "hotspots": []
     },
     "pawn_shop": {
       "header": "PAWN SHOP",
-      "background": "res://assets/segments/painted/night/storefront_row_night_02.png",
+      "background_day": "res://assets/segments/painted/night/storefront_row_night_02.png",
+      "background_night": "res://assets/segments/painted/night/storefront_row_night_02.png",
       "overlays": ["light_flicker", "fluorescent_flicker"],
       "hotspots": []
     },
     "vacant_lot": {
       "header": "VACANT LOT",
-      "background": "res://generated images/vacant lot.png",
+      "background_day": "res://generated images/vacant lot.png",
+      "background_night": "res://generated images/vacant lot.png",
       "overlays": ["wind_trash", "distant_light_sweep"],
       "hotspots": []
     },
     "septa": {
       "header": "SEPTA ENTRANCE",
-      "background": "res://assets/segments/painted/night/septa_entrance_night_02.png",
+      "background_day": "res://assets/segments/painted/night/septa_entrance_night_02.png",
+      "background_night": "res://assets/segments/painted/night/septa_entrance_night_02.png",
       "overlays": ["fluorescent_flicker", "train_flash"],
       "hotspots": []
     },
     "movie_theater": {
       "header": "MOVIE THEATER",
-      "background": "res://assets/segments/painted/night/rialto_theater_night_02.png",
+      "background_day": "res://assets/segments/painted/night/rialto_theater_night_02.png",
+      "background_night": "res://assets/segments/painted/night/rialto_theater_night_02.png",
       "overlays": ["light_flicker", "distant_light_sweep"],
       "hotspots": []
     },
     "western_union": {
       "header": "WESTERN UNION",
-      "background": "res://assets/segments/painted/night/jewelers_western_union_night_02.png",
+      "background_day": "res://assets/segments/painted/night/jewelers_western_union_night_02.png",
+      "background_night": "res://assets/segments/painted/night/jewelers_western_union_night_02.png",
       "overlays": ["fluorescent_flicker", "light_flicker"],
       "hotspots": []
     },
     "rowhouse": {
       "header": "ROWHOUSE",
-      "background": "res://assets/segments/painted/night/alley_fence_night_02.png",
+      "background_day": "res://assets/segments/painted/night/alley_fence_night_02.png",
+      "background_night": "res://assets/segments/painted/night/alley_fence_night_02.png",
       "overlays": ["rain", "light_flicker"],
       "hotspots": []
     },
     "underpass": {
       "header": "UNDERPASS",
-      "background": "res://assets/segments/07_septa_underpass.png",
+      "background_day": "res://assets/segments/07_septa_underpass.png",
+      "background_night": "res://assets/segments/07_septa_underpass.png",
       "overlays": ["rain", "distant_light_sweep", "puddle_shimmer"],
       "hotspots": []
     }

@@ -12,6 +12,8 @@ signal hotspot_pressed(hotspot: Dictionary)
 var screen_id: String = ""
 var _pending_data: Dictionary = {}
 var _hotspot_rects: Dictionary = {}
+var _showing_night: bool = false
+var _last_minute_check := -1
 
 func _ready() -> void:
 	resized.connect(_on_resized)
@@ -35,17 +37,21 @@ func setup(id: String) -> void:
 func _apply_setup(data: Dictionary) -> void:
 	DoomTypography.stamp_mono(_status_label, 11)
 	_status_label.add_theme_color_override("font_color", DoomTypography.COLOR_DIM)
-	var bg_path: String = data.get("background", "")
-	var tex: Texture2D = load(bg_path) as Texture2D
-	if tex:
-		_background.texture = tex
-		_background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
-	else:
-		push_warning("Missing background: %s" % bg_path)
+	_showing_night = DayNight.is_night()
+	_apply_background(data)
 	_build_overlays(data.get("overlays", []), data)
 	_rebuild_hotspots(data)
 	_refresh_alley_status()
 	_refresh_world_events()
+
+func _apply_background(data: Dictionary) -> void:
+	var bg_path := ScreenData.background_path(data)
+	var tex: Texture2D = load(bg_path) as Texture2D
+	if tex:
+		_background.texture = tex
+		_background.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_COVERED
+	elif not bg_path.is_empty():
+		push_warning("Missing background: %s" % bg_path)
 
 func _on_resized() -> void:
 	_relayout_hotspots()
@@ -53,6 +59,15 @@ func _on_resized() -> void:
 	_build_overlays(data.get("overlays", []), data)
 
 func _process(_delta: float) -> void:
+	var now := Time.get_datetime_dict_from_system()
+	var minute_key := now.hour * 60 + now.minute
+	if minute_key != _last_minute_check:
+		_last_minute_check = minute_key
+		var night := DayNight.is_night()
+		if night != _showing_night:
+			_showing_night = night
+			if not screen_id.is_empty():
+				_apply_background(ScreenData.get_screen(screen_id))
 	if screen_id == "alley":
 		_refresh_alley_status()
 
