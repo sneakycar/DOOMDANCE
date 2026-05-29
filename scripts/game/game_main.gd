@@ -37,7 +37,9 @@ func _apply_corner_ui() -> void:
 	panel_style.content_margin_top = 6
 	panel_style.content_margin_bottom = 6
 	%HudPanel.add_theme_stylebox_override("panel", panel_style)
-	%LocationBadge.add_theme_stylebox_override("panel", panel_style.duplicate())
+	var location_style := panel_style.duplicate()
+	location_style.bg_color = Color(0, 0, 0, 0.6)
+	%LocationBadge.add_theme_stylebox_override("panel", location_style)
 	_observation.add_theme_stylebox_override("panel", panel_style.duplicate())
 
 func _apply_hud_typography() -> void:
@@ -46,6 +48,8 @@ func _apply_hud_typography() -> void:
 	DoomTypography.stamp_mono(%InventoryLabel, 10)
 	DoomTypography.stamp_observation(%MessageLabel, 12)
 	DoomTypography.stamp_signage(_location_label, 16)
+	var signage := DoomTypography.COLOR_SIGNAGE
+	_location_label.add_theme_color_override("font_color", Color(signage.r, signage.g, signage.b, 0.6))
 	_location_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
 	%InventoryLabel.vertical_alignment = VERTICAL_ALIGNMENT_TOP
 	%CollectionsButton.add_theme_font_override("font", DoomTypography.mono)

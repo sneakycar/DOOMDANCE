@@ -54,7 +54,7 @@ grow_horizontal = 0
 [node name="LocationLabel" type="Label" parent="HUD/LocationBadge"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 1)
+theme_override_colors/font_color = Color(0.95, 0.93, 0.88, 0.6)
 theme_override_font_sizes/font_size = 16
 text = "IMPOUND LOT"
 horizontal_alignment = 2
