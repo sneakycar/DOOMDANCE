@@ -39,10 +39,14 @@ func _apply_setup(data: Dictionary) -> void:
 	_status_label.add_theme_color_override("font_color", DoomTypography.COLOR_DIM)
 	_showing_night = DayNight.is_night()
 	_apply_background(data)
-	_build_overlays(data.get("overlays", []), data)
+	_build_overlays(_overlays_for(data), data)
 	_rebuild_hotspots(data)
-	_refresh_alley_status()
 	_refresh_world_events()
+
+func _overlays_for(data: Dictionary) -> Array:
+	if DayNight.is_night():
+		return data.get("overlays_night", data.get("overlays", []))
+	return data.get("overlays_day", [])
 
 func _apply_background(data: Dictionary) -> void:
 	var bg_path := ScreenData.background_path(data)
@@ -56,7 +60,7 @@ func _apply_background(data: Dictionary) -> void:
 func _on_resized() -> void:
 	_relayout_hotspots()
 	var data := ScreenData.get_screen(screen_id)
-	_build_overlays(data.get("overlays", []), data)
+	_build_overlays(_overlays_for(data), data)
 
 func _process(_delta: float) -> void:
 	var now := Time.get_datetime_dict_from_system()
@@ -67,9 +71,9 @@ func _process(_delta: float) -> void:
 		if night != _showing_night:
 			_showing_night = night
 			if not screen_id.is_empty():
-				_apply_background(ScreenData.get_screen(screen_id))
-	if screen_id == "alley":
-		_refresh_alley_status()
+				var data := ScreenData.get_screen(screen_id)
+				_apply_background(data)
+				_build_overlays(_overlays_for(data), data)
 
 func _refresh_alley_status() -> void:
 	if screen_id != "alley":
@@ -107,7 +111,10 @@ func _build_overlays(names: Array, data: Dictionary = {}) -> void:
 	var size := _overlay_layer.size
 	if size.x < 2.0:
 		size = get_viewport_rect().size
-	var extras := {"lamp_spots": data.get("lamp_spots", [])}
+	var extras := {
+		"lamp_spots": data.get("lamp_spots", []),
+		"neon_spots": data.get("neon_spots", []),
+	}
 	ScreenOverlays.build(_overlay_layer, names, size, extras)
 
 func _rebuild_hotspots(data: Dictionary) -> void:

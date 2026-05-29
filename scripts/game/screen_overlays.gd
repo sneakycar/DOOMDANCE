@@ -30,6 +30,8 @@ static func _make_effect(name: String, size: Vector2, extras: Dictionary = {}) -
 			return _light_flicker(size, Color(0.75, 0.95, 1.0, 0.09), 0.35)
 		"neon_buzz":
 			return _neon_buzz(size)
+		"neon_lights":
+			return _neon_lights(size, extras.get("neon_spots", []))
 		"lamp_buzz":
 			return _lamp_buzz(size, extras.get("lamp_spots", []))
 		"train_flash", "passing_train_flash":
@@ -142,6 +144,33 @@ static func _neon_buzz(size: Vector2) -> ColorRect:
 	tween.tween_property(rect, "modulate", Color(0.85, 0.25, 0.7, 1.0), 0.18)
 	tween.tween_property(rect, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.22)
 	return rect
+
+static func _neon_lights(size: Vector2, spots: Array) -> Control:
+	var root := Control.new()
+	root.name = "NeonLights"
+	root.set_anchors_preset(Control.PRESET_FULL_RECT)
+	root.offset_right = size.x
+	root.offset_bottom = size.y
+	root.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if spots.is_empty():
+		return root
+	var flicker_script: Script = load("res://scripts/game/neon_flicker.gd")
+	var unit := minf(size.x, size.y)
+	for i in spots.size():
+		var spot: Dictionary = spots[i]
+		var center_norm: Vector2 = _spot_center(spot)
+		var radius_norm: float = float(spot.get("radius", 0.03))
+		var center_px := center_norm * size
+		var diameter := radius_norm * unit * 2.0
+		var glow := Control.new()
+		glow.set_script(flicker_script)
+		glow.set("buzz_seed", float(i) * 0.41 + radius_norm * 2.8)
+		glow.set("base_color", _spot_color(spot))
+		glow.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		glow.position = center_px - Vector2(diameter, diameter) * 0.5
+		glow.size = Vector2(diameter, diameter)
+		root.add_child(glow)
+	return root
 
 static func _lamp_buzz(size: Vector2, spots: Array) -> Control:
 	var root := Control.new()

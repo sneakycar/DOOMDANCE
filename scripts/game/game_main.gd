@@ -30,7 +30,29 @@ func _ready() -> void:
 	_inventory.closed.connect(_on_overlay_closed)
 	_collections.closed.connect(_on_overlay_closed)
 	_observation.action_confirmed.connect(_execute_hotspot)
-	_go_to_screen("impound_lot", true)
+	_play_opening_intro()
+
+func _play_opening_intro() -> void:
+	_fade.color.a = 1.0
+	_fade.mouse_filter = Control.MOUSE_FILTER_STOP
+	_fade_busy = true
+	_transition_label.text = DoomTypography.transition_for_screen("impound_lot")
+	_transition_label.visible = true
+	_transition_label.modulate.a = 0.0
+	var tween := create_tween()
+	tween.tween_property(_transition_label, "modulate:a", 1.0, 0.45)
+	tween.tween_interval(0.75)
+	tween.tween_property(_transition_label, "modulate:a", 0.0, 0.45)
+	tween.tween_callback(func() -> void:
+		_swap_screen("impound_lot")
+		var fade_out := create_tween()
+		fade_out.tween_property(_fade, "color:a", 0.0, 0.4)
+		fade_out.finished.connect(func() -> void:
+			_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			_fade_busy = false
+			_transition_label.visible = false
+		)
+	)
 
 func _process(delta: float) -> void:
 	GameState.tick_xp(delta)
@@ -157,11 +179,20 @@ func _swap_screen(screen_id: String) -> void:
 
 func _on_hotspot(hotspot: Dictionary) -> void:
 	DoomMusic.unlock()
+	var action: String = hotspot.get("action", "")
+	if action == "prompt":
+		_show_message(str(hotspot.get("text", "")))
+		return
+	if action == "goto":
+		_go_to_screen(str(hotspot.get("target", "")))
+		return
 	_observation.show_hotspot(hotspot)
 
 func _execute_hotspot(hotspot: Dictionary) -> void:
 	var action: String = hotspot.get("action", "")
 	match action:
+		"prompt":
+			_show_message(str(hotspot.get("text", "")))
 		"goto":
 			_go_to_screen(hotspot.get("target", "alley"))
 		"message":

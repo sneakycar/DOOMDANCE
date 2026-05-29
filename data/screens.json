@@ -1,10 +1,12 @@
 {
   "screens": {
     "impound_lot": {
-      "header": "IMPOUND LOT",
+      "header": "KENSINGTON SALVAGE YARD",
+      "transition_title": "KENSINGTON\nSALVAGE YARD",
       "background_day": "res://generated images/kensington salvage yard day.png",
       "background_night": "res://generated images/doomdance impound wakeup.png",
-      "overlays": ["rain", "lamp_buzz", "puddle_shimmer"],
+      "overlays_day": [],
+      "overlays_night": ["rain", "lamp_buzz", "puddle_shimmer"],
       "lamp_spots": [
         {"center": [0.56, 0.1], "radius": 0.042, "kind": "street"},
         {"center": [0.795, 0.285], "radius": 0.024, "kind": "bulb"},
@@ -12,88 +14,33 @@
       ],
       "hotspots": [
         {
-          "id": "gate",
-          "label": "GATE",
-          "observation": "Exit to alley.",
-          "rect": [0.02, 0.28, 0.48, 0.62],
-          "action": "goto",
-          "target": "alley"
+          "id": "body",
+          "label": "BODY",
+          "rect": [0.08, 0.52, 0.38, 0.38],
+          "action": "prompt",
+          "text": "You woke up drunk. It's raining again."
         },
         {
           "id": "office",
           "label": "OFFICE",
-          "observation": "Door to the liquor store.",
           "rect": [0.62, 0.32, 0.36, 0.55],
           "action": "goto",
           "target": "liquor_store"
         }
       ]
     },
-    "alley": {
-      "header": "ALLEY",
-      "background_day": "res://generated images/daylight alley 1.png",
-      "background_night": "res://generated images/night time alley 1.png",
-      "overlays": ["rain", "lamp_buzz"],
-      "lamp_spots": [
-        {"center": [0.41, 0.075], "radius": 0.038, "kind": "street"}
-      ],
-      "hotspots": []
-    },
     "liquor_store": {
       "header": "KENSINGTON LIQUORS",
       "transition_title": "KENSINGTON\nLIQUORS",
-      "background_day": "res://generated images/liquor store.png",
-      "background_night": "res://generated images/liquor store.png",
-      "overlays": ["fluorescent_flicker", "neon_buzz"],
-      "hotspots": []
-    },
-    "pawn_shop": {
-      "header": "PAWN SHOP",
-      "background_day": "res://assets/segments/painted/night/storefront_row_night_02.png",
-      "background_night": "res://assets/segments/painted/night/storefront_row_night_02.png",
-      "overlays": ["light_flicker", "fluorescent_flicker"],
-      "hotspots": []
-    },
-    "vacant_lot": {
-      "header": "VACANT LOT",
-      "background_day": "res://generated images/vacant lot.png",
-      "background_night": "res://generated images/vacant lot.png",
-      "overlays": ["wind_trash", "distant_light_sweep"],
-      "hotspots": []
-    },
-    "septa": {
-      "header": "SEPTA ENTRANCE",
-      "background_day": "res://assets/segments/painted/night/septa_entrance_night_02.png",
-      "background_night": "res://assets/segments/painted/night/septa_entrance_night_02.png",
-      "overlays": ["fluorescent_flicker", "train_flash"],
-      "hotspots": []
-    },
-    "movie_theater": {
-      "header": "MOVIE THEATER",
-      "background_day": "res://assets/segments/painted/night/rialto_theater_night_02.png",
-      "background_night": "res://assets/segments/painted/night/rialto_theater_night_02.png",
-      "overlays": ["light_flicker", "distant_light_sweep"],
-      "hotspots": []
-    },
-    "western_union": {
-      "header": "WESTERN UNION",
-      "background_day": "res://assets/segments/painted/night/jewelers_western_union_night_02.png",
-      "background_night": "res://assets/segments/painted/night/jewelers_western_union_night_02.png",
-      "overlays": ["fluorescent_flicker", "light_flicker"],
-      "hotspots": []
-    },
-    "rowhouse": {
-      "header": "ROWHOUSE",
-      "background_day": "res://assets/segments/painted/night/alley_fence_night_02.png",
-      "background_night": "res://assets/segments/painted/night/alley_fence_night_02.png",
-      "overlays": ["rain", "light_flicker"],
-      "hotspots": []
-    },
-    "underpass": {
-      "header": "UNDERPASS",
-      "background_day": "res://assets/segments/07_septa_underpass.png",
-      "background_night": "res://assets/segments/07_septa_underpass.png",
-      "overlays": ["rain", "distant_light_sweep", "puddle_shimmer"],
+      "background_day": "res://generated images/kensington liquor store day.png",
+      "background_night": "res://generated images/kensington liquor store night.png",
+      "overlays_day": ["neon_lights"],
+      "overlays_night": ["neon_lights", "rain", "puddle_shimmer"],
+      "neon_spots": [
+        {"center": [0.295, 0.43], "radius": 0.034, "color": [1.0, 0.12, 0.22, 1.0]},
+        {"center": [0.335, 0.47], "radius": 0.024, "color": [0.35, 0.55, 1.0, 1.0]},
+        {"center": [0.735, 0.39], "radius": 0.028, "color": [0.15, 0.95, 0.42, 1.0]}
+      ],
       "hotspots": []
     }
   }
