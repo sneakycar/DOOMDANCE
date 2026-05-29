@@ -2,19 +2,25 @@ extends Node
 ## Chapter 1 soundtrack — loops with reverb tail masking the seam.
 
 const TRACK_RES := "res://assets/audio/doom_soundtrack_01.mp3"
+const MUTE_PATH := "user://music_mute.cfg"
+
+signal mute_changed(muted: bool)
 
 var _player: AudioStreamPlayer
 var _started := false
 var _unlocked := false
 var _stream_ready := false
+var _muted := false
 
 func _ready() -> void:
+	_load_mute_pref()
 	_setup_music_bus()
 	_player = AudioStreamPlayer.new()
 	_player.name = "SoundtrackPlayer"
 	_player.bus = "Music"
 	_player.volume_db = -3.0
 	add_child(_player)
+	_apply_mute()
 	_load_track()
 
 func _setup_music_bus() -> void:
@@ -62,3 +68,33 @@ func _maybe_start() -> void:
 		return
 	_player.play()
 	_started = true
+
+func is_muted() -> bool:
+	return _muted
+
+func toggle_mute() -> void:
+	set_muted(not _muted)
+
+func set_muted(value: bool) -> void:
+	if _muted == value:
+		return
+	_muted = value
+	_apply_mute()
+	mute_changed.emit(_muted)
+	_save_mute_pref()
+
+func _apply_mute() -> void:
+	var idx := AudioServer.get_bus_index("Music")
+	if idx >= 0:
+		AudioServer.set_bus_mute(idx, _muted)
+
+func _load_mute_pref() -> void:
+	var cfg := ConfigFile.new()
+	if cfg.load(MUTE_PATH) != OK:
+		return
+	_muted = bool(cfg.get_value("audio", "muted", false))
+
+func _save_mute_pref() -> void:
+	var cfg := ConfigFile.new()
+	cfg.set_value("audio", "muted", _muted)
+	cfg.save(MUTE_PATH)

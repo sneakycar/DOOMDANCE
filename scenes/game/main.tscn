@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cphillymaingame01"]
+[gd_scene load_steps=7 format=3 uid="uid://cphillymaingame01"]
 
 [ext_resource type="Script" path="res://scripts/game/game_main.gd" id="1"]
 [ext_resource type="Script" path="res://scripts/game/hud_panel.gd" id="2"]
 [ext_resource type="PackedScene" uid="uid://cphillycollections01" path="res://scenes/game/collections_panel.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://cphillyobservation01" path="res://scenes/game/observation_panel.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://cphillyinventory01" path="res://scenes/game/inventory_panel.tscn" id="5"]
+[ext_resource type="Script" path="res://scripts/game/music_mute_button.gd" id="6"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -50,16 +51,34 @@ anchor_right = 1.0
 offset_left = -168.0
 offset_top = 8.0
 offset_right = -8.0
-offset_bottom = 30.0
+offset_bottom = 48.0
 grow_horizontal = 0
 
-[node name="LocationLabel" type="Label" parent="HUD/LocationBadge"]
+[node name="VBox" type="VBoxContainer" parent="HUD/LocationBadge"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="LocationLabel" type="Label" parent="HUD/LocationBadge/VBox"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0.92, 0.9, 0.86, 0.55)
 theme_override_font_sizes/font_size = 11
 text = "IMPOUND LOT"
 horizontal_alignment = 2
+
+[node name="MuteRow" type="HBoxContainer" parent="HUD/LocationBadge/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Spacer" type="Control" parent="HUD/LocationBadge/VBox/MuteRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MuteButton" type="Button" parent="HUD/LocationBadge/VBox/MuteRow"]
+unique_name_in_owner = true
+layout_mode = 2
+focus_mode = 0
+script = ExtResource("6")
 
 [node name="HudPanel" type="PanelContainer" parent="HUD"]
 unique_name_in_owner = true
