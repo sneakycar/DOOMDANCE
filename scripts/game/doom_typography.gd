@@ -1,26 +1,23 @@
 extends Node
-## Locked type system — receipt HUD, location card, happenings, symbols.
+## Pixel Uni 05 — all in-game UI. Neue Haas Display — scene transitions only. Symbola — icons.
 
-const MONO_PATH := "res://assets/fonts/IBMPlexMono-Regular.ttf"
-const PIXEL_PATH := "res://assets/fonts/PixelOperator.ttf"
-const LOCATION_PATH := "res://assets/fonts/NeueHaasGrotDisp-95Black.otf"
+const GAME_PATH := "res://assets/fonts/PixelUni05.ttf"
+const TRANSITION_PATH := "res://assets/fonts/NeueHaasGrotDisp-95Black.otf"
 const SYMBOL_PATH := "res://assets/fonts/Symbola.ttf"
 
 const COLOR_INK := Color(0.92, 0.9, 0.86, 1.0)
 const COLOR_DIM := Color(0.62, 0.6, 0.56, 1.0)
-const COLOR_SIGNAGE := Color(0.95, 0.93, 0.88, 1.0)
 const COLOR_OBSERVATION := Color(0.88, 0.86, 0.82, 1.0)
 const COLOR_SYMBOL := Color(0.92, 0.9, 0.86, 0.55)
+const COLOR_TRANSITION := Color(0.95, 0.93, 0.88, 1.0)
 
-var mono: Font
-var pixel: Font
-var location: Font
+var game: Font
+var transition: Font
 var symbol: Font
 
 func _ready() -> void:
-	mono = _load_font(MONO_PATH, "IBM Plex Mono")
-	pixel = _load_font(PIXEL_PATH, "Pixel Operator")
-	location = _load_font(LOCATION_PATH, "Neue Haas Grotesk Display Black")
+	game = _load_font(GAME_PATH, "Pixel Uni 05")
+	transition = _load_font(TRANSITION_PATH, "Neue Haas Grotesk Display Black")
 	symbol = _load_font(SYMBOL_PATH, "Symbola")
 
 func _load_font(path: String, label: String) -> Font:
@@ -29,30 +26,32 @@ func _load_font(path: String, label: String) -> Font:
 		push_warning("Missing %s at %s" % [label, path])
 	return font
 
-func stamp_mono(control: Control, size: int = 12, dimmed: bool = false) -> void:
-	if mono:
-		control.add_theme_font_override("font", mono)
+func stamp_game(control: Control, size: int = 12, dimmed: bool = false) -> void:
+	if game:
+		control.add_theme_font_override("font", game)
 	control.add_theme_font_size_override("font_size", size)
+	var color := COLOR_DIM if dimmed else COLOR_INK
 	if control is Label:
-		control.add_theme_color_override("font_color", COLOR_DIM if dimmed else COLOR_INK)
+		control.add_theme_color_override("font_color", color)
 	elif control is Button:
-		control.add_theme_color_override("font_color", COLOR_DIM if dimmed else COLOR_INK)
+		control.add_theme_color_override("font_color", color)
 
 func stamp_happening(control: Control, size: int = 12) -> void:
-	if pixel:
-		control.add_theme_font_override("font", pixel)
+	if game:
+		control.add_theme_font_override("font", game)
 	control.add_theme_font_size_override("font_size", size)
 	if control is Label:
 		control.add_theme_color_override("font_color", COLOR_OBSERVATION)
 	elif control is Button:
 		control.add_theme_color_override("font_color", COLOR_OBSERVATION)
 
-func stamp_location(label: Label, size: int = 13) -> void:
-	if location:
-		label.add_theme_font_override("font", location)
+func stamp_transition(label: Label, size: int = 28) -> void:
+	if transition:
+		label.add_theme_font_override("font", transition)
 	label.add_theme_font_size_override("font_size", size)
-	label.add_theme_color_override("font_color", Color(COLOR_SIGNAGE.r, COLOR_SIGNAGE.g, COLOR_SIGNAGE.b, 0.85))
+	label.add_theme_color_override("font_color", COLOR_TRANSITION)
 	label.uppercase = true
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
 func stamp_symbol(control: Control, size: int = 14) -> void:
 	if symbol:
@@ -63,13 +62,20 @@ func stamp_symbol(control: Control, size: int = 14) -> void:
 		control.add_theme_color_override("font_hover_color", Color(0.95, 0.93, 0.88, 0.82))
 		control.add_theme_color_override("font_pressed_color", COLOR_DIM)
 
+func stamp_mono(control: Control, size: int = 12, dimmed: bool = false) -> void:
+	stamp_game(control, size, dimmed)
+
+func stamp_location(label: Label, size: int = 12) -> void:
+	stamp_game(label, size)
+	label.uppercase = true
+
 func stamp_observation(label: Label, size: int = 13) -> void:
 	stamp_happening(label, size)
 	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 
 func stamp_signage(label: Label, size: int = 20) -> void:
-	stamp_location(label, size)
+	stamp_transition(label, size)
 
 func format_money(amount: int) -> String:
 	return "$%d.00" % amount

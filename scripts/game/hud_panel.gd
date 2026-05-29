@@ -46,7 +46,7 @@ func _apply_typography() -> void:
 	DoomTypography.stamp_mono(_time, 11, true)
 	DoomTypography.stamp_mono(_xp, 11, true)
 	for btn in [_inv_btn, _collections_btn]:
-		btn.add_theme_font_override("font", DoomTypography.mono)
+		btn.add_theme_font_override("font", DoomTypography.game)
 		btn.add_theme_font_size_override("font_size", 11)
 		btn.add_theme_color_override("font_color", DoomTypography.COLOR_INK)
 		btn.add_theme_color_override("font_hover_color", Color(1, 1, 1, 1))

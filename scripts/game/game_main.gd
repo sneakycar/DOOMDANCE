@@ -7,6 +7,7 @@ extends Control
 @onready var _inventory: PanelContainer = %InventoryPanel
 @onready var _observation: PanelContainer = %ObservationPanel
 @onready var _location_label: Label = %LocationLabel
+@onready var _transition_label: Label = %TransitionLabel
 @onready var _hud: PanelContainer = %HudPanel
 
 const LocationScreenScene := preload("res://scenes/game/location_screen.tscn")
@@ -20,6 +21,7 @@ func _ready() -> void:
 	_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	_apply_corner_ui()
 	_apply_location_badge()
+	_apply_transition_label()
 	GameState.message_requested.connect(_show_message)
 	GameState.panhandle_changed.connect(_on_panhandle_changed)
 	_hud.inventory_requested.connect(_on_inventory_pressed)
@@ -57,8 +59,15 @@ func _apply_location_badge() -> void:
 	badge.set_corner_radius_all(1)
 	badge.set_content_margin_all(6)
 	%LocationBadge.add_theme_stylebox_override("panel", badge)
-	DoomTypography.stamp_location(_location_label, 12)
+	DoomTypography.stamp_game(_location_label, 12)
+	_location_label.uppercase = true
 	_location_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+
+func _apply_transition_label() -> void:
+	_transition_label.visible = false
+	_transition_label.modulate.a = 0.0
+	_transition_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	DoomTypography.stamp_transition(_transition_label, 32)
 
 func _on_inventory_pressed() -> void:
 	_inventory.toggle()
@@ -104,9 +113,11 @@ func _go_to_screen(screen_id: String, instant: bool = false) -> void:
 		_swap_screen(screen_id)
 		var tween := create_tween()
 		tween.tween_property(_fade, "color:a", 0.0, 0.35)
+		tween.parallel().tween_property(_transition_label, "modulate:a", 0.0, 0.22)
 		tween.finished.connect(func() -> void:
 			_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
 			_fade_busy = false
+			_transition_label.visible = false
 		)
 
 	if instant:
@@ -114,10 +125,15 @@ func _go_to_screen(screen_id: String, instant: bool = false) -> void:
 		_fade.color.a = 0.0
 		_fade_busy = false
 		_fade.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		_transition_label.visible = false
 		return
 
+	_transition_label.text = DoomTypography.header_for_screen(screen_id)
+	_transition_label.visible = true
+	_transition_label.modulate.a = 0.0
 	var tween_in := create_tween()
 	tween_in.tween_property(_fade, "color:a", 1.0, 0.35)
+	tween_in.parallel().tween_property(_transition_label, "modulate:a", 1.0, 0.28).set_delay(0.1)
 	tween_in.finished.connect(do_swap)
 
 func _swap_screen(screen_id: String) -> void:
