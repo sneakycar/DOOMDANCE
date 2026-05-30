@@ -10,30 +10,21 @@ config_version=5
 
 [application]
 
-config/name="DOOM DANCE"
-config/description="Static-screen exploration — Chapter 1."
-run/main_scene="res://scenes/game/main.tscn"
+config/name="RETURN BUT DIFFERENT"
+config/description="Living-world simulation prototype."
+run/main_scene="res://return_but_different/main.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-DoomRarity="*res://scripts/game/doom_rarity.gd"
-DoomTypography="*res://scripts/game/doom_typography.gd"
-MobileUI="*res://scripts/game/mobile_ui.gd"
-GameState="*res://scripts/game/game_state.gd"
-DoomMusic="*res://scripts/game/doom_music.gd"
-DoomAmbience="*res://scripts/game/doom_ambience.gd"
-DayNight="*res://scripts/game/day_night.gd"
-MazeStore="*res://scripts/game/maze_store.gd"
-
 [display]
 
-window/size/viewport_width=854
-window/size/viewport_height=480
+window/size/viewport_width=390
+window/size/viewport_height=844
 window/stretch/mode="canvas_items"
-window/stretch/aspect="ignore"
-window/handheld/orientation=5
+window/stretch/aspect="expand"
+window/handheld/orientation=1
 
 [input]
 

@@ -1,0 +1,22 @@
+{
+  "first_names": [
+    "Jaxon", "Mara", "Ezra", "Elias", "Nora", "Silas", "Iris", "Cole", "Ada", "Levi",
+    "June", "Orin", "Vera", "Miles", "Ruth", "Arlo", "Cleo", "Finn", "Hazel", "Jude",
+    "Lena", "Owen", "Piper", "Quinn", "Sage", "Theo", "Wren", "Zara", "Boone", "Clara",
+    "Dorian", "Eden", "Felix", "Greta", "Holden", "Inez", "Jonah", "Kira", "Luca", "Maeve"
+  ],
+  "surnames": [
+    "Thorn", "Black", "Vonwell", "Ashford", "Marsh", "Crowe", "Hale", "Vale", "Stone", "Rivers",
+    "North", "Sable", "Wick", "Grim", "Locke", "Mercer", "Pike", "Shade", "Briar", "Carr",
+    "Dusk", "Ember", "Frost", "Glenn", "Harrow", "Ives", "Keene", "Loom", "Morrow", "Nox"
+  ],
+  "surname_prefixes": ["Von", "Van", "De", "St", "Mc", "O", "Le", "Du"],
+  "surname_roots": [
+    "Well", "Hollow", "Mark", "Glass", "Field", "Brook", "Fall", "Ridge", "Mist", "Dale",
+    "Watch", "Gate", "Bell", "Cross", "Ward", "Shore", "Bloom", "Drift", "Spire", "Grove"
+  ],
+  "strange_surnames": [
+    "Vonwell", "Blackthorn", "Ashgrave", "Nightwell", "Stormhollow", "Ironvale", "Palemark",
+    "Deepward", "Stillwater", "Brightmoor", "Coldridge", "Oldmarsh", "Truehollow", "Lowbell"
+  ]
+}
