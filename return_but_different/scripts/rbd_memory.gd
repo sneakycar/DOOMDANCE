@@ -18,6 +18,9 @@ var _person_serial := 0
 var _event_serial := 0
 var _last_notification := ""
 
+func get_last_notification() -> String:
+	return _last_notification
+
 func _init(world_seed: int = 0) -> void:
 	_names.set_seed(world_seed)
 	_schedule_next(0.0, true)
@@ -80,8 +83,6 @@ func on_world_headline(
 				["witness", "second_light", tag]
 			)
 			_push_history(history, clock, events.back())
-	elif "DIMMING" in upper or "FADE" in upper:
-		_maybe_death_in_region(region, clock, history, "dim")
 	elif "EXPANDING" in upper or "BRIGHT" in upper:
 		if _names.randf() < 0.4:
 			var p := _birth_in_region(region, clock)
@@ -131,6 +132,61 @@ func on_region_contact(a: RbdRegions.Region, b: RbdRegions.Region, clock: RbdClo
 	_push_history(history, clock, events.back())
 	if _names.randf() < 0.35:
 		_try_family_move(person["surname_key"], from_region, clock, history)
+
+func on_event_resolved(
+	ev: RbdEvents.PendingEvent,
+	choice_index: int,
+	regions: RbdRegions,
+	clock: RbdClock,
+	history: RbdHistory
+) -> void:
+	if ev == null:
+		return
+	if not regions.regions.has(ev.region_a_id):
+		return
+	var region: RbdRegions.Region = regions.regions[ev.region_a_id]
+	match ev.effect:
+		"dim_origin":
+			if choice_index == 1:
+				_maybe_death_in_region(region, clock, history, "fade")
+			elif _names.randf() < 0.35:
+				_region_remembrance(region, clock, history)
+		"second_light":
+			if choice_index == 0:
+				var w := _witness_in_region(region, clock, "second_light_stay")
+				if not w.is_empty():
+					_post_event(
+						clock,
+						"witness",
+						region.id,
+						w["id"],
+						w["surname_key"],
+						"%s SAW THE SECOND LIGHT FIRST." % w["full_name_upper"],
+						["witness", "second_light", "stay"]
+					)
+					_push_history(history, clock, events.back())
+		"contact":
+			if regions.regions.has(ev.region_b_id):
+				var other: RbdRegions.Region = regions.regions[ev.region_b_id]
+				if choice_index == 0:
+					on_region_contact(region, other, clock, history)
+		"belt":
+			if choice_index == 1 and _names.randf() < 0.4:
+				var p := _birth_in_region(region, clock)
+				if not p.is_empty():
+					_post_event(
+						clock,
+						"birth",
+						region.id,
+						p["id"],
+						p["surname_key"],
+						"%s WAS BORN IN %s." % [p["full_name_upper"], region.name],
+						["birth", "belt"]
+					)
+					_push_history(history, clock, events.back())
+		"stasis":
+			if choice_index == 0 and _names.randf() < 0.3:
+				_try_return(region, clock, history)
 
 func on_player_decision(effect: String, region_id: String, regions: RbdRegions, clock: RbdClock, history: RbdHistory) -> void:
 	if not regions.regions.has(region_id):

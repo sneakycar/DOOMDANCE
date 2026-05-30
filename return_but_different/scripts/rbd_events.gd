@@ -276,13 +276,39 @@ func _find_old_center(regions: RbdRegions) -> RbdRegions.Region:
 	return null
 
 func to_dict() -> Dictionary:
+	var pending: Variant = null
+	if current != null:
+		pending = {
+			"id": current.id,
+			"headline": current.headline,
+			"choice_a": current.choice_a,
+			"choice_b": current.choice_b,
+			"region_a_id": current.region_a_id,
+			"region_b_id": current.region_b_id,
+			"effect": current.effect,
+		}
 	return {
 		"cooldown_until": _cooldown_until,
 		"second_light_logged": _second_light_logged,
 		"decisions": _decisions.duplicate(),
+		"pending": pending,
 	}
 
 func from_dict(data: Dictionary) -> void:
 	_cooldown_until = float(data.get("cooldown_until", 0.0))
 	_second_light_logged = bool(data.get("second_light_logged", false))
 	_decisions = Dictionary(data.get("decisions", {}))
+	current = null
+	var raw: Variant = data.get("pending", null)
+	if typeof(raw) != TYPE_DICTIONARY:
+		return
+	var ev := PendingEvent.new()
+	ev.id = str(raw.get("id", ""))
+	ev.headline = str(raw.get("headline", ""))
+	ev.choice_a = str(raw.get("choice_a", ""))
+	ev.choice_b = str(raw.get("choice_b", ""))
+	ev.region_a_id = str(raw.get("region_a_id", ""))
+	ev.region_b_id = str(raw.get("region_b_id", ""))
+	ev.effect = str(raw.get("effect", ""))
+	if not ev.id.is_empty():
+		current = ev

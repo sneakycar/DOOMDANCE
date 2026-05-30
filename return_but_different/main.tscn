@@ -66,6 +66,7 @@ text = "RETURN BUT DIFFERENT"
 horizontal_alignment = 1
 
 [node name="WorldViewport" type="SubViewportContainer" parent="VBox"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 stretch = true

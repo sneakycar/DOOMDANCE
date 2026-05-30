@@ -3,11 +3,14 @@ extends RefCounted
 
 var image: Image
 var texture: ImageTexture
-var _update_stride := 2
+var _update_stride := 4
 
 func _init() -> void:
 	image = Image.create(RbdConstants.WORLD_SIZE, RbdConstants.WORLD_SIZE, false, Image.FORMAT_RGB8)
 	texture = ImageTexture.create_from_image(image)
+
+func set_stride(stride: int) -> void:
+	_update_stride = clampi(stride, 1, 16)
 
 func refresh(world: RbdWorld, shimmer: float, full: bool = false) -> void:
 	var w := RbdConstants.WORLD_SIZE

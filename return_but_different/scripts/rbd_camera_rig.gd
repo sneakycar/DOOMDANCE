@@ -117,3 +117,13 @@ func screen_to_world(screen_pos: Vector2) -> Vector2:
 		return Vector2.ZERO
 	var xform := camera.get_global_transform().affine_inverse()
 	return xform * screen_pos
+
+func viewport_position_to_cell(vp_pixel: Vector2) -> Vector2i:
+	if not camera:
+		return RbdConstants.ORIGIN
+	var world_pos := camera.get_canvas_transform().affine_inverse() * vp_pixel
+	var half := float(RbdConstants.WORLD_SIZE) * 0.5
+	return Vector2i(
+		clampi(int(world_pos.x + half), 0, RbdConstants.WORLD_SIZE - 1),
+		clampi(int(world_pos.y + half), 0, RbdConstants.WORLD_SIZE - 1)
+	)

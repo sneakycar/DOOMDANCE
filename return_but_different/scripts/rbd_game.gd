@@ -12,6 +12,7 @@ extends Control
 @onready var _world_sprite: Sprite2D = %WorldSprite
 @onready var _camera: Camera2D = %WorldCamera
 @onready var _camera_rig: RbdCameraRig = %CameraRig
+@onready var _world_viewport: SubViewportContainer = %WorldViewport
 @onready var _influence_bar: HBoxContainer = %InfluenceBar
 @onready var _region_label: Label = %RegionLabel
 @onready var _memory_feed: Label = %MemoryFeed
@@ -33,9 +34,12 @@ var _last_save_unix := 0.0
 var _autosave_accum := 0.0
 var _influence_mode := RbdConstants.InfluenceMode.ATTRACT
 var _offline_banner := ""
+var _banner_ttl := 0.0
 var _session_started := false
-var _hooked_event_id := ""
 var _music_unlocked := false
+var _offline_steps_pending := 0
+var _offline_elapsed_pending := 0.0
+var _offline_memory_pending := false
 
 func _ready() -> void:
 	_title.text = "RETURN BUT DIFFERENT"
@@ -62,11 +66,10 @@ func _start_soundtrack() -> void:
 	DoomMusic.unlock()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if _music_unlocked:
-		return
-	if event is InputEventScreenTouch or event is InputEventMouseButton:
-		_music_unlocked = true
-		DoomMusic.unlock()
+	if not _music_unlocked:
+		if event is InputEventScreenTouch or event is InputEventMouseButton:
+			_music_unlocked = true
+			DoomMusic.unlock()
 
 func _wire_influence_buttons() -> void:
 	for child in _influence_bar.get_children():
@@ -93,41 +96,71 @@ func _load_or_new() -> void:
 	influence.from_dict(data.get("influence", []))
 	_last_save_unix = float(data.get("last_unix", now))
 	var elapsed_offline := maxf(0.0, float(now - _last_save_unix))
-	_apply_offline(elapsed_offline)
+	_queue_offline(elapsed_offline)
 	_last_save_unix = now
 
-func _apply_offline(elapsed_sec: float) -> void:
+func _queue_offline(elapsed_sec: float) -> void:
 	if elapsed_sec < 2.0:
 		_offline_banner = "RETURN BUT DIFFERENT"
 		return
-	var steps := int(elapsed_sec * RbdConstants.ACTIVE_STEPS_PER_SECOND)
-	steps = mini(steps, RbdConstants.OFFLINE_MAX_STEPS)
-	world.run_steps(steps, influence)
-	influence.prune(clock.elapsed_sec + elapsed_sec)
-	clock.elapsed_sec += elapsed_sec
-	memory.process_offline(elapsed_sec, regions, world, clock, history)
-	if world.offline_delta_metric >= RbdConstants.OFFLINE_SIGNIFICANCE:
+	var steps := int(elapsed_sec * RbdConstants.active_steps_per_second())
+	_offline_steps_pending = mini(steps, RbdConstants.OFFLINE_MAX_STEPS)
+	_offline_elapsed_pending = elapsed_sec
+	_offline_memory_pending = elapsed_sec >= 120.0
+	if _offline_steps_pending > 0:
 		_offline_banner = "IT CHANGED WHILE YOU WERE AWAY"
-		history.log(clock, "THE WORLD CHANGED WHILE YOU WERE AWAY")
+		_banner_ttl = 14.0
 	else:
 		_offline_banner = "RETURN BUT DIFFERENT"
-	if not memory._last_notification.is_empty() and elapsed_sec >= 120.0:
-		_offline_banner = memory._last_notification
+
+func _finish_offline_catchup() -> void:
+	var elapsed := _offline_elapsed_pending
+	if elapsed > 0.0:
+		clock.elapsed_sec += elapsed
+		influence.prune(clock.elapsed_sec)
+		_offline_elapsed_pending = 0.0
+	if _offline_memory_pending:
+		memory.process_offline(elapsed, regions, world, clock, history)
+		_offline_memory_pending = false
+		var note := memory.get_last_notification()
+		if not note.is_empty():
+			_offline_banner = note
+			_banner_ttl = 14.0
+	var found := regions.scan(world, clock)
+	for n in found:
+		history.log(clock, n + " EMERGED")
+		memory.on_region_emerged(regions.get_by_name(n), clock, history)
+
+func _process_offline_batch() -> void:
+	var batch := mini(_offline_steps_pending, RbdConstants.OFFLINE_STEPS_PER_FRAME)
+	world.run_steps(batch, influence)
+	_offline_steps_pending -= batch
+	if _offline_steps_pending <= 0:
+		_finish_offline_catchup()
 
 func _process(delta: float) -> void:
 	if not _session_started:
 		return
+	if _offline_steps_pending > 0:
+		_process_offline_batch()
+		_tick_banner(delta)
+		_refresh_ui()
+		return
 	clock.tick(delta)
 	_shimmer += delta
+	_tick_banner(delta)
 	_sim_accum += delta
-	var steps := int(_sim_accum * RbdConstants.ACTIVE_STEPS_PER_SECOND)
+	var rate := RbdConstants.active_steps_per_second()
+	var steps := mini(int(_sim_accum * rate), RbdConstants.MAX_SIM_STEPS_PER_FRAME)
 	if steps > 0:
-		_sim_accum -= float(steps) / RbdConstants.ACTIVE_STEPS_PER_SECOND
+		_sim_accum -= float(steps) / rate
 		world.run_steps(steps, influence)
 	influence.prune(clock.elapsed_sec)
 	_visual_accum += delta
-	if _visual_accum >= 1.0 / RbdConstants.VISUAL_TICK_HZ:
+	var vis_hz := RbdConstants.visual_tick_hz()
+	if _visual_accum >= 1.0 / vis_hz:
 		_visual_accum = 0.0
+		world_tex.set_stride(RbdConstants.visual_stride_for_zoom(_camera.zoom.x))
 		world_tex.refresh(world, _shimmer, false)
 		if _world_sprite.material is ShaderMaterial:
 			_world_sprite.material.set_shader_parameter("shimmer_phase", _shimmer)
@@ -138,22 +171,30 @@ func _process(delta: float) -> void:
 		var found := regions.scan(world, clock)
 		for n in found:
 			history.log(clock, n + " EMERGED")
-			var reg := regions.get_by_name(n)
-			memory.on_region_emerged(reg, clock, history)
+			memory.on_region_emerged(regions.get_by_name(n), clock, history)
 		events.check_history_milestones(regions, clock, history)
 		if not events.has_event():
 			events.try_generate(world, regions, clock, history)
-		_hook_pending_event_memory()
 	memory.tick(clock, regions, world, history)
 	_autosave_accum += delta
-	if _autosave_accum > 8.0:
+	if _autosave_accum > 10.0:
 		_autosave_accum = 0.0
 		_save()
 	_refresh_ui()
 
+func _tick_banner(delta: float) -> void:
+	if _banner_ttl <= 0.0:
+		return
+	_banner_ttl -= delta
+	if _banner_ttl <= 0.0:
+		_offline_banner = ""
+
 func _refresh_ui() -> void:
 	_clock.text = clock.format()
-	_banner.text = _offline_banner if not _offline_banner.is_empty() else "RETURN BUT DIFFERENT"
+	if _offline_banner.is_empty():
+		_banner.text = "RETURN BUT DIFFERENT"
+	else:
+		_banner.text = _offline_banner
 	if events.has_event():
 		var ev: RbdEvents.PendingEvent = events.current
 		_event_head.text = ev.headline
@@ -162,83 +203,69 @@ func _refresh_ui() -> void:
 		_btn_a.visible = true
 		_btn_b.visible = true
 	else:
-		_event_head.text = "The world is evolving."
+		_event_head.text = "THE WORLD IS EVOLVING."
 		_btn_a.visible = false
 		_btn_b.visible = false
 	var fragments := memory.recent_fragments(4)
-	if fragments.is_empty():
-		_memory_feed.text = ""
-	else:
-		_memory_feed.text = "\n".join(fragments)
+	_memory_feed.text = "" if fragments.is_empty() else "\n".join(fragments)
 	if _history_panel.visible:
 		_history_text.text = "\n\n".join(history.format_lines(120))
 
 func _resolve_event(choice: int) -> void:
+	var ev: RbdEvents.PendingEvent = events.current
 	var effect := ""
 	var region_id := ""
-	if events.current != null:
-		effect = events.current.effect
-		region_id = events.current.region_a_id
+	if ev != null:
+		effect = ev.effect
+		region_id = ev.region_a_id
 	events.resolve(choice, world, regions, clock, history, influence)
+	if ev != null:
+		memory.on_event_resolved(ev, choice, regions, clock, history)
 	memory.on_player_decision(effect, region_id, regions, clock, history)
 	_refresh_ui()
 
-func _hook_pending_event_memory() -> void:
-	if not events.has_event():
-		_hooked_event_id = ""
-		return
-	var ev: RbdEvents.PendingEvent = events.current
-	if ev.id == _hooked_event_id:
-		return
-	_hooked_event_id = ev.id
-	if not regions.regions.has(ev.region_a_id):
-		return
-	var region: RbdRegions.Region = regions.regions[ev.region_a_id]
-	memory.on_world_headline(ev.headline, region, clock, history)
-	if ev.effect == "contact" and regions.regions.has(ev.region_b_id):
-		var other: RbdRegions.Region = regions.regions[ev.region_b_id]
-		memory.on_region_contact(region, other, clock, history)
+func _viewport_center_cell() -> Vector2i:
+	if _world_viewport == null:
+		return RbdConstants.ORIGIN
+	var sv := _world_viewport.get_node_or_null("SubViewport") as SubViewport
+	if sv == null or _world_viewport.size.x < 2.0:
+		return RbdConstants.ORIGIN
+	var scale := Vector2(sv.size) / _world_viewport.size
+	var vp_pixel := _world_viewport.size * 0.5 * scale
+	return _camera_rig.viewport_position_to_cell(vp_pixel)
+
+func _place_influence_at_view_center() -> void:
+	var cell := _viewport_center_cell()
+	influence.place(_influence_mode, cell, clock.elapsed_sec)
+	var reg := regions.region_at_point(cell)
+	_region_label.text = reg.name if reg else "UNCLAIMED TERRITORY"
 
 func _on_influence_button(mode_name: StringName) -> void:
 	match str(mode_name):
 		"Attract":
 			_influence_mode = RbdConstants.InfluenceMode.ATTRACT
+			_place_influence_at_view_center()
 		"Repel":
 			_influence_mode = RbdConstants.InfluenceMode.REPEL
+			_place_influence_at_view_center()
 		"Brighten":
 			_influence_mode = RbdConstants.InfluenceMode.BRIGHTEN
+			_place_influence_at_view_center()
 		"Darken":
 			_influence_mode = RbdConstants.InfluenceMode.DARKEN
+			_place_influence_at_view_center()
 		"History":
 			_history_panel.visible = not _history_panel.visible
 			_refresh_ui()
-			return
 		"Origin":
 			_camera_rig.focus_origin()
-			return
 		"World":
 			_camera_rig.focus_world()
-			return
-	var vp := get_viewport()
-	if vp == null:
-		return
-	var screen_center := vp.get_visible_rect().size * 0.5
-	var world_pos := _camera_rig.screen_to_world(screen_center)
-	var cell := Vector2i(
-		clampi(int(world_pos.x + RbdConstants.WORLD_SIZE * 0.5), 0, RbdConstants.WORLD_SIZE - 1),
-		clampi(int(world_pos.y + RbdConstants.WORLD_SIZE * 0.5), 0, RbdConstants.WORLD_SIZE - 1)
-	)
-	influence.place(_influence_mode, cell, clock.elapsed_sec)
-	var reg := regions.region_at_point(cell)
-	if reg:
-		_region_label.text = reg.name
-	else:
-		_region_label.text = "UNCLAIMED TERRITORY"
 
 func _save() -> void:
 	_last_save_unix = Time.get_unix_time_from_system()
 	RbdSave.save_session({
-		"version": 2,
+		"version": 3,
 		"last_unix": _last_save_unix,
 		"clock": clock.to_dict(),
 		"world": world.to_save_dict(),
@@ -252,5 +279,9 @@ func _save() -> void:
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_APPLICATION_RESUMED:
 		_start_soundtrack()
+		var now := Time.get_unix_time_from_system()
+		if _last_save_unix > 0.0:
+			_queue_offline(maxf(0.0, float(now - _last_save_unix)))
+		_last_save_unix = now
 	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_APPLICATION_PAUSED:
 		_save()
