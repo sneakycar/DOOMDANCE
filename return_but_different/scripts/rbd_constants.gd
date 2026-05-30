@@ -1,5 +1,6 @@
 class_name RbdConstants
 extends RefCounted
+## Tuned for iPhone / iOS only.
 
 const WORLD_SIZE := 1024
 const ORIGIN := Vector2i(512, 512)
@@ -7,7 +8,7 @@ const CELL_COUNT := WORLD_SIZE * WORLD_SIZE
 
 const SAVE_PATH := "user://return_but_different.save"
 
-## 15 real minutes = one in-game day (playable on phone; was 24h).
+## 15 real minutes of play ≈ one in-game day.
 const SECONDS_PER_DAY := 900.0
 const OFFLINE_MAX_STEPS := 2400
 const OFFLINE_STEPS_PER_FRAME := 40
@@ -27,14 +28,11 @@ const INFLUENCE_RADIUS_CELLS := 36.0
 
 enum InfluenceMode { ATTRACT, REPEL, BRIGHTEN, DARKEN }
 
-static func is_phone_profile() -> bool:
-	return OS.has_feature("mobile") or OS.has_feature("web")
-
 static func active_steps_per_second() -> float:
-	return 2.0 if is_phone_profile() else 5.0
+	return 2.0
 
 static func visual_tick_hz() -> float:
-	return 10.0 if is_phone_profile() else 20.0
+	return 12.0
 
 static func visual_stride_for_zoom(zoom: float) -> int:
 	if zoom < 1.2:
@@ -42,3 +40,6 @@ static func visual_stride_for_zoom(zoom: float) -> int:
 	if zoom < 3.5:
 		return 4
 	return 2
+
+static func sim_seconds_for_steps(steps: int) -> float:
+	return float(steps) / active_steps_per_second()

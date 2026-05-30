@@ -1,5 +1,5 @@
 extends Control
-## RETURN BUT DIFFERENT — iPhone-first living world prototype.
+## RETURN BUT DIFFERENT — iOS-only living world prototype.
 
 @onready var _title: Label = %TitleLabel
 @onready var _clock: Label = %ClockLabel
@@ -38,7 +38,7 @@ var _banner_ttl := 0.0
 var _session_started := false
 var _music_unlocked := false
 var _offline_steps_pending := 0
-var _offline_elapsed_pending := 0.0
+var _offline_sim_elapsed := 0.0
 var _offline_memory_pending := false
 
 func _ready() -> void:
@@ -57,19 +57,30 @@ func _ready() -> void:
 	_btn_b.pressed.connect(func() -> void: _resolve_event(1))
 	_wire_influence_buttons()
 	_history_panel.visible = false
+	_world_viewport.resized.connect(_sync_viewport_size)
+	_sync_viewport_size()
 	_load_or_new()
 	_refresh_ui()
 	_session_started = true
 	call_deferred("_start_soundtrack")
 
+func _sync_viewport_size() -> void:
+	var sv := _world_viewport.get_node_or_null("SubViewport") as SubViewport
+	if sv == null:
+		return
+	var sz := _world_viewport.size
+	if sz.x >= 2.0 and sz.y >= 2.0:
+		sv.size = Vector2i(sz)
+
 func _start_soundtrack() -> void:
 	DoomMusic.unlock()
 
 func _unhandled_input(event: InputEvent) -> void:
-	if not _music_unlocked:
-		if event is InputEventScreenTouch or event is InputEventMouseButton:
-			_music_unlocked = true
-			DoomMusic.unlock()
+	if _music_unlocked:
+		return
+	if event is InputEventScreenTouch and event.pressed:
+		_music_unlocked = true
+		DoomMusic.unlock()
 
 func _wire_influence_buttons() -> void:
 	for child in _influence_bar.get_children():
@@ -86,6 +97,7 @@ func _load_or_new() -> void:
 		history.log(clock, "THE FIRST WHITE")
 		_last_save_unix = now
 		world_tex.refresh(world, 0.0, true)
+		_save()
 		return
 	clock.from_dict(data.get("clock", {}))
 	world.from_save_dict(data.get("world", {}))
@@ -105,8 +117,8 @@ func _queue_offline(elapsed_sec: float) -> void:
 		return
 	var steps := int(elapsed_sec * RbdConstants.active_steps_per_second())
 	_offline_steps_pending = mini(steps, RbdConstants.OFFLINE_MAX_STEPS)
-	_offline_elapsed_pending = elapsed_sec
-	_offline_memory_pending = elapsed_sec >= 120.0
+	_offline_sim_elapsed = 0.0
+	_offline_memory_pending = _offline_steps_pending > 0 and elapsed_sec >= 120.0
 	if _offline_steps_pending > 0:
 		_offline_banner = "IT CHANGED WHILE YOU WERE AWAY"
 		_banner_ttl = 14.0
@@ -114,13 +126,8 @@ func _queue_offline(elapsed_sec: float) -> void:
 		_offline_banner = "RETURN BUT DIFFERENT"
 
 func _finish_offline_catchup() -> void:
-	var elapsed := _offline_elapsed_pending
-	if elapsed > 0.0:
-		clock.elapsed_sec += elapsed
-		influence.prune(clock.elapsed_sec)
-		_offline_elapsed_pending = 0.0
 	if _offline_memory_pending:
-		memory.process_offline(elapsed, regions, world, clock, history)
+		memory.process_offline(_offline_sim_elapsed, regions, world, clock, history)
 		_offline_memory_pending = false
 		var note := memory.get_last_notification()
 		if not note.is_empty():
@@ -130,11 +137,18 @@ func _finish_offline_catchup() -> void:
 	for n in found:
 		history.log(clock, n + " EMERGED")
 		memory.on_region_emerged(regions.get_by_name(n), clock, history)
+	world_tex.set_stride(RbdConstants.visual_stride_for_zoom(_camera.zoom.x))
+	world_tex.refresh(world, _shimmer, true)
+	_save()
 
 func _process_offline_batch() -> void:
 	var batch := mini(_offline_steps_pending, RbdConstants.OFFLINE_STEPS_PER_FRAME)
 	world.run_steps(batch, influence)
 	_offline_steps_pending -= batch
+	var sim_dt := RbdConstants.sim_seconds_for_steps(batch)
+	_offline_sim_elapsed += sim_dt
+	clock.elapsed_sec += sim_dt
+	influence.prune(clock.elapsed_sec)
 	if _offline_steps_pending <= 0:
 		_finish_offline_catchup()
 
@@ -213,15 +227,10 @@ func _refresh_ui() -> void:
 
 func _resolve_event(choice: int) -> void:
 	var ev: RbdEvents.PendingEvent = events.current
-	var effect := ""
-	var region_id := ""
-	if ev != null:
-		effect = ev.effect
-		region_id = ev.region_a_id
 	events.resolve(choice, world, regions, clock, history, influence)
 	if ev != null:
 		memory.on_event_resolved(ev, choice, regions, clock, history)
-	memory.on_player_decision(effect, region_id, regions, clock, history)
+	_save()
 	_refresh_ui()
 
 func _viewport_center_cell() -> Vector2i:
@@ -265,7 +274,7 @@ func _on_influence_button(mode_name: StringName) -> void:
 func _save() -> void:
 	_last_save_unix = Time.get_unix_time_from_system()
 	RbdSave.save_session({
-		"version": 3,
+		"version": 4,
 		"last_unix": _last_save_unix,
 		"clock": clock.to_dict(),
 		"world": world.to_save_dict(),
@@ -282,6 +291,5 @@ func _notification(what: int) -> void:
 		var now := Time.get_unix_time_from_system()
 		if _last_save_unix > 0.0:
 			_queue_offline(maxf(0.0, float(now - _last_save_unix)))
-		_last_save_unix = now
-	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_APPLICATION_PAUSED:
+	elif what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_APPLICATION_PAUSED:
 		_save()

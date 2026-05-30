@@ -1,0 +1,9 @@
+RETURN BUT DIFFERENT — iOS build (only target)
+
+1. Open project in Godot 4.4+.
+2. Editor → Export → iOS → Download export templates if needed.
+3. Set your Apple Team ID and signing in the iOS preset.
+4. Export Project → build/ios/ReturnButDifferent.xcodeproj
+5. Open in Xcode, run on device or Archive for TestFlight.
+
+Save data: user://return_but_different.save (app sandbox, persists across launches).

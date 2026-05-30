@@ -149,7 +149,7 @@ func on_event_resolved(
 		"dim_origin":
 			if choice_index == 1:
 				_maybe_death_in_region(region, clock, history, "fade")
-			elif _names.randf() < 0.35:
+			elif choice_index == 0 and _names.randf() < 0.4:
 				_region_remembrance(region, clock, history)
 		"second_light":
 			if choice_index == 0:
@@ -188,22 +188,6 @@ func on_event_resolved(
 			if choice_index == 0 and _names.randf() < 0.3:
 				_try_return(region, clock, history)
 
-func on_player_decision(effect: String, region_id: String, regions: RbdRegions, clock: RbdClock, history: RbdHistory) -> void:
-	if not regions.regions.has(region_id):
-		return
-	var region: RbdRegions.Region = regions.regions[region_id]
-	match effect:
-		"dim_origin", "second_light", "stasis":
-			if effect == "second_light":
-				on_world_headline("SECOND LIGHT", region, clock, history, "decision")
-			else:
-				_maybe_death_in_region(region, clock, history, effect)
-		"contact":
-			pass
-		"belt":
-			if _names.randf() < 0.3:
-				_region_remembrance(region, clock, history)
-
 func tick(clock: RbdClock, regions: RbdRegions, world: RbdWorld, history: RbdHistory) -> void:
 	if clock.elapsed_sec < _next_named_at:
 		return
@@ -212,15 +196,15 @@ func tick(clock: RbdClock, regions: RbdRegions, world: RbdWorld, history: RbdHis
 		_schedule_next(clock.elapsed_sec + 180.0)
 
 func process_offline(
-	elapsed_sec: float,
+	sim_elapsed_sec: float,
 	regions: RbdRegions,
 	world: RbdWorld,
 	clock: RbdClock,
 	history: RbdHistory
 ) -> void:
-	if elapsed_sec < 120.0:
+	if sim_elapsed_sec < 60.0:
 		return
-	var count := clampi(int(elapsed_sec / 7200.0) + 1, 1, RbdConstants.MEMORY_OFFLINE_MAX)
+	var count := clampi(int(sim_elapsed_sec / 600.0) + 1, 1, RbdConstants.MEMORY_OFFLINE_MAX)
 	for _i in range(count):
 		if not _try_scheduled_event(clock, regions, world, history, true):
 			break
