@@ -35,6 +35,7 @@ var _influence_mode := RbdConstants.InfluenceMode.ATTRACT
 var _offline_banner := ""
 var _session_started := false
 var _hooked_event_id := ""
+var _music_unlocked := false
 
 func _ready() -> void:
 	_title.text = "RETURN BUT DIFFERENT"
@@ -55,6 +56,17 @@ func _ready() -> void:
 	_load_or_new()
 	_refresh_ui()
 	_session_started = true
+	call_deferred("_start_soundtrack")
+
+func _start_soundtrack() -> void:
+	DoomMusic.unlock()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if _music_unlocked:
+		return
+	if event is InputEventScreenTouch or event is InputEventMouseButton:
+		_music_unlocked = true
+		DoomMusic.unlock()
 
 func _wire_influence_buttons() -> void:
 	for child in _influence_bar.get_children():
@@ -238,5 +250,7 @@ func _save() -> void:
 	})
 
 func _notification(what: int) -> void:
+	if what == NOTIFICATION_APPLICATION_RESUMED:
+		_start_soundtrack()
 	if what == NOTIFICATION_WM_CLOSE_REQUEST or what == NOTIFICATION_APPLICATION_PAUSED:
 		_save()

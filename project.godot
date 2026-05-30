@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
+DoomMusic="*res://scripts/game/doom_music.gd"
+
 [display]
 
 window/size/viewport_width=390
