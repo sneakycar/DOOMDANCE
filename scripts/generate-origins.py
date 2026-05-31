@@ -43,6 +43,7 @@ MUST_INCLUDE = {
     "Deadwood",
     "Thunder Bay",
     "Akureyri",
+    "Outside Carmel, Iowa",
     "The Faroe Islands",
     "Svalbard",
     "Lofoten",
@@ -60,7 +61,8 @@ VALID_TAGS = {
     "desert", "arctic", "nordic", "coastal", "warehouse", "urban", "rural", "isolation",
     "plains", "weather", "forest", "mountain", "working_class", "abandoned", "cold",
     "highway", "small_town", "salvage", "waterfront", "fog", "grain_elevator", "oil",
-    "paper_mill", "borderland",
+    "paper_mill", "borderland", "volcanic", "rowhouse", "fluorescent", "vacant_lot",
+    "drainage_ditch", "church_basement", "county_road", "tractor", "storm",
 }
 
 
@@ -154,7 +156,7 @@ def main() -> None:
 
     root = Path(__file__).resolve().parent.parent
     outputs = [
-        root / "public" / "evol" / "data" / "origins.json",
+        root / "public" / "data" / "origins.json",
         Path("/Users/dustyaltena/Documents/dev/EVOL/ReturnButDifferent/ReturnButDifferent/Data/origins.json"),
     ]
 

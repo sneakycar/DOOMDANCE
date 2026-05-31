@@ -48,6 +48,15 @@ export class MemoryBackground {
     this.atmosphere.setAgeBlend(t);
   }
 
+  setPullMood(moodTags) {
+    this.atmosphere.setPullMoodTags(moodTags);
+  }
+
+  setMotionActive(active) {
+    this.field.setMotionActive(active);
+    this.atmosphere.setMotionActive(active);
+  }
+
   triggerSonar(nx, ny, durationMs = 4800) {
     this.pulses.push({
       x: nx,

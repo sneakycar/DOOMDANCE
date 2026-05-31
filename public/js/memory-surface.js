@@ -1,3 +1,5 @@
+import { getLifePull, pullMemoryBiasMultiplier } from "./pull.js";
+
 const MIN_COOLDOWN_MS = 90000;
 const RECENT_EVENT_GUARD = 2;
 const CLUSTER_MS = 4 * 60 * 1000;
@@ -131,6 +133,11 @@ function pickMemoryRecord(records, life, rng, clusterTags) {
 
     const lifeOverlap = record.tags?.filter((t) => lifeTags.includes(t)).length || 0;
     if (lifeOverlap) w *= 1 + lifeOverlap * 0.15;
+
+    const pull = getLifePull(life.pullId);
+    if (pull) {
+      w *= pullMemoryBiasMultiplier(pull, record.tags || []);
+    }
 
     if (clusterTags?.length && record.tags?.some((t) => clusterTags.includes(t))) {
       w *= 1.65;

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+		<meta name="screen-orientation" content="landscape" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="theme-color" content="#06070a" />
+		<title>RETURN BUT DIFFERENT</title>
+		<link rel="manifest" href="manifest.webmanifest" />
+		<style>
+html, body, #canvas {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	height: 100dvh;
+	overflow: hidden;
+	background: #06070a;
+	touch-action: manipulation;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+#canvas-wrap {
+	position: fixed;
+	inset: 0;
+	box-sizing: border-box;
+	padding:
+		env(safe-area-inset-top, 0px)
+		env(safe-area-inset-right, 0px)
+		env(safe-area-inset-bottom, 0px)
+		env(safe-area-inset-left, 0px);
+}
+
+#canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+	outline: none;
+}
+
+#canvas:focus {
+	outline: none;
+}
+
+#status, #status-splash, #status-progress, #status-notice {
+	display: none !important;
+}
+
+#doom-soundtrack {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+	pointer-events: none;
+}
+		</style>
+		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+
+	</head>
+	<body>
+		<div id="canvas-wrap">
+		<canvas id="canvas">
+			Your browser does not support the canvas tag.
+		</canvas>
+		</div>
+
+		<noscript>
+			Your browser does not support JavaScript.
+		</noscript>
+
+		<audio
+			id="doom-soundtrack"
+			preload="auto"
+			loop
+			playsinline
+			webkit-playsinline
+			crossorigin="anonymous"
+			src="/doom_soundtrack_01.mp3"
+		></audio>
+
+		<div id="status">
+			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
+			<progress id="status-progress"></progress>
+			<div id="status-notice"></div>
+		</div>
+
+		<script src="index.js"></script>
+		<script>
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":37679024,"index.wasm":43699190},"focusCanvas":true,"gdextensionLibs":[]};
+const GODOT_THREADS_ENABLED = false;
+const engine = new Engine(GODOT_CONFIG);
+
+(function () {
+	const canvas = document.getElementById('canvas');
+	const wrap = document.getElementById('canvas-wrap');
+	const setSize = () => {
+		if (wrap) {
+			wrap.style.width = window.innerWidth + 'px';
+			wrap.style.height = window.innerHeight + 'px';
+		}
+		canvas.style.width = '100%';
+		canvas.style.height = '100%';
+	};
+	window.addEventListener('resize', setSize);
+	window.addEventListener('orientationchange', setSize);
+	setSize();
+
+	let htmlMuted = false;
+	let audioLive = false;
+	let primed = false;
+	const getAudio = () => document.getElementById('doom-soundtrack');
+
+	const primeAudio = () => {
+		const audio = getAudio();
+		if (!audio || primed) {
+			return;
+		}
+		primed = true;
+		audio.load();
+	};
+
+	const bindAudioEvents = () => {
+		const audio = getAudio();
+		if (!audio || audio.dataset.bound) {
+			return;
+		}
+		audio.dataset.bound = '1';
+		audio.addEventListener('playing', () => {
+			audioLive = true;
+		});
+		audio.addEventListener('pause', () => {
+			audioLive = false;
+		});
+		audio.addEventListener('ended', () => {
+			audioLive = false;
+		});
+		audio.addEventListener('error', () => {
+			audioLive = false;
+			console.warn('doom soundtrack error', audio.error);
+		});
+	};
+
+	window.doomDanceStartMusic = function () {
+		if (htmlMuted) {
+			return false;
+		}
+		const audio = getAudio();
+		if (!audio) {
+			return false;
+		}
+		bindAudioEvents();
+		primeAudio();
+		audio.volume = 1.0;
+		audio.muted = false;
+		const playAttempt = audio.play();
+		if (playAttempt && typeof playAttempt.catch === 'function') {
+			playAttempt.catch(function (err) {
+				audioLive = false;
+				console.warn('doomDanceStartMusic', err);
+			});
+		}
+		return !audio.paused;
+	};
+
+	window.doomDanceStopMusic = function () {
+		const audio = getAudio();
+		if (!audio) {
+			return;
+		}
+		audio.pause();
+		audioLive = false;
+	};
+
+	window.doomDanceSetMuted = function (muted) {
+		htmlMuted = !!muted;
+		const audio = getAudio();
+		if (!audio) {
+			return;
+		}
+		audio.muted = htmlMuted;
+		if (htmlMuted) {
+			audio.pause();
+			audioLive = false;
+		} else {
+			window.doomDanceStartMusic();
+		}
+	};
+
+	window.doomDanceIsPlaying = function () {
+		const audio = getAudio();
+		return !!(audio && audioLive && !audio.paused && !audio.muted && !htmlMuted);
+	};
+
+	const unlockWebAudio = () => {
+		primeAudio();
+		bindAudioEvents();
+		try {
+			if (typeof engine !== 'undefined' && engine && typeof engine.runsInWasm === 'function' && engine.runsInWasm()) {
+				const ctx = engine.audioCtx || (engine.audio && engine.audio.ctx);
+				if (ctx && ctx.state === 'suspended') {
+					ctx.resume();
+				}
+			}
+		} catch (err) {
+			console.warn('godot audio unlock', err);
+		}
+		if (!htmlMuted) {
+			window.doomDanceStartMusic();
+		}
+	};
+
+	['pointerdown', 'touchstart', 'click'].forEach((eventName) => {
+		document.addEventListener(eventName, unlockWebAudio, { passive: true });
+	});
+})();
+
+(function () {
+	const statusOverlay = document.getElementById('status');
+	const statusProgress = document.getElementById('status-progress');
+	const statusNotice = document.getElementById('status-notice');
+
+	let initializing = true;
+	let statusMode = '';
+
+	function setStatusMode(mode) {
+		if (statusMode === mode || !initializing) {
+			return;
+		}
+		if (mode === 'hidden') {
+			statusOverlay.remove();
+			initializing = false;
+			return;
+		}
+		statusOverlay.style.visibility = 'visible';
+		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
+		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
+		statusMode = mode;
+	}
+
+	function setStatusNotice(text) {
+		while (statusNotice.lastChild) {
+			statusNotice.removeChild(statusNotice.lastChild);
+		}
+		const lines = text.split('\n');
+		lines.forEach((line) => {
+			statusNotice.appendChild(document.createTextNode(line));
+			statusNotice.appendChild(document.createElement('br'));
+		});
+	}
+
+	function displayFailureNotice(err) {
+		console.error(err);
+		if (err instanceof Error) {
+			setStatusNotice(err.message);
+		} else if (typeof err === 'string') {
+			setStatusNotice(err);
+		} else {
+			setStatusNotice('An unknown error occurred.');
+		}
+		setStatusMode('notice');
+		initializing = false;
+	}
+
+	const missing = Engine.getMissingFeatures({
+		threads: GODOT_THREADS_ENABLED,
+	});
+
+	if (missing.length !== 0) {
+		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
+			let serviceWorkerRegistrationPromise;
+			try {
+				serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
+			} catch (err) {
+				serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
+			}
+			Promise.race([
+				serviceWorkerRegistrationPromise.then((registration) => {
+					if (registration != null) {
+						return Promise.reject(new Error('Service worker already exists.'));
+					}
+					return registration;
+				}).then(() => engine.installServiceWorker()),
+				new Promise((resolve) => {
+					setTimeout(() => resolve(), 2000);
+				}),
+			]).then(() => {
+				window.location.reload();
+			}).catch((err) => {
+				console.error('Error while registering service worker:', err);
+			});
+		} else {
+			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
+			displayFailureNotice(missingMsg + missing.join('\n'));
+		}
+	} else {
+		setStatusMode('progress');
+		engine.startGame({
+			'onProgress': function (current, total) {
+				if (current > 0 && total > 0) {
+					statusProgress.value = current;
+					statusProgress.max = total;
+				} else {
+					statusProgress.removeAttribute('value');
+					statusProgress.removeAttribute('max');
+				}
+			},
+		}).then(() => {
+			setStatusMode('hidden');
+			primeAudio();
+			bindAudioEvents();
+			if (!htmlMuted) {
+				window.doomDanceStartMusic();
+			}
+		}, displayFailureNotice);
+	}
+}());
+		</script>
+	</body>
+</html>
+

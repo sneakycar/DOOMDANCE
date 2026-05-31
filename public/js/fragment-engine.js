@@ -102,7 +102,7 @@ const FALLBACK_FRAGMENTS = {
 };
 
 export async function loadFragmentData() {
-  const base = new URL("/evol/data/", window.location.origin);
+  const base = new URL("/data/", window.location.origin);
   const fragments = await fetchJson("atmospheric_fragments", base);
   const subjects = await fetchJson("fragment_subjects", base);
   const verbs = await fetchJson("fragment_verbs", base);

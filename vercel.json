@@ -1,64 +1,19 @@
 {
   "outputDirectory": "public",
-  "rewrites": [
-    { "source": "/evol", "destination": "/evol/index.html" },
-    { "source": "/evol/", "destination": "/evol/index.html" }
-  ],
   "redirects": [
-    { "source": "/evol", "destination": "/evol/", "permanent": false },
-    { "source": "/rbd", "destination": "/evol/", "permanent": true },
-    { "source": "/rbd/:path*", "destination": "/evol/:path*", "permanent": true }
+    { "source": "/evol", "destination": "/", "permanent": true },
+    { "source": "/evol/", "destination": "/", "permanent": true },
+    { "source": "/evol/:path*", "destination": "/:path*", "permanent": true },
+    { "source": "/rbd", "destination": "/", "permanent": true },
+    { "source": "/rbd/:path*", "destination": "/:path*", "permanent": true }
   ],
   "headers": [
     {
-      "source": "/evol/:path*",
+      "source": "/(.*)",
       "headers": [
         { "key": "Cross-Origin-Embedder-Policy", "value": "unsafe-none" },
         { "key": "Cross-Origin-Opener-Policy", "value": "unsafe-none" },
         { "key": "Cross-Origin-Resource-Policy", "value": "cross-origin" }
-      ]
-    },
-    {
-      "source": "/",
-      "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" },
-        { "key": "Cross-Origin-Resource-Policy", "value": "same-origin" }
-      ]
-    },
-    {
-      "source": "/index.html",
-      "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" },
-        { "key": "Cross-Origin-Resource-Policy", "value": "same-origin" }
-      ]
-    },
-    {
-      "source": "/index.js",
-      "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" },
-        { "key": "Cross-Origin-Resource-Policy", "value": "same-origin" },
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/index.wasm",
-      "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" },
-        { "key": "Cross-Origin-Resource-Policy", "value": "same-origin" },
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
-      ]
-    },
-    {
-      "source": "/index.pck",
-      "headers": [
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" },
-        { "key": "Cross-Origin-Resource-Policy", "value": "same-origin" },
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
       ]
     },
     {

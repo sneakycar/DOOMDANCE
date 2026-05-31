@@ -1,3 +1,9 @@
+import {
+  getLifePull,
+  pullScoreDelta,
+  templateTagsForPull,
+} from "./pull.js";
+
 const RARITY_BASE = {
   common: 100,
   uncommon: 40,
@@ -147,10 +153,13 @@ function moveEventFactor(age, life, template) {
   return 0.15;
 }
 
-export function scoreEventTemplate(template, life, age) {
+export function scoreEventTemplate(template, life, age, { forDeath = false } = {}) {
   const base = RARITY_BASE[template.rarity] ?? RARITY_BASE.common;
   const { origin, current, life: lifeMult } = ageInfluenceMultipliers(age);
-  const eventTags = template.tags || [];
+  const eventTags = templateTagsForPull(template, {
+    forDeath,
+    inferFromText: inferTagsFromText,
+  });
   const originTags = life.originTags || [];
   const placeTags = life.currentPlaceTags || originTags;
   const lifeTags = life.lifeTags || [];
@@ -172,14 +181,19 @@ export function scoreEventTemplate(template, life, age) {
   score += originRegion * origin * 0.45;
   score += placeRegion * current * 0.45;
 
+  const pull = getLifePull(life.pullId);
+  if (pull) {
+    score += pullScoreDelta(pull, eventTags, { mode: forDeath ? "death" : "event" });
+  }
+
   score *= moveEventFactor(age, life, template);
 
   return Math.max(1, score);
 }
 
-export function pickScoredTemplate(pool, life, age, rng) {
+export function pickScoredTemplate(pool, life, age, rng, { forDeath = false } = {}) {
   if (!pool.length) return null;
-  const weights = pool.map((t) => scoreEventTemplate(t, life, age));
+  const weights = pool.map((t) => scoreEventTemplate(t, life, age, { forDeath }));
   const total = weights.reduce((a, b) => a + b, 0);
   let roll = rng.nextDouble() * total;
   for (let i = 0; i < pool.length; i++) {

@@ -2,14 +2,14 @@ import { SeededRNG } from "./rng.js";
 import { loadSave, writeSave, clearSave, freshSave } from "./storage.js";
 import {
   loadContent,
-  createLife,
   createLifeCandidates,
   createLifeFromCandidate,
   generateEvent,
   nextEventTime,
   catchUpCount,
-  nextAge,
   createScar,
+  syncLifeAge,
+  migrateLifeDuration,
   assignFirstLifeMortality,
 } from "./engine.js";
 import { MemoryBackground } from "./background.js";
@@ -17,13 +17,35 @@ import { MemorySurface, computeMemoryWeight, estimateMemoryWeight } from "./memo
 import { applyPlaceEffects, migrateLifePlaceFields } from "./place-influence.js";
 import { FragmentEngine, loadFragmentData } from "./fragment-engine.js";
 import { FragmentSurface } from "./fragment-surface.js";
+import {
+  ensureXpSave,
+  initLifeXp,
+  migrateLifeXp,
+  finalizeLifeXp,
+  syncActiveXp,
+  formatXp,
+  XpTracker,
+} from "./xp.js";
+import { pullBackgroundMoodTags, migrateLifePull } from "./pull.js";
+import { lifeProgress } from "./life-duration.js";
+import {
+  appendTimelineEntry,
+  birthTimelineEntry,
+  formatTimelineText,
+  groupEntriesByAge,
+  groupTimelineByLife,
+  rebuildTimelineFromSave,
+  timelineEntryFromRecord,
+} from "./timeline.js";
+import { playTitleSequence } from "./title-sequence.js";
 
 const DEV =
   new URLSearchParams(location.search).has("dev") ||
+  localStorage.getItem("doomdance_dev") === "1" ||
   localStorage.getItem("evol_dev") === "1";
 
 if (new URLSearchParams(location.search).has("dev")) {
-  localStorage.setItem("evol_dev", "1");
+  localStorage.setItem("doomdance_dev", "1");
 }
 const MAX_AGE = 99;
 const LIVE_PRESENT_MS = 4800;
@@ -31,12 +53,13 @@ const DAY_MS = 86400000;
 
 const els = {
   beginScreen: document.getElementById("begin-screen"),
-  btnBegin: document.getElementById("btn-begin"),
+  titleWord: document.getElementById("title-word"),
   gameUi: document.getElementById("game-ui"),
   bioName: document.getElementById("bio-name"),
   bioAge: document.getElementById("bio-age"),
   bioBorn: document.getElementById("bio-born"),
   bioOrigin: document.getElementById("bio-origin"),
+  bioXp: document.getElementById("bio-xp"),
   btnMute: document.getElementById("btn-mute"),
   iconSpeaker: document.querySelector(".icon-speaker"),
   iconMuted: document.querySelector(".icon-muted"),
@@ -80,6 +103,9 @@ let selectionSession = null;
 let selectingLife = false;
 let fragmentEngine;
 let fragmentSurface;
+let xpTracker;
+let xpJumpTimer = null;
+let titleSequencePlaying = false;
 let fragmentData;
 let openingPlayed = false;
 let ageTickTimer = null;
@@ -113,12 +139,21 @@ function migrateLife(life) {
     life.originTags = ["rural"];
   }
   if (content) migrateLifePlaceFields(life, content);
+  migrateLifeXp(life, save);
+  migrateLifePull(life, rng);
+  migrateLifeDuration(life, rng, {
+    isFirstLife: !save.hasCompletedFirstLife && !(save.obituaries?.length),
+    assignFirstLifeMortality,
+  });
   for (const record of life.events || []) {
     migrateEvent(record);
   }
 }
 
 function migrateSave() {
+  ensureXpSave(save);
+  if (!save.timeline) save.timeline = [];
+  rebuildTimelineFromSave(save);
   if (save.hasCompletedFirstLife == null) {
     save.hasCompletedFirstLife = (save.obituaries?.length || 0) > 0;
   }
@@ -131,17 +166,6 @@ function migrateSave() {
   if (!save.activeLife) return;
 
   migrateLife(save.activeLife);
-  const life = save.activeLife;
-  if (life.mortalityProfile == null) {
-    if (!save.hasCompletedFirstLife && !(save.obituaries?.length)) {
-      assignFirstLifeMortality(life, rng);
-    } else {
-      life.mortalityProfile = "normal";
-      life.targetDeathAge = null;
-    }
-  } else if (life.targetDeathAge === undefined) {
-    life.targetDeathAge = null;
-  }
 }
 
 function needsLifeSelection() {
@@ -156,19 +180,38 @@ function setLifeSelectionHeader(mode) {
   if (!els.lifeSelectionTitle) return;
   if (mode === "obituary") {
     els.lifeSelectionTitle.textContent = "A LIFE HAS ENDED";
+    const last = save.obituaries?.[0];
     if (els.lifeSelectionSubA) {
-      els.lifeSelectionSubA.textContent = "The archive remains.";
+      els.lifeSelectionSubA.textContent = last?.fullName ? `${last.fullName.toUpperCase()}` : "The archive remains.";
       els.lifeSelectionSubA.hidden = false;
     }
     if (els.lifeSelectionSubB) {
-      els.lifeSelectionSubB.textContent = "Choose the next life.";
+      const pullLine = last?.pullGlyph ? `Pull: ${last.pullGlyph}` : "Choose the next life.";
+      els.lifeSelectionSubB.textContent = pullLine;
       els.lifeSelectionSubB.hidden = false;
+      els.lifeSelectionSubB.classList.toggle("life-selection-pull-archive", !!last?.pullGlyph);
     }
     return;
   }
-  els.lifeSelectionTitle.textContent = "CHOOSE A LIFE";
+  els.lifeSelectionTitle.textContent = "choose a life:";
   if (els.lifeSelectionSubA) els.lifeSelectionSubA.hidden = true;
-  if (els.lifeSelectionSubB) els.lifeSelectionSubB.hidden = true;
+  if (els.lifeSelectionSubB) {
+    els.lifeSelectionSubB.hidden = true;
+    els.lifeSelectionSubB.classList.remove("life-selection-pull-archive");
+  }
+}
+
+function revealLifeSelection(fadeIn = false) {
+  if (!els.lifeSelection) return;
+  els.lifeSelection.hidden = false;
+  els.lifeSelection.classList.remove("is-visible");
+  if (fadeIn) {
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => els.lifeSelection.classList.add("is-visible"));
+    });
+  } else {
+    els.lifeSelection.classList.add("is-visible");
+  }
 }
 
 function prepareLifeSelectionSession() {
@@ -179,46 +222,37 @@ function prepareLifeSelectionSession() {
   selectingLife = false;
 }
 
-async function playFragment(kind, opts = {}) {
-  if (!fragmentEngine || !fragmentSurface) return;
-  let text;
-  if (kind === "opening") {
-    text = fragmentEngine.pickOpening();
-  } else if (kind === "birth") {
-    text = fragmentEngine.birthFragment(opts.firstName, opts.lastName);
-  } else {
-    text = fragmentEngine.pick(kind);
-  }
-  if (!text) return;
-  await fragmentSurface.play(text, { dev: DEV });
-}
-
 async function playOpeningSequence() {
   if (openingPlayed || save.hasBegun) return;
   openingPlayed = true;
-  els.btnBegin.hidden = true;
+  titleSequencePlaying = true;
   try {
-    await playFragment("opening");
-  } catch (err) {
-    console.warn("EVOL: opening fragment skipped", err);
+    await playTitleSequence({
+      screenEl: els.beginScreen,
+      wordEl: els.titleWord,
+    });
+    showLifeSelection({ mode: "choose", fadeIn: true });
+  } finally {
+    titleSequencePlaying = false;
   }
-  els.btnBegin.hidden = false;
 }
 
-function showLifeSelection({ mode = "choose" } = {}) {
+function showLifeSelection({ mode = "choose", fadeIn = false } = {}) {
   if (!content || !els.lifeSelection) return;
   stopScheduleLoop();
   memorySurface?.stop();
   prepareLifeSelectionSession();
   hideBeginScreen();
   els.gameUi.hidden = true;
-  els.lifeSelection.hidden = false;
+  revealLifeSelection(fadeIn);
   els.lifeSelectionOptions.hidden = false;
   els.btnShowOthers.hidden = false;
   setLifeSelectionHeader(mode);
   renderLifeSelection();
   bg.setScars([]);
   bg.setAgeBlend(0);
+  bg.setPullMood([]);
+  syncBackgroundMotion();
 }
 
 async function showLifeSelectionAfterDeath({ showLive = false } = {}) {
@@ -228,12 +262,14 @@ async function showLifeSelectionAfterDeath({ showLive = false } = {}) {
   prepareLifeSelectionSession();
   hideBeginScreen();
   els.gameUi.hidden = true;
-  els.lifeSelection.hidden = false;
+  revealLifeSelection(false);
   els.lifeSelectionOptions.hidden = true;
   els.btnShowOthers.hidden = true;
   setLifeSelectionHeader("obituary");
   bg.setScars([]);
   bg.setAgeBlend(0);
+  bg.setPullMood([]);
+  syncBackgroundMotion();
 
   if (showLive) await waitMs(LIVE_PRESENT_MS);
   await playFragment("death");
@@ -244,12 +280,33 @@ async function showLifeSelectionAfterDeath({ showLive = false } = {}) {
   els.lifeSelectionOptions.hidden = false;
   els.btnShowOthers.hidden = false;
   renderLifeSelection();
+  els.lifeSelection.classList.add("is-visible");
 }
 
 function hideLifeSelection() {
-  if (els.lifeSelection) els.lifeSelection.hidden = true;
+  if (els.lifeSelection) {
+    els.lifeSelection.classList.remove("is-visible");
+    els.lifeSelection.hidden = true;
+  }
   selectionSession = null;
   selectingLife = false;
+}
+
+async function playFragment(kind, opts = {}) {
+  if (!fragmentSurface) return;
+  if (opts.overrideText) {
+    await fragmentSurface.play(opts.overrideText, { dev: DEV });
+    return;
+  }
+  if (!fragmentEngine) return;
+  let text;
+  if (kind === "birth") {
+    text = fragmentEngine.birthFragment(opts.firstName, opts.lastName);
+  } else {
+    text = fragmentEngine.pick(kind);
+  }
+  if (!text) return;
+  await fragmentSurface.play(text, { dev: DEV });
 }
 
 function renderLifeSelection() {
@@ -258,13 +315,15 @@ function renderLifeSelection() {
   els.btnShowOthers.hidden = selectionSession.redrawUsed;
   els.lifeSelectionOptions.className = "life-selection-options is-visible";
   els.lifeSelectionOptions.innerHTML = selectionSession.candidates
-    .map(
-      (c) => `
+    .map((c) => {
+      const name = `${c.firstName} ${c.lastName}`.trim().toUpperCase();
+      return `
       <button type="button" class="life-candidate" data-id="${escapeHtml(c.id)}">
-        <p class="life-candidate-name">${escapeHtml(`${c.firstName} ${c.lastName}`.toUpperCase())}</p>
+        <p class="life-candidate-name">${escapeHtml(name)}</p>
         <p class="life-candidate-origin">${escapeHtml(c.originName)}</p>
-      </button>`
-    )
+        <p class="life-candidate-pull"><span class="life-candidate-pull-label">PULL</span><span class="life-candidate-pull-glyph" aria-hidden="true">${escapeHtml(c.pullGlyph || "")}</span></p>
+      </button>`;
+    })
     .join("");
 
   for (const btn of els.lifeSelectionOptions.querySelectorAll(".life-candidate")) {
@@ -291,24 +350,80 @@ async function chooseCandidate(candidate, btnEl) {
 
   await waitMs(SELECTION_FADE_MS);
   selectionSession = null;
+  els.lifeSelection.classList.remove("is-visible");
   els.lifeSelection.hidden = true;
-  await playFragment("birth", {
-    firstName: candidate.firstName,
-    lastName: candidate.lastName,
-  });
+
+  if (!save.hasBegun) {
+    save.hasBegun = true;
+    primeAudio();
+    startSoundtrack();
+    writeSave(save);
+  }
+
+  await playBirthIntro(candidate);
   activateSelectedLife(candidate);
 }
 
+async function playBirthIntro(candidate) {
+  const name = `${candidate.firstName} ${candidate.lastName}`.trim();
+  await playFragment("birth", {
+    overrideText: `${name} was born.`,
+  });
+  if (candidate.pullGlyph) {
+    await playFragment("birth", { overrideText: `PULL  ${candidate.pullGlyph}` });
+  }
+}
+
+function displayXp(value) {
+  if (!els.bioXp) return;
+  els.bioXp.textContent = formatXp(value);
+}
+
+function pulseXpJump() {
+  if (!els.bioXp) return;
+  els.bioXp.classList.add("is-jump");
+  if (xpJumpTimer) clearTimeout(xpJumpTimer);
+  xpJumpTimer = setTimeout(() => {
+    els.bioXp?.classList.remove("is-jump");
+    xpJumpTimer = null;
+  }, 420);
+}
+
+function initXpTracker() {
+  if (xpTracker) return;
+  xpTracker = new XpTracker({
+    getSave: () => save,
+    getLife: () => save.activeLife,
+    onDisplay: displayXp,
+    onJump: pulseXpJump,
+    onSync: () => writeSave(save),
+  });
+}
+
+function startXpTracker() {
+  initXpTracker();
+  xpTracker.start();
+}
+
+function stopXpTracker() {
+  xpTracker?.stop();
+}
+
 function activateSelectedLife(candidate, atMs = Date.now()) {
-  save.activeLife = createLifeFromCandidate(content, rng, candidate, atMs);
+  const isFirstLife = !save.hasCompletedFirstLife;
+  save.activeLife = createLifeFromCandidate(content, rng, candidate, atMs, { isFirstLife });
+  initLifeXp(save.activeLife, save);
   save.activeLife.nextEventScheduledAt = nextEventTime(atMs, rng, DEV);
+  appendTimelineEntry(save, birthTimelineEntry(save.activeLife, atMs));
   hideLifeSelection();
   els.gameUi.hidden = false;
   setEventsExpanded(false);
   writeSave(save);
   renderStatus();
+  syncBackgroundMotion();
   startScheduleLoop();
   startAgeTick();
+  startXpTracker();
   memorySurface?.resetSession();
   memorySurface?.start();
   selectingLife = false;
@@ -333,6 +448,8 @@ async function handleLifeSelectionRedraw() {
 }
 
 function scheduleAfterDeath(atMs, { showLive = false } = {}) {
+  if (save.activeLife) finalizeLifeXp(save.activeLife, save, atMs);
+  stopXpTracker();
   save.activeLife = null;
   writeSave(save);
   stopScheduleLoop();
@@ -342,12 +459,15 @@ function scheduleAfterDeath(atMs, { showLive = false } = {}) {
 
 function showBeginScreen() {
   els.beginScreen.hidden = false;
+  els.beginScreen.classList.remove("is-visible");
+  if (els.titleWord) {
+    els.titleWord.textContent = "";
+    els.titleWord.classList.remove("is-shown");
+  }
   els.gameUi.hidden = true;
   if (els.lifeSelection) els.lifeSelection.hidden = true;
-  if (!save.hasBegun) {
-    els.btnBegin.hidden = true;
-  }
   memorySurface?.stop();
+  syncBackgroundMotion();
 }
 
 function hideBeginScreen() {
@@ -368,11 +488,13 @@ function stopScheduleLoop() {
   clearInterval(scheduleTimer);
   scheduleTimer = null;
   stopAgeTick();
+  stopXpTracker();
 }
 
 function memoryIsBlocked() {
   return (
     presentingLive ||
+    titleSequencePlaying ||
     document.hidden ||
     fragmentSurface?.isPlaying() ||
     !save.hasBegun ||
@@ -393,36 +515,26 @@ function initMemorySurface() {
   });
 }
 
-async function beginSession() {
-  save.hasBegun = true;
-  els.btnBegin.hidden = true;
-  hideBeginScreen();
-  primeAudio();
-  startSoundtrack();
-
-  if (!save.activeLife) {
-    if (needsLifeSelection()) {
-      showLifeSelection({ mode: "choose" });
-    } else {
-      await startNewLife();
-    }
-  } else {
-    migrateLife(save.activeLife);
-    await processSchedule({ allowLive: false });
-    renderStatus();
-  }
-
-  writeSave(save);
-
-  if (isSelectionVisible()) return;
-
-  startScheduleLoop();
-  startAgeTick();
-  memorySurface.start();
+function lifeTextureBlendFor(life, atMs = Date.now()) {
+  const progress = lifeProgress(life, atMs);
+  if (progress <= 0.04) return 0;
+  const t = (progress - 0.04) / 0.96;
+  return t * t * (3 - 2 * t);
 }
 
-function ageBlendFor(life) {
-  return Math.min(life.currentAge / MAX_AGE, 1);
+function ageBlendFor(life, atMs = Date.now()) {
+  return lifeTextureBlendFor(life, atMs);
+}
+
+function syncBackgroundMotion() {
+  if (!bg) return;
+  const inPlay =
+    save.hasBegun &&
+    save.activeLife?.status === "active" &&
+    !titleSequencePlaying &&
+    !isSelectionVisible() &&
+    els.beginScreen?.hidden !== false;
+  bg.setMotionActive(inPlay);
 }
 
 function formatBornDate(ms) {
@@ -471,7 +583,7 @@ function startAgeTick() {
   stopAgeTick();
   ageTickTimer = setInterval(() => {
     if (save.activeLife?.status === "active") renderStatus();
-  }, 60000);
+  }, 30000);
 }
 
 function stopAgeTick() {
@@ -496,55 +608,56 @@ function eventPopupText(life, text) {
   return `${name} ${trimmed.charAt(0).toLowerCase()}${trimmed.slice(1)}`;
 }
 
-function groupEventsByAge(events) {
-  const groups = new Map();
-  for (const e of events) {
-    if (!groups.has(e.age)) groups.set(e.age, []);
-    groups.get(e.age).push(e);
-  }
-  return [...groups.entries()]
-    .sort((a, b) => a[0] - b[0])
-    .map(([age, rows]) => ({
-      age,
-      rows: rows.sort((a, b) => a.timestamp - b.timestamp),
-    }));
-}
-
 function scrollEventsToPresent() {
   requestAnimationFrame(() => {
     els.eventsScroll.scrollTop = els.eventsScroll.scrollHeight;
   });
 }
 
-function renderEventsPanel(life) {
-  const events = life?.events || [];
-  if (!events.length) {
+function renderEventsPanel() {
+  const entries = save.timeline || [];
+  if (!entries.length) {
     els.eventsPreview.textContent = "—";
     els.eventsScroll.innerHTML = `<p class="events-empty">No records yet.</p>`;
     return;
   }
 
-  const latest = events[events.length - 1];
-  els.eventsPreview.textContent = eventPopupText(life, latest.text);
+  const latest = entries[entries.length - 1];
+  els.eventsPreview.textContent = formatTimelineText(latest);
 
-  const groups = groupEventsByAge(events);
-  const total = groups.length;
-  els.eventsScroll.innerHTML = groups
-    .map(
-      (g, i) => `
+  const chapters = groupTimelineByLife(entries);
+  els.eventsScroll.innerHTML = chapters
+    .map((chapter, chapterIndex) => {
+      const groups = groupEntriesByAge(chapter.entries);
+      const total = groups.length;
+      const chapterHtml = groups
+        .map(
+          (g, i) => `
       <div class="age-stratum" style="--stratum-depth: ${total - i - 1}">
         <h3 class="age-heading">AGE ${g.age}</h3>
         ${g.rows
           .map(
             (e) =>
-              `<p class="event-line${e.isRead ? "" : " unread"}">${escapeHtml(eventPopupText(life, e.text))}</p>`
+              `<p class="event-line${e.isRead ? "" : " unread"}">${escapeHtml(formatTimelineText(e))}</p>`
           )
           .join("")}
       </div>`
-    )
+        )
+        .join("");
+      const divider =
+        chapterIndex < chapters.length - 1
+          ? `<div class="life-chapter-gap" aria-hidden="true"></div>`
+          : "";
+      return `${chapterHtml}${divider}`;
+    })
     .join("");
 
   if (eventsExpanded) scrollEventsToPresent();
+}
+
+function markTimelineRead(recordId) {
+  const entry = save.timeline?.find((e) => e.id === recordId);
+  if (entry) entry.isRead = true;
 }
 
 function escapeHtml(s) {
@@ -557,6 +670,7 @@ function escapeHtml(s) {
 
 function finalizeEvent(life, record) {
   record.isRead = true;
+  markTimelineRead(record.id);
   if (!record.scarCreated) {
     const scarRng = new SeededRNG(Number(BigInt(record.id.length) ^ BigInt(life.mapSeed)));
     life.memoryScars.push(createScar(record.id, record.pulseX, record.pulseY, scarRng));
@@ -607,7 +721,7 @@ function presentLiveEvent(life, record) {
       finalizeEvent(life, record);
       writeSave(save);
       bg.setScars(life.memoryScars);
-      renderEventsPanel(life);
+      renderEventsPanel();
       pulseNewLogEntry();
       presentingLive = false;
       resolve();
@@ -619,16 +733,20 @@ function renderStatus() {
   const life = save.activeLife;
   if (!life) return;
   migrateLife(life);
+  syncLifeAge(life);
 
   els.bioName.textContent = displayName(life).toUpperCase();
   els.bioAge.textContent = formatAgeLine(life);
   els.bioBorn.textContent = `Born: ${formatBornDate(life.bornAt)}`;
   els.bioOrigin.textContent = `Origin: ${life.origin}`;
+  displayXp(life.xp ?? 0);
 
-  bg.setAgeBlend(ageBlendFor(life));
+  bg.setAgeBlend(ageBlendFor(life, Date.now()));
+  bg.setPullMood(pullBackgroundMoodTags(life.pullId));
   bg.setSeed(life.mapSeed);
   bg.setScars(life.memoryScars);
-  renderEventsPanel(life);
+  renderEventsPanel();
+  syncBackgroundMotion();
 }
 
 function setEventsExpanded(open) {
@@ -640,8 +758,8 @@ function setEventsExpanded(open) {
 }
 
 function generateOne(life, { forceDeath = false, atMs = Date.now() } = {}) {
-  life.currentAge = nextAge(life.currentAge, rng);
-  const result = generateEvent(life, content, rng, { forceDeath });
+  syncLifeAge(life, atMs);
+  const result = generateEvent(life, content, rng, { forceDeath, atMs });
   if (!result) return null;
 
   const record = {
@@ -666,9 +784,11 @@ function generateOne(life, { forceDeath = false, atMs = Date.now() } = {}) {
   };
 
   life.events.push(record);
+  appendTimelineEntry(save, timelineEntryFromRecord(life, record));
   life.usedTemplateIds.push(result.template.id);
   life.memories.push(...result.memories);
   life.lastEventGeneratedAt = atMs;
+  xpTracker?.eventJump();
 
   if (!result.isDeath) {
     applyPlaceEffects(life, result.template, record.memoryWeight);
@@ -689,6 +809,8 @@ function generateOne(life, { forceDeath = false, atMs = Date.now() } = {}) {
       birthYear: life.birthYear,
       deathYear: life.birthYear + life.currentAge,
       origin: life.origin,
+      pullId: life.pullId,
+      pullGlyph: life.pullGlyph,
       bornAt: life.bornAt,
       recordCount: life.events.length,
       deathCause: life.deathCause,
@@ -709,27 +831,8 @@ async function settleEvent(life, record, { live = false } = {}) {
   finalizeEvent(life, record);
 }
 
-async function startNewLife(atMs = Date.now()) {
-  const isFirstLife = !save.hasCompletedFirstLife;
-  if (!isFirstLife) {
-    showLifeSelection({ mode: "choose" });
-    return;
-  }
-  save.activeLife = createLife(content, rng, { isFirstLife: true });
-  save.activeLife.nextEventScheduledAt = nextEventTime(atMs, rng, DEV);
-  memorySurface?.resetSession();
-  els.gameUi.hidden = true;
-  await playFragment("birth", {
-    firstName: save.activeLife.firstName,
-    lastName: save.activeLife.surname,
-  });
-  els.gameUi.hidden = false;
-  if (save.hasBegun && save.activeLife.status === "active") {
-    memorySurface?.start();
-  }
-  writeSave(save);
-  renderStatus();
-  startAgeTick();
+async function startNewLife() {
+  showLifeSelection({ mode: "choose" });
 }
 
 async function processSchedule({
@@ -922,8 +1025,8 @@ function toggleMute() {
 }
 
 async function init() {
-  if (!els.beginScreen || !els.btnBegin || !els.gameUi) {
-    console.error("EVOL: missing required DOM nodes");
+  if (!els.beginScreen || !els.gameUi) {
+    console.error("DOOM DANCE: missing required DOM nodes");
     return;
   }
 
@@ -951,13 +1054,13 @@ async function init() {
 
   migrateSave();
   updateMuteUi();
+  syncBackgroundMotion();
   els.soundtrack.addEventListener("playing", syncMuteIconWithPlayback);
   els.soundtrack.addEventListener("pause", syncMuteIconWithPlayback);
   initMemorySurface();
 
   els.eventsToggle.addEventListener("click", () => setEventsExpanded(!eventsExpanded));
   els.btnMute.addEventListener("click", toggleMute);
-  els.btnBegin.addEventListener("click", () => beginSession());
   if (els.btnShowOthers) {
     els.btnShowOthers.addEventListener("click", () => handleLifeSelectionRedraw());
   }
@@ -977,6 +1080,7 @@ async function init() {
     if (!isSelectionVisible()) {
       startScheduleLoop();
       startAgeTick();
+      startXpTracker();
       memorySurface.start();
     }
   } else {
@@ -986,6 +1090,7 @@ async function init() {
       writeSave(save);
     }
     await playOpeningSequence();
+    syncBackgroundMotion();
   }
 
   if (DEV) {
@@ -1011,6 +1116,7 @@ async function init() {
     });
     bindDevButton(els.devReset, () => {
       stopScheduleLoop();
+      stopXpTracker();
       memorySurface?.stop();
       hideLifeSelection();
       clearSave();
@@ -1036,6 +1142,5 @@ async function init() {
 }
 
 init().catch((err) => {
-  console.error("EVOL init failed", err);
-  if (els.btnBegin) els.btnBegin.hidden = false;
+  console.error("DOOM DANCE init failed", err);
 });

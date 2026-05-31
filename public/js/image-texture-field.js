@@ -1,12 +1,23 @@
 /** Pan/zoom background from archive texture. Max zoom 2×. Ambient drift + user pan. */
 export class ImageTextureField {
-  constructor(canvas, { src = "/evol/images/background-texture.png", gestureLayer = null } = {}) {
+  constructor(
+    canvas,
+    {
+      src = "/images/background-texture.png",
+      srcAged = "/images/background-texture-aged.png",
+      gestureLayer = null,
+    } = {}
+  ) {
     this.canvas = canvas;
     this.ctx = canvas.getContext("2d", { alpha: false });
     this.src = src;
+    this.srcAged = srcAged;
     this.img = new Image();
+    this.imgAged = new Image();
     this.img.decoding = "async";
+    this.imgAged.decoding = "async";
     this.ready = false;
+    this.agedReady = false;
     this.width = 0;
     this.height = 0;
     this.scale = 1;
@@ -18,7 +29,8 @@ export class ImageTextureField {
     this.driftX = 0;
     this.driftY = 0;
     this.breathe = 1;
-    this.ageBlend = 0;
+    this.textureBlend = 0;
+    this.motionActive = false;
     this._userPanning = false;
 
     this._pointers = new Map();
@@ -34,9 +46,18 @@ export class ImageTextureField {
       this.draw();
     };
     this.img.onerror = () => {
-      console.warn("EVOL: background texture failed to load", src);
+      console.warn("DOOM DANCE: background texture failed to load", src);
     };
     this.img.src = src;
+
+    this.imgAged.onload = () => {
+      this.agedReady = true;
+      this.draw();
+    };
+    this.imgAged.onerror = () => {
+      console.warn("DOOM DANCE: aged background texture failed to load", srcAged);
+    };
+    this.imgAged.src = srcAged;
 
     const surface = gestureLayer || canvas.parentElement || canvas;
     this._surface = surface;
@@ -54,19 +75,45 @@ export class ImageTextureField {
   }
 
   setAgeBlend(t) {
-    this.ageBlend = Math.max(0, Math.min(1, t));
+    const next = Math.max(0, Math.min(1, t));
+    if (Math.abs(next - this.textureBlend) < 0.0005) return;
+    this.textureBlend = next;
+    this.draw();
+  }
+
+  setMotionActive(active) {
+    this.motionActive = !!active;
   }
 
   setSeed() {}
 
   _ambient(now) {
-    if (!this._userPanning && this._pointers.size === 0) {
-      const t = now * 0.001;
-      this.driftX = Math.sin(t * 0.11) * 14 + Math.sin(t * 0.067) * 8;
-      this.driftY = Math.cos(t * 0.095) * 11 + Math.sin(t * 0.043) * 6;
-      this.breathe = 1 + Math.sin(t * 0.31) * 0.015;
+    const t = now * 0.001;
+
+    if (this.motionActive && !this._userPanning && this._pointers.size === 0) {
+      this.driftX =
+        Math.sin(t * 0.042) * 34 +
+        Math.sin(t * 0.027 + 1.4) * 18 +
+        Math.cos(t * 0.019) * 10;
+      this.driftY =
+        Math.cos(t * 0.036) * 28 +
+        Math.sin(t * 0.048 + 0.6) * 14 +
+        Math.sin(t * 0.023) * 8;
+      this.breathe = 1 + Math.sin(t * 0.19) * 0.028 + Math.sin(t * 0.07) * 0.012;
       this.draw();
+    } else if (!this.motionActive && !this._userPanning && this._pointers.size === 0) {
+      const settling =
+        Math.abs(this.driftX) > 0.15 ||
+        Math.abs(this.driftY) > 0.15 ||
+        Math.abs(this.breathe - 1) > 0.001;
+      if (settling) {
+        this.driftX *= 0.94;
+        this.driftY *= 0.94;
+        this.breathe += (1 - this.breathe) * 0.06;
+        this.draw();
+      }
     }
+
     requestAnimationFrame(this._ambient);
   }
 
@@ -92,17 +139,17 @@ export class ImageTextureField {
     this.clamp();
   }
 
-  _coverScale() {
-    if (!this.ready) return 1;
-    return Math.max(this.width / this.img.width, this.height / this.img.height);
+  _coverScale(img = this.img) {
+    if (!img?.width || !this.width || !this.height) return 1;
+    return Math.max(this.width / img.width, this.height / img.height);
   }
 
-  _drawSize() {
-    const cover = this._coverScale();
+  _drawSize(img = this.img) {
+    const cover = this._coverScale(img);
     const zoom = this.scale * this.baseOverscan * this.breathe;
     return {
-      w: this.img.width * cover * zoom,
-      h: this.img.height * cover * zoom,
+      w: img.width * cover * zoom,
+      h: img.height * cover * zoom,
     };
   }
 
@@ -145,7 +192,7 @@ export class ImageTextureField {
 
   _isInteractiveTarget(el) {
     return !!el?.closest?.(
-      "button, a, input, textarea, select, label, #dev-panel, .events-panel, .life-selection-inner, #begin-screen, .memory-overlay, .event-float"
+      "button, a, input, textarea, select, label, #dev-panel, .events-panel, .life-selection-panel, #begin-screen, .memory-overlay, .event-float"
     );
   }
 
@@ -220,15 +267,22 @@ export class ImageTextureField {
     ctx.fillRect(0, 0, this.width, this.height);
     if (!this.ready) return;
 
-    const { w, h } = this._drawSize();
-    const x = (this.width - w) / 2 + this.offsetX + this.driftX;
-    const y = (this.height - h) / 2 + this.offsetY + this.driftY;
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = "high";
+
+    const { w, h } = this._drawSize(this.img);
+    const x = Math.round((this.width - w) / 2 + this.offsetX + this.driftX);
+    const y = Math.round((this.height - h) / 2 + this.offsetY + this.driftY);
 
     ctx.drawImage(this.img, x, y, w, h);
 
-    if (this.ageBlend > 0.01) {
-      ctx.fillStyle = `rgba(0, 0, 0, ${this.ageBlend * 0.22})`;
-      ctx.fillRect(0, 0, this.width, this.height);
+    if (this.agedReady && this.textureBlend > 0.001) {
+      const agedSize = this._drawSize(this.imgAged);
+      const ax = Math.round((this.width - agedSize.w) / 2 + this.offsetX + this.driftX);
+      const ay = Math.round((this.height - agedSize.h) / 2 + this.offsetY + this.driftY);
+      ctx.globalAlpha = this.textureBlend;
+      ctx.drawImage(this.imgAged, ax, ay, agedSize.w, agedSize.h);
+      ctx.globalAlpha = 1;
     }
   }
 }

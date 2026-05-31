@@ -1,332 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-		<meta name="screen-orientation" content="landscape" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="theme-color" content="#06070a" />
-		<title>RETURN BUT DIFFERENT</title>
-		<link rel="manifest" href="manifest.webmanifest" />
-		<style>
-html, body, #canvas {
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#000000" />
+  <title>DOOM DANCE</title>
+  <base href="/" />
+  <link rel="stylesheet" href="/css/archive.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      min-height: 100dvh;
+      background: #000;
+      color: #e8e8e4;
+      overflow: hidden;
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    #phone {
+      position: relative;
+      width: 100%;
+      height: 100dvh;
+      min-height: 100dvh;
+      max-width: 430px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #2e2a26;
+    }
+    #memory-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: #000;
+      touch-action: none;
+    }
+    #field-canvas, #atmosphere-canvas, #scars-canvas, #pulse-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #bg-touch-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      touch-action: none;
+    }
+    #begin-screen {
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+      opacity: 0;
+      transition: opacity 0.85s ease;
+    }
+    #begin-screen.is-visible { opacity: 1; }
+    #begin-screen[hidden] { display: none !important; }
+    #game-ui {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+    }
+    #game-ui[hidden] { display: none !important; }
+    #bio-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+      padding: calc(0.85rem + env(safe-area-inset-top, 0px)) 3.75rem 0.75rem 1.1rem;
+    }
+    #bio-name {
+      margin: 0;
+      font-size: clamp(0.95rem, 4.2vw, 1.15rem);
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 0 1px 12px rgba(0,0,0,0.65);
+    }
+    #bio-age, #bio-born, #bio-origin {
+      margin: 0.28rem 0 0;
+      font-size: 0.72rem;
+      line-height: 1.45;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.7);
+    }
+    .mute-btn--fixed {
+      position: absolute;
+      top: calc(0.85rem + env(safe-area-inset-top, 0px));
+      right: 1.1rem;
+      z-index: 30;
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+    }
+    .mute-btn svg[hidden] {
+      display: none !important;
+    }
+    .events-panel {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+      z-index: 10;
+      background: rgba(0,0,0,0.8);
+      border-radius: 0.35rem;
+    }
+    .events-toggle {
+      width: 100%;
+      display: flex;
+      gap: 0.65rem;
+      padding: 0.85rem 1rem;
+      background: transparent;
+      border: none;
+      color: #e8e8e4;
+      text-align: left;
+      font: 400 0.72rem/1.5 ui-monospace, Menlo, monospace;
+    }
+  </style>
+</head>
+<body>
+  <audio
+    id="soundtrack"
+    preload="auto"
+    loop
+    playsinline
+    webkit-playsinline
+    crossorigin="anonymous"
+    src="/doom_soundtrack_01.mp3"
+  ></audio>
 
-html, body {
-	width: 100%;
-	height: 100%;
-	height: 100dvh;
-	overflow: hidden;
-	background: #06070a;
-	touch-action: manipulation;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	user-select: none;
-}
+  <div id="phone">
+    <div id="memory-bg" aria-hidden="true">
+      <canvas id="field-canvas"></canvas>
+      <canvas id="atmosphere-canvas"></canvas>
+      <canvas id="scars-canvas"></canvas>
+      <canvas id="pulse-canvas"></canvas>
+    </div>
 
-#canvas-wrap {
-	position: fixed;
-	inset: 0;
-	box-sizing: border-box;
-	padding:
-		env(safe-area-inset-top, 0px)
-		env(safe-area-inset-right, 0px)
-		env(safe-area-inset-bottom, 0px)
-		env(safe-area-inset-left, 0px);
-}
+    <div id="event-float-layer" aria-live="polite"></div>
+    <div id="memory-overlay-layer" aria-live="polite"></div>
+    <div id="fragment-layer" hidden aria-live="polite"></div>
 
-#canvas {
-	display: block;
-	width: 100%;
-	height: 100%;
-	outline: none;
-}
+    <div id="begin-screen" hidden>
+      <p id="title-word" class="title-word" aria-live="polite"></p>
+    </div>
 
-#canvas:focus {
-	outline: none;
-}
+    <div id="life-selection" hidden>
+      <div class="life-selection-panel">
+        <div class="life-selection-inner">
+          <header class="life-selection-header">
+            <h2 id="life-selection-title" class="life-selection-title">choose a life:</h2>
+            <p id="life-selection-sub-a" class="life-selection-sub" hidden></p>
+            <p id="life-selection-sub-b" class="life-selection-sub" hidden></p>
+          </header>
+          <div id="life-selection-options" class="life-selection-options"></div>
+          <button type="button" id="btn-show-others" class="life-selection-redraw">SHOW THREE OTHERS</button>
+        </div>
+      </div>
+    </div>
 
-#status, #status-splash, #status-progress, #status-notice {
-	display: none !important;
-}
+    <button type="button" id="btn-mute" class="mute-btn mute-btn--fixed" aria-label="Mute soundtrack" aria-pressed="false">
+      <svg class="icon-speaker" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+        <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+      </svg>
+      <svg class="icon-muted" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" hidden>
+        <path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v1.96c2.89.86 5 3.54 5 6.81zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+      </svg>
+    </button>
 
-#doom-soundtrack {
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 1px;
-	height: 1px;
-	opacity: 0;
-	pointer-events: none;
-}
-		</style>
-		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
-<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+    <div id="game-ui" hidden>
+    <header id="bio-bar">
+      <div class="bio-copy">
+        <h1 id="bio-name">—</h1>
+        <p id="bio-age">Age 0</p>
+        <p id="bio-born">Born —</p>
+        <p id="bio-origin">Origin —</p>
+        <p id="bio-xp" class="bio-xp">0.0</p>
+      </div>
+    </header>
 
-	</head>
-	<body>
-		<div id="canvas-wrap">
-		<canvas id="canvas">
-			Your browser does not support the canvas tag.
-		</canvas>
-		</div>
+    <section id="events-panel" class="events-panel">
+      <button type="button" id="events-toggle" class="events-toggle" aria-expanded="false">
+        <span id="events-chevron" class="chevron" aria-hidden="true">▶</span>
+        <span id="events-preview" class="events-preview">—</span>
+      </button>
+      <div id="events-body" class="events-body" hidden>
+        <div id="events-scroll" class="events-scroll"></div>
+      </div>
+    </section>
+    </div>
 
-		<noscript>
-			Your browser does not support JavaScript.
-		</noscript>
+    <div id="dev-panel" hidden>
+      <button type="button" id="dev-sim-next">SIM TO NEXT</button>
+      <button type="button" id="dev-sim-1d">SIM 1 DAY</button>
+      <button type="button" id="dev-sim-7d">SIM 7 DAYS</button>
+      <button type="button" id="dev-sim-30d">SIM 30 DAYS</button>
+      <hr class="dev-divider" />
+      <button type="button" id="dev-event">GENERATE EVENT</button>
+      <button type="button" id="dev-kill">KILL LIFE</button>
+      <button type="button" id="dev-reset">RESET ALL</button>
+    </div>
+  </div>
 
-		<audio
-			id="doom-soundtrack"
-			preload="auto"
-			loop
-			playsinline
-			webkit-playsinline
-			crossorigin="anonymous"
-			src="/doom_soundtrack_01.mp3"
-		></audio>
-
-		<div id="status">
-			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
-			<progress id="status-progress"></progress>
-			<div id="status-notice"></div>
-		</div>
-
-		<script src="index.js"></script>
-		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":37679024,"index.wasm":43699190},"focusCanvas":true,"gdextensionLibs":[]};
-const GODOT_THREADS_ENABLED = false;
-const engine = new Engine(GODOT_CONFIG);
-
-(function () {
-	const canvas = document.getElementById('canvas');
-	const wrap = document.getElementById('canvas-wrap');
-	const setSize = () => {
-		if (wrap) {
-			wrap.style.width = window.innerWidth + 'px';
-			wrap.style.height = window.innerHeight + 'px';
-		}
-		canvas.style.width = '100%';
-		canvas.style.height = '100%';
-	};
-	window.addEventListener('resize', setSize);
-	window.addEventListener('orientationchange', setSize);
-	setSize();
-
-	let htmlMuted = false;
-	let audioLive = false;
-	let primed = false;
-	const getAudio = () => document.getElementById('doom-soundtrack');
-
-	const primeAudio = () => {
-		const audio = getAudio();
-		if (!audio || primed) {
-			return;
-		}
-		primed = true;
-		audio.load();
-	};
-
-	const bindAudioEvents = () => {
-		const audio = getAudio();
-		if (!audio || audio.dataset.bound) {
-			return;
-		}
-		audio.dataset.bound = '1';
-		audio.addEventListener('playing', () => {
-			audioLive = true;
-		});
-		audio.addEventListener('pause', () => {
-			audioLive = false;
-		});
-		audio.addEventListener('ended', () => {
-			audioLive = false;
-		});
-		audio.addEventListener('error', () => {
-			audioLive = false;
-			console.warn('doom soundtrack error', audio.error);
-		});
-	};
-
-	window.doomDanceStartMusic = function () {
-		if (htmlMuted) {
-			return false;
-		}
-		const audio = getAudio();
-		if (!audio) {
-			return false;
-		}
-		bindAudioEvents();
-		primeAudio();
-		audio.volume = 1.0;
-		audio.muted = false;
-		const playAttempt = audio.play();
-		if (playAttempt && typeof playAttempt.catch === 'function') {
-			playAttempt.catch(function (err) {
-				audioLive = false;
-				console.warn('doomDanceStartMusic', err);
-			});
-		}
-		return !audio.paused;
-	};
-
-	window.doomDanceStopMusic = function () {
-		const audio = getAudio();
-		if (!audio) {
-			return;
-		}
-		audio.pause();
-		audioLive = false;
-	};
-
-	window.doomDanceSetMuted = function (muted) {
-		htmlMuted = !!muted;
-		const audio = getAudio();
-		if (!audio) {
-			return;
-		}
-		audio.muted = htmlMuted;
-		if (htmlMuted) {
-			audio.pause();
-			audioLive = false;
-		} else {
-			window.doomDanceStartMusic();
-		}
-	};
-
-	window.doomDanceIsPlaying = function () {
-		const audio = getAudio();
-		return !!(audio && audioLive && !audio.paused && !audio.muted && !htmlMuted);
-	};
-
-	const unlockWebAudio = () => {
-		primeAudio();
-		bindAudioEvents();
-		try {
-			if (typeof engine !== 'undefined' && engine && typeof engine.runsInWasm === 'function' && engine.runsInWasm()) {
-				const ctx = engine.audioCtx || (engine.audio && engine.audio.ctx);
-				if (ctx && ctx.state === 'suspended') {
-					ctx.resume();
-				}
-			}
-		} catch (err) {
-			console.warn('godot audio unlock', err);
-		}
-		if (!htmlMuted) {
-			window.doomDanceStartMusic();
-		}
-	};
-
-	['pointerdown', 'touchstart', 'click'].forEach((eventName) => {
-		document.addEventListener(eventName, unlockWebAudio, { passive: true });
-	});
-})();
-
-(function () {
-	const statusOverlay = document.getElementById('status');
-	const statusProgress = document.getElementById('status-progress');
-	const statusNotice = document.getElementById('status-notice');
-
-	let initializing = true;
-	let statusMode = '';
-
-	function setStatusMode(mode) {
-		if (statusMode === mode || !initializing) {
-			return;
-		}
-		if (mode === 'hidden') {
-			statusOverlay.remove();
-			initializing = false;
-			return;
-		}
-		statusOverlay.style.visibility = 'visible';
-		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
-		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
-		statusMode = mode;
-	}
-
-	function setStatusNotice(text) {
-		while (statusNotice.lastChild) {
-			statusNotice.removeChild(statusNotice.lastChild);
-		}
-		const lines = text.split('\n');
-		lines.forEach((line) => {
-			statusNotice.appendChild(document.createTextNode(line));
-			statusNotice.appendChild(document.createElement('br'));
-		});
-	}
-
-	function displayFailureNotice(err) {
-		console.error(err);
-		if (err instanceof Error) {
-			setStatusNotice(err.message);
-		} else if (typeof err === 'string') {
-			setStatusNotice(err);
-		} else {
-			setStatusNotice('An unknown error occurred.');
-		}
-		setStatusMode('notice');
-		initializing = false;
-	}
-
-	const missing = Engine.getMissingFeatures({
-		threads: GODOT_THREADS_ENABLED,
-	});
-
-	if (missing.length !== 0) {
-		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
-			let serviceWorkerRegistrationPromise;
-			try {
-				serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
-			} catch (err) {
-				serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
-			}
-			Promise.race([
-				serviceWorkerRegistrationPromise.then((registration) => {
-					if (registration != null) {
-						return Promise.reject(new Error('Service worker already exists.'));
-					}
-					return registration;
-				}).then(() => engine.installServiceWorker()),
-				new Promise((resolve) => {
-					setTimeout(() => resolve(), 2000);
-				}),
-			]).then(() => {
-				window.location.reload();
-			}).catch((err) => {
-				console.error('Error while registering service worker:', err);
-			});
-		} else {
-			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
-			displayFailureNotice(missingMsg + missing.join('\n'));
-		}
-	} else {
-		setStatusMode('progress');
-		engine.startGame({
-			'onProgress': function (current, total) {
-				if (current > 0 && total > 0) {
-					statusProgress.value = current;
-					statusProgress.max = total;
-				} else {
-					statusProgress.removeAttribute('value');
-					statusProgress.removeAttribute('max');
-				}
-			},
-		}).then(() => {
-			setStatusMode('hidden');
-			primeAudio();
-			bindAudioEvents();
-			if (!htmlMuted) {
-				window.doomDanceStartMusic();
-			}
-		}, displayFailureNotice);
-	}
-}());
-		</script>
-	</body>
+  <script type="module" src="/js/app.js"></script>
+</body>
 </html>
-

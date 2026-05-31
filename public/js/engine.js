@@ -1,4 +1,11 @@
-import { SeededRNG } from "./rng.js";
+import { rollLifePull } from "./pull.js";
+import {
+  assignLifeDuration,
+  migrateLifeDuration,
+  syncLifeAge,
+  shouldDieByDuration,
+  rollNormalTargetDeathAge,
+} from "./life-duration.js";
 import {
   enrichOrigin,
   initLifePlaceFields,
@@ -15,9 +22,9 @@ const CATEGORY_WEIGHTS = [
   ["milestone", 0.03],
 ];
 
-function pickTemplate(pool, life, age, rng) {
+function pickTemplate(pool, life, age, rng, { forDeath = false } = {}) {
   if (!pool.length) return null;
-  return pickScoredTemplate(pool, life, age, rng);
+  return pickScoredTemplate(pool, life, age, rng, { forDeath });
 }
 
 function pickCategory(rng) {
@@ -54,9 +61,6 @@ function poolForCategory(cat, age, content) {
   }
 }
 
-const FIRST_LIFE_MIN_EVENTS = 6;
-const FIRST_LIFE_PREFERRED_MIN = 10;
-
 const FIRST_LIFE_PROFILE_WEIGHTS = [
   ["first_life_childhood_death", 0.6],
   ["first_life_young_adult_death", 0.25],
@@ -92,65 +96,23 @@ export function assignFirstLifeMortality(life, rng) {
     life.targetDeathAge = rollChildhoodDeathAge(rng);
   } else if (profile === "first_life_young_adult_death") {
     life.targetDeathAge = rollYoungAdultDeathAge(rng);
+  } else if (profile === "normal") {
+    life.targetDeathAge = rollNormalTargetDeathAge(rng);
   } else {
     life.targetDeathAge = null;
   }
 }
 
-function normalDeathChance(age, eventCount) {
-  let base;
-  if (age <= 4) base = 0.0008;
-  else if (age <= 12) base = 0.0012;
-  else if (age <= 19) base = 0.002;
-  else if (age <= 39) base = 0.003;
-  else if (age <= 59) base = 0.006;
-  else if (age <= 74) base = 0.012;
-  else base = 0.025;
-  const maturity = Math.min(eventCount / 200, 1);
-  return base * (1 + maturity * 0.5);
+export function shouldDie(life, rng, atMs = Date.now()) {
+  return shouldDieByDuration(life, rng, atMs);
 }
 
-function firstLifeDeathChance(life) {
-  const { currentAge: age, events, targetDeathAge } = life;
-  const eventCount = events.length;
-  if (eventCount < FIRST_LIFE_MIN_EVENTS) return 0;
-  if (targetDeathAge == null || age < targetDeathAge) return 0;
-
-  const overshoot = age - targetDeathAge;
-  if (eventCount < FIRST_LIFE_PREFERRED_MIN) {
-    return 0.45 + Math.min(overshoot * 0.08, 0.25);
-  }
-  return 0.88 + Math.min(overshoot * 0.04, 0.11);
-}
-
-export function shouldDie(life, rng) {
-  const age = life.currentAge;
-  const eventCount = life.events.length;
-  const profile = life.mortalityProfile || "normal";
-
-  if (profile !== "normal" && life.targetDeathAge != null) {
-    const chance = firstLifeDeathChance(life);
-    if (chance > 0) return rng.nextDouble() < chance;
-    return false;
-  }
-
-  return rng.nextDouble() < normalDeathChance(age, eventCount);
-}
-
-export function nextAge(current, rng) {
-  if (current === 0) return rng.nextInt(2, 4);
-  let inc;
-  if (current <= 5) inc = rng.nextInt(0, 1);
-  else if (current <= 12) inc = rng.nextInt(0, 2);
-  else if (current <= 25) inc = rng.nextInt(1, 3);
-  else if (current <= 50) inc = rng.nextInt(1, 4);
-  else inc = rng.nextInt(1, 5);
-  return Math.min(current + Math.max(inc, 1), 99);
-}
+export { syncLifeAge, migrateLifeDuration };
 
 export function createLife(content, rng, { isFirstLife = false } = {}) {
   const year = new Date().getFullYear() - rng.nextInt(0, 2);
   const originEntry = rng.pick(content.origins) || rng.pick(content.places);
+  const pull = rollLifePull(rng);
   return buildLife({
     content,
     rng,
@@ -159,17 +121,22 @@ export function createLife(content, rng, { isFirstLife = false } = {}) {
     surname: rng.pick(content.surnames) || "Person",
     originEntry,
     isFirstLife,
+    pullId: pull.id,
+    pullGlyph: pull.glyph,
   });
 }
 
 export function createLifeCandidate(content, rng) {
   const originEntry = rng.pick(content.origins) || rng.pick(content.places);
+  const pull = rollLifePull(rng);
   return {
     id: crypto.randomUUID(),
     firstName: rng.pick(content.firstNames) || "Unknown",
     lastName: rng.pick(content.surnames) || "Person",
     originId: originEntry?.id || null,
     originName: originEntry?.name || "Unknown",
+    pullId: pull.id,
+    pullGlyph: pull.glyph,
   };
 }
 
@@ -205,7 +172,13 @@ function resolveOriginEntry(content, candidate) {
   return null;
 }
 
-export function createLifeFromCandidate(content, rng, candidate, atMs = Date.now()) {
+export function createLifeFromCandidate(
+  content,
+  rng,
+  candidate,
+  atMs = Date.now(),
+  { isFirstLife = false } = {}
+) {
   const year = new Date().getFullYear() - rng.nextInt(0, 2);
   const originEntry = resolveOriginEntry(content, candidate) || rng.pick(content.places);
   const life = buildLife({
@@ -220,13 +193,26 @@ export function createLifeFromCandidate(content, rng, candidate, atMs = Date.now
       category: "town",
       tags: ["rural"],
     },
-    isFirstLife: false,
+    isFirstLife,
     bornAt: atMs,
+    pullId: candidate.pullId,
+    pullGlyph: candidate.pullGlyph,
   });
   return life;
 }
 
-function buildLife({ content, rng, year, firstName, surname, originEntry, isFirstLife, bornAt }) {
+function buildLife({
+  content,
+  rng,
+  year,
+  firstName,
+  surname,
+  originEntry,
+  isFirstLife,
+  bornAt,
+  pullId,
+  pullGlyph,
+}) {
   const resolvedOrigin = enrichOrigin(originEntry);
   const life = {
     id: crypto.randomUUID(),
@@ -249,9 +235,15 @@ function buildLife({ content, rng, year, firstName, surname, originEntry, isFirs
     mapSeed: Number(rng.next() & 0xffffffffffffn),
     lastEventGeneratedAt: null,
     nextEventScheduledAt: null,
+    pullId: pullId || null,
+    pullGlyph: pullGlyph || null,
+    targetRealDays: null,
   };
   initLifePlaceFields(life, resolvedOrigin);
-  if (isFirstLife) assignFirstLifeMortality(life, rng);
+  assignLifeDuration(life, rng, {
+    isFirstLife,
+    assignFirstLifeMortality,
+  });
   return life;
 }
 
@@ -285,13 +277,14 @@ function extractMemories(template, text, age) {
   }));
 }
 
-export function generateEvent(life, content, rng, { forceDeath = false } = {}) {
+export function generateEvent(life, content, rng, { forceDeath = false, atMs = Date.now() } = {}) {
+  syncLifeAge(life, atMs);
   const age = life.currentAge;
   const used = life.usedTemplateIds;
 
-  if (forceDeath || shouldDie(life, rng)) {
+  if (forceDeath || shouldDie(life, rng, atMs)) {
     const deaths = eligible(content.deaths, age, used);
-    const death = pickTemplate(deaths, life, age, rng);
+    const death = pickTemplate(deaths, life, age, rng, { forDeath: true });
     if (death) {
       return {
         template: death,
@@ -420,7 +413,7 @@ export async function loadContent() {
     "strange_events", "places_events", "death_events", "memory_callbacks",
     "place_typed_events", "banned_phrases",
   ];
-  const base = new URL("/evol/data/", window.location.origin);
+  const base = new URL("/data/", window.location.origin);
   const entries = await Promise.all(
     files.map(async (name) => {
       const res = await fetch(new URL(`${name}.json`, base));
