@@ -1,7 +1,8 @@
 {
   "outputDirectory": "public",
   "rewrites": [
-    { "source": "/evol", "destination": "/evol/index.html" }
+    { "source": "/evol", "destination": "/evol/index.html" },
+    { "source": "/evol/", "destination": "/evol/index.html" }
   ],
   "redirects": [
     { "source": "/rbd", "destination": "/evol", "permanent": true },
