@@ -1,51 +1,49 @@
-# RETURN BUT DIFFERENT — portrait web devtest
+# EVOL — portrait web devtest
 
 Live dev build for the EVOL archive engine (portrait, memory city background).
 
 ## Play URL
 
-**https://doomdance.makeawesome.com/rbd/**
+**https://doomdance.makeawesome.com/evol/**
 
 Add `?dev` for fast event timing and debug controls:
 
-**https://doomdance.makeawesome.com/rbd/?dev**
+**https://doomdance.makeawesome.com/evol/?dev**
 
 ## iPhone (Safari)
 
 1. Open the URL above in **portrait**.
 2. Tap the red radar pulse when an unread event exists.
-3. Progress saves in **localStorage** (`rbd_archive_v1`).
+3. Progress saves in **localStorage** (`evol_archive_v1`).
 4. Optional: **Add to Home Screen** for fullscreen.
 
 ## Local
 
 ```bash
-cd public/rbd
+cd public/evol
 python3 -m http.server 8788
 ```
 
 Open `http://localhost:8788` (portrait frame on desktop).
 
-## Sync from EVOL iOS project
+## Sync from iOS project
 
-When JSON or city art changes in the standalone iOS repo:
+When JSON or city art changes in the standalone EVOL iOS repo:
 
 ```bash
-./scripts/sync-rbd-web-dev.sh
+./scripts/sync-evol-web-dev.sh
 ```
 
 Sources: `/Users/dustyaltena/Documents/dev/EVOL/ReturnButDifferent/`
 
 ## Deploy
 
-Committed under `public/rbd/`. Push to `main` → Vercel redeploys `doomdance.makeawesome.com`.
-
-No Godot export required for this path.
+Committed under `public/evol/`. Push to `main` → Vercel redeploys `doomdance.makeawesome.com`.
 
 ## Reset save
 
 ```js
-localStorage.removeItem('rbd_archive_v1');
+localStorage.removeItem('evol_archive_v1');
 ```
 
 ## Dev controls (`?dev`)

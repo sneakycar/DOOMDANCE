@@ -1,4 +1,4 @@
-const SAVE_KEY = "rbd_archive_v1";
+const SAVE_KEY = "evol_archive_v1";
 
 export function loadSave() {
   try {

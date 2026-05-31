@@ -1,10 +1,10 @@
 # DOOM DANCE — iPhone web playtest (Vercel)
 
-## RETURN BUT DIFFERENT (portrait dev — EVOL)
+## EVOL (portrait web dev)
 
-**https://doomdance.makeawesome.com/rbd/** · add **`?dev`** for fast events + debug panel.
+**https://doomdance.makeawesome.com/evol/** · add **`?dev`** for fast events + debug panel.
 
-Portrait archive terminal with memory city background. See `public/rbd/README.md`.
+Portrait archive terminal with memory city background. See `public/evol/README.md`.
 
 ---
 

@@ -1,7 +1,11 @@
 {
   "outputDirectory": "public",
   "rewrites": [
-    { "source": "/rbd", "destination": "/rbd/index.html" }
+    { "source": "/evol", "destination": "/evol/index.html" }
+  ],
+  "redirects": [
+    { "source": "/rbd", "destination": "/evol", "permanent": true },
+    { "source": "/rbd/:path*", "destination": "/evol/:path*", "permanent": true }
   ],
   "headers": [
     {
