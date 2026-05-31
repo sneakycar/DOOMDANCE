@@ -1,11 +1,14 @@
 const DAY_MS = 86400000;
 
+/** Real-time share of a life spent reaching each age band (must end at 1). */
 const PHASE_ENDS = [
-  { progress: 0.08, maxAge: 5 },
-  { progress: 0.3, maxAge: 18 },
-  { progress: 0.75, maxAge: 60 },
+  { progress: 0.07, maxAge: 5 },
+  { progress: 0.32, maxAge: 18 },
+  { progress: 0.72, maxAge: 60 },
   { progress: 1, maxAge: null },
 ];
+
+export const LIFE_DURATION_VERSION = 2;
 
 export function rollNormalTargetDeathAge(rng) {
   const roll = rng.nextDouble();
@@ -19,9 +22,9 @@ export function rollNormalTargetDeathAge(rng) {
 
 export function rollTargetRealDays(rng, { isFirstLife = false, mortalityProfile = "normal" } = {}) {
   if (isFirstLife && mortalityProfile !== "normal") {
-    return rng.nextDoubleRange(3, 7);
+    return rng.nextInt(3, 7);
   }
-  return rng.nextDoubleRange(28, 35);
+  return rng.nextInt(28, 35);
 }
 
 function buildMilestones(targetDeathAge) {
@@ -64,6 +67,25 @@ export function computeAgeFromProgress(progress, targetDeathAge) {
   return target;
 }
 
+export function progressForAge(ageYears, targetDeathAge) {
+  const target = Math.max(1, Math.round(targetDeathAge ?? 75));
+  const desired = Math.max(0, Math.min(target, Math.floor(ageYears ?? 0)));
+  const milestones = buildMilestones(target);
+
+  for (let i = 1; i < milestones.length; i += 1) {
+    const prev = milestones[i - 1];
+    const next = milestones[i];
+    if (desired <= next.age) {
+      const span = next.age - prev.age || 1;
+      const local = (desired - prev.age) / span;
+      const progressSpan = next.progress - prev.progress;
+      return Math.max(0, Math.min(1, prev.progress + local * progressSpan));
+    }
+  }
+
+  return 1;
+}
+
 export function lifeProgress(life, atMs = Date.now()) {
   const bornAt = life.bornAt ?? atMs;
   const targetDays = life.targetRealDays ?? 31;
@@ -94,9 +116,17 @@ export function assignLifeDuration(life, rng, { isFirstLife = false, assignFirst
     isFirstLife,
     mortalityProfile: life.mortalityProfile || "normal",
   });
+  life.lifeDurationVersion = LIFE_DURATION_VERSION;
 }
 
-export function migrateLifeDuration(life, rng, { assignFirstLifeMortality, isFirstLife = false } = {}) {
+export function migrateLifeDuration(
+  life,
+  rng,
+  { assignFirstLifeMortality, isFirstLife = false, atMs = Date.now() } = {}
+) {
+  const needsVersionUpgrade = (life.lifeDurationVersion || 0) < LIFE_DURATION_VERSION;
+  const needsDurationFields = life.targetRealDays == null || life.targetDeathAge == null;
+
   if (life.mortalityProfile == null) {
     if (isFirstLife && assignFirstLifeMortality) {
       assignFirstLifeMortality(life, rng);
@@ -104,15 +134,59 @@ export function migrateLifeDuration(life, rng, { assignFirstLifeMortality, isFir
       life.mortalityProfile = "normal";
     }
   }
+
   if (life.targetDeathAge == null && (life.mortalityProfile === "normal" || !isFirstLife)) {
     life.targetDeathAge = rollNormalTargetDeathAge(rng);
   }
-  if (life.targetRealDays == null) {
+
+  if (needsDurationFields || needsVersionUpgrade) {
     life.targetRealDays = rollTargetRealDays(rng, {
       isFirstLife,
       mortalityProfile: life.mortalityProfile || "normal",
     });
   }
+
+  if (needsDurationFields || needsVersionUpgrade) {
+    const age = Math.max(0, life.currentAge ?? 0);
+    const progress = progressForAge(age, life.targetDeathAge ?? 75);
+    const targetMs = (life.targetRealDays ?? 31) * DAY_MS;
+    life.bornAt = atMs - progress * targetMs;
+    life.lifeDurationVersion = LIFE_DURATION_VERSION;
+  } else if (life.lifeDurationVersion == null) {
+    life.lifeDurationVersion = LIFE_DURATION_VERSION;
+  }
+
+  syncLifeAge(life, atMs);
+}
+
+function rareAccidentalDeath(life, rng, progress, age) {
+  if (life.mortalityProfile !== "normal") return false;
+  if (progress < 0.28 || progress > 0.78 || age < 22) return false;
+  return rng.nextDouble() < 0.000006;
+}
+
+function firstLifeDeathChance(life, progress, age, target, atMs) {
+  const elapsedDays = (atMs - (life.bornAt ?? atMs)) / DAY_MS;
+  if (elapsedDays < 3) return false;
+  if (progress < 0.78) return false;
+  if (age < target) return false;
+  if (progress >= 0.98 && age >= target) return true;
+
+  let chance = progress >= 0.9 ? 0.45 + (progress - 0.9) * 5 : 0.1;
+  if (age >= target) chance += 0.3;
+  if (progress >= 0.95 && age >= target) chance = 0.92;
+  return chance;
+}
+
+function normalDeathChance(life, progress, age, target) {
+  if (progress < 0.88) return false;
+  if (age < target - 1) return false;
+  if (progress >= 0.995 && age >= target - 1) return true;
+
+  let chance = 0.04 + Math.max(0, progress - 0.9) * 1.4;
+  if (age >= target) chance += 0.35;
+  if (progress >= 0.97 && age >= target) chance = 0.9;
+  return chance;
 }
 
 export function shouldDieByDuration(life, rng, atMs = Date.now()) {
@@ -122,26 +196,11 @@ export function shouldDieByDuration(life, rng, atMs = Date.now()) {
   const target = life.targetDeathAge ?? 75;
   const profile = life.mortalityProfile || "normal";
 
-  if (profile === "normal" && progress > 0.2 && progress < 0.82 && age >= 20) {
-    if (rng.nextDouble() < 0.00035) return true;
-  }
+  if (rareAccidentalDeath(life, rng, progress, age)) return true;
 
   if (profile !== "normal") {
-    if (progress < 0.7) return false;
-    if (age < target) return false;
-    if (progress >= 0.98 && age >= target) return true;
-    let chance = progress >= 0.88 ? 0.5 + (progress - 0.88) * 4 : 0.12;
-    if (age >= target) chance += 0.28;
-    if (progress >= 0.94 && age >= target) chance = 0.9;
-    return rng.nextDouble() < Math.min(chance, 0.96);
+    return rng.nextDouble() < firstLifeDeathChance(life, progress, age, target, atMs);
   }
 
-  if (progress < 0.84) return false;
-  if (age < target - 1) return false;
-  if (progress >= 0.99 && age >= target - 1) return true;
-
-  let chance = 0.03 + Math.max(0, progress - 0.86) * 0.9;
-  if (age >= target) chance += 0.32;
-  if (progress >= 0.95 && age >= target) chance = 0.88;
-  return rng.nextDouble() < Math.min(chance, 0.95);
+  return rng.nextDouble() < normalDeathChance(life, progress, age, target);
 }

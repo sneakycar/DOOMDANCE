@@ -332,11 +332,7 @@ export function nextEventTime(fromMs, rng, devMode) {
   if (devMode) {
     return fromMs + rng.nextDoubleRange(15, 45) * 1000;
   }
-  const roll = rng.nextDouble();
-  let hours;
-  if (roll < 0.15) hours = rng.nextDoubleRange(4.5, 8);
-  else if (roll < 0.35) hours = rng.nextDoubleRange(0.4, 1.2);
-  else hours = rng.nextDoubleRange(1, 4);
+  const hours = 0.82 + rng.nextDouble() * 0.36;
   return fromMs + hours * 3600 * 1000;
 }
 
@@ -345,7 +341,7 @@ export function catchUpCount(lastMs, nowMs, rng, devMode) {
   const elapsed = nowMs - lastMs;
   const threshold = devMode ? 10000 : 3600000;
   if (elapsed <= threshold) return 0;
-  const unit = devMode ? 20000 : 2.5 * 3600000;
+  const unit = devMode ? 20000 : 3600000;
   let expected = Math.floor(elapsed / unit);
   if (expected <= 0) return rng.nextDouble() < 0.3 ? 1 : 0;
   let count = Math.min(expected, 20);
