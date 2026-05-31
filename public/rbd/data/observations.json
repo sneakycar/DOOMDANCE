@@ -1,0 +1,4202 @@
+[
+  {
+    "id": "obs_0001",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a truck idle behind a grocery store."
+  },
+  {
+    "id": "obs_0002",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a dead bird under the dryer vent."
+  },
+  {
+    "id": "obs_0003",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You spent fifteen minutes watching a man unload oranges."
+  },
+  {
+    "id": "obs_0004",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You began avoiding gas stations with bright lighting."
+  },
+  {
+    "id": "obs_0005",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard someone coughing inside an empty house."
+  },
+  {
+    "id": "obs_0006",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "The motel pool was covered for the season."
+  },
+  {
+    "id": "obs_0007",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found thirty-seven shoes near a drainage ditch."
+  },
+  {
+    "id": "obs_0008",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You carried the same flashlight for eleven years."
+  },
+  {
+    "id": "obs_0009",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You slept through an entire thunderstorm."
+  },
+  {
+    "id": "obs_0010",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed that birds seem louder near warehouses."
+  },
+  {
+    "id": "obs_0011",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a television playing inside an empty laundromat."
+  },
+  {
+    "id": "obs_0012",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You became afraid of open water."
+  },
+  {
+    "id": "obs_0013",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You stopped liking fluorescent lights."
+  },
+  {
+    "id": "obs_0014",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You stood under a highway overpass during heavy rain."
+  },
+  {
+    "id": "obs_0015",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You decided the cornfields were not empty."
+  },
+  {
+    "id": "obs_0016",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You kept a receipt in your wallet until the ink disappeared."
+  },
+  {
+    "id": "obs_0017",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched rainwater collect in a parking lot crack."
+  },
+  {
+    "id": "obs_0018",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted seven pigeons on a single wire."
+  },
+  {
+    "id": "obs_0019",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a door that was always slightly open."
+  },
+  {
+    "id": "obs_0020",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You smelled cut grass from three blocks away."
+  },
+  {
+    "id": "obs_0021",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a man read a newspaper without turning pages."
+  },
+  {
+    "id": "obs_0022",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a glove on a fence post and left it."
+  },
+  {
+    "id": "obs_0023",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard a generator running behind a closed store."
+  },
+  {
+    "id": "obs_0024",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the same rust stain on a bridge every year."
+  },
+  {
+    "id": "obs_0025",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched steam rise from a manhole cover for a long time."
+  },
+  {
+    "id": "obs_0026",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a dog tied outside a pharmacy for twenty minutes."
+  },
+  {
+    "id": "obs_0027",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted the steps from your bed to the bathroom."
+  },
+  {
+    "id": "obs_0028",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a light that never turned off in an empty building."
+  },
+  {
+    "id": "obs_0029",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a woman carry one bag into a laundromat."
+  },
+  {
+    "id": "obs_0030",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a penny heads-up in a puddle."
+  },
+  {
+    "id": "obs_0031",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard a screen door slam three houses away."
+  },
+  {
+    "id": "obs_0032",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched fog move across a field like something breathing."
+  },
+  {
+    "id": "obs_0033",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed tire marks that never washed away."
+  },
+  {
+    "id": "obs_0034",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a chair sitting alone in a yard."
+  },
+  {
+    "id": "obs_0035",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a sprinkler miss the same patch of grass every day."
+  },
+  {
+    "id": "obs_0036",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a note written on the back of a receipt."
+  },
+  {
+    "id": "obs_0037",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard an ice machine running in an empty motel hallway."
+  },
+  {
+    "id": "obs_0038",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a window that reflected the wrong sky."
+  },
+  {
+    "id": "obs_0039",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a crow pick at something in the road."
+  },
+  {
+    "id": "obs_0040",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted four different sirens before noon."
+  },
+  {
+    "id": "obs_0041",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a key without a tag in a parking lot."
+  },
+  {
+    "id": "obs_0042",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a flag hang motionless for an entire afternoon."
+  },
+  {
+    "id": "obs_0043",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a stain on the ceiling that looked like a map."
+  },
+  {
+    "id": "obs_0044",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard typing from an office with the lights off."
+  },
+  {
+    "id": "obs_0045",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a delivery truck circle the block twice."
+  },
+  {
+    "id": "obs_0046",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a single sock on a bench."
+  },
+  {
+    "id": "obs_0047",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the same car parked in the same spot for weeks."
+  },
+  {
+    "id": "obs_0048",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a man sweep a sidewalk that was already clean."
+  },
+  {
+    "id": "obs_0049",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard a phone ring inside a closed shop."
+  },
+  {
+    "id": "obs_0050",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a plastic fork bent into a curve."
+  },
+  {
+    "id": "obs_0051",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a truck idle behind a grocery store again."
+  },
+  {
+    "id": "obs_0052",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a dead bird under the dryer vent again."
+  },
+  {
+    "id": "obs_0053",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You spent fifteen minutes watching a man unload oranges again."
+  },
+  {
+    "id": "obs_0054",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You began avoiding gas stations with bright lighting again."
+  },
+  {
+    "id": "obs_0055",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard someone coughing inside an empty house again."
+  },
+  {
+    "id": "obs_0056",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "The motel pool was covered for the season again."
+  },
+  {
+    "id": "obs_0057",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found thirty-seven shoes near a drainage ditch again."
+  },
+  {
+    "id": "obs_0058",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You carried the same flashlight for eleven years again."
+  },
+  {
+    "id": "obs_0059",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You slept through an entire thunderstorm again."
+  },
+  {
+    "id": "obs_0060",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed that birds seem louder near warehouses again."
+  },
+  {
+    "id": "obs_0061",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a television playing inside an empty laundromat again."
+  },
+  {
+    "id": "obs_0062",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You became afraid of open water again."
+  },
+  {
+    "id": "obs_0063",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You stopped liking fluorescent lights again."
+  },
+  {
+    "id": "obs_0064",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You stood under a highway overpass during heavy rain again."
+  },
+  {
+    "id": "obs_0065",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You decided the cornfields were not empty again."
+  },
+  {
+    "id": "obs_0066",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You kept a receipt in your wallet until the ink disappeared again."
+  },
+  {
+    "id": "obs_0067",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched rainwater collect in a parking lot crack again."
+  },
+  {
+    "id": "obs_0068",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted seven pigeons on a single wire again."
+  },
+  {
+    "id": "obs_0069",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a door that was always slightly open again."
+  },
+  {
+    "id": "obs_0070",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You smelled cut grass from three blocks away again."
+  },
+  {
+    "id": "obs_0071",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a man read a newspaper without turning pages again."
+  },
+  {
+    "id": "obs_0072",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a glove on a fence post and left it again."
+  },
+  {
+    "id": "obs_0073",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard a generator running behind a closed store again."
+  },
+  {
+    "id": "obs_0074",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the same rust stain on a bridge every year again."
+  },
+  {
+    "id": "obs_0075",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched steam rise from a manhole cover for a long time again."
+  },
+  {
+    "id": "obs_0076",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a dog tied outside a pharmacy for twenty minutes again."
+  },
+  {
+    "id": "obs_0077",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted the steps from your bed to the bathroom again."
+  },
+  {
+    "id": "obs_0078",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a light that never turned off in an empty building again."
+  },
+  {
+    "id": "obs_0079",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a woman carry one bag into a laundromat again."
+  },
+  {
+    "id": "obs_0080",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a penny heads-up in a puddle again."
+  },
+  {
+    "id": "obs_0081",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard a screen door slam three houses away again."
+  },
+  {
+    "id": "obs_0082",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched fog move across a field like something breathing again."
+  },
+  {
+    "id": "obs_0083",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed tire marks that never washed away again."
+  },
+  {
+    "id": "obs_0084",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a chair sitting alone in a yard again."
+  },
+  {
+    "id": "obs_0085",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a sprinkler miss the same patch of grass every day again."
+  },
+  {
+    "id": "obs_0086",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a note written on the back of a receipt again."
+  },
+  {
+    "id": "obs_0087",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard an ice machine running in an empty motel hallway again."
+  },
+  {
+    "id": "obs_0088",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a window that reflected the wrong sky again."
+  },
+  {
+    "id": "obs_0089",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a crow pick at something in the road again."
+  },
+  {
+    "id": "obs_0090",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted four different sirens before noon again."
+  },
+  {
+    "id": "obs_0091",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a key without a tag in a parking lot again."
+  },
+  {
+    "id": "obs_0092",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a flag hang motionless for an entire afternoon again."
+  },
+  {
+    "id": "obs_0093",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a stain on the ceiling that looked like a map again."
+  },
+  {
+    "id": "obs_0094",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard typing from an office with the lights off again."
+  },
+  {
+    "id": "obs_0095",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a delivery truck circle the block twice again."
+  },
+  {
+    "id": "obs_0096",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a single sock on a bench again."
+  },
+  {
+    "id": "obs_0097",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the same car parked in the same spot for weeks again."
+  },
+  {
+    "id": "obs_0098",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a man sweep a sidewalk that was already clean again."
+  },
+  {
+    "id": "obs_0099",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard a phone ring inside a closed shop again."
+  },
+  {
+    "id": "obs_0100",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a plastic fork bent into a curve again."
+  },
+  {
+    "id": "obs_0101",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a truck idle behind a grocery store."
+  },
+  {
+    "id": "obs_0102",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a dead bird under the dryer vent."
+  },
+  {
+    "id": "obs_0103",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly spent fifteen minutes watching a man unload oranges."
+  },
+  {
+    "id": "obs_0104",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly began avoiding gas stations with bright lighting."
+  },
+  {
+    "id": "obs_0105",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard someone coughing inside an empty house."
+  },
+  {
+    "id": "obs_0106",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "The motel pool was covered for the season."
+  },
+  {
+    "id": "obs_0107",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found thirty-seven shoes near a drainage ditch."
+  },
+  {
+    "id": "obs_0108",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly carried the same flashlight for eleven years."
+  },
+  {
+    "id": "obs_0109",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly slept through an entire thunderstorm."
+  },
+  {
+    "id": "obs_0110",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly noticed that birds seem louder near warehouses."
+  },
+  {
+    "id": "obs_0111",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly saw a television playing inside an empty laundromat."
+  },
+  {
+    "id": "obs_0112",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly became afraid of open water."
+  },
+  {
+    "id": "obs_0113",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly stopped liking fluorescent lights."
+  },
+  {
+    "id": "obs_0114",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly stood under a highway overpass during heavy rain."
+  },
+  {
+    "id": "obs_0115",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly decided the cornfields were not empty."
+  },
+  {
+    "id": "obs_0116",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly kept a receipt in your wallet until the ink disappeared."
+  },
+  {
+    "id": "obs_0117",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched rainwater collect in a parking lot crack."
+  },
+  {
+    "id": "obs_0118",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly counted seven pigeons on a single wire."
+  },
+  {
+    "id": "obs_0119",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly noticed a door that was always slightly open."
+  },
+  {
+    "id": "obs_0120",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly smelled cut grass from three blocks away."
+  },
+  {
+    "id": "obs_0121",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a man read a newspaper without turning pages."
+  },
+  {
+    "id": "obs_0122",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a glove on a fence post and left it."
+  },
+  {
+    "id": "obs_0123",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard a generator running behind a closed store."
+  },
+  {
+    "id": "obs_0124",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly noticed the same rust stain on a bridge every year."
+  },
+  {
+    "id": "obs_0125",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched steam rise from a manhole cover for a long time."
+  },
+  {
+    "id": "obs_0126",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly saw a dog tied outside a pharmacy for twenty minutes."
+  },
+  {
+    "id": "obs_0127",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly counted the steps from your bed to the bathroom."
+  },
+  {
+    "id": "obs_0128",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly noticed a light that never turned off in an empty building."
+  },
+  {
+    "id": "obs_0129",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a woman carry one bag into a laundromat."
+  },
+  {
+    "id": "obs_0130",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a penny heads-up in a puddle."
+  },
+  {
+    "id": "obs_0131",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard a screen door slam three houses away."
+  },
+  {
+    "id": "obs_0132",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched fog move across a field like something breathing."
+  },
+  {
+    "id": "obs_0133",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly noticed tire marks that never washed away."
+  },
+  {
+    "id": "obs_0134",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly saw a chair sitting alone in a yard."
+  },
+  {
+    "id": "obs_0135",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a sprinkler miss the same patch of grass every day."
+  },
+  {
+    "id": "obs_0136",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a note written on the back of a receipt."
+  },
+  {
+    "id": "obs_0137",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard an ice machine running in an empty motel hallway."
+  },
+  {
+    "id": "obs_0138",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly noticed a window that reflected the wrong sky."
+  },
+  {
+    "id": "obs_0139",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a crow pick at something in the road."
+  },
+  {
+    "id": "obs_0140",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly counted four different sirens before noon."
+  },
+  {
+    "id": "obs_0141",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a key without a tag in a parking lot."
+  },
+  {
+    "id": "obs_0142",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a flag hang motionless for an entire afternoon."
+  },
+  {
+    "id": "obs_0143",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly noticed a stain on the ceiling that looked like a map."
+  },
+  {
+    "id": "obs_0144",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard typing from an office with the lights off."
+  },
+  {
+    "id": "obs_0145",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a delivery truck circle the block twice."
+  },
+  {
+    "id": "obs_0146",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a single sock on a bench."
+  },
+  {
+    "id": "obs_0147",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly noticed the same car parked in the same spot for weeks."
+  },
+  {
+    "id": "obs_0148",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a man sweep a sidewalk that was already clean."
+  },
+  {
+    "id": "obs_0149",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard a phone ring inside a closed shop."
+  },
+  {
+    "id": "obs_0150",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a plastic fork bent into a curve."
+  },
+  {
+    "id": "obs_0151",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a truck idle behind a grocery store."
+  },
+  {
+    "id": "obs_0152",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a dead bird under the dryer vent."
+  },
+  {
+    "id": "obs_0153",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later spent fifteen minutes watching a man unload oranges."
+  },
+  {
+    "id": "obs_0154",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later began avoiding gas stations with bright lighting."
+  },
+  {
+    "id": "obs_0155",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later heard someone coughing inside an empty house."
+  },
+  {
+    "id": "obs_0156",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "The motel pool was covered for the season."
+  },
+  {
+    "id": "obs_0157",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found thirty-seven shoes near a drainage ditch."
+  },
+  {
+    "id": "obs_0158",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later carried the same flashlight for eleven years."
+  },
+  {
+    "id": "obs_0159",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later slept through an entire thunderstorm."
+  },
+  {
+    "id": "obs_0160",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later noticed that birds seem louder near warehouses."
+  },
+  {
+    "id": "obs_0161",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later saw a television playing inside an empty laundromat."
+  },
+  {
+    "id": "obs_0162",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later became afraid of open water."
+  },
+  {
+    "id": "obs_0163",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later stopped liking fluorescent lights."
+  },
+  {
+    "id": "obs_0164",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later stood under a highway overpass during heavy rain."
+  },
+  {
+    "id": "obs_0165",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later decided the cornfields were not empty."
+  },
+  {
+    "id": "obs_0166",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later kept a receipt in your wallet until the ink disappeared."
+  },
+  {
+    "id": "obs_0167",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched rainwater collect in a parking lot crack."
+  },
+  {
+    "id": "obs_0168",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later counted seven pigeons on a single wire."
+  },
+  {
+    "id": "obs_0169",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later noticed a door that was always slightly open."
+  },
+  {
+    "id": "obs_0170",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later smelled cut grass from three blocks away."
+  },
+  {
+    "id": "obs_0171",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a man read a newspaper without turning pages."
+  },
+  {
+    "id": "obs_0172",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a glove on a fence post and left it."
+  },
+  {
+    "id": "obs_0173",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later heard a generator running behind a closed store."
+  },
+  {
+    "id": "obs_0174",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later noticed the same rust stain on a bridge every year."
+  },
+  {
+    "id": "obs_0175",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched steam rise from a manhole cover for a long time."
+  },
+  {
+    "id": "obs_0176",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later saw a dog tied outside a pharmacy for twenty minutes."
+  },
+  {
+    "id": "obs_0177",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later counted the steps from your bed to the bathroom."
+  },
+  {
+    "id": "obs_0178",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later noticed a light that never turned off in an empty building."
+  },
+  {
+    "id": "obs_0179",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a woman carry one bag into a laundromat."
+  },
+  {
+    "id": "obs_0180",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a penny heads-up in a puddle."
+  },
+  {
+    "id": "obs_0181",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later heard a screen door slam three houses away."
+  },
+  {
+    "id": "obs_0182",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched fog move across a field like something breathing."
+  },
+  {
+    "id": "obs_0183",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later noticed tire marks that never washed away."
+  },
+  {
+    "id": "obs_0184",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later saw a chair sitting alone in a yard."
+  },
+  {
+    "id": "obs_0185",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a sprinkler miss the same patch of grass every day."
+  },
+  {
+    "id": "obs_0186",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a note written on the back of a receipt."
+  },
+  {
+    "id": "obs_0187",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later heard an ice machine running in an empty motel hallway."
+  },
+  {
+    "id": "obs_0188",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later noticed a window that reflected the wrong sky."
+  },
+  {
+    "id": "obs_0189",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a crow pick at something in the road."
+  },
+  {
+    "id": "obs_0190",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later counted four different sirens before noon."
+  },
+  {
+    "id": "obs_0191",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a key without a tag in a parking lot."
+  },
+  {
+    "id": "obs_0192",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a flag hang motionless for an entire afternoon."
+  },
+  {
+    "id": "obs_0193",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later noticed a stain on the ceiling that looked like a map."
+  },
+  {
+    "id": "obs_0194",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later heard typing from an office with the lights off."
+  },
+  {
+    "id": "obs_0195",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a delivery truck circle the block twice."
+  },
+  {
+    "id": "obs_0196",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a single sock on a bench."
+  },
+  {
+    "id": "obs_0197",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later noticed the same car parked in the same spot for weeks."
+  },
+  {
+    "id": "obs_0198",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a man sweep a sidewalk that was already clean."
+  },
+  {
+    "id": "obs_0199",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later heard a phone ring inside a closed shop."
+  },
+  {
+    "id": "obs_0200",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a plastic fork bent into a curve."
+  },
+  {
+    "id": "obs_0201",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the truck idle behind the grocery store."
+  },
+  {
+    "id": "obs_0202",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the dead bird under the dryer vent."
+  },
+  {
+    "id": "obs_0203",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You spent fifteen minutes watching the man unload oranges."
+  },
+  {
+    "id": "obs_0204",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You began avoiding gas stations with bright lighting."
+  },
+  {
+    "id": "obs_0205",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard someone coughing inside an empty house."
+  },
+  {
+    "id": "obs_0206",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "The motel pool was covered for the season."
+  },
+  {
+    "id": "obs_0207",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found thirty-seven shoes near the drainage ditch."
+  },
+  {
+    "id": "obs_0208",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You carried the same flashlight for eleven years."
+  },
+  {
+    "id": "obs_0209",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You slept through an entire thunderstorm."
+  },
+  {
+    "id": "obs_0210",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed that birds seem louder near warehouses."
+  },
+  {
+    "id": "obs_0211",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw the television playing inside an empty laundromat."
+  },
+  {
+    "id": "obs_0212",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You became afraid of open water."
+  },
+  {
+    "id": "obs_0213",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You stopped liking fluorescent lights."
+  },
+  {
+    "id": "obs_0214",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You stood under the highway overpass during heavy rain."
+  },
+  {
+    "id": "obs_0215",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You decided the cornfields were not empty."
+  },
+  {
+    "id": "obs_0216",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You kept the receipt in your wallet until the ink disappeared."
+  },
+  {
+    "id": "obs_0217",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched rainwater collect in the parking lot crack."
+  },
+  {
+    "id": "obs_0218",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted seven pigeons on the single wire."
+  },
+  {
+    "id": "obs_0219",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the door that was always slightly open."
+  },
+  {
+    "id": "obs_0220",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You smelled cut grass from three blocks away."
+  },
+  {
+    "id": "obs_0221",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the man read the newspaper without turning pages."
+  },
+  {
+    "id": "obs_0222",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the glove on the fence post and left it."
+  },
+  {
+    "id": "obs_0223",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard the generator running behind the closed store."
+  },
+  {
+    "id": "obs_0224",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the same rust stain on the bridge every year."
+  },
+  {
+    "id": "obs_0225",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched steam rise from the manhole cover for the long time."
+  },
+  {
+    "id": "obs_0226",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw the dog tied outside the pharmacy for twenty minutes."
+  },
+  {
+    "id": "obs_0227",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted the steps from your bed to the bathroom."
+  },
+  {
+    "id": "obs_0228",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the light that never turned off in an empty building."
+  },
+  {
+    "id": "obs_0229",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the woman carry one bag into the laundromat."
+  },
+  {
+    "id": "obs_0230",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the penny heads-up in the puddle."
+  },
+  {
+    "id": "obs_0231",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard the screen door slam three houses away."
+  },
+  {
+    "id": "obs_0232",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched fog move across the field like something breathing."
+  },
+  {
+    "id": "obs_0233",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed tire marks that never washed away."
+  },
+  {
+    "id": "obs_0234",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw the chair sitting alone in the yard."
+  },
+  {
+    "id": "obs_0235",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the sprinkler miss the same patch of grass every day."
+  },
+  {
+    "id": "obs_0236",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the note written on the back of the receipt."
+  },
+  {
+    "id": "obs_0237",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard an ice machine running in an empty motel hallway."
+  },
+  {
+    "id": "obs_0238",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the window that reflected the wrong sky."
+  },
+  {
+    "id": "obs_0239",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the crow pick at something in the road."
+  },
+  {
+    "id": "obs_0240",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted four different sirens before noon."
+  },
+  {
+    "id": "obs_0241",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the key without the tag in the parking lot."
+  },
+  {
+    "id": "obs_0242",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the flag hang motionless for an entire afternoon."
+  },
+  {
+    "id": "obs_0243",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the stain on the ceiling that looked like the map."
+  },
+  {
+    "id": "obs_0244",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard typing from an office with the lights off."
+  },
+  {
+    "id": "obs_0245",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the delivery truck circle the block twice."
+  },
+  {
+    "id": "obs_0246",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the single sock on the bench."
+  },
+  {
+    "id": "obs_0247",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the same car parked in the same spot for weeks."
+  },
+  {
+    "id": "obs_0248",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the man sweep the sidewalk that was already clean."
+  },
+  {
+    "id": "obs_0249",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard the phone ring inside the closed shop."
+  },
+  {
+    "id": "obs_0250",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the plastic fork bent into the curve."
+  },
+  {
+    "id": "obs_0251",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a truck idle behind a grocery store."
+  },
+  {
+    "id": "obs_0252",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a dead bird under a dryer vent."
+  },
+  {
+    "id": "obs_0253",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You spent fifteen minutes watching a man unload oranges."
+  },
+  {
+    "id": "obs_0254",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You began avoiding gas stations with bright lighting."
+  },
+  {
+    "id": "obs_0255",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard someone coughing inside an empty house."
+  },
+  {
+    "id": "obs_0256",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "The motel pool was covered for a season."
+  },
+  {
+    "id": "obs_0257",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found thirty-seven shoes near a drainage ditch."
+  },
+  {
+    "id": "obs_0258",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You carried a same flashlight for eleven years."
+  },
+  {
+    "id": "obs_0259",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You slept through an entire thunderstorm."
+  },
+  {
+    "id": "obs_0260",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed that birds seem louder near warehouses."
+  },
+  {
+    "id": "obs_0261",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a television playing inside an empty laundromat."
+  },
+  {
+    "id": "obs_0262",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You became afraid of open water."
+  },
+  {
+    "id": "obs_0263",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You stopped liking fluorescent lights."
+  },
+  {
+    "id": "obs_0264",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You stood under a highway overpass during heavy rain."
+  },
+  {
+    "id": "obs_0265",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You decided a cornfields were not empty."
+  },
+  {
+    "id": "obs_0266",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You kept a receipt in your wallet until a ink disappeared."
+  },
+  {
+    "id": "obs_0267",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched rainwater collect in a parking lot crack."
+  },
+  {
+    "id": "obs_0268",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted seven pigeons on a single wire."
+  },
+  {
+    "id": "obs_0269",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a door that was always slightly open."
+  },
+  {
+    "id": "obs_0270",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You smelled cut grass from three blocks away."
+  },
+  {
+    "id": "obs_0271",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a man read a newspaper without turning pages."
+  },
+  {
+    "id": "obs_0272",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a glove on a fence post and left it."
+  },
+  {
+    "id": "obs_0273",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard a generator running behind a closed store."
+  },
+  {
+    "id": "obs_0274",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a same rust stain on a bridge every year."
+  },
+  {
+    "id": "obs_0275",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched steam rise from a manhole cover for a long time."
+  },
+  {
+    "id": "obs_0276",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a dog tied outside a pharmacy for twenty minutes."
+  },
+  {
+    "id": "obs_0277",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted a steps from your bed to a bathroom."
+  },
+  {
+    "id": "obs_0278",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a light that never turned off in an empty building."
+  },
+  {
+    "id": "obs_0279",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a woman carry one bag into a laundromat."
+  },
+  {
+    "id": "obs_0280",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a penny heads-up in a puddle."
+  },
+  {
+    "id": "obs_0281",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard a screen door slam three houses away."
+  },
+  {
+    "id": "obs_0282",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched fog move across a field like something breathing."
+  },
+  {
+    "id": "obs_0283",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed tire marks that never washed away."
+  },
+  {
+    "id": "obs_0284",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a chair sitting alone in a yard."
+  },
+  {
+    "id": "obs_0285",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a sprinkler miss a same patch of grass every day."
+  },
+  {
+    "id": "obs_0286",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a note written on a back of a receipt."
+  },
+  {
+    "id": "obs_0287",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard an ice machine running in an empty motel hallway."
+  },
+  {
+    "id": "obs_0288",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a window that reflected a wrong sky."
+  },
+  {
+    "id": "obs_0289",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a crow pick at something in a road."
+  },
+  {
+    "id": "obs_0290",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted four different sirens before noon."
+  },
+  {
+    "id": "obs_0291",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a key without a tag in a parking lot."
+  },
+  {
+    "id": "obs_0292",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a flag hang motionless for an entire afternoon."
+  },
+  {
+    "id": "obs_0293",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a stain on a ceiling that looked like a map."
+  },
+  {
+    "id": "obs_0294",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard typing from an office with a lights off."
+  },
+  {
+    "id": "obs_0295",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a delivery truck circle a block twice."
+  },
+  {
+    "id": "obs_0296",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a single sock on a bench."
+  },
+  {
+    "id": "obs_0297",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a same car parked in a same spot for weeks."
+  },
+  {
+    "id": "obs_0298",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a man sweep a sidewalk that was already clean."
+  },
+  {
+    "id": "obs_0299",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard a phone ring inside a closed shop."
+  },
+  {
+    "id": "obs_0300",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "observation"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a plastic fork bent into a curve."
+  }
+]

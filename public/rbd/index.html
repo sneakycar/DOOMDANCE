@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="screen-orientation" content="portrait" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#08090a" />
+  <title>RETURN BUT DIFFERENT</title>
+  <link rel="stylesheet" href="css/archive.css" />
+</head>
+<body>
+  <div id="rotate-gate" hidden>
+    <p>RETURN BUT DIFFERENT</p>
+    <p class="sub">Portrait only. Rotate your device.</p>
+  </div>
+
+  <div id="phone">
+    <div id="memory-bg" aria-hidden="true">
+      <div id="city-layer"></div>
+      <div id="city-treatment"></div>
+      <canvas id="scars-canvas"></canvas>
+      <canvas id="pulse-canvas"></canvas>
+      <div id="grain"></div>
+      <div id="scanlines"></div>
+    </div>
+
+    <header id="status-bar" class="panel">
+      <div class="status-left">
+        <div class="row"><span class="dim">SUBJECT</span> <span id="subject-name">—</span></div>
+        <div class="row meta">
+          <span><span class="dim">AGE</span> <span id="subject-age">0</span></span>
+          <span><span class="dim">REC</span> <span id="subject-rec">0000</span></span>
+          <span><span class="dim">STS</span> <span id="subject-sts">LIVE</span></span>
+        </div>
+      </div>
+      <div class="status-right dim">
+        <div>RETURN BUT DIFFERENT</div>
+        <div>ARCHIVE TERMINAL · WEB DEV</div>
+        <div class="cursor"><span>&gt;</span><span id="cursor">█</span></div>
+      </div>
+    </header>
+
+    <nav id="nav">
+      <button type="button" id="btn-log" class="nav-btn">[ RECORD INDEX ]</button>
+      <button type="button" id="btn-archive" class="nav-btn">[ OBITUARY INDEX ]</button>
+    </nav>
+
+    <div id="event-overlay" hidden>
+      <div id="event-card" class="panel">
+        <div class="event-meta">
+          <span id="event-record">ENTRY 0000</span>
+          <span id="event-age">AGE 0</span>
+        </div>
+        <hr />
+        <p id="event-text"></p>
+        <button type="button" id="btn-ack" class="ack-btn">&gt; ACKNOWLEDGE RECORD</button>
+      </div>
+    </div>
+
+    <div id="sheet" hidden>
+      <div class="sheet-inner panel">
+        <div class="sheet-head">
+          <h2 id="sheet-title">RECORD INDEX</h2>
+          <button type="button" id="btn-close-sheet" class="nav-btn">[ CLOSE ]</button>
+        </div>
+        <div id="sheet-body"></div>
+      </div>
+    </div>
+
+    <div id="dev-panel" hidden>
+      <button type="button" id="dev-event">GENERATE EVENT</button>
+      <button type="button" id="dev-kill">KILL LIFE</button>
+      <button type="button" id="dev-reset">RESET ALL</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

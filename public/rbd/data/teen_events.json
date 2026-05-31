@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "teen_0001",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You sat in a parked car and listened to static on the radio."
+  },
+  {
+    "id": "teen_0002",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You walked home along the railroad tracks at dusk."
+  },
+  {
+    "id": "teen_0003",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a wallet in a bus seat and turned it in."
+  },
+  {
+    "id": "teen_0004",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You skipped a class and sat behind the gym instead."
+  },
+  {
+    "id": "teen_0005",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched freight cars pass and tried to read the graffiti."
+  },
+  {
+    "id": "teen_0006",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a convenience store aisle longer than necessary."
+  },
+  {
+    "id": "teen_0007",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You wrote something in a notebook and tore the page out."
+  },
+  {
+    "id": "teen_0008",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You heard a party three houses down and did not go."
+  },
+  {
+    "id": "teen_0009",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You rode a bike to the edge of town and turned around."
+  },
+  {
+    "id": "teen_0010",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a cassette tape with no label."
+  },
+  {
+    "id": "teen_0011",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched your breath fog a bus window."
+  },
+  {
+    "id": "teen_0012",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You sat on a loading dock and ate a sandwich."
+  },
+  {
+    "id": "teen_0013",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a teacher crying in an empty classroom."
+  },
+  {
+    "id": "teen_0014",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You walked through a cemetery on the way home."
+  },
+  {
+    "id": "teen_0015",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found graffiti under a bridge that said nothing in particular."
+  },
+  {
+    "id": "teen_0016",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You sat in a parked car and listened to static on the radio again."
+  },
+  {
+    "id": "teen_0017",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You walked home along the railroad tracks at dusk again."
+  },
+  {
+    "id": "teen_0018",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a wallet in a bus seat and turned it in again."
+  },
+  {
+    "id": "teen_0019",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You skipped a class and sat behind the gym instead again."
+  },
+  {
+    "id": "teen_0020",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched freight cars pass and tried to read the graffiti again."
+  },
+  {
+    "id": "teen_0021",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a convenience store aisle longer than necessary again."
+  },
+  {
+    "id": "teen_0022",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You wrote something in a notebook and tore the page out again."
+  },
+  {
+    "id": "teen_0023",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You heard a party three houses down and did not go again."
+  },
+  {
+    "id": "teen_0024",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You rode a bike to the edge of town and turned around again."
+  },
+  {
+    "id": "teen_0025",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a cassette tape with no label again."
+  },
+  {
+    "id": "teen_0026",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched your breath fog a bus window again."
+  },
+  {
+    "id": "teen_0027",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You sat on a loading dock and ate a sandwich again."
+  },
+  {
+    "id": "teen_0028",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You noticed a teacher crying in an empty classroom again."
+  },
+  {
+    "id": "teen_0029",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You walked through a cemetery on the way home again."
+  },
+  {
+    "id": "teen_0030",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found graffiti under a bridge that said nothing in particular again."
+  },
+  {
+    "id": "teen_0031",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly sat in a parked car and listened to static on the radio."
+  },
+  {
+    "id": "teen_0032",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly walked home along the railroad tracks at dusk."
+  },
+  {
+    "id": "teen_0033",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a wallet in a bus seat and turned it in."
+  },
+  {
+    "id": "teen_0034",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly skipped a class and sat behind the gym instead."
+  },
+  {
+    "id": "teen_0035",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched freight cars pass and tried to read the graffiti."
+  },
+  {
+    "id": "teen_0036",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly stood in a convenience store aisle longer than necessary."
+  },
+  {
+    "id": "teen_0037",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly wrote something in a notebook and tore the page out."
+  },
+  {
+    "id": "teen_0038",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard a party three houses down and did not go."
+  },
+  {
+    "id": "teen_0039",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly rode a bike to the edge of town and turned around."
+  },
+  {
+    "id": "teen_0040",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a cassette tape with no label."
+  },
+  {
+    "id": "teen_0041",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched your breath fog a bus window."
+  },
+  {
+    "id": "teen_0042",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly sat on a loading dock and ate a sandwich."
+  },
+  {
+    "id": "teen_0043",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly noticed a teacher crying in an empty classroom."
+  },
+  {
+    "id": "teen_0044",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly walked through a cemetery on the way home."
+  },
+  {
+    "id": "teen_0045",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found graffiti under a bridge that said nothing in particular."
+  },
+  {
+    "id": "teen_0046",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later sat in a parked car and listened to static on the radio."
+  },
+  {
+    "id": "teen_0047",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later walked home along the railroad tracks at dusk."
+  },
+  {
+    "id": "teen_0048",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later found a wallet in a bus seat and turned it in."
+  },
+  {
+    "id": "teen_0049",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later skipped a class and sat behind the gym instead."
+  },
+  {
+    "id": "teen_0050",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later watched freight cars pass and tried to read the graffiti."
+  },
+  {
+    "id": "teen_0051",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later stood in a convenience store aisle longer than necessary."
+  },
+  {
+    "id": "teen_0052",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later wrote something in a notebook and tore the page out."
+  },
+  {
+    "id": "teen_0053",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later heard a party three houses down and did not go."
+  },
+  {
+    "id": "teen_0054",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later rode a bike to the edge of town and turned around."
+  },
+  {
+    "id": "teen_0055",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later found a cassette tape with no label."
+  },
+  {
+    "id": "teen_0056",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later watched your breath fog a bus window."
+  },
+  {
+    "id": "teen_0057",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later sat on a loading dock and ate a sandwich."
+  },
+  {
+    "id": "teen_0058",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later noticed a teacher crying in an empty classroom."
+  },
+  {
+    "id": "teen_0059",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later walked through a cemetery on the way home."
+  },
+  {
+    "id": "teen_0060",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later found graffiti under a bridge that said nothing in particular."
+  },
+  {
+    "id": "teen_0061",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You sat in the parked car and listened to static on the radio."
+  },
+  {
+    "id": "teen_0062",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You walked home along the railroad tracks at dusk."
+  },
+  {
+    "id": "teen_0063",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found the wallet in the bus seat and turned it in."
+  },
+  {
+    "id": "teen_0064",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "uncommon",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You skipped the class and sat behind the gym instead."
+  },
+  {
+    "id": "teen_0065",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched freight cars pass and tried to read the graffiti."
+  },
+  {
+    "id": "teen_0066",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "rare",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in the convenience store aisle longer than necessary."
+  },
+  {
+    "id": "teen_0067",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You wrote something in the notebook and tore the page out."
+  },
+  {
+    "id": "teen_0068",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You heard the party three houses down and did not go."
+  },
+  {
+    "id": "teen_0069",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You rode the bike to the edge of town and turned around."
+  },
+  {
+    "id": "teen_0070",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found the cassette tape with no label."
+  },
+  {
+    "id": "teen_0071",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched your breath fog the bus window."
+  },
+  {
+    "id": "teen_0072",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You sat on the loading dock and ate the sandwich."
+  },
+  {
+    "id": "teen_0073",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You noticed the teacher crying in an empty classroom."
+  },
+  {
+    "id": "teen_0074",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You walked through the cemetery on the way home."
+  },
+  {
+    "id": "teen_0075",
+    "age_min": 13,
+    "age_max": 19,
+    "rarity": "common",
+    "tags": [
+      "teen"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found graffiti under the bridge that said nothing in particular."
+  }
+]

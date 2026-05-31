@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "thought_0001",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about Wyoming for several days."
+  },
+  {
+    "id": "thought_0002",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided cornfields were beautiful."
+  },
+  {
+    "id": "thought_0003",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided cornfields were not beautiful anymore."
+  },
+  {
+    "id": "thought_0004",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if anyone else noticed the humming."
+  },
+  {
+    "id": "thought_0005",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You considered whether the creek had a name."
+  },
+  {
+    "id": "thought_0006",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the sound of your own breathing."
+  },
+  {
+    "id": "thought_0007",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided you did not trust quiet rooms."
+  },
+  {
+    "id": "thought_0008",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered how long the paint would last."
+  },
+  {
+    "id": "thought_0009",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the weight of a full glass of water."
+  },
+  {
+    "id": "thought_0010",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided some roads feel older than others."
+  },
+  {
+    "id": "thought_0011",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if the birds were arguing."
+  },
+  {
+    "id": "thought_0012",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the last time you saw snow."
+  },
+  {
+    "id": "thought_0013",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided you preferred overcast mornings."
+  },
+  {
+    "id": "thought_0014",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered what happened to the previous tenant."
+  },
+  {
+    "id": "thought_0015",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the distance between streetlights."
+  },
+  {
+    "id": "thought_0016",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided you would never learn to swim properly."
+  },
+  {
+    "id": "thought_0017",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if the factory made anything anymore."
+  },
+  {
+    "id": "thought_0018",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the color of rust."
+  },
+  {
+    "id": "thought_0019",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided fluorescent lights made everything look temporary."
+  },
+  {
+    "id": "thought_0020",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if anyone lived in the house with the blue tarp."
+  },
+  {
+    "id": "thought_0021",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about Wyoming for several days again."
+  },
+  {
+    "id": "thought_0022",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided cornfields were beautiful again."
+  },
+  {
+    "id": "thought_0023",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided cornfields were not beautiful anymore again."
+  },
+  {
+    "id": "thought_0024",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if anyone else noticed the humming again."
+  },
+  {
+    "id": "thought_0025",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You considered whether the creek had a name again."
+  },
+  {
+    "id": "thought_0026",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the sound of your own breathing again."
+  },
+  {
+    "id": "thought_0027",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided you did not trust quiet rooms again."
+  },
+  {
+    "id": "thought_0028",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered how long the paint would last again."
+  },
+  {
+    "id": "thought_0029",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the weight of a full glass of water again."
+  },
+  {
+    "id": "thought_0030",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided some roads feel older than others again."
+  },
+  {
+    "id": "thought_0031",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if the birds were arguing again."
+  },
+  {
+    "id": "thought_0032",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the last time you saw snow again."
+  },
+  {
+    "id": "thought_0033",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided you preferred overcast mornings again."
+  },
+  {
+    "id": "thought_0034",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered what happened to the previous tenant again."
+  },
+  {
+    "id": "thought_0035",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the distance between streetlights again."
+  },
+  {
+    "id": "thought_0036",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided you would never learn to swim properly again."
+  },
+  {
+    "id": "thought_0037",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if the factory made anything anymore again."
+  },
+  {
+    "id": "thought_0038",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the color of rust again."
+  },
+  {
+    "id": "thought_0039",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided fluorescent lights made everything look temporary again."
+  },
+  {
+    "id": "thought_0040",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if anyone lived in the house with the blue tarp again."
+  },
+  {
+    "id": "thought_0041",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly thought about Wyoming for several days."
+  },
+  {
+    "id": "thought_0042",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly decided cornfields were beautiful."
+  },
+  {
+    "id": "thought_0043",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly decided cornfields were not beautiful anymore."
+  },
+  {
+    "id": "thought_0044",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly wondered if anyone else noticed the humming."
+  },
+  {
+    "id": "thought_0045",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly considered whether the creek had a name."
+  },
+  {
+    "id": "thought_0046",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly thought about the sound of your own breathing."
+  },
+  {
+    "id": "thought_0047",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly decided you did not trust quiet rooms."
+  },
+  {
+    "id": "thought_0048",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly wondered how long the paint would last."
+  },
+  {
+    "id": "thought_0049",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly thought about the weight of a full glass of water."
+  },
+  {
+    "id": "thought_0050",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly decided some roads feel older than others."
+  },
+  {
+    "id": "thought_0051",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly wondered if the birds were arguing."
+  },
+  {
+    "id": "thought_0052",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly thought about the last time you saw snow."
+  },
+  {
+    "id": "thought_0053",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly decided you preferred overcast mornings."
+  },
+  {
+    "id": "thought_0054",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly wondered what happened to the previous tenant."
+  },
+  {
+    "id": "thought_0055",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly thought about the distance between streetlights."
+  },
+  {
+    "id": "thought_0056",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly decided you would never learn to swim properly."
+  },
+  {
+    "id": "thought_0057",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly wondered if the factory made anything anymore."
+  },
+  {
+    "id": "thought_0058",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly thought about the color of rust."
+  },
+  {
+    "id": "thought_0059",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly decided fluorescent lights made everything look temporary."
+  },
+  {
+    "id": "thought_0060",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You briefly wondered if anyone lived in the house with the blue tarp."
+  },
+  {
+    "id": "thought_0061",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later thought about Wyoming for several days."
+  },
+  {
+    "id": "thought_0062",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later decided cornfields were beautiful."
+  },
+  {
+    "id": "thought_0063",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later decided cornfields were not beautiful anymore."
+  },
+  {
+    "id": "thought_0064",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later wondered if anyone else noticed the humming."
+  },
+  {
+    "id": "thought_0065",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later considered whether the creek had a name."
+  },
+  {
+    "id": "thought_0066",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later thought about the sound of your own breathing."
+  },
+  {
+    "id": "thought_0067",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later decided you did not trust quiet rooms."
+  },
+  {
+    "id": "thought_0068",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later wondered how long the paint would last."
+  },
+  {
+    "id": "thought_0069",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later thought about the weight of a full glass of water."
+  },
+  {
+    "id": "thought_0070",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later decided some roads feel older than others."
+  },
+  {
+    "id": "thought_0071",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later wondered if the birds were arguing."
+  },
+  {
+    "id": "thought_0072",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later thought about the last time you saw snow."
+  },
+  {
+    "id": "thought_0073",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later decided you preferred overcast mornings."
+  },
+  {
+    "id": "thought_0074",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later wondered what happened to the previous tenant."
+  },
+  {
+    "id": "thought_0075",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later thought about the distance between streetlights."
+  },
+  {
+    "id": "thought_0076",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later decided you would never learn to swim properly."
+  },
+  {
+    "id": "thought_0077",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later wondered if the factory made anything anymore."
+  },
+  {
+    "id": "thought_0078",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later thought about the color of rust."
+  },
+  {
+    "id": "thought_0079",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later decided fluorescent lights made everything look temporary."
+  },
+  {
+    "id": "thought_0080",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You later wondered if anyone lived in the house with the blue tarp."
+  },
+  {
+    "id": "thought_0081",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about Wyoming for several days."
+  },
+  {
+    "id": "thought_0082",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided cornfields were beautiful."
+  },
+  {
+    "id": "thought_0083",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided cornfields were not beautiful anymore."
+  },
+  {
+    "id": "thought_0084",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if anyone else noticed the humming."
+  },
+  {
+    "id": "thought_0085",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You considered whether the creek had the name."
+  },
+  {
+    "id": "thought_0086",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the sound of your own breathing."
+  },
+  {
+    "id": "thought_0087",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided you did not trust quiet rooms."
+  },
+  {
+    "id": "thought_0088",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered how long the paint would last."
+  },
+  {
+    "id": "thought_0089",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the weight of the full glass of water."
+  },
+  {
+    "id": "thought_0090",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided some roads feel older than others."
+  },
+  {
+    "id": "thought_0091",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if the birds were arguing."
+  },
+  {
+    "id": "thought_0092",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the last time you saw snow."
+  },
+  {
+    "id": "thought_0093",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided you preferred overcast mornings."
+  },
+  {
+    "id": "thought_0094",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered what happened to the previous tenant."
+  },
+  {
+    "id": "thought_0095",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the distance between streetlights."
+  },
+  {
+    "id": "thought_0096",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided you would never learn to swim properly."
+  },
+  {
+    "id": "thought_0097",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if the factory made anything anymore."
+  },
+  {
+    "id": "thought_0098",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You thought about the color of rust."
+  },
+  {
+    "id": "thought_0099",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You decided fluorescent lights made everything look temporary."
+  },
+  {
+    "id": "thought_0100",
+    "age_min": 6,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "thought"
+    ],
+    "creates_memory": [
+      "preference"
+    ],
+    "requires_memory": [],
+    "text": "You wondered if anyone lived in the house with the blue tarp."
+  }
+]

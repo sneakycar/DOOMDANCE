@@ -1,0 +1,1052 @@
+[
+  {
+    "id": "child_0001",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You hid under the kitchen table during a thunderstorm."
+  },
+  {
+    "id": "child_0002",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a frog in the driveway after rain."
+  },
+  {
+    "id": "child_0003",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched ants carry a crumb across the sidewalk."
+  },
+  {
+    "id": "child_0004",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You drew on the wall with a crayon and nobody noticed for weeks."
+  },
+  {
+    "id": "child_0005",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You counted ceiling tiles while waiting for dinner."
+  },
+  {
+    "id": "child_0006",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a dead beetle in your shoe."
+  },
+  {
+    "id": "child_0007",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a moth beat against the porch light."
+  },
+  {
+    "id": "child_0008",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You learned that the basement smelled different in summer."
+  },
+  {
+    "id": "child_0009",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You sat on the curb and watched cars pass."
+  },
+  {
+    "id": "child_0010",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a marble in the gravel by the garage."
+  },
+  {
+    "id": "child_0011",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You heard your parents talking in the next room through the vent."
+  },
+  {
+    "id": "child_0012",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a spider rebuild its web after rain."
+  },
+  {
+    "id": "child_0013",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You discovered that the attic door stuck in humidity."
+  },
+  {
+    "id": "child_0014",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You ate cereal straight from the box on a Saturday morning."
+  },
+  {
+    "id": "child_0015",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a neighbor mow the same strip of lawn twice."
+  },
+  {
+    "id": "child_0016",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You hid under the kitchen table during a thunderstorm again."
+  },
+  {
+    "id": "child_0017",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a frog in the driveway after rain again."
+  },
+  {
+    "id": "child_0018",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched ants carry a crumb across the sidewalk again."
+  },
+  {
+    "id": "child_0019",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You drew on the wall with a crayon and nobody noticed for weeks again."
+  },
+  {
+    "id": "child_0020",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You counted ceiling tiles while waiting for dinner again."
+  },
+  {
+    "id": "child_0021",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a dead beetle in your shoe again."
+  },
+  {
+    "id": "child_0022",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a moth beat against the porch light again."
+  },
+  {
+    "id": "child_0023",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You learned that the basement smelled different in summer again."
+  },
+  {
+    "id": "child_0024",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You sat on the curb and watched cars pass again."
+  },
+  {
+    "id": "child_0025",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found a marble in the gravel by the garage again."
+  },
+  {
+    "id": "child_0026",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You heard your parents talking in the next room through the vent again."
+  },
+  {
+    "id": "child_0027",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a spider rebuild its web after rain again."
+  },
+  {
+    "id": "child_0028",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You discovered that the attic door stuck in humidity again."
+  },
+  {
+    "id": "child_0029",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You ate cereal straight from the box on a Saturday morning again."
+  },
+  {
+    "id": "child_0030",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a neighbor mow the same strip of lawn twice again."
+  },
+  {
+    "id": "child_0031",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly hid under the kitchen table during a thunderstorm."
+  },
+  {
+    "id": "child_0032",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a frog in the driveway after rain."
+  },
+  {
+    "id": "child_0033",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched ants carry a crumb across the sidewalk."
+  },
+  {
+    "id": "child_0034",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly drew on the wall with a crayon and nobody noticed for weeks."
+  },
+  {
+    "id": "child_0035",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly counted ceiling tiles while waiting for dinner."
+  },
+  {
+    "id": "child_0036",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a dead beetle in your shoe."
+  },
+  {
+    "id": "child_0037",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a moth beat against the porch light."
+  },
+  {
+    "id": "child_0038",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly learned that the basement smelled different in summer."
+  },
+  {
+    "id": "child_0039",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly sat on the curb and watched cars pass."
+  },
+  {
+    "id": "child_0040",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a marble in the gravel by the garage."
+  },
+  {
+    "id": "child_0041",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard your parents talking in the next room through the vent."
+  },
+  {
+    "id": "child_0042",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a spider rebuild its web after rain."
+  },
+  {
+    "id": "child_0043",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly discovered that the attic door stuck in humidity."
+  },
+  {
+    "id": "child_0044",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly ate cereal straight from the box on a Saturday morning."
+  },
+  {
+    "id": "child_0045",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a neighbor mow the same strip of lawn twice."
+  },
+  {
+    "id": "child_0046",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later hid under the kitchen table during a thunderstorm."
+  },
+  {
+    "id": "child_0047",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later found a frog in the driveway after rain."
+  },
+  {
+    "id": "child_0048",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later watched ants carry a crumb across the sidewalk."
+  },
+  {
+    "id": "child_0049",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later drew on the wall with a crayon and nobody noticed for weeks."
+  },
+  {
+    "id": "child_0050",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later counted ceiling tiles while waiting for dinner."
+  },
+  {
+    "id": "child_0051",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later found a dead beetle in your shoe."
+  },
+  {
+    "id": "child_0052",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a moth beat against the porch light."
+  },
+  {
+    "id": "child_0053",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later learned that the basement smelled different in summer."
+  },
+  {
+    "id": "child_0054",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later sat on the curb and watched cars pass."
+  },
+  {
+    "id": "child_0055",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later found a marble in the gravel by the garage."
+  },
+  {
+    "id": "child_0056",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later heard your parents talking in the next room through the vent."
+  },
+  {
+    "id": "child_0057",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a spider rebuild its web after rain."
+  },
+  {
+    "id": "child_0058",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later discovered that the attic door stuck in humidity."
+  },
+  {
+    "id": "child_0059",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later ate cereal straight from the box on a Saturday morning."
+  },
+  {
+    "id": "child_0060",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a neighbor mow the same strip of lawn twice."
+  },
+  {
+    "id": "child_0061",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You hid under the kitchen table during the thunderstorm."
+  },
+  {
+    "id": "child_0062",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found the frog in the driveway after rain."
+  },
+  {
+    "id": "child_0063",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched ants carry the crumb across the sidewalk."
+  },
+  {
+    "id": "child_0064",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You drew on the wall with the crayon and nobody noticed for weeks."
+  },
+  {
+    "id": "child_0065",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You counted ceiling tiles while waiting for dinner."
+  },
+  {
+    "id": "child_0066",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found the dead beetle in your shoe."
+  },
+  {
+    "id": "child_0067",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched the moth beat against the porch light."
+  },
+  {
+    "id": "child_0068",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You learned that the basement smelled different in summer."
+  },
+  {
+    "id": "child_0069",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "rare",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You sat on the curb and watched cars pass."
+  },
+  {
+    "id": "child_0070",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found the marble in the gravel by the garage."
+  },
+  {
+    "id": "child_0071",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You heard your parents talking in the next room through the vent."
+  },
+  {
+    "id": "child_0072",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched the spider rebuild its web after rain."
+  },
+  {
+    "id": "child_0073",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You discovered that the attic door stuck in humidity."
+  },
+  {
+    "id": "child_0074",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "uncommon",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You ate cereal straight from the box on the Saturday morning."
+  },
+  {
+    "id": "child_0075",
+    "age_min": 2,
+    "age_max": 12,
+    "rarity": "common",
+    "tags": [
+      "childhood"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched the neighbor mow the same strip of lawn twice."
+  }
+]

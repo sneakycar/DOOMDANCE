@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "place_0001",
+    "age_min": 17,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a factory fence line."
+  },
+  {
+    "id": "place_0002",
+    "age_min": 24,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a service road without stopping."
+  },
+  {
+    "id": "place_0003",
+    "age_min": 56,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a motel parking lot for a long time."
+  },
+  {
+    "id": "place_0004",
+    "age_min": 67,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a rail yard without meaning to."
+  },
+  {
+    "id": "place_0005",
+    "age_min": 55,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a drainage ditch for several months."
+  },
+  {
+    "id": "place_0006",
+    "age_min": 74,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a gravel lot at the wrong hour."
+  },
+  {
+    "id": "place_0007",
+    "age_min": 62,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched Iceland from a distance."
+  },
+  {
+    "id": "place_0008",
+    "age_min": 44,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near Wyoming once."
+  },
+  {
+    "id": "place_0009",
+    "age_min": 45,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a salvage yard."
+  },
+  {
+    "id": "place_0010",
+    "age_min": 55,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through Nebraska without stopping."
+  },
+  {
+    "id": "place_0011",
+    "age_min": 69,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a service road for a long time."
+  },
+  {
+    "id": "place_0012",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a gravel lot without meaning to."
+  },
+  {
+    "id": "place_0013",
+    "age_min": 73,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a factory fence line for several months."
+  },
+  {
+    "id": "place_0014",
+    "age_min": 56,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a cornfield at the wrong hour."
+  },
+  {
+    "id": "place_0015",
+    "age_min": 28,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched Iceland from a distance."
+  },
+  {
+    "id": "place_0016",
+    "age_min": 50,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near a county road once."
+  },
+  {
+    "id": "place_0017",
+    "age_min": 67,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a strip mall."
+  },
+  {
+    "id": "place_0018",
+    "age_min": 60,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a church parking lot without stopping."
+  },
+  {
+    "id": "place_0019",
+    "age_min": 10,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a culvert for a long time."
+  },
+  {
+    "id": "place_0020",
+    "age_min": 38,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to Montana without meaning to."
+  },
+  {
+    "id": "place_0021",
+    "age_min": 20,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a rest stop for several months."
+  },
+  {
+    "id": "place_0022",
+    "age_min": 60,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a drainage ditch at the wrong hour."
+  },
+  {
+    "id": "place_0023",
+    "age_min": 66,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a loading dock from a distance."
+  },
+  {
+    "id": "place_0024",
+    "age_min": 7,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near Nebraska once."
+  },
+  {
+    "id": "place_0025",
+    "age_min": 34,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a church parking lot."
+  },
+  {
+    "id": "place_0026",
+    "age_min": 24,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a rail yard without stopping."
+  },
+  {
+    "id": "place_0027",
+    "age_min": 74,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a drainage ditch for a long time."
+  },
+  {
+    "id": "place_0028",
+    "age_min": 74,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to Philadelphia without meaning to."
+  },
+  {
+    "id": "place_0029",
+    "age_min": 15,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a grocery store for several months."
+  },
+  {
+    "id": "place_0030",
+    "age_min": 18,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in Kansas at the wrong hour."
+  },
+  {
+    "id": "place_0031",
+    "age_min": 19,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a cornfield from a distance."
+  },
+  {
+    "id": "place_0032",
+    "age_min": 23,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near a church parking lot once."
+  },
+  {
+    "id": "place_0033",
+    "age_min": 41,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a warehouse district."
+  },
+  {
+    "id": "place_0034",
+    "age_min": 38,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a county road without stopping."
+  },
+  {
+    "id": "place_0035",
+    "age_min": 65,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a grocery store for a long time."
+  },
+  {
+    "id": "place_0036",
+    "age_min": 35,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a warehouse district without meaning to."
+  },
+  {
+    "id": "place_0037",
+    "age_min": 74,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a cornfield for several months."
+  },
+  {
+    "id": "place_0038",
+    "age_min": 53,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in Ohio at the wrong hour."
+  },
+  {
+    "id": "place_0039",
+    "age_min": 80,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched Montana from a distance."
+  },
+  {
+    "id": "place_0040",
+    "age_min": 21,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near a county road once."
+  },
+  {
+    "id": "place_0041",
+    "age_min": 12,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a service road."
+  },
+  {
+    "id": "place_0042",
+    "age_min": 57,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a salvage yard without stopping."
+  },
+  {
+    "id": "place_0043",
+    "age_min": 68,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a motel parking lot for a long time."
+  },
+  {
+    "id": "place_0044",
+    "age_min": 4,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a salvage yard without meaning to."
+  },
+  {
+    "id": "place_0045",
+    "age_min": 42,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a drainage ditch for several months."
+  },
+  {
+    "id": "place_0046",
+    "age_min": 79,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a gravel lot at the wrong hour."
+  },
+  {
+    "id": "place_0047",
+    "age_min": 66,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a bus station from a distance."
+  },
+  {
+    "id": "place_0048",
+    "age_min": 23,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near a service road once."
+  },
+  {
+    "id": "place_0049",
+    "age_min": 72,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a cornfield."
+  },
+  {
+    "id": "place_0050",
+    "age_min": 48,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a warehouse district without stopping."
+  },
+  {
+    "id": "place_0051",
+    "age_min": 74,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a motel parking lot for a long time."
+  },
+  {
+    "id": "place_0052",
+    "age_min": 73,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a culvert without meaning to."
+  },
+  {
+    "id": "place_0053",
+    "age_min": 62,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a laundromat for several months."
+  },
+  {
+    "id": "place_0054",
+    "age_min": 28,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a motel parking lot at the wrong hour."
+  },
+  {
+    "id": "place_0055",
+    "age_min": 34,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a rail yard from a distance."
+  },
+  {
+    "id": "place_0056",
+    "age_min": 53,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near a bus station once."
+  },
+  {
+    "id": "place_0057",
+    "age_min": 56,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited Kansas."
+  },
+  {
+    "id": "place_0058",
+    "age_min": 44,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through Iceland without stopping."
+  },
+  {
+    "id": "place_0059",
+    "age_min": 64,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a cul-de-sac for a long time."
+  },
+  {
+    "id": "place_0060",
+    "age_min": 52,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a rail yard without meaning to."
+  },
+  {
+    "id": "place_0061",
+    "age_min": 23,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a laundromat for several months."
+  },
+  {
+    "id": "place_0062",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a warehouse district at the wrong hour."
+  },
+  {
+    "id": "place_0063",
+    "age_min": 68,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched Ohio from a distance."
+  },
+  {
+    "id": "place_0064",
+    "age_min": 46,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near a bus station once."
+  },
+  {
+    "id": "place_0065",
+    "age_min": 16,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a service road."
+  },
+  {
+    "id": "place_0066",
+    "age_min": 60,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a service road without stopping."
+  },
+  {
+    "id": "place_0067",
+    "age_min": 71,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in Nebraska for a long time."
+  },
+  {
+    "id": "place_0068",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a cornfield without meaning to."
+  },
+  {
+    "id": "place_0069",
+    "age_min": 22,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a cul-de-sac for several months."
+  },
+  {
+    "id": "place_0070",
+    "age_min": 23,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a grocery store at the wrong hour."
+  },
+  {
+    "id": "place_0071",
+    "age_min": 64,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched Wyoming from a distance."
+  },
+  {
+    "id": "place_0072",
+    "age_min": 37,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near a retention pond once."
+  },
+  {
+    "id": "place_0073",
+    "age_min": 54,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a motel parking lot."
+  },
+  {
+    "id": "place_0074",
+    "age_min": 14,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a church parking lot without stopping."
+  },
+  {
+    "id": "place_0075",
+    "age_min": 46,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a service road for a long time."
+  },
+  {
+    "id": "place_0076",
+    "age_min": 72,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a service road without meaning to."
+  },
+  {
+    "id": "place_0077",
+    "age_min": 44,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a laundromat for several months."
+  },
+  {
+    "id": "place_0078",
+    "age_min": 66,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a church parking lot at the wrong hour."
+  },
+  {
+    "id": "place_0079",
+    "age_min": 73,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a service road from a distance."
+  },
+  {
+    "id": "place_0080",
+    "age_min": 12,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near Iceland once."
+  },
+  {
+    "id": "place_0081",
+    "age_min": 40,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited Kansas."
+  },
+  {
+    "id": "place_0082",
+    "age_min": 15,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through Kansas without stopping."
+  },
+  {
+    "id": "place_0083",
+    "age_min": 16,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a grocery store for a long time."
+  },
+  {
+    "id": "place_0084",
+    "age_min": 16,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a culvert without meaning to."
+  },
+  {
+    "id": "place_0085",
+    "age_min": 25,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a cornfield for several months."
+  },
+  {
+    "id": "place_0086",
+    "age_min": 42,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a rail yard at the wrong hour."
+  },
+  {
+    "id": "place_0087",
+    "age_min": 7,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched a loading dock from a distance."
+  },
+  {
+    "id": "place_0088",
+    "age_min": 45,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near Iceland once."
+  },
+  {
+    "id": "place_0089",
+    "age_min": 11,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a retention pond."
+  },
+  {
+    "id": "place_0090",
+    "age_min": 49,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a drainage ditch without stopping."
+  },
+  {
+    "id": "place_0091",
+    "age_min": 59,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in a highway overpass for a long time."
+  },
+  {
+    "id": "place_0092",
+    "age_min": 35,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to Ohio without meaning to."
+  },
+  {
+    "id": "place_0093",
+    "age_min": 56,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You avoided a county road for several months."
+  },
+  {
+    "id": "place_0094",
+    "age_min": 27,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You found yourself in a bus station at the wrong hour."
+  },
+  {
+    "id": "place_0095",
+    "age_min": 26,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You watched Michigan from a distance."
+  },
+  {
+    "id": "place_0096",
+    "age_min": 52,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You slept near Wyoming once."
+  },
+  {
+    "id": "place_0097",
+    "age_min": 34,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You visited a strip mall."
+  },
+  {
+    "id": "place_0098",
+    "age_min": 78,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You passed through a warehouse district without stopping."
+  },
+  {
+    "id": "place_0099",
+    "age_min": 33,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You stood in Ohio for a long time."
+  },
+  {
+    "id": "place_0100",
+    "age_min": 36,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "place"
+    ],
+    "creates_memory": [
+      "place"
+    ],
+    "requires_memory": [],
+    "text": "You returned to a cornfield without meaning to."
+  }
+]

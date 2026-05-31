@@ -1,0 +1,802 @@
+[
+  {
+    "id": "death_0001",
+    "age_min": 15,
+    "age_max": 22,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died before sunrise on a county road."
+  },
+  {
+    "id": "death_0002",
+    "age_min": 4,
+    "age_max": 40,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You drowned in water shallow enough to stand in."
+  },
+  {
+    "id": "death_0003",
+    "age_min": 5,
+    "age_max": 8,
+    "rarity": "rare",
+    "cause": "childhood_illness",
+    "text": "You died at seven years old. The swing set remained in the yard for three more summers."
+  },
+  {
+    "id": "death_0004",
+    "age_min": 60,
+    "age_max": 95,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your sleep during a week of heavy rain."
+  },
+  {
+    "id": "death_0005",
+    "age_min": 18,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "exposure",
+    "text": "You were found beside the drainage ditch."
+  },
+  {
+    "id": "death_0006",
+    "age_min": 45,
+    "age_max": 80,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died before anyone finished the coffee."
+  },
+  {
+    "id": "death_0007",
+    "age_min": 3,
+    "age_max": 70,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died in a fire that started in the kitchen."
+  },
+  {
+    "id": "death_0008",
+    "age_min": 25,
+    "age_max": 75,
+    "rarity": "uncommon",
+    "cause": "falling",
+    "text": "You died after falling from a ladder."
+  },
+  {
+    "id": "death_0009",
+    "age_min": 20,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "workplace_accident",
+    "text": "You died at work when a shelf collapsed."
+  },
+  {
+    "id": "death_0010",
+    "age_min": 50,
+    "age_max": 90,
+    "rarity": "uncommon",
+    "cause": "stroke",
+    "text": "You died of a stroke while sitting in a parked car."
+  },
+  {
+    "id": "death_0011",
+    "age_min": 16,
+    "age_max": 24,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died in a car that left the road."
+  },
+  {
+    "id": "death_0012",
+    "age_min": 1,
+    "age_max": 12,
+    "rarity": "rare",
+    "cause": "disease",
+    "text": "You died from an illness that had no clear name."
+  },
+  {
+    "id": "death_0013",
+    "age_min": 22,
+    "age_max": 45,
+    "rarity": "uncommon",
+    "cause": "overdose_ambiguity",
+    "text": "You died alone in a motel room."
+  },
+  {
+    "id": "death_0014",
+    "age_min": 19,
+    "age_max": 50,
+    "rarity": "uncommon",
+    "cause": "violence",
+    "text": "You died during an argument that became something else."
+  },
+  {
+    "id": "death_0015",
+    "age_min": 78,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "cause": "old_age",
+    "text": "You died of old age in a chair by the window."
+  },
+  {
+    "id": "death_0016",
+    "age_min": 40,
+    "age_max": 85,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died when your heart stopped without warning."
+  },
+  {
+    "id": "death_0017",
+    "age_min": 8,
+    "age_max": 60,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You died in a flood that reached the second floor."
+  },
+  {
+    "id": "death_0018",
+    "age_min": 10,
+    "age_max": 70,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died after being struck by a vehicle."
+  },
+  {
+    "id": "death_0019",
+    "age_min": 55,
+    "age_max": 92,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your bed on a Tuesday morning."
+  },
+  {
+    "id": "death_0020",
+    "age_min": 5,
+    "age_max": 65,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died from smoke inhalation two rooms away from the exit."
+  },
+  {
+    "id": "death_0021",
+    "age_min": 15,
+    "age_max": 22,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died before sunrise on a county road."
+  },
+  {
+    "id": "death_0022",
+    "age_min": 4,
+    "age_max": 40,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You drowned in water shallow enough to stand in."
+  },
+  {
+    "id": "death_0023",
+    "age_min": 5,
+    "age_max": 8,
+    "rarity": "rare",
+    "cause": "childhood_illness",
+    "text": "You died at seven years old. The swing set remained in the yard for three more summers."
+  },
+  {
+    "id": "death_0024",
+    "age_min": 60,
+    "age_max": 95,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your sleep during a week of heavy rain."
+  },
+  {
+    "id": "death_0025",
+    "age_min": 18,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "exposure",
+    "text": "You were found beside the drainage ditch."
+  },
+  {
+    "id": "death_0026",
+    "age_min": 45,
+    "age_max": 80,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died before anyone finished the coffee."
+  },
+  {
+    "id": "death_0027",
+    "age_min": 3,
+    "age_max": 70,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died in a fire that started in the kitchen."
+  },
+  {
+    "id": "death_0028",
+    "age_min": 25,
+    "age_max": 75,
+    "rarity": "uncommon",
+    "cause": "falling",
+    "text": "You died after falling from a ladder."
+  },
+  {
+    "id": "death_0029",
+    "age_min": 20,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "workplace_accident",
+    "text": "You died at work when a shelf collapsed."
+  },
+  {
+    "id": "death_0030",
+    "age_min": 50,
+    "age_max": 90,
+    "rarity": "uncommon",
+    "cause": "stroke",
+    "text": "You died of a stroke while sitting in a parked car."
+  },
+  {
+    "id": "death_0031",
+    "age_min": 16,
+    "age_max": 24,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died in a car that left the road."
+  },
+  {
+    "id": "death_0032",
+    "age_min": 1,
+    "age_max": 12,
+    "rarity": "rare",
+    "cause": "disease",
+    "text": "You died from an illness that had no clear name."
+  },
+  {
+    "id": "death_0033",
+    "age_min": 22,
+    "age_max": 45,
+    "rarity": "uncommon",
+    "cause": "overdose_ambiguity",
+    "text": "You died alone in a motel room."
+  },
+  {
+    "id": "death_0034",
+    "age_min": 19,
+    "age_max": 50,
+    "rarity": "uncommon",
+    "cause": "violence",
+    "text": "You died during an argument that became something else."
+  },
+  {
+    "id": "death_0035",
+    "age_min": 78,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "cause": "old_age",
+    "text": "You died of old age in a chair by the window."
+  },
+  {
+    "id": "death_0036",
+    "age_min": 40,
+    "age_max": 85,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died when your heart stopped without warning."
+  },
+  {
+    "id": "death_0037",
+    "age_min": 8,
+    "age_max": 60,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You died in a flood that reached the second floor."
+  },
+  {
+    "id": "death_0038",
+    "age_min": 10,
+    "age_max": 70,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died after being struck by a vehicle."
+  },
+  {
+    "id": "death_0039",
+    "age_min": 55,
+    "age_max": 92,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your bed on a Tuesday morning."
+  },
+  {
+    "id": "death_0040",
+    "age_min": 5,
+    "age_max": 65,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died from smoke inhalation two rooms away from the exit."
+  },
+  {
+    "id": "death_0041",
+    "age_min": 15,
+    "age_max": 22,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died before sunrise on a county road."
+  },
+  {
+    "id": "death_0042",
+    "age_min": 4,
+    "age_max": 40,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You drowned in water shallow enough to stand in."
+  },
+  {
+    "id": "death_0043",
+    "age_min": 5,
+    "age_max": 8,
+    "rarity": "rare",
+    "cause": "childhood_illness",
+    "text": "You died at seven years old. The swing set remained in the yard for three more summers."
+  },
+  {
+    "id": "death_0044",
+    "age_min": 60,
+    "age_max": 95,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your sleep during a week of heavy rain."
+  },
+  {
+    "id": "death_0045",
+    "age_min": 18,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "exposure",
+    "text": "You were found beside the drainage ditch."
+  },
+  {
+    "id": "death_0046",
+    "age_min": 45,
+    "age_max": 80,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died before anyone finished the coffee."
+  },
+  {
+    "id": "death_0047",
+    "age_min": 3,
+    "age_max": 70,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died in a fire that started in the kitchen."
+  },
+  {
+    "id": "death_0048",
+    "age_min": 25,
+    "age_max": 75,
+    "rarity": "uncommon",
+    "cause": "falling",
+    "text": "You died after falling from a ladder."
+  },
+  {
+    "id": "death_0049",
+    "age_min": 20,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "workplace_accident",
+    "text": "You died at work when a shelf collapsed."
+  },
+  {
+    "id": "death_0050",
+    "age_min": 50,
+    "age_max": 90,
+    "rarity": "uncommon",
+    "cause": "stroke",
+    "text": "You died of a stroke while sitting in a parked car."
+  },
+  {
+    "id": "death_0051",
+    "age_min": 16,
+    "age_max": 24,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died in a car that left the road."
+  },
+  {
+    "id": "death_0052",
+    "age_min": 1,
+    "age_max": 12,
+    "rarity": "rare",
+    "cause": "disease",
+    "text": "You died from an illness that had no clear name."
+  },
+  {
+    "id": "death_0053",
+    "age_min": 22,
+    "age_max": 45,
+    "rarity": "uncommon",
+    "cause": "overdose_ambiguity",
+    "text": "You died alone in a motel room."
+  },
+  {
+    "id": "death_0054",
+    "age_min": 19,
+    "age_max": 50,
+    "rarity": "uncommon",
+    "cause": "violence",
+    "text": "You died during an argument that became something else."
+  },
+  {
+    "id": "death_0055",
+    "age_min": 78,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "cause": "old_age",
+    "text": "You died of old age in a chair by the window."
+  },
+  {
+    "id": "death_0056",
+    "age_min": 40,
+    "age_max": 85,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died when your heart stopped without warning."
+  },
+  {
+    "id": "death_0057",
+    "age_min": 8,
+    "age_max": 60,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You died in a flood that reached the second floor."
+  },
+  {
+    "id": "death_0058",
+    "age_min": 10,
+    "age_max": 70,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died after being struck by a vehicle."
+  },
+  {
+    "id": "death_0059",
+    "age_min": 55,
+    "age_max": 92,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your bed on a Tuesday morning."
+  },
+  {
+    "id": "death_0060",
+    "age_min": 5,
+    "age_max": 65,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died from smoke inhalation two rooms away from the exit."
+  },
+  {
+    "id": "death_0061",
+    "age_min": 15,
+    "age_max": 22,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died before sunrise on a county road."
+  },
+  {
+    "id": "death_0062",
+    "age_min": 4,
+    "age_max": 40,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You drowned in water shallow enough to stand in."
+  },
+  {
+    "id": "death_0063",
+    "age_min": 5,
+    "age_max": 8,
+    "rarity": "rare",
+    "cause": "childhood_illness",
+    "text": "You died at seven years old. The swing set remained in the yard for three more summers."
+  },
+  {
+    "id": "death_0064",
+    "age_min": 60,
+    "age_max": 95,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your sleep during a week of heavy rain."
+  },
+  {
+    "id": "death_0065",
+    "age_min": 18,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "exposure",
+    "text": "You were found beside the drainage ditch."
+  },
+  {
+    "id": "death_0066",
+    "age_min": 45,
+    "age_max": 80,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died before anyone finished the coffee."
+  },
+  {
+    "id": "death_0067",
+    "age_min": 3,
+    "age_max": 70,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died in a fire that started in the kitchen."
+  },
+  {
+    "id": "death_0068",
+    "age_min": 25,
+    "age_max": 75,
+    "rarity": "uncommon",
+    "cause": "falling",
+    "text": "You died after falling from a ladder."
+  },
+  {
+    "id": "death_0069",
+    "age_min": 20,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "workplace_accident",
+    "text": "You died at work when a shelf collapsed."
+  },
+  {
+    "id": "death_0070",
+    "age_min": 50,
+    "age_max": 90,
+    "rarity": "uncommon",
+    "cause": "stroke",
+    "text": "You died of a stroke while sitting in a parked car."
+  },
+  {
+    "id": "death_0071",
+    "age_min": 16,
+    "age_max": 24,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died in a car that left the road."
+  },
+  {
+    "id": "death_0072",
+    "age_min": 1,
+    "age_max": 12,
+    "rarity": "rare",
+    "cause": "disease",
+    "text": "You died from an illness that had no clear name."
+  },
+  {
+    "id": "death_0073",
+    "age_min": 22,
+    "age_max": 45,
+    "rarity": "uncommon",
+    "cause": "overdose_ambiguity",
+    "text": "You died alone in a motel room."
+  },
+  {
+    "id": "death_0074",
+    "age_min": 19,
+    "age_max": 50,
+    "rarity": "uncommon",
+    "cause": "violence",
+    "text": "You died during an argument that became something else."
+  },
+  {
+    "id": "death_0075",
+    "age_min": 78,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "cause": "old_age",
+    "text": "You died of old age in a chair by the window."
+  },
+  {
+    "id": "death_0076",
+    "age_min": 40,
+    "age_max": 85,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died when your heart stopped without warning."
+  },
+  {
+    "id": "death_0077",
+    "age_min": 8,
+    "age_max": 60,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You died in a flood that reached the second floor."
+  },
+  {
+    "id": "death_0078",
+    "age_min": 10,
+    "age_max": 70,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died after being struck by a vehicle."
+  },
+  {
+    "id": "death_0079",
+    "age_min": 55,
+    "age_max": 92,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your bed on a Tuesday morning."
+  },
+  {
+    "id": "death_0080",
+    "age_min": 5,
+    "age_max": 65,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died from smoke inhalation two rooms away from the exit."
+  },
+  {
+    "id": "death_0081",
+    "age_min": 15,
+    "age_max": 22,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died before sunrise on a county road."
+  },
+  {
+    "id": "death_0082",
+    "age_min": 4,
+    "age_max": 40,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You drowned in water shallow enough to stand in."
+  },
+  {
+    "id": "death_0083",
+    "age_min": 5,
+    "age_max": 8,
+    "rarity": "rare",
+    "cause": "childhood_illness",
+    "text": "You died at seven years old. The swing set remained in the yard for three more summers."
+  },
+  {
+    "id": "death_0084",
+    "age_min": 60,
+    "age_max": 95,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your sleep during a week of heavy rain."
+  },
+  {
+    "id": "death_0085",
+    "age_min": 18,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "exposure",
+    "text": "You were found beside the drainage ditch."
+  },
+  {
+    "id": "death_0086",
+    "age_min": 45,
+    "age_max": 80,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died before anyone finished the coffee."
+  },
+  {
+    "id": "death_0087",
+    "age_min": 3,
+    "age_max": 70,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died in a fire that started in the kitchen."
+  },
+  {
+    "id": "death_0088",
+    "age_min": 25,
+    "age_max": 75,
+    "rarity": "uncommon",
+    "cause": "falling",
+    "text": "You died after falling from a ladder."
+  },
+  {
+    "id": "death_0089",
+    "age_min": 20,
+    "age_max": 55,
+    "rarity": "uncommon",
+    "cause": "workplace_accident",
+    "text": "You died at work when a shelf collapsed."
+  },
+  {
+    "id": "death_0090",
+    "age_min": 50,
+    "age_max": 90,
+    "rarity": "uncommon",
+    "cause": "stroke",
+    "text": "You died of a stroke while sitting in a parked car."
+  },
+  {
+    "id": "death_0091",
+    "age_min": 16,
+    "age_max": 24,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died in a car that left the road."
+  },
+  {
+    "id": "death_0092",
+    "age_min": 1,
+    "age_max": 12,
+    "rarity": "rare",
+    "cause": "disease",
+    "text": "You died from an illness that had no clear name."
+  },
+  {
+    "id": "death_0093",
+    "age_min": 22,
+    "age_max": 45,
+    "rarity": "uncommon",
+    "cause": "overdose_ambiguity",
+    "text": "You died alone in a motel room."
+  },
+  {
+    "id": "death_0094",
+    "age_min": 19,
+    "age_max": 50,
+    "rarity": "uncommon",
+    "cause": "violence",
+    "text": "You died during an argument that became something else."
+  },
+  {
+    "id": "death_0095",
+    "age_min": 78,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "cause": "old_age",
+    "text": "You died of old age in a chair by the window."
+  },
+  {
+    "id": "death_0096",
+    "age_min": 40,
+    "age_max": 85,
+    "rarity": "uncommon",
+    "cause": "heart_attack",
+    "text": "You died when your heart stopped without warning."
+  },
+  {
+    "id": "death_0097",
+    "age_min": 8,
+    "age_max": 60,
+    "rarity": "rare",
+    "cause": "drowning",
+    "text": "You died in a flood that reached the second floor."
+  },
+  {
+    "id": "death_0098",
+    "age_min": 10,
+    "age_max": 70,
+    "rarity": "uncommon",
+    "cause": "car_accident",
+    "text": "You died after being struck by a vehicle."
+  },
+  {
+    "id": "death_0099",
+    "age_min": 55,
+    "age_max": 92,
+    "rarity": "uncommon",
+    "cause": "unknown",
+    "text": "You died in your bed on a Tuesday morning."
+  },
+  {
+    "id": "death_0100",
+    "age_min": 5,
+    "age_max": 65,
+    "rarity": "rare",
+    "cause": "fire",
+    "text": "You died from smoke inhalation two rooms away from the exit."
+  }
+]

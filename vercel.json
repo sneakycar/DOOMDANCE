@@ -1,5 +1,8 @@
 {
   "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/rbd", "destination": "/rbd/index.html" }
+  ],
   "headers": [
     {
       "source": "/(.*)",

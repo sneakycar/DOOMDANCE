@@ -1,5 +1,15 @@
 # DOOM DANCE — iPhone web playtest (Vercel)
 
+## RETURN BUT DIFFERENT (portrait dev — EVOL)
+
+**https://doomdance.makeawesome.com/rbd/** · add **`?dev`** for fast events + debug panel.
+
+Portrait archive terminal with memory city background. See `public/rbd/README.md`.
+
+---
+
+## DOOM DANCE (landscape Godot — root)
+
 ## Play URL
 
 - **`https://<your-vercel-domain>/doom-dance/index.html`**

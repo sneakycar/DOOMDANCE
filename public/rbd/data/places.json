@@ -1,0 +1,402 @@
+[
+  {
+    "id": "place_001",
+    "name": "Philadelphia"
+  },
+  {
+    "id": "place_002",
+    "name": "Iceland"
+  },
+  {
+    "id": "place_003",
+    "name": "Wyoming"
+  },
+  {
+    "id": "place_004",
+    "name": "Nebraska"
+  },
+  {
+    "id": "place_005",
+    "name": "Ohio"
+  },
+  {
+    "id": "place_006",
+    "name": "Michigan"
+  },
+  {
+    "id": "place_007",
+    "name": "Montana"
+  },
+  {
+    "id": "place_008",
+    "name": "Kansas"
+  },
+  {
+    "id": "place_009",
+    "name": "a salvage yard"
+  },
+  {
+    "id": "place_010",
+    "name": "a drainage ditch"
+  },
+  {
+    "id": "place_011",
+    "name": "a motel parking lot"
+  },
+  {
+    "id": "place_012",
+    "name": "a highway overpass"
+  },
+  {
+    "id": "place_013",
+    "name": "a laundromat"
+  },
+  {
+    "id": "place_014",
+    "name": "a grocery store"
+  },
+  {
+    "id": "place_015",
+    "name": "a cornfield"
+  },
+  {
+    "id": "place_016",
+    "name": "a warehouse district"
+  },
+  {
+    "id": "place_017",
+    "name": "a county road"
+  },
+  {
+    "id": "place_018",
+    "name": "a rest stop"
+  },
+  {
+    "id": "place_019",
+    "name": "a bus station"
+  },
+  {
+    "id": "place_020",
+    "name": "a strip mall"
+  },
+  {
+    "id": "place_021",
+    "name": "a church parking lot"
+  },
+  {
+    "id": "place_022",
+    "name": "a factory fence line"
+  },
+  {
+    "id": "place_023",
+    "name": "a rail yard"
+  },
+  {
+    "id": "place_024",
+    "name": "a cul-de-sac"
+  },
+  {
+    "id": "place_025",
+    "name": "a culvert"
+  },
+  {
+    "id": "place_026",
+    "name": "a retention pond"
+  },
+  {
+    "id": "place_027",
+    "name": "a gravel lot"
+  },
+  {
+    "id": "place_028",
+    "name": "a service road"
+  },
+  {
+    "id": "place_029",
+    "name": "a loading dock"
+  },
+  {
+    "id": "place_030",
+    "name": "Philadelphia"
+  },
+  {
+    "id": "place_031",
+    "name": "Iceland"
+  },
+  {
+    "id": "place_032",
+    "name": "Wyoming"
+  },
+  {
+    "id": "place_033",
+    "name": "Nebraska"
+  },
+  {
+    "id": "place_034",
+    "name": "Ohio"
+  },
+  {
+    "id": "place_035",
+    "name": "Michigan"
+  },
+  {
+    "id": "place_036",
+    "name": "Montana"
+  },
+  {
+    "id": "place_037",
+    "name": "Kansas"
+  },
+  {
+    "id": "place_038",
+    "name": "a salvage yard"
+  },
+  {
+    "id": "place_039",
+    "name": "a drainage ditch"
+  },
+  {
+    "id": "place_040",
+    "name": "a motel parking lot"
+  },
+  {
+    "id": "place_041",
+    "name": "a highway overpass"
+  },
+  {
+    "id": "place_042",
+    "name": "a laundromat"
+  },
+  {
+    "id": "place_043",
+    "name": "a grocery store"
+  },
+  {
+    "id": "place_044",
+    "name": "a cornfield"
+  },
+  {
+    "id": "place_045",
+    "name": "a warehouse district"
+  },
+  {
+    "id": "place_046",
+    "name": "a county road"
+  },
+  {
+    "id": "place_047",
+    "name": "a rest stop"
+  },
+  {
+    "id": "place_048",
+    "name": "a bus station"
+  },
+  {
+    "id": "place_049",
+    "name": "a strip mall"
+  },
+  {
+    "id": "place_050",
+    "name": "a church parking lot"
+  },
+  {
+    "id": "place_051",
+    "name": "a factory fence line"
+  },
+  {
+    "id": "place_052",
+    "name": "a rail yard"
+  },
+  {
+    "id": "place_053",
+    "name": "a cul-de-sac"
+  },
+  {
+    "id": "place_054",
+    "name": "a culvert"
+  },
+  {
+    "id": "place_055",
+    "name": "a retention pond"
+  },
+  {
+    "id": "place_056",
+    "name": "a gravel lot"
+  },
+  {
+    "id": "place_057",
+    "name": "a service road"
+  },
+  {
+    "id": "place_058",
+    "name": "a loading dock"
+  },
+  {
+    "id": "place_059",
+    "name": "Philadelphia"
+  },
+  {
+    "id": "place_060",
+    "name": "Iceland"
+  },
+  {
+    "id": "place_061",
+    "name": "Wyoming"
+  },
+  {
+    "id": "place_062",
+    "name": "Nebraska"
+  },
+  {
+    "id": "place_063",
+    "name": "Ohio"
+  },
+  {
+    "id": "place_064",
+    "name": "Michigan"
+  },
+  {
+    "id": "place_065",
+    "name": "Montana"
+  },
+  {
+    "id": "place_066",
+    "name": "Kansas"
+  },
+  {
+    "id": "place_067",
+    "name": "a salvage yard"
+  },
+  {
+    "id": "place_068",
+    "name": "a drainage ditch"
+  },
+  {
+    "id": "place_069",
+    "name": "a motel parking lot"
+  },
+  {
+    "id": "place_070",
+    "name": "a highway overpass"
+  },
+  {
+    "id": "place_071",
+    "name": "a laundromat"
+  },
+  {
+    "id": "place_072",
+    "name": "a grocery store"
+  },
+  {
+    "id": "place_073",
+    "name": "a cornfield"
+  },
+  {
+    "id": "place_074",
+    "name": "a warehouse district"
+  },
+  {
+    "id": "place_075",
+    "name": "a county road"
+  },
+  {
+    "id": "place_076",
+    "name": "a rest stop"
+  },
+  {
+    "id": "place_077",
+    "name": "a bus station"
+  },
+  {
+    "id": "place_078",
+    "name": "a strip mall"
+  },
+  {
+    "id": "place_079",
+    "name": "a church parking lot"
+  },
+  {
+    "id": "place_080",
+    "name": "a factory fence line"
+  },
+  {
+    "id": "place_081",
+    "name": "a rail yard"
+  },
+  {
+    "id": "place_082",
+    "name": "a cul-de-sac"
+  },
+  {
+    "id": "place_083",
+    "name": "a culvert"
+  },
+  {
+    "id": "place_084",
+    "name": "a retention pond"
+  },
+  {
+    "id": "place_085",
+    "name": "a gravel lot"
+  },
+  {
+    "id": "place_086",
+    "name": "a service road"
+  },
+  {
+    "id": "place_087",
+    "name": "a loading dock"
+  },
+  {
+    "id": "place_088",
+    "name": "Philadelphia"
+  },
+  {
+    "id": "place_089",
+    "name": "Iceland"
+  },
+  {
+    "id": "place_090",
+    "name": "Wyoming"
+  },
+  {
+    "id": "place_091",
+    "name": "Nebraska"
+  },
+  {
+    "id": "place_092",
+    "name": "Ohio"
+  },
+  {
+    "id": "place_093",
+    "name": "Michigan"
+  },
+  {
+    "id": "place_094",
+    "name": "Montana"
+  },
+  {
+    "id": "place_095",
+    "name": "Kansas"
+  },
+  {
+    "id": "place_096",
+    "name": "a salvage yard"
+  },
+  {
+    "id": "place_097",
+    "name": "a drainage ditch"
+  },
+  {
+    "id": "place_098",
+    "name": "a motel parking lot"
+  },
+  {
+    "id": "place_099",
+    "name": "a highway overpass"
+  },
+  {
+    "id": "place_100",
+    "name": "a laundromat"
+  }
+]

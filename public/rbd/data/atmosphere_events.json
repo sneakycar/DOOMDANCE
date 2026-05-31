@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "atmo_0001",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "It rained for six days without stopping."
+  },
+  {
+    "id": "atmo_0002",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The air smelled like wet asphalt and cut grass."
+  },
+  {
+    "id": "atmo_0003",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A heat wave made the tar soft underfoot."
+  },
+  {
+    "id": "atmo_0004",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Fog settled in the valley and did not lift until noon."
+  },
+  {
+    "id": "atmo_0005",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Wind rattled the gutters all night."
+  },
+  {
+    "id": "atmo_0006",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sky turned green before the storm."
+  },
+  {
+    "id": "atmo_0007",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Snow fell silently and covered the tire tracks."
+  },
+  {
+    "id": "atmo_0008",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Humidity made the windows weep."
+  },
+  {
+    "id": "atmo_0009",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A dry spell turned the lawn brown."
+  },
+  {
+    "id": "atmo_0010",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Ice formed on the inside of a window."
+  },
+  {
+    "id": "atmo_0011",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Thunder rolled across the flat land for an hour."
+  },
+  {
+    "id": "atmo_0012",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The morning was so cold your breath hung in the air."
+  },
+  {
+    "id": "atmo_0013",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Dust blew across the parking lot in sheets."
+  },
+  {
+    "id": "atmo_0014",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sunset lasted forty minutes."
+  },
+  {
+    "id": "atmo_0015",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A freeze killed the flowers overnight."
+  },
+  {
+    "id": "atmo_0016",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "It rained for six days without stopping again."
+  },
+  {
+    "id": "atmo_0017",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The air smelled like wet asphalt and cut grass again."
+  },
+  {
+    "id": "atmo_0018",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A heat wave made the tar soft underfoot again."
+  },
+  {
+    "id": "atmo_0019",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Fog settled in the valley and did not lift until noon again."
+  },
+  {
+    "id": "atmo_0020",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Wind rattled the gutters all night again."
+  },
+  {
+    "id": "atmo_0021",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sky turned green before the storm again."
+  },
+  {
+    "id": "atmo_0022",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Snow fell silently and covered the tire tracks again."
+  },
+  {
+    "id": "atmo_0023",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Humidity made the windows weep again."
+  },
+  {
+    "id": "atmo_0024",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A dry spell turned the lawn brown again."
+  },
+  {
+    "id": "atmo_0025",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Ice formed on the inside of a window again."
+  },
+  {
+    "id": "atmo_0026",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Thunder rolled across the flat land for an hour again."
+  },
+  {
+    "id": "atmo_0027",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The morning was so cold your breath hung in the air again."
+  },
+  {
+    "id": "atmo_0028",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Dust blew across the parking lot in sheets again."
+  },
+  {
+    "id": "atmo_0029",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sunset lasted forty minutes again."
+  },
+  {
+    "id": "atmo_0030",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A freeze killed the flowers overnight again."
+  },
+  {
+    "id": "atmo_0031",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "It rained for six days without stopping."
+  },
+  {
+    "id": "atmo_0032",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The air smelled like wet asphalt and cut grass."
+  },
+  {
+    "id": "atmo_0033",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A heat wave made the tar soft underfoot."
+  },
+  {
+    "id": "atmo_0034",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Fog settled in the valley and did not lift until noon."
+  },
+  {
+    "id": "atmo_0035",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Wind rattled the gutters all night."
+  },
+  {
+    "id": "atmo_0036",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sky turned green before the storm."
+  },
+  {
+    "id": "atmo_0037",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Snow fell silently and covered the tire tracks."
+  },
+  {
+    "id": "atmo_0038",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Humidity made the windows weep."
+  },
+  {
+    "id": "atmo_0039",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A dry spell turned the lawn brown."
+  },
+  {
+    "id": "atmo_0040",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Ice formed on the inside of a window."
+  },
+  {
+    "id": "atmo_0041",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Thunder rolled across the flat land for an hour."
+  },
+  {
+    "id": "atmo_0042",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The morning was so cold your breath hung in the air."
+  },
+  {
+    "id": "atmo_0043",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Dust blew across the parking lot in sheets."
+  },
+  {
+    "id": "atmo_0044",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sunset lasted forty minutes."
+  },
+  {
+    "id": "atmo_0045",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A freeze killed the flowers overnight."
+  },
+  {
+    "id": "atmo_0046",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "It rained for six days without stopping."
+  },
+  {
+    "id": "atmo_0047",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The air smelled like wet asphalt and cut grass."
+  },
+  {
+    "id": "atmo_0048",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A heat wave made the tar soft underfoot."
+  },
+  {
+    "id": "atmo_0049",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Fog settled in the valley and did not lift until noon."
+  },
+  {
+    "id": "atmo_0050",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Wind rattled the gutters all night."
+  },
+  {
+    "id": "atmo_0051",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sky turned green before the storm."
+  },
+  {
+    "id": "atmo_0052",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Snow fell silently and covered the tire tracks."
+  },
+  {
+    "id": "atmo_0053",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Humidity made the windows weep."
+  },
+  {
+    "id": "atmo_0054",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A dry spell turned the lawn brown."
+  },
+  {
+    "id": "atmo_0055",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Ice formed on the inside of a window."
+  },
+  {
+    "id": "atmo_0056",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Thunder rolled across the flat land for an hour."
+  },
+  {
+    "id": "atmo_0057",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The morning was so cold your breath hung in the air."
+  },
+  {
+    "id": "atmo_0058",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Dust blew across the parking lot in sheets."
+  },
+  {
+    "id": "atmo_0059",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sunset lasted forty minutes."
+  },
+  {
+    "id": "atmo_0060",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A freeze killed the flowers overnight."
+  },
+  {
+    "id": "atmo_0061",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "It rained for six days without stopping."
+  },
+  {
+    "id": "atmo_0062",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The air smelled like wet asphalt and cut grass."
+  },
+  {
+    "id": "atmo_0063",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A heat wave made the tar soft underfoot."
+  },
+  {
+    "id": "atmo_0064",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Fog settled in the valley and did not lift until noon."
+  },
+  {
+    "id": "atmo_0065",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Wind rattled the gutters all night."
+  },
+  {
+    "id": "atmo_0066",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sky turned green before the storm."
+  },
+  {
+    "id": "atmo_0067",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Snow fell silently and covered the tire tracks."
+  },
+  {
+    "id": "atmo_0068",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Humidity made the windows weep."
+  },
+  {
+    "id": "atmo_0069",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A dry spell turned the lawn brown."
+  },
+  {
+    "id": "atmo_0070",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Ice formed on the inside of the window."
+  },
+  {
+    "id": "atmo_0071",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Thunder rolled across the flat land for an hour."
+  },
+  {
+    "id": "atmo_0072",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The morning was so cold your breath hung in the air."
+  },
+  {
+    "id": "atmo_0073",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Dust blew across the parking lot in sheets."
+  },
+  {
+    "id": "atmo_0074",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sunset lasted forty minutes."
+  },
+  {
+    "id": "atmo_0075",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A freeze killed the flowers overnight."
+  },
+  {
+    "id": "atmo_0076",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "It rained for six days without stopping."
+  },
+  {
+    "id": "atmo_0077",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The air smelled like wet asphalt and cut grass."
+  },
+  {
+    "id": "atmo_0078",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A heat wave made a tar soft underfoot."
+  },
+  {
+    "id": "atmo_0079",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Fog settled in a valley and did not lift until noon."
+  },
+  {
+    "id": "atmo_0080",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Wind rattled a gutters all night."
+  },
+  {
+    "id": "atmo_0081",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sky turned green before a storm."
+  },
+  {
+    "id": "atmo_0082",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Snow fell silently and covered a tire tracks."
+  },
+  {
+    "id": "atmo_0083",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Humidity made a windows weep."
+  },
+  {
+    "id": "atmo_0084",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A dry spell turned a lawn brown."
+  },
+  {
+    "id": "atmo_0085",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Ice formed on a inside of a window."
+  },
+  {
+    "id": "atmo_0086",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Thunder rolled across a flat land for an hour."
+  },
+  {
+    "id": "atmo_0087",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The morning was so cold your breath hung in a air."
+  },
+  {
+    "id": "atmo_0088",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Dust blew across a parking lot in sheets."
+  },
+  {
+    "id": "atmo_0089",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sunset lasted forty minutes."
+  },
+  {
+    "id": "atmo_0090",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A freeze killed a flowers overnight."
+  },
+  {
+    "id": "atmo_0091",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "It rained for six days without stopping."
+  },
+  {
+    "id": "atmo_0092",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The air smelled like wet asphalt and cut grass."
+  },
+  {
+    "id": "atmo_0093",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A heat wave made the tar soft underfoot."
+  },
+  {
+    "id": "atmo_0094",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Fog settled in the valley and did not lift until noon."
+  },
+  {
+    "id": "atmo_0095",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Wind rattled the gutters all night."
+  },
+  {
+    "id": "atmo_0096",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The sky turned green before the storm."
+  },
+  {
+    "id": "atmo_0097",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Snow fell silently and covered the tire tracks."
+  },
+  {
+    "id": "atmo_0098",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Humidity made the windows weep."
+  },
+  {
+    "id": "atmo_0099",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "A dry spell turned the lawn brown."
+  },
+  {
+    "id": "atmo_0100",
+    "age_min": 3,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "atmosphere"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "Ice formed on the inside of a window."
+  }
+]

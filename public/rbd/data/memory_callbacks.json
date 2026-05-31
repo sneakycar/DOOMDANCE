@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "callback_0001",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0002",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0003",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0004",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0005",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0006",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0007",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0008",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0009",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0010",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  },
+  {
+    "id": "callback_0011",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0012",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0013",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0014",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0015",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0016",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0017",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0018",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0019",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0020",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  },
+  {
+    "id": "callback_0021",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0022",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0023",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0024",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0025",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0026",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0027",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0028",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0029",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0030",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  },
+  {
+    "id": "callback_0031",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0032",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0033",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0034",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0035",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0036",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0037",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0038",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0039",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0040",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  },
+  {
+    "id": "callback_0041",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0042",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0043",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0044",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0045",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0046",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0047",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0048",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0049",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0050",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  },
+  {
+    "id": "callback_0051",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0052",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0053",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0054",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0055",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0056",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0057",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0058",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0059",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0060",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  },
+  {
+    "id": "callback_0061",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0062",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0063",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0064",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0065",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0066",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0067",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0068",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0069",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0070",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  },
+  {
+    "id": "callback_0071",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0072",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0073",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0074",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0075",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0076",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0077",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0078",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0079",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0080",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  },
+  {
+    "id": "callback_0081",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0082",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0083",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0084",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0085",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0086",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0087",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0088",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0089",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0090",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  },
+  {
+    "id": "callback_0091",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You thought about the {memory} again while standing in line at the pharmacy."
+  },
+  {
+    "id": "callback_0092",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You saw {memory} from a hospital window and felt embarrassed."
+  },
+  {
+    "id": "callback_0093",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You crossed a bridge with your eyes closed because of {memory}."
+  },
+  {
+    "id": "callback_0094",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You passed a place that reminded you of {memory}."
+  },
+  {
+    "id": "callback_0095",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You found yourself thinking about {memory} during a long wait."
+  },
+  {
+    "id": "callback_0096",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You avoided a street because of {memory}."
+  },
+  {
+    "id": "callback_0097",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You heard a sound that brought back {memory}."
+  },
+  {
+    "id": "callback_0098",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You smelled something that made you remember {memory}."
+  },
+  {
+    "id": "callback_0099",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You stood in rain and thought about {memory}."
+  },
+  {
+    "id": "callback_0100",
+    "age_min": 8,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "memory_callback"
+    ],
+    "creates_memory": [],
+    "requires_memory": [
+      "any"
+    ],
+    "text": "You wrote {memory} on a scrap of paper and threw it away."
+  }
+]

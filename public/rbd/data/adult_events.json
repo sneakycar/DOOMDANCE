@@ -1,0 +1,1202 @@
+[
+  {
+    "id": "adult_0001",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a truck idle behind a grocery store."
+  },
+  {
+    "id": "adult_0002",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a dead bird under the dryer vent."
+  },
+  {
+    "id": "adult_0003",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You spent fifteen minutes watching a man unload oranges."
+  },
+  {
+    "id": "adult_0004",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You began avoiding gas stations with bright lighting."
+  },
+  {
+    "id": "adult_0005",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard someone coughing inside an empty house."
+  },
+  {
+    "id": "adult_0006",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The motel pool was covered for the season."
+  },
+  {
+    "id": "adult_0007",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found thirty-seven shoes near a drainage ditch."
+  },
+  {
+    "id": "adult_0008",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You carried the same flashlight for eleven years."
+  },
+  {
+    "id": "adult_0009",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You slept through an entire thunderstorm."
+  },
+  {
+    "id": "adult_0010",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed that birds seem louder near warehouses."
+  },
+  {
+    "id": "adult_0011",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You saw a television playing inside an empty laundromat."
+  },
+  {
+    "id": "adult_0012",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You became afraid of open water."
+  },
+  {
+    "id": "adult_0013",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You stopped liking fluorescent lights."
+  },
+  {
+    "id": "adult_0014",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You stood under a highway overpass during heavy rain."
+  },
+  {
+    "id": "adult_0015",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You decided the cornfields were not empty."
+  },
+  {
+    "id": "adult_0016",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You kept a receipt in your wallet until the ink disappeared."
+  },
+  {
+    "id": "adult_0017",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched rainwater collect in a parking lot crack."
+  },
+  {
+    "id": "adult_0018",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You counted seven pigeons on a single wire."
+  },
+  {
+    "id": "adult_0019",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed a door that was always slightly open."
+  },
+  {
+    "id": "adult_0020",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You smelled cut grass from three blocks away."
+  },
+  {
+    "id": "adult_0021",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a man read a newspaper without turning pages."
+  },
+  {
+    "id": "adult_0022",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a glove on a fence post and left it."
+  },
+  {
+    "id": "adult_0023",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard a generator running behind a closed store."
+  },
+  {
+    "id": "adult_0024",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed the same rust stain on a bridge every year."
+  },
+  {
+    "id": "adult_0025",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched steam rise from a manhole cover for a long time."
+  },
+  {
+    "id": "adult_0026",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You saw a dog tied outside a pharmacy for twenty minutes."
+  },
+  {
+    "id": "adult_0027",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You counted the steps from your bed to the bathroom."
+  },
+  {
+    "id": "adult_0028",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed a light that never turned off in an empty building."
+  },
+  {
+    "id": "adult_0029",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a woman carry one bag into a laundromat."
+  },
+  {
+    "id": "adult_0030",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a penny heads-up in a puddle."
+  },
+  {
+    "id": "adult_0031",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard a screen door slam three houses away."
+  },
+  {
+    "id": "adult_0032",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched fog move across a field like something breathing."
+  },
+  {
+    "id": "adult_0033",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed tire marks that never washed away."
+  },
+  {
+    "id": "adult_0034",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You saw a chair sitting alone in a yard."
+  },
+  {
+    "id": "adult_0035",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a sprinkler miss the same patch of grass every day."
+  },
+  {
+    "id": "adult_0036",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a note written on the back of a receipt."
+  },
+  {
+    "id": "adult_0037",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard an ice machine running in an empty motel hallway."
+  },
+  {
+    "id": "adult_0038",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed a window that reflected the wrong sky."
+  },
+  {
+    "id": "adult_0039",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a crow pick at something in the road."
+  },
+  {
+    "id": "adult_0040",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You counted four different sirens before noon."
+  },
+  {
+    "id": "adult_0041",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a key without a tag in a parking lot."
+  },
+  {
+    "id": "adult_0042",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a flag hang motionless for an entire afternoon."
+  },
+  {
+    "id": "adult_0043",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed a stain on the ceiling that looked like a map."
+  },
+  {
+    "id": "adult_0044",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard typing from an office with the lights off."
+  },
+  {
+    "id": "adult_0045",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a delivery truck circle the block twice."
+  },
+  {
+    "id": "adult_0046",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a single sock on a bench."
+  },
+  {
+    "id": "adult_0047",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed the same car parked in the same spot for weeks."
+  },
+  {
+    "id": "adult_0048",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a man sweep a sidewalk that was already clean."
+  },
+  {
+    "id": "adult_0049",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard a phone ring inside a closed shop."
+  },
+  {
+    "id": "adult_0050",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a plastic fork bent into a curve."
+  },
+  {
+    "id": "adult_0051",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a truck idle behind a grocery store again."
+  },
+  {
+    "id": "adult_0052",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a dead bird under the dryer vent again."
+  },
+  {
+    "id": "adult_0053",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You spent fifteen minutes watching a man unload oranges again."
+  },
+  {
+    "id": "adult_0054",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You began avoiding gas stations with bright lighting again."
+  },
+  {
+    "id": "adult_0055",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard someone coughing inside an empty house again."
+  },
+  {
+    "id": "adult_0056",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "The motel pool was covered for the season again."
+  },
+  {
+    "id": "adult_0057",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found thirty-seven shoes near a drainage ditch again."
+  },
+  {
+    "id": "adult_0058",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You carried the same flashlight for eleven years again."
+  },
+  {
+    "id": "adult_0059",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You slept through an entire thunderstorm again."
+  },
+  {
+    "id": "adult_0060",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed that birds seem louder near warehouses again."
+  },
+  {
+    "id": "adult_0061",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You saw a television playing inside an empty laundromat again."
+  },
+  {
+    "id": "adult_0062",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You became afraid of open water again."
+  },
+  {
+    "id": "adult_0063",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You stopped liking fluorescent lights again."
+  },
+  {
+    "id": "adult_0064",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You stood under a highway overpass during heavy rain again."
+  },
+  {
+    "id": "adult_0065",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You decided the cornfields were not empty again."
+  },
+  {
+    "id": "adult_0066",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You kept a receipt in your wallet until the ink disappeared again."
+  },
+  {
+    "id": "adult_0067",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched rainwater collect in a parking lot crack again."
+  },
+  {
+    "id": "adult_0068",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You counted seven pigeons on a single wire again."
+  },
+  {
+    "id": "adult_0069",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed a door that was always slightly open again."
+  },
+  {
+    "id": "adult_0070",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You smelled cut grass from three blocks away again."
+  },
+  {
+    "id": "adult_0071",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a man read a newspaper without turning pages again."
+  },
+  {
+    "id": "adult_0072",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a glove on a fence post and left it again."
+  },
+  {
+    "id": "adult_0073",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard a generator running behind a closed store again."
+  },
+  {
+    "id": "adult_0074",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed the same rust stain on a bridge every year again."
+  },
+  {
+    "id": "adult_0075",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched steam rise from a manhole cover for a long time again."
+  },
+  {
+    "id": "adult_0076",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You saw a dog tied outside a pharmacy for twenty minutes again."
+  },
+  {
+    "id": "adult_0077",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You counted the steps from your bed to the bathroom again."
+  },
+  {
+    "id": "adult_0078",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed a light that never turned off in an empty building again."
+  },
+  {
+    "id": "adult_0079",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a woman carry one bag into a laundromat again."
+  },
+  {
+    "id": "adult_0080",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a penny heads-up in a puddle again."
+  },
+  {
+    "id": "adult_0081",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard a screen door slam three houses away again."
+  },
+  {
+    "id": "adult_0082",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched fog move across a field like something breathing again."
+  },
+  {
+    "id": "adult_0083",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed tire marks that never washed away again."
+  },
+  {
+    "id": "adult_0084",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You saw a chair sitting alone in a yard again."
+  },
+  {
+    "id": "adult_0085",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a sprinkler miss the same patch of grass every day again."
+  },
+  {
+    "id": "adult_0086",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a note written on the back of a receipt again."
+  },
+  {
+    "id": "adult_0087",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard an ice machine running in an empty motel hallway again."
+  },
+  {
+    "id": "adult_0088",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed a window that reflected the wrong sky again."
+  },
+  {
+    "id": "adult_0089",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a crow pick at something in the road again."
+  },
+  {
+    "id": "adult_0090",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You counted four different sirens before noon again."
+  },
+  {
+    "id": "adult_0091",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a key without a tag in a parking lot again."
+  },
+  {
+    "id": "adult_0092",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "rare",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a flag hang motionless for an entire afternoon again."
+  },
+  {
+    "id": "adult_0093",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed a stain on the ceiling that looked like a map again."
+  },
+  {
+    "id": "adult_0094",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard typing from an office with the lights off again."
+  },
+  {
+    "id": "adult_0095",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a delivery truck circle the block twice again."
+  },
+  {
+    "id": "adult_0096",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "uncommon",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a single sock on a bench again."
+  },
+  {
+    "id": "adult_0097",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You noticed the same car parked in the same spot for weeks again."
+  },
+  {
+    "id": "adult_0098",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You watched a man sweep a sidewalk that was already clean again."
+  },
+  {
+    "id": "adult_0099",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You heard a phone ring inside a closed shop again."
+  },
+  {
+    "id": "adult_0100",
+    "age_min": 20,
+    "age_max": 65,
+    "rarity": "common",
+    "tags": [
+      "adult"
+    ],
+    "creates_memory": [],
+    "requires_memory": [],
+    "text": "You found a plastic fork bent into a curve again."
+  }
+]

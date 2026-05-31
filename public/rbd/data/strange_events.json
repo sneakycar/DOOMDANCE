@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "strange_0001",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You woke up in a salvage yard in Philadelphia."
+  },
+  {
+    "id": "strange_0002",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a broken television behind the church."
+  },
+  {
+    "id": "strange_0003",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw thirty-seven shoes arranged in a semicircle."
+  },
+  {
+    "id": "strange_0004",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard humming from an empty storage unit."
+  },
+  {
+    "id": "strange_0005",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a room where the clock ran backward for an hour."
+  },
+  {
+    "id": "strange_0006",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a man standing in a field who was not there when you looked again."
+  },
+  {
+    "id": "strange_0007",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a note that said only: check the culvert."
+  },
+  {
+    "id": "strange_0008",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a door open on its own in a vacant building."
+  },
+  {
+    "id": "strange_0009",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted eleven identical cars in a row."
+  },
+  {
+    "id": "strange_0010",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a photograph of a place you had never been."
+  },
+  {
+    "id": "strange_0011",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard your name spoken in an empty hallway."
+  },
+  {
+    "id": "strange_0012",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw lights moving in a field where there were no roads."
+  },
+  {
+    "id": "strange_0013",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a key that opened a lock you did not know existed."
+  },
+  {
+    "id": "strange_0014",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a television play static in a house with no power."
+  },
+  {
+    "id": "strange_0015",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a shoe filled with sand on a windowsill."
+  },
+  {
+    "id": "strange_0016",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You woke up in a salvage yard in Philadelphia again."
+  },
+  {
+    "id": "strange_0017",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a broken television behind the church again."
+  },
+  {
+    "id": "strange_0018",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw thirty-seven shoes arranged in a semicircle again."
+  },
+  {
+    "id": "strange_0019",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard humming from an empty storage unit again."
+  },
+  {
+    "id": "strange_0020",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a room where the clock ran backward for an hour again."
+  },
+  {
+    "id": "strange_0021",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a man standing in a field who was not there when you looked again again."
+  },
+  {
+    "id": "strange_0022",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a note that said only: check the culvert again."
+  },
+  {
+    "id": "strange_0023",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a door open on its own in a vacant building again."
+  },
+  {
+    "id": "strange_0024",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted eleven identical cars in a row again."
+  },
+  {
+    "id": "strange_0025",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a photograph of a place you had never been again."
+  },
+  {
+    "id": "strange_0026",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard your name spoken in an empty hallway again."
+  },
+  {
+    "id": "strange_0027",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw lights moving in a field where there were no roads again."
+  },
+  {
+    "id": "strange_0028",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a key that opened a lock you did not know existed again."
+  },
+  {
+    "id": "strange_0029",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a television play static in a house with no power again."
+  },
+  {
+    "id": "strange_0030",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a shoe filled with sand on a windowsill again."
+  },
+  {
+    "id": "strange_0031",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly woke up in a salvage yard in Philadelphia."
+  },
+  {
+    "id": "strange_0032",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a broken television behind the church."
+  },
+  {
+    "id": "strange_0033",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly saw thirty-seven shoes arranged in a semicircle."
+  },
+  {
+    "id": "strange_0034",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard humming from an empty storage unit."
+  },
+  {
+    "id": "strange_0035",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a room where the clock ran backward for an hour."
+  },
+  {
+    "id": "strange_0036",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly saw a man standing in a field who was not there when you looked again."
+  },
+  {
+    "id": "strange_0037",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a note that said only: check the culvert."
+  },
+  {
+    "id": "strange_0038",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a door open on its own in a vacant building."
+  },
+  {
+    "id": "strange_0039",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly counted eleven identical cars in a row."
+  },
+  {
+    "id": "strange_0040",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a photograph of a place you had never been."
+  },
+  {
+    "id": "strange_0041",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly heard your name spoken in an empty hallway."
+  },
+  {
+    "id": "strange_0042",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly saw lights moving in a field where there were no roads."
+  },
+  {
+    "id": "strange_0043",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a key that opened a lock you did not know existed."
+  },
+  {
+    "id": "strange_0044",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly watched a television play static in a house with no power."
+  },
+  {
+    "id": "strange_0045",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You briefly found a shoe filled with sand on a windowsill."
+  },
+  {
+    "id": "strange_0046",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later woke up in a salvage yard in Philadelphia."
+  },
+  {
+    "id": "strange_0047",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a broken television behind the church."
+  },
+  {
+    "id": "strange_0048",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later saw thirty-seven shoes arranged in a semicircle."
+  },
+  {
+    "id": "strange_0049",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later heard humming from an empty storage unit."
+  },
+  {
+    "id": "strange_0050",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a room where the clock ran backward for an hour."
+  },
+  {
+    "id": "strange_0051",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later saw a man standing in a field who was not there when you looked again."
+  },
+  {
+    "id": "strange_0052",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a note that said only: check the culvert."
+  },
+  {
+    "id": "strange_0053",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a door open on its own in a vacant building."
+  },
+  {
+    "id": "strange_0054",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later counted eleven identical cars in a row."
+  },
+  {
+    "id": "strange_0055",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a photograph of a place you had never been."
+  },
+  {
+    "id": "strange_0056",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later heard your name spoken in an empty hallway."
+  },
+  {
+    "id": "strange_0057",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later saw lights moving in a field where there were no roads."
+  },
+  {
+    "id": "strange_0058",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a key that opened a lock you did not know existed."
+  },
+  {
+    "id": "strange_0059",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later watched a television play static in a house with no power."
+  },
+  {
+    "id": "strange_0060",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You later found a shoe filled with sand on a windowsill."
+  },
+  {
+    "id": "strange_0061",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You woke up in the salvage yard in Philadelphia."
+  },
+  {
+    "id": "strange_0062",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the broken television behind the church."
+  },
+  {
+    "id": "strange_0063",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw thirty-seven shoes arranged in the semicircle."
+  },
+  {
+    "id": "strange_0064",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard humming from an empty storage unit."
+  },
+  {
+    "id": "strange_0065",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the room where the clock ran backward for an hour."
+  },
+  {
+    "id": "strange_0066",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw the man standing in the field who was not there when you looked again."
+  },
+  {
+    "id": "strange_0067",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the note that said only: check the culvert."
+  },
+  {
+    "id": "strange_0068",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the door open on its own in the vacant building."
+  },
+  {
+    "id": "strange_0069",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted eleven identical cars in the row."
+  },
+  {
+    "id": "strange_0070",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the photograph of the place you had never been."
+  },
+  {
+    "id": "strange_0071",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard your name spoken in an empty hallway."
+  },
+  {
+    "id": "strange_0072",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw lights moving in the field where there were no roads."
+  },
+  {
+    "id": "strange_0073",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the key that opened the lock you did not know existed."
+  },
+  {
+    "id": "strange_0074",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched the television play static in the house with no power."
+  },
+  {
+    "id": "strange_0075",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found the shoe filled with sand on the windowsill."
+  },
+  {
+    "id": "strange_0076",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You woke up in a salvage yard in Philadelphia."
+  },
+  {
+    "id": "strange_0077",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a broken television behind a church."
+  },
+  {
+    "id": "strange_0078",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw thirty-seven shoes arranged in a semicircle."
+  },
+  {
+    "id": "strange_0079",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard humming from an empty storage unit."
+  },
+  {
+    "id": "strange_0080",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a room where a clock ran backward for an hour."
+  },
+  {
+    "id": "strange_0081",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw a man standing in a field who was not there when you looked again."
+  },
+  {
+    "id": "strange_0082",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a note that said only: check a culvert."
+  },
+  {
+    "id": "strange_0083",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a door open on its own in a vacant building."
+  },
+  {
+    "id": "strange_0084",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You counted eleven identical cars in a row."
+  },
+  {
+    "id": "strange_0085",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a photograph of a place you had never been."
+  },
+  {
+    "id": "strange_0086",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You heard your name spoken in an empty hallway."
+  },
+  {
+    "id": "strange_0087",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You saw lights moving in a field where there were no roads."
+  },
+  {
+    "id": "strange_0088",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a key that opened a lock you did not know existed."
+  },
+  {
+    "id": "strange_0089",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You watched a television play static in a house with no power."
+  },
+  {
+    "id": "strange_0090",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You found a shoe filled with sand on a windowsill."
+  },
+  {
+    "id": "strange_0091",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once woke up in a salvage yard in Philadelphia."
+  },
+  {
+    "id": "strange_0092",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "rare",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once found a broken television behind the church."
+  },
+  {
+    "id": "strange_0093",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once saw thirty-seven shoes arranged in a semicircle."
+  },
+  {
+    "id": "strange_0094",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once heard humming from an empty storage unit."
+  },
+  {
+    "id": "strange_0095",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once found a room where the clock ran backward for an hour."
+  },
+  {
+    "id": "strange_0096",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once saw a man standing in a field who was not there when you looked again."
+  },
+  {
+    "id": "strange_0097",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once found a note that said only: check the culvert."
+  },
+  {
+    "id": "strange_0098",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "uncommon",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once watched a door open on its own in a vacant building."
+  },
+  {
+    "id": "strange_0099",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once counted eleven identical cars in a row."
+  },
+  {
+    "id": "strange_0100",
+    "age_min": 5,
+    "age_max": 99,
+    "rarity": "common",
+    "tags": [
+      "strange"
+    ],
+    "creates_memory": [
+      "object"
+    ],
+    "requires_memory": [],
+    "text": "You once found a photograph of a place you had never been."
+  }
+]
