@@ -8,8 +8,10 @@ import {
   catchUpCount,
   nextAge,
   createScar,
+  assignFirstLifeMortality,
 } from "./engine.js";
 import { MemoryBackground } from "./background.js";
+import { MemorySurface, computeMemoryWeight, estimateMemoryWeight } from "./memory-surface.js";
 
 const DEV = new URLSearchParams(location.search).has("dev");
 const MAX_AGE = 99;
@@ -17,6 +19,9 @@ const LIVE_PRESENT_MS = 4800;
 const DAY_MS = 86400000;
 
 const els = {
+  beginScreen: document.getElementById("begin-screen"),
+  btnBegin: document.getElementById("btn-begin"),
+  gameUi: document.getElementById("game-ui"),
   bioName: document.getElementById("bio-name"),
   bioAge: document.getElementById("bio-age"),
   bioBorn: document.getElementById("bio-born"),
@@ -26,6 +31,7 @@ const els = {
   iconMuted: document.querySelector(".icon-muted"),
   soundtrack: document.getElementById("soundtrack"),
   eventFloatLayer: document.getElementById("event-float-layer"),
+  memoryOverlayLayer: document.getElementById("memory-overlay-layer"),
   eventsPanel: document.getElementById("events-panel"),
   eventsToggle: document.getElementById("events-toggle"),
   eventsPreview: document.getElementById("events-preview"),
@@ -50,6 +56,20 @@ let audioMuted = false;
 let audioPrimed = false;
 let presentingLive = false;
 let simulating = false;
+let scheduleTimer = null;
+let memorySurface;
+
+function migrateEvent(record) {
+  if (record.ageYears == null) record.ageYears = record.age ?? 0;
+  if (record.isDeathEvent == null) record.isDeathEvent = !!(record.isDeath);
+  if (record.category == null) {
+    record.category = record.isDeathEvent ? "death" : "observation";
+  }
+  if (!record.tags?.length) record.tags = [];
+  if (record.memoryWeight == null) {
+    record.memoryWeight = estimateMemoryWeight(record);
+  }
+}
 
 function migrateLife(life) {
   if (!life.bornAt) {
@@ -64,6 +84,96 @@ function migrateLife(life) {
   if (!life.originTags?.length) {
     life.originTags = ["rural"];
   }
+  for (const record of life.events || []) {
+    migrateEvent(record);
+  }
+}
+
+function migrateSave() {
+  if (save.hasCompletedFirstLife == null) {
+    save.hasCompletedFirstLife = (save.obituaries?.length || 0) > 0;
+  }
+  if (save.hasBegun == null) {
+    save.hasBegun = !!(save.activeLife || save.obituaries?.length);
+  }
+  if (!save.activeLife) return;
+
+  migrateLife(save.activeLife);
+  const life = save.activeLife;
+  if (life.mortalityProfile == null) {
+    if (!save.hasCompletedFirstLife && !(save.obituaries?.length)) {
+      assignFirstLifeMortality(life, rng);
+    } else {
+      life.mortalityProfile = "normal";
+      life.targetDeathAge = null;
+    }
+  } else if (life.targetDeathAge === undefined) {
+    life.targetDeathAge = null;
+  }
+}
+
+function showBeginScreen() {
+  els.beginScreen.hidden = false;
+  els.gameUi.hidden = true;
+  memorySurface?.stop();
+}
+
+function hideBeginScreen() {
+  els.beginScreen.hidden = true;
+  els.gameUi.hidden = false;
+}
+
+function startScheduleLoop() {
+  if (scheduleTimer) return;
+  scheduleTimer = setInterval(
+    () => processSchedule({ allowLive: true }),
+    DEV ? 5000 : 60000
+  );
+}
+
+function stopScheduleLoop() {
+  if (!scheduleTimer) return;
+  clearInterval(scheduleTimer);
+  scheduleTimer = null;
+}
+
+function memoryIsBlocked() {
+  return (
+    presentingLive ||
+    document.hidden ||
+    !save.hasBegun ||
+    !els.beginScreen.hidden ||
+    save.activeLife?.status !== "active"
+  );
+}
+
+function initMemorySurface() {
+  memorySurface = new MemorySurface({
+    layer: els.memoryOverlayLayer,
+    rng,
+    dev: DEV,
+    getLife: () => save.activeLife,
+    isBlocked: memoryIsBlocked,
+    formatText: eventPopupText,
+  });
+}
+
+async function beginSession() {
+  save.hasBegun = true;
+  hideBeginScreen();
+  primeAudio();
+  startSoundtrack();
+
+  if (!save.activeLife) startNewLife();
+  else {
+    migrateLife(save.activeLife);
+    await processSchedule({ allowLive: false });
+    renderStatus();
+  }
+
+  writeSave(save);
+  startScheduleLoop();
+  memorySurface.start();
 }
 
 function ageBlendFor(life) {
@@ -246,12 +356,19 @@ function generateOne(life, { forceDeath = false, atMs = Date.now() } = {}) {
     id: crypto.randomUUID(),
     recordNumber: life.events.length + 1,
     age: life.currentAge,
+    ageYears: life.currentAge,
     text: result.text,
     templateId: result.template.id,
     timestamp: atMs,
     isRead: false,
     scarCreated: false,
     isDeath: result.isDeath,
+    isDeathEvent: result.isDeath,
+    category: result.category,
+    tags: result.tags || [],
+    memoryWeight: result.isDeath
+      ? 0
+      : computeMemoryWeight(result.template, result.category, result.text),
     pulseX: rng.nextDoubleRange(0.08, 0.92),
     pulseY: rng.nextDoubleRange(0.08, 0.92),
   };
@@ -264,6 +381,11 @@ function generateOne(life, { forceDeath = false, atMs = Date.now() } = {}) {
   if (result.isDeath) {
     life.status = "ended";
     life.deathCause = result.template.cause || null;
+    memorySurface?.stop();
+    memorySurface?.resetSession();
+    if (!save.hasCompletedFirstLife) {
+      save.hasCompletedFirstLife = true;
+    }
     save.obituaries.unshift({
       id: crypto.randomUUID(),
       lifeId: life.id,
@@ -292,8 +414,13 @@ async function settleEvent(life, record, { live = false } = {}) {
 }
 
 function startNewLife(atMs = Date.now()) {
-  save.activeLife = createLife(content, rng);
+  const isFirstLife = !save.hasCompletedFirstLife;
+  save.activeLife = createLife(content, rng, { isFirstLife });
   save.activeLife.nextEventScheduledAt = nextEventTime(atMs, rng, DEV);
+  memorySurface?.resetSession();
+  if (save.hasBegun && save.activeLife.status === "active") {
+    memorySurface?.start();
+  }
   writeSave(save);
   renderStatus();
 }
@@ -448,33 +575,45 @@ function toggleMute() {
 }
 
 async function init() {
+  if (!els.beginScreen || !els.btnBegin || !els.gameUi) {
+    console.error("EVOL: missing required DOM nodes");
+    return;
+  }
+
   content = await loadContent();
   bg = new MemoryBackground(
     document.getElementById("field-canvas"),
     document.getElementById("pulse-canvas"),
     document.getElementById("scars-canvas")
   );
+  bg.setSeed(save.globalMapSeed || Date.now());
 
-  if (!save.activeLife) startNewLife();
-  else {
-    migrateLife(save.activeLife);
-    await processSchedule({ allowLive: false });
-  }
-  renderStatus();
-
-  setInterval(() => processSchedule({ allowLive: true }), DEV ? 5000 : 60000);
+  migrateSave();
+  updateMuteUi();
+  initMemorySurface();
 
   els.eventsToggle.addEventListener("click", () => setEventsExpanded(!eventsExpanded));
   els.btnMute.addEventListener("click", toggleMute);
+  els.btnBegin.addEventListener("click", () => beginSession());
 
-  const unlockAudio = () => {
+  if (save.hasBegun) {
+    hideBeginScreen();
+    if (!save.activeLife) startNewLife();
+    else {
+      migrateLife(save.activeLife);
+      await processSchedule({ allowLive: false });
+      renderStatus();
+    }
     startSoundtrack();
-    document.removeEventListener("pointerdown", unlockAudio);
-    document.removeEventListener("keydown", unlockAudio);
-  };
-  document.addEventListener("pointerdown", unlockAudio, { once: true });
-  document.addEventListener("keydown", unlockAudio, { once: true });
-  startSoundtrack();
+    startScheduleLoop();
+    memorySurface.start();
+  } else {
+    showBeginScreen();
+    if (save.activeLife) {
+      save.activeLife = null;
+      writeSave(save);
+    }
+  }
 
   if (DEV) {
     els.devPanel.hidden = false;
@@ -504,10 +643,15 @@ async function init() {
       }
     });
     els.devReset.addEventListener("click", () => {
+      stopScheduleLoop();
+      memorySurface?.stop();
       clearSave();
       save = freshSave();
       rng = new SeededRNG(Date.now());
-      startNewLife();
+      bg.setSeed(save.globalMapSeed);
+      bg.setScars([]);
+      showBeginScreen();
+      writeSave(save);
     });
   }
 }

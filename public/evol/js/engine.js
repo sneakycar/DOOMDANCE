@@ -61,7 +61,50 @@ function poolForCategory(cat, age, content) {
   }
 }
 
-export function shouldDie(age, eventCount, rng) {
+const FIRST_LIFE_MIN_EVENTS = 6;
+const FIRST_LIFE_PREFERRED_MIN = 10;
+
+const FIRST_LIFE_PROFILE_WEIGHTS = [
+  ["first_life_childhood_death", 0.6],
+  ["first_life_young_adult_death", 0.25],
+  ["normal", 0.15],
+];
+
+export function rollFirstLifeMortalityProfile(rng) {
+  const roll = rng.nextDouble();
+  let cumulative = 0;
+  for (const [profile, weight] of FIRST_LIFE_PROFILE_WEIGHTS) {
+    cumulative += weight;
+    if (roll <= cumulative) return profile;
+  }
+  return "normal";
+}
+
+function rollChildhoodDeathAge(rng) {
+  if (rng.nextDouble() < 0.7) return rng.nextInt(6, 16);
+  if (rng.nextDouble() < 0.55) return rng.nextInt(2, 5);
+  return 17;
+}
+
+function rollYoungAdultDeathAge(rng) {
+  if (rng.nextDouble() < 0.75) return rng.nextInt(19, 27);
+  if (rng.nextDouble() < 0.5) return 18;
+  return rng.nextInt(28, 30);
+}
+
+export function assignFirstLifeMortality(life, rng) {
+  const profile = rollFirstLifeMortalityProfile(rng);
+  life.mortalityProfile = profile;
+  if (profile === "first_life_childhood_death") {
+    life.targetDeathAge = rollChildhoodDeathAge(rng);
+  } else if (profile === "first_life_young_adult_death") {
+    life.targetDeathAge = rollYoungAdultDeathAge(rng);
+  } else {
+    life.targetDeathAge = null;
+  }
+}
+
+function normalDeathChance(age, eventCount) {
   let base;
   if (age <= 4) base = 0.0008;
   else if (age <= 12) base = 0.0012;
@@ -71,7 +114,34 @@ export function shouldDie(age, eventCount, rng) {
   else if (age <= 74) base = 0.012;
   else base = 0.025;
   const maturity = Math.min(eventCount / 200, 1);
-  return rng.nextDouble() < base * (1 + maturity * 0.5);
+  return base * (1 + maturity * 0.5);
+}
+
+function firstLifeDeathChance(life) {
+  const { currentAge: age, events, targetDeathAge } = life;
+  const eventCount = events.length;
+  if (eventCount < FIRST_LIFE_MIN_EVENTS) return 0;
+  if (targetDeathAge == null || age < targetDeathAge) return 0;
+
+  const overshoot = age - targetDeathAge;
+  if (eventCount < FIRST_LIFE_PREFERRED_MIN) {
+    return 0.45 + Math.min(overshoot * 0.08, 0.25);
+  }
+  return 0.88 + Math.min(overshoot * 0.04, 0.11);
+}
+
+export function shouldDie(life, rng) {
+  const age = life.currentAge;
+  const eventCount = life.events.length;
+  const profile = life.mortalityProfile || "normal";
+
+  if (profile !== "normal" && life.targetDeathAge != null) {
+    const chance = firstLifeDeathChance(life);
+    if (chance > 0) return rng.nextDouble() < chance;
+    return false;
+  }
+
+  return rng.nextDouble() < normalDeathChance(age, eventCount);
 }
 
 export function nextAge(current, rng) {
@@ -84,10 +154,10 @@ export function nextAge(current, rng) {
   return Math.min(current + Math.max(inc, 1), 99);
 }
 
-export function createLife(content, rng) {
+export function createLife(content, rng, { isFirstLife = false } = {}) {
   const year = new Date().getFullYear() - rng.nextInt(0, 2);
   const originEntry = rng.pick(content.origins) || rng.pick(content.places);
-  return {
+  const life = {
     id: crypto.randomUUID(),
     firstName: rng.pick(content.firstNames) || "Unknown",
     surname: rng.pick(content.surnames) || "Person",
@@ -103,10 +173,14 @@ export function createLife(content, rng) {
     memoryScars: [],
     usedTemplateIds: [],
     deathCause: null,
+    mortalityProfile: "normal",
+    targetDeathAge: null,
     mapSeed: Number(rng.next() & 0xffffffffffffn),
     lastEventGeneratedAt: null,
     nextEventScheduledAt: null,
   };
+  if (isFirstLife) assignFirstLifeMortality(life, rng);
+  return life;
 }
 
 function eligible(templates, age, used) {
@@ -143,10 +217,19 @@ export function generateEvent(life, content, rng, { forceDeath = false } = {}) {
   const age = life.currentAge;
   const used = life.usedTemplateIds;
 
-  if (forceDeath || shouldDie(age, life.events.length, rng)) {
+  if (forceDeath || shouldDie(life, rng)) {
     const deaths = eligible(content.deaths, age, used);
     const death = weightedPick(deaths, rng);
-    if (death) return { template: death, text: death.text, isDeath: true, memories: [] };
+    if (death) {
+      return {
+        template: death,
+        text: death.text,
+        isDeath: true,
+        memories: [],
+        category: "death",
+        tags: death.tags || [],
+      };
+    }
   }
 
   if (life.memories.length && rng.nextDouble() < 0.18) {
@@ -155,7 +238,7 @@ export function generateEvent(life, content, rng, { forceDeath = false } = {}) {
     if (cb) {
       const mem = rng.pick(life.memories);
       const text = cb.text.replace("{memory}", mem?.fragment || "something");
-      return { template: cb, text, isDeath: false, memories: [] };
+      return { template: cb, text, isDeath: false, memories: [], category: "memory_callback", tags: cb.tags || [] };
     }
   }
 
@@ -170,7 +253,14 @@ export function generateEvent(life, content, rng, { forceDeath = false } = {}) {
 
   const text = resolveText(template, content, rng);
   const memories = extractMemories(template, text, age);
-  return { template, text, isDeath: false, memories };
+  return {
+    template,
+    text,
+    isDeath: false,
+    memories,
+    category: cat,
+    tags: template.tags || [],
+  };
 }
 
 export function nextEventTime(fromMs, rng, devMode) {
@@ -223,7 +313,7 @@ export async function loadContent() {
     "strange_events", "places_events", "death_events", "memory_callbacks",
     "banned_phrases",
   ];
-  const base = new URL("../data/", import.meta.url);
+  const base = new URL("/evol/data/", window.location.origin);
   const entries = await Promise.all(
     files.map(async (name) => {
       const res = await fetch(new URL(`${name}.json`, base));

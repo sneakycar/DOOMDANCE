@@ -8,7 +8,120 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="theme-color" content="#000000" />
   <title>EVOL</title>
-  <link rel="stylesheet" href="css/archive.css" />
+  <base href="/evol/" />
+  <link rel="stylesheet" href="/evol/css/archive.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      height: 100%;
+      min-height: 100dvh;
+      background: #000;
+      color: #e8e8e4;
+      overflow: hidden;
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    }
+    #phone {
+      position: relative;
+      width: 100%;
+      height: 100dvh;
+      min-height: 100dvh;
+      max-width: 430px;
+      margin: 0 auto;
+      overflow: hidden;
+      background: #2e2a26;
+    }
+    #memory-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: #2e2a26;
+    }
+    #field-canvas, #scars-canvas, #pulse-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #begin-screen {
+      position: absolute;
+      inset: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #begin-screen[hidden] { display: none !important; }
+    #btn-begin {
+      font: 700 0.78rem/1 ui-monospace, Menlo, monospace;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: #fff;
+      background: rgba(0,0,0,0.55);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 0.25rem;
+      padding: 0.85rem 2.4rem;
+    }
+    #game-ui {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+    }
+    #game-ui[hidden] { display: none !important; }
+    #bio-bar {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      z-index: 10;
+      padding: calc(0.85rem + env(safe-area-inset-top, 0px)) 3.75rem 0.75rem 1.1rem;
+    }
+    #bio-name {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #fff;
+      text-shadow: 0 1px 12px rgba(0,0,0,0.65);
+    }
+    #bio-age, #bio-born, #bio-origin {
+      margin: 0.28rem 0 0;
+      font-size: 0.72rem;
+      line-height: 1.45;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.7);
+    }
+    .mute-btn--fixed {
+      position: absolute;
+      top: calc(0.85rem + env(safe-area-inset-top, 0px));
+      right: 1.1rem;
+      z-index: 30;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(0,0,0,0.45);
+      color: #fff;
+    }
+    .events-panel {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+      z-index: 10;
+      background: rgba(0,0,0,0.8);
+      border-radius: 0.35rem;
+    }
+    .events-toggle {
+      width: 100%;
+      display: flex;
+      gap: 0.65rem;
+      padding: 0.85rem 1rem;
+      background: transparent;
+      border: none;
+      color: #e8e8e4;
+      text-align: left;
+      font: 400 0.72rem/1.5 ui-monospace, Menlo, monospace;
+    }
+  </style>
 </head>
 <body>
   <div id="rotate-gate" hidden>
@@ -34,7 +147,22 @@
     </div>
 
     <div id="event-float-layer" aria-live="polite"></div>
+    <div id="memory-overlay-layer" aria-live="polite"></div>
 
+    <div id="begin-screen">
+      <button type="button" id="btn-begin">BEGIN</button>
+    </div>
+
+    <button type="button" id="btn-mute" class="mute-btn mute-btn--fixed" aria-label="Mute soundtrack" aria-pressed="false">
+      <svg class="icon-speaker" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+      </svg>
+      <svg class="icon-muted" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" hidden>
+        <path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v1.96c2.89.86 5 3.54 5 6.81zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+      </svg>
+    </button>
+
+    <div id="game-ui" hidden>
     <header id="bio-bar">
       <div class="bio-copy">
         <h1 id="bio-name">—</h1>
@@ -42,14 +170,6 @@
         <p id="bio-born">Born —</p>
         <p id="bio-origin">Origin —</p>
       </div>
-      <button type="button" id="btn-mute" class="mute-btn" aria-label="Mute soundtrack" aria-pressed="false">
-        <svg class="icon-speaker" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-          <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
-        </svg>
-        <svg class="icon-muted" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" hidden>
-          <path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v1.96c2.89.86 5 3.54 5 6.81zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
-        </svg>
-      </button>
     </header>
 
     <section id="events-panel" class="events-panel">
@@ -72,8 +192,9 @@
       <button type="button" id="dev-kill">KILL LIFE</button>
       <button type="button" id="dev-reset">RESET ALL</button>
     </div>
+    </div>
   </div>
 
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="/evol/js/app.js"></script>
 </body>
 </html>

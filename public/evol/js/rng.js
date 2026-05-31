@@ -13,7 +13,7 @@ export class SeededRNG {
   }
 
   nextDouble() {
-    return Number(this.next() >> 11n) / (1 << 53);
+    return Number(this.next() >> 11n) / 2 ** 53;
   }
 
   nextDoubleRange(min, max) {

@@ -24,5 +24,7 @@ export function freshSave() {
     activeLife: null,
     obituaries: [],
     globalMapSeed: Date.now(),
+    hasCompletedFirstLife: false,
+    hasBegun: false,
   };
 }
