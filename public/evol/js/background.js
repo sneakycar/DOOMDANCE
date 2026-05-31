@@ -1,11 +1,13 @@
 import { ImageTextureField } from "./image-texture-field.js";
+import { AtmosphereOverlay } from "./atmosphere-overlay.js";
 
 export class MemoryBackground {
-  constructor(fieldCanvas, pulseCanvas, scarsCanvas) {
+  constructor(fieldCanvas, atmosphereCanvas, pulseCanvas, scarsCanvas, gestureLayer) {
     this.fieldCanvas = fieldCanvas;
     this.pulseCanvas = pulseCanvas;
     this.scarsCanvas = scarsCanvas;
-    this.field = new ImageTextureField(fieldCanvas);
+    this.field = new ImageTextureField(fieldCanvas, { gestureLayer });
+    this.atmosphere = new AtmosphereOverlay(atmosphereCanvas);
     this.pulseCtx = pulseCanvas.getContext("2d");
     this.scarsCtx = scarsCanvas.getContext("2d");
     this.scars = [];
@@ -25,6 +27,7 @@ export class MemoryBackground {
       c.style.width = rect.width + "px";
       c.style.height = rect.height + "px";
     }
+    this.atmosphere.resize();
     this.width = rect.width;
     this.height = rect.height;
     this.drawScars();
@@ -32,6 +35,7 @@ export class MemoryBackground {
 
   setSeed(seed) {
     this.field.setSeed(seed);
+    this.atmosphere.setSeed(seed);
   }
 
   setScars(scars) {
@@ -41,6 +45,7 @@ export class MemoryBackground {
 
   setAgeBlend(t) {
     this.field.setAgeBlend(t);
+    this.atmosphere.setAgeBlend(t);
   }
 
   triggerSonar(nx, ny, durationMs = 4800) {

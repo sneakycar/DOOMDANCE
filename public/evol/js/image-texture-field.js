@@ -1,6 +1,6 @@
-/** Pan/zoom background from a single archive texture image. Max zoom 2×. */
+/** Pan/zoom background from archive texture. Max zoom 2×. Ambient drift + user pan. */
 export class ImageTextureField {
-  constructor(canvas, { src = "/evol/images/background-texture.png" } = {}) {
+  constructor(canvas, { src = "/evol/images/background-texture.png", gestureLayer = null } = {}) {
     this.canvas = canvas;
     this.ctx = canvas.getContext("2d", { alpha: false });
     this.src = src;
@@ -12,12 +12,18 @@ export class ImageTextureField {
     this.scale = 1;
     this.minScale = 1;
     this.maxScale = 2;
+    this.baseOverscan = 1.22;
     this.offsetX = 0;
     this.offsetY = 0;
+    this.driftX = 0;
+    this.driftY = 0;
+    this.breathe = 1;
     this.ageBlend = 0;
+    this._userPanning = false;
 
     this._pointers = new Map();
     this._pinchStart = null;
+    this._lastPan = { x: 0, y: 0 };
 
     this._resize = () => this.resize();
     window.addEventListener("resize", this._resize);
@@ -32,24 +38,36 @@ export class ImageTextureField {
     };
     this.img.src = src;
 
-    const surface = canvas.parentElement || canvas;
+    const surface = gestureLayer || canvas.parentElement || canvas;
+    this._surface = surface;
     surface.style.touchAction = "none";
-    surface.addEventListener("pointerdown", (e) => this._onPointerDown(e, surface));
-    surface.addEventListener("pointermove", (e) => this._onPointerMove(e));
-    surface.addEventListener("pointerup", (e) => this._onPointerUp(e));
-    surface.addEventListener("pointercancel", (e) => this._onPointerUp(e));
-    surface.addEventListener("wheel", (e) => this._onWheel(e), { passive: false });
+    const opts = { capture: true, passive: false };
+    surface.addEventListener("pointerdown", (e) => this._onPointerDown(e), opts);
+    surface.addEventListener("pointermove", (e) => this._onPointerMove(e), opts);
+    surface.addEventListener("pointerup", (e) => this._onPointerUp(e), opts);
+    surface.addEventListener("pointercancel", (e) => this._onPointerUp(e), opts);
+    surface.addEventListener("wheel", (e) => this._onWheel(e), { passive: false, capture: true });
 
     this.resize();
+    this._ambient = this._ambient.bind(this);
+    requestAnimationFrame(this._ambient);
   }
 
   setAgeBlend(t) {
     this.ageBlend = Math.max(0, Math.min(1, t));
-    this.draw();
   }
 
-  setSeed() {
-    /* image background is fixed; seed unused */
+  setSeed() {}
+
+  _ambient(now) {
+    if (!this._userPanning && this._pointers.size === 0) {
+      const t = now * 0.001;
+      this.driftX = Math.sin(t * 0.11) * 14 + Math.sin(t * 0.067) * 8;
+      this.driftY = Math.cos(t * 0.095) * 11 + Math.sin(t * 0.043) * 6;
+      this.breathe = 1 + Math.sin(t * 0.31) * 0.015;
+      this.draw();
+    }
+    requestAnimationFrame(this._ambient);
   }
 
   resize() {
@@ -81,9 +99,10 @@ export class ImageTextureField {
 
   _drawSize() {
     const cover = this._coverScale();
+    const zoom = this.scale * this.baseOverscan * this.breathe;
     return {
-      w: this.img.width * cover * this.scale,
-      h: this.img.height * cover * this.scale,
+      w: this.img.width * cover * zoom,
+      h: this.img.height * cover * zoom,
     };
   }
 
@@ -94,6 +113,11 @@ export class ImageTextureField {
     const maxY = Math.max(0, (h - this.height) / 2);
     this.offsetX = Math.max(-maxX, Math.min(maxX, this.offsetX));
     this.offsetY = Math.max(-maxY, Math.min(maxY, this.offsetY));
+  }
+
+  _canPan() {
+    const { w, h } = this._drawSize();
+    return w > this.width + 1 || h > this.height + 1;
   }
 
   _zoomAt(factor, cx, cy) {
@@ -110,33 +134,44 @@ export class ImageTextureField {
   }
 
   _onWheel(e) {
+    if (e.target.closest("#dev-panel, button, a, input, .events-panel")) return;
     e.preventDefault();
-    const rect = this.canvas.getBoundingClientRect();
+    const rect = this._surface.getBoundingClientRect();
     const cx = e.clientX - rect.left;
     const cy = e.clientY - rect.top;
-    const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    const factor = e.deltaY < 0 ? 1.1 : 1 / 1.1;
     this._zoomAt(factor, cx, cy);
   }
 
-  _onPointerDown(e, surface) {
-    if (e.target.closest("button, a, input, textarea, select, label")) return;
-    surface.setPointerCapture?.(e.pointerId);
+  _isInteractiveTarget(el) {
+    return !!el?.closest?.(
+      "button, a, input, textarea, select, label, #dev-panel, .events-panel, .life-selection-inner, #begin-screen, .memory-overlay, .event-float"
+    );
+  }
+
+  _onPointerDown(e) {
+    if (this._isInteractiveTarget(e.target)) return;
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    e.preventDefault();
+    this._surface.setPointerCapture?.(e.pointerId);
     this._pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    this._lastPan = { x: e.clientX, y: e.clientY };
+    this._userPanning = true;
+
     if (this._pointers.size === 2) {
       const pts = [...this._pointers.values()];
       const dx = pts[1].x - pts[0].x;
       const dy = pts[1].y - pts[0].y;
       this._pinchStart = {
-        distance: Math.hypot(dx, dy),
+        distance: Math.max(24, Math.hypot(dx, dy)),
         scale: this.scale,
-        midX: (pts[0].x + pts[1].x) / 2,
-        midY: (pts[0].y + pts[1].y) / 2,
       };
     }
   }
 
   _onPointerMove(e) {
     if (!this._pointers.has(e.pointerId)) return;
+    e.preventDefault();
     const prev = this._pointers.get(e.pointerId);
     this._pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
 
@@ -145,19 +180,18 @@ export class ImageTextureField {
       const dx = pts[1].x - pts[0].x;
       const dy = pts[1].y - pts[0].y;
       const dist = Math.max(24, Math.hypot(dx, dy));
-      const rect = this.canvas.getBoundingClientRect();
+      const rect = this._surface.getBoundingClientRect();
       const midX = (pts[0].x + pts[1].x) / 2 - rect.left;
       const midY = (pts[0].y + pts[1].y) / 2 - rect.top;
       const next = Math.max(
         this.minScale,
         Math.min(this.maxScale, (this._pinchStart.scale * dist) / this._pinchStart.distance)
       );
-      const factor = next / this.scale;
-      this._zoomAt(factor, midX, midY);
+      this._zoomAt(next / this.scale, midX, midY);
       return;
     }
 
-    if (this._pointers.size === 1 && this.scale > 1) {
+    if (this._pointers.size === 1 && this._canPan()) {
       this.offsetX += e.clientX - prev.x;
       this.offsetY += e.clientY - prev.y;
       this.clamp();
@@ -168,6 +202,14 @@ export class ImageTextureField {
   _onPointerUp(e) {
     this._pointers.delete(e.pointerId);
     if (this._pointers.size < 2) this._pinchStart = null;
+    if (this._pointers.size === 0) {
+      this._userPanning = false;
+      try {
+        this._surface.releasePointerCapture?.(e.pointerId);
+      } catch {
+        /* ignore */
+      }
+    }
   }
 
   draw() {
@@ -179,8 +221,8 @@ export class ImageTextureField {
     if (!this.ready) return;
 
     const { w, h } = this._drawSize();
-    const x = (this.width - w) / 2 + this.offsetX;
-    const y = (this.height - h) / 2 + this.offsetY;
+    const x = (this.width - w) / 2 + this.offsetX + this.driftX;
+    const y = (this.height - h) / 2 + this.offsetY + this.driftY;
 
     ctx.drawImage(this.img, x, y, w, h);
 

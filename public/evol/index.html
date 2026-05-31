@@ -38,11 +38,17 @@
       background: #000;
       touch-action: none;
     }
-    #field-canvas, #scars-canvas, #pulse-canvas {
+    #field-canvas, #atmosphere-canvas, #scars-canvas, #pulse-canvas {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
+    }
+    #bg-touch-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 5;
+      touch-action: none;
     }
     #begin-screen {
       position: absolute;
@@ -98,7 +104,7 @@
       width: 1.85rem;
       height: 1.85rem;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,0.18);
+      border: none;
       background: rgba(0,0,0,0.45);
       color: #fff;
     }
@@ -141,6 +147,7 @@
   <div id="phone">
     <div id="memory-bg" aria-hidden="true">
       <canvas id="field-canvas"></canvas>
+      <canvas id="atmosphere-canvas"></canvas>
       <canvas id="scars-canvas"></canvas>
       <canvas id="pulse-canvas"></canvas>
     </div>

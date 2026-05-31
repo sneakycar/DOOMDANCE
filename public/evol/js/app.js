@@ -18,7 +18,13 @@ import { applyPlaceEffects, migrateLifePlaceFields } from "./place-influence.js"
 import { FragmentEngine, loadFragmentData } from "./fragment-engine.js";
 import { FragmentSurface } from "./fragment-surface.js";
 
-const DEV = new URLSearchParams(location.search).has("dev");
+const DEV =
+  new URLSearchParams(location.search).has("dev") ||
+  localStorage.getItem("evol_dev") === "1";
+
+if (new URLSearchParams(location.search).has("dev")) {
+  localStorage.setItem("evol_dev", "1");
+}
 const MAX_AGE = 99;
 const LIVE_PRESENT_MS = 4800;
 const DAY_MS = 86400000;
@@ -452,13 +458,13 @@ function formatAgeLine(life, atMs = Date.now()) {
 
   if (years <= 0) {
     const { months, days } = calendarRemainder(bornAt, atMs);
-    return `Age: ${unitLabel(months, "month")}, ${unitLabel(days, "day")}`;
+    return `${unitLabel(months, "month")}, ${unitLabel(days, "day")} old`;
   }
 
   const afterYears = new Date(bornAt);
   afterYears.setFullYear(afterYears.getFullYear() + years);
   const { months, days } = calendarRemainder(afterYears.getTime(), atMs);
-  return `Age: ${unitLabel(years, "year")}, ${unitLabel(months, "month")}, ${unitLabel(days, "day")}`;
+  return `${unitLabel(years, "year")}, ${unitLabel(months, "month")}, ${unitLabel(days, "day")} old`;
 }
 
 function startAgeTick() {
@@ -781,20 +787,45 @@ function setDevSimBusy(busy) {
   }
 }
 
+async function devGenerateEvent({ live = true } = {}) {
+  const life = save.activeLife;
+  if (!life || life.status !== "active") return null;
+  const atMs = Date.now();
+  const record = generateOne(life, { atMs });
+  if (!record) return null;
+  await settleEvent(life, record, { live });
+  if (life.status === "active") {
+    life.nextEventScheduledAt = nextEventTime(atMs, rng, DEV);
+  }
+  writeSave(save);
+  renderStatus();
+  if (record.isDeath) {
+    scheduleAfterDeath(atMs, { showLive: live });
+  }
+  return record;
+}
+
+function bindDevButton(el, handler) {
+  if (!el) return;
+  let busy = false;
+  const run = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (busy) return;
+    busy = true;
+    setTimeout(() => {
+      busy = false;
+    }, 350);
+    Promise.resolve(handler()).catch(console.error);
+  };
+  el.addEventListener("pointerup", run);
+}
+
 async function simToNext() {
   if (simulating || !save.activeLife) return;
   setDevSimBusy(true);
   try {
-    const life = save.activeLife;
-    if (life.status !== "active") return;
-    const now = Date.now();
-    life.nextEventScheduledAt = now;
-    writeSave(save);
-    await processSchedule({
-      allowLive: true,
-      asOfMs: now,
-      useDevSchedule: DEV,
-    });
+    await devGenerateEvent({ live: true });
   } finally {
     setDevSimBusy(false);
   }
@@ -911,8 +942,10 @@ async function init() {
 
   bg = new MemoryBackground(
     document.getElementById("field-canvas"),
+    document.getElementById("atmosphere-canvas"),
     document.getElementById("pulse-canvas"),
-    document.getElementById("scars-canvas")
+    document.getElementById("scars-canvas"),
+    document.getElementById("phone")
   );
   bg.setSeed(save.globalMapSeed || Date.now());
 
@@ -957,29 +990,26 @@ async function init() {
 
   if (DEV) {
     els.devPanel.hidden = false;
-    els.devSimNext.addEventListener("click", () => simToNext());
-    els.devSim1d.addEventListener("click", () => simDays(1));
-    els.devSim7d.addEventListener("click", () => simDays(7));
-    els.devSim30d.addEventListener("click", () => simDays(30));
-    els.devEvent.addEventListener("click", async () => {
+    bindDevButton(els.devSimNext, () => simToNext());
+    bindDevButton(els.devSim1d, () => simDays(1));
+    bindDevButton(els.devSim7d, () => simDays(7));
+    bindDevButton(els.devSim30d, () => simDays(30));
+    bindDevButton(els.devEvent, () => devGenerateEvent({ live: true }));
+    bindDevButton(els.devKill, async () => {
       if (!save.activeLife || save.activeLife.status !== "active") return;
-      const record = generateOne(save.activeLife);
-      if (record) {
+      setDevSimBusy(true);
+      try {
+        const record = generateOne(save.activeLife, { forceDeath: true, atMs: Date.now() });
+        if (!record) return;
         await settleEvent(save.activeLife, record, { live: true });
         writeSave(save);
         renderStatus();
+        scheduleAfterDeath(Date.now(), { showLive: true });
+      } finally {
+        setDevSimBusy(false);
       }
     });
-    els.devKill.addEventListener("click", async () => {
-      if (!save.activeLife || save.activeLife.status !== "active") return;
-      const record = generateOne(save.activeLife, { forceDeath: true });
-      if (!record) return;
-      await settleEvent(save.activeLife, record, { live: true });
-      writeSave(save);
-      renderStatus();
-      scheduleAfterDeath(Date.now(), { showLive: true });
-    });
-    els.devReset.addEventListener("click", () => {
+    bindDevButton(els.devReset, () => {
       stopScheduleLoop();
       memorySurface?.stop();
       hideLifeSelection();
