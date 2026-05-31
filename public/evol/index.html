@@ -6,7 +6,7 @@
   <meta name="screen-orientation" content="portrait" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <meta name="theme-color" content="#08090a" />
+  <meta name="theme-color" content="#000000" />
   <title>EVOL</title>
   <link rel="stylesheet" href="css/archive.css" />
 </head>
@@ -16,60 +16,58 @@
     <p class="sub">Portrait only. Rotate your device.</p>
   </div>
 
+  <audio
+    id="soundtrack"
+    preload="auto"
+    loop
+    playsinline
+    webkit-playsinline
+    crossorigin="anonymous"
+    src="/doom_soundtrack_01.mp3"
+  ></audio>
+
   <div id="phone">
     <div id="memory-bg" aria-hidden="true">
-      <div id="city-layer"></div>
-      <div id="city-treatment"></div>
+      <canvas id="field-canvas"></canvas>
       <canvas id="scars-canvas"></canvas>
       <canvas id="pulse-canvas"></canvas>
-      <div id="grain"></div>
-      <div id="scanlines"></div>
     </div>
 
-    <header id="status-bar" class="panel">
-      <div class="status-left">
-        <div class="row"><span class="dim">SUBJECT</span> <span id="subject-name">—</span></div>
-        <div class="row meta">
-          <span><span class="dim">AGE</span> <span id="subject-age">0</span></span>
-          <span><span class="dim">REC</span> <span id="subject-rec">0000</span></span>
-          <span><span class="dim">STS</span> <span id="subject-sts">LIVE</span></span>
-        </div>
+    <div id="event-float-layer" aria-live="polite"></div>
+
+    <header id="bio-bar">
+      <div class="bio-copy">
+        <h1 id="bio-name">—</h1>
+        <p id="bio-age">Age 0</p>
+        <p id="bio-born">Born —</p>
+        <p id="bio-origin">Origin —</p>
       </div>
-      <div class="status-right dim">
-        <div>EVOL</div>
-        <div>ARCHIVE TERMINAL · WEB DEV</div>
-        <div class="cursor"><span>&gt;</span><span id="cursor">█</span></div>
-      </div>
+      <button type="button" id="btn-mute" class="mute-btn" aria-label="Mute soundtrack" aria-pressed="false">
+        <svg class="icon-speaker" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        </svg>
+        <svg class="icon-muted" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" hidden>
+          <path fill="currentColor" d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v1.96c2.89.86 5 3.54 5 6.81zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+        </svg>
+      </button>
     </header>
 
-    <nav id="nav">
-      <button type="button" id="btn-log" class="nav-btn">[ RECORD INDEX ]</button>
-      <button type="button" id="btn-archive" class="nav-btn">[ OBITUARY INDEX ]</button>
-    </nav>
-
-    <div id="event-overlay" hidden>
-      <div id="event-card" class="panel">
-        <div class="event-meta">
-          <span id="event-record">ENTRY 0000</span>
-          <span id="event-age">AGE 0</span>
-        </div>
-        <hr />
-        <p id="event-text"></p>
-        <button type="button" id="btn-ack" class="ack-btn">&gt; ACKNOWLEDGE RECORD</button>
+    <section id="events-panel" class="events-panel">
+      <button type="button" id="events-toggle" class="events-toggle" aria-expanded="false">
+        <span id="events-chevron" class="chevron" aria-hidden="true">▶</span>
+        <span id="events-preview" class="events-preview">—</span>
+      </button>
+      <div id="events-body" class="events-body" hidden>
+        <div id="events-scroll" class="events-scroll"></div>
       </div>
-    </div>
-
-    <div id="sheet" hidden>
-      <div class="sheet-inner panel">
-        <div class="sheet-head">
-          <h2 id="sheet-title">RECORD INDEX</h2>
-          <button type="button" id="btn-close-sheet" class="nav-btn">[ CLOSE ]</button>
-        </div>
-        <div id="sheet-body"></div>
-      </div>
-    </div>
+    </section>
 
     <div id="dev-panel" hidden>
+      <button type="button" id="dev-sim-next">SIM TO NEXT</button>
+      <button type="button" id="dev-sim-1d">SIM 1 DAY</button>
+      <button type="button" id="dev-sim-7d">SIM 7 DAYS</button>
+      <button type="button" id="dev-sim-30d">SIM 30 DAYS</button>
+      <hr class="dev-divider" />
       <button type="button" id="dev-event">GENERATE EVENT</button>
       <button type="button" id="dev-kill">KILL LIFE</button>
       <button type="button" id="dev-reset">RESET ALL</button>

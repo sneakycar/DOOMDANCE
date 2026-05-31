@@ -86,11 +86,16 @@ export function nextAge(current, rng) {
 
 export function createLife(content, rng) {
   const year = new Date().getFullYear() - rng.nextInt(0, 2);
+  const originEntry = rng.pick(content.origins) || rng.pick(content.places);
   return {
     id: crypto.randomUUID(),
     firstName: rng.pick(content.firstNames) || "Unknown",
     surname: rng.pick(content.surnames) || "Person",
     birthYear: year,
+    origin: originEntry?.name || "Unknown",
+    originCategory: originEntry?.category || "town",
+    originTags: originEntry?.tags?.length ? originEntry.tags : ["rural"],
+    bornAt: Date.now(),
     currentAge: 0,
     status: "active",
     events: [],
@@ -212,7 +217,7 @@ export function createScar(eventId, x, y, rng) {
 
 export async function loadContent() {
   const files = [
-    "first_names", "surnames", "places", "objects",
+    "first_names", "surnames", "origins", "places", "objects",
     "observations", "thoughts", "atmosphere_events",
     "childhood_events", "teen_events", "adult_events", "old_age_events",
     "strange_events", "places_events", "death_events", "memory_callbacks",
@@ -240,6 +245,7 @@ export async function loadContent() {
   return {
     firstNames: data.first_names,
     surnames: data.surnames,
+    origins: data.origins,
     places: data.places,
     objects: data.objects,
     observations: data.observations,
