@@ -36,6 +36,22 @@ function fbm(x, y, seed, octaves = 5) {
   return v;
 }
 
+function staticHash(x, y, frame) {
+  let n = (x * 374761393 + y * 668265263 + frame * 982451653) | 0;
+  n ^= n << 13;
+  n ^= n >>> 17;
+  n ^= n << 5;
+  return n >>> 0;
+}
+
+/** B&W snow with strong contrast — reads as analog TV, not gray wash. */
+function tvSnowByte(h) {
+  const bucket = h % 997;
+  if (bucket < 340) return (h >>> 4) & 255;
+  if (bucket < 680) return 255 - ((h >>> 6) & 127);
+  return ((h >>> 2) & 63) + 96;
+}
+
 /** Living photographic texture field — geological / biological / archival. */
 export class TextureField {
   constructor(canvas) {
@@ -49,9 +65,13 @@ export class TextureField {
     this.baseCtx = this.baseCanvas.getContext("2d", { alpha: false });
     this.stainCanvas = document.createElement("canvas");
     this.stainCtx = this.stainCanvas.getContext("2d");
+    this.staticCanvas = document.createElement("canvas");
+    this.staticCtx = this.staticCanvas.getContext("2d", { alpha: false });
     this.blobs = [];
     this.lastFrame = 0;
     this.frameInterval = 1000 / 12;
+    this.staticBurst = null;
+    this._nextStaticAt = performance.now() + 90000 + Math.random() * 180000;
     this._resize = () => this.resize();
     window.addEventListener("resize", this._resize);
     this.resize();
@@ -89,6 +109,12 @@ export class TextureField {
     this.baseCanvas.height = bh;
     this.stainCanvas.width = bw;
     this.stainCanvas.height = bh;
+    const sw = Math.max(120, Math.round(rect.width * 0.5));
+    const sh = Math.max(160, Math.round(rect.height * 0.5));
+    this.staticCanvas.width = sw;
+    this.staticCanvas.height = sh;
+    this._staticW = sw;
+    this._staticH = sh;
     this.buildBase();
     this.initBlobs();
     this.paintStains(0, true);
@@ -296,6 +322,89 @@ export class TextureField {
     ctx.restore();
   }
 
+  scheduleNextStatic(fromMs) {
+    const dev = new URLSearchParams(location.search).has("dev");
+    const gap = dev
+      ? 12000 + Math.random() * 28000
+      : 150000 + Math.random() * 270000;
+    this._nextStaticAt = fromMs + gap;
+  }
+
+  maybeTriggerStatic(ms) {
+    if (document.hidden || this.staticBurst) return;
+    if (ms < this._nextStaticAt) return;
+
+    const longFlicker = Math.random() < 0.12;
+    const duration = longFlicker
+      ? 280 + Math.random() * 520
+      : 35 + Math.random() * 140;
+    this.staticBurst = {
+      start: ms,
+      end: ms + duration,
+      peak: 0.42 + Math.random() * 0.48,
+      frame: 0,
+    };
+    this.scheduleNextStatic(ms + duration);
+  }
+
+  staticStrength(ms) {
+    if (!this.staticBurst) return 0;
+    if (ms >= this.staticBurst.end) {
+      this.staticBurst = null;
+      return 0;
+    }
+    const span = this.staticBurst.end - this.staticBurst.start;
+    const t = (ms - this.staticBurst.start) / span;
+    let env = 1;
+    if (t < 0.08) env = t / 0.08;
+    else if (t > 0.82) env = (1 - t) / 0.18;
+    const flutter = 0.72 + (staticHash(this.staticBurst.frame, 0, this.seed) % 1000) / 2500;
+    return this.staticBurst.peak * env * flutter;
+  }
+
+  drawTvStatic(ctx, w, h, ms) {
+    const strength = this.staticStrength(ms);
+    if (strength <= 0.01) return;
+
+    const burst = this.staticBurst;
+    burst.frame += 1;
+    const frame = burst.frame + ((ms / 16) | 0);
+
+    const sw = this._staticW;
+    const sh = this._staticH;
+    const img = this.staticCtx.createImageData(sw, sh);
+    const d = img.data;
+    const bandRoll = (staticHash(frame, 1, this.seed) % 9) - 4;
+
+    for (let y = 0; y < sh; y++) {
+      const row = (y + bandRoll + sh) % sh;
+      for (let x = 0; x < sw; x++) {
+        const h = staticHash(x, row, frame);
+        const v = tvSnowByte(h);
+        const i = (y * sw + x) * 4;
+        d[i] = v;
+        d[i + 1] = v;
+        d[i + 2] = v + ((h & 3) - 1);
+        d[i + 3] = 255;
+      }
+    }
+    this.staticCtx.putImageData(img, 0, 0);
+
+    ctx.save();
+    ctx.globalCompositeOperation = "screen";
+    ctx.globalAlpha = strength;
+    ctx.imageSmoothingEnabled = false;
+    ctx.drawImage(this.staticCanvas, 0, 0, w, h);
+
+    if (strength > 0.25 && (frame & 3) === 0) {
+      ctx.globalCompositeOperation = "soft-light";
+      ctx.globalAlpha = strength * 0.35;
+      ctx.fillStyle = "#fff";
+      ctx.fillRect(0, ((frame * 7) % 13) - 6, w, 2);
+    }
+    ctx.restore();
+  }
+
   render(ms) {
     const ctx = this.ctx;
     const dpr = this.canvas.width / this.width;
@@ -384,10 +493,15 @@ export class TextureField {
     ctx.fillStyle = "#8a8070";
     ctx.fillRect(Math.sin(ms / (86400000 * 7)) * w * 0.02, 0, w, h);
     ctx.restore();
+
+    this.drawTvStatic(ctx, w, h, ms);
   }
 
   animate(now) {
-    if (now - this.lastFrame >= this.frameInterval) {
+    this.maybeTriggerStatic(now);
+    const inStatic = this.staticBurst && now < this.staticBurst.end;
+    const interval = inStatic ? 0 : this.frameInterval;
+    if (now - this.lastFrame >= interval) {
       this.render(now);
       this.lastFrame = now;
     }

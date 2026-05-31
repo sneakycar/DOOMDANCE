@@ -2521,7 +2521,10 @@
       "arctic",
       "isolation",
       "cold",
-      "fog"
+      "fog",
+      "coastal",
+      "volcanic",
+      "weather"
     ],
     "id": "origin_0226"
   },
@@ -6698,7 +6701,11 @@
       "salvage",
       "railroad",
       "working_class",
-      "rustbelt"
+      "rustbelt",
+      "rowhouse",
+      "fluorescent",
+      "vacant_lot",
+      "industrial"
     ],
     "id": "origin_0600"
   },
@@ -11176,5 +11183,21 @@
       "small_town"
     ],
     "id": "origin_1000"
+  },
+  {
+    "name": "Outside Carmel, Iowa",
+    "category": "non_city",
+    "tags": [
+      "rural",
+      "cornfield",
+      "farmland",
+      "tractor",
+      "grain_elevator",
+      "drainage_ditch",
+      "church_basement",
+      "county_road",
+      "storm"
+    ],
+    "id": "origin_1001"
   }
 ]

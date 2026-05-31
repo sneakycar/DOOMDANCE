@@ -1,4 +1,10 @@
 import { SeededRNG } from "./rng.js";
+import {
+  enrichOrigin,
+  initLifePlaceFields,
+  normalizeEventTemplate,
+  pickScoredTemplate,
+} from "./place-influence.js";
 
 const CATEGORY_WEIGHTS = [
   ["observation", 0.45],
@@ -9,22 +15,9 @@ const CATEGORY_WEIGHTS = [
   ["milestone", 0.03],
 ];
 
-function rarityWeight(r) {
-  if (r === "common") return 3;
-  if (r === "uncommon") return 2;
-  return 1;
-}
-
-function weightedPick(list, rng) {
-  if (!list.length) return null;
-  const weights = list.map((t) => rarityWeight(t.rarity));
-  const total = weights.reduce((a, b) => a + b, 0);
-  let roll = rng.nextDouble() * total;
-  for (let i = 0; i < list.length; i++) {
-    roll -= weights[i];
-    if (roll <= 0) return list[i];
-  }
-  return list[list.length - 1];
+function pickTemplate(pool, life, age, rng) {
+  if (!pool.length) return null;
+  return pickScoredTemplate(pool, life, age, rng);
 }
 
 function pickCategory(rng) {
@@ -145,6 +138,7 @@ export function shouldDie(life, rng) {
 }
 
 export function nextAge(current, rng) {
+  if (current === 0) return rng.nextInt(2, 4);
   let inc;
   if (current <= 5) inc = rng.nextInt(0, 1);
   else if (current <= 12) inc = rng.nextInt(0, 2);
@@ -157,15 +151,92 @@ export function nextAge(current, rng) {
 export function createLife(content, rng, { isFirstLife = false } = {}) {
   const year = new Date().getFullYear() - rng.nextInt(0, 2);
   const originEntry = rng.pick(content.origins) || rng.pick(content.places);
-  const life = {
-    id: crypto.randomUUID(),
+  return buildLife({
+    content,
+    rng,
+    year,
     firstName: rng.pick(content.firstNames) || "Unknown",
     surname: rng.pick(content.surnames) || "Person",
+    originEntry,
+    isFirstLife,
+  });
+}
+
+export function createLifeCandidate(content, rng) {
+  const originEntry = rng.pick(content.origins) || rng.pick(content.places);
+  return {
+    id: crypto.randomUUID(),
+    firstName: rng.pick(content.firstNames) || "Unknown",
+    lastName: rng.pick(content.surnames) || "Person",
+    originId: originEntry?.id || null,
+    originName: originEntry?.name || "Unknown",
+  };
+}
+
+export function createLifeCandidates(content, rng, count = 3) {
+  const candidates = [];
+  const usedNames = new Set();
+  const usedOrigins = new Set();
+  let guard = 0;
+  while (candidates.length < count && guard++ < 40) {
+    const candidate = createLifeCandidate(content, rng);
+    const nameKey = `${candidate.firstName}|${candidate.lastName}`;
+    const originKey = candidate.originName;
+    if (usedNames.has(nameKey) || usedOrigins.has(originKey)) continue;
+    usedNames.add(nameKey);
+    usedOrigins.add(originKey);
+    candidates.push(candidate);
+  }
+  while (candidates.length < count) {
+    candidates.push(createLifeCandidate(content, rng));
+  }
+  return candidates;
+}
+
+function resolveOriginEntry(content, candidate) {
+  if (candidate.originId && content.origins?.length) {
+    const found = content.origins.find((o) => o.id === candidate.originId);
+    if (found) return found;
+  }
+  if (candidate.originName && content.origins?.length) {
+    const found = content.origins.find((o) => o.name === candidate.originName);
+    if (found) return found;
+  }
+  return null;
+}
+
+export function createLifeFromCandidate(content, rng, candidate, atMs = Date.now()) {
+  const year = new Date().getFullYear() - rng.nextInt(0, 2);
+  const originEntry = resolveOriginEntry(content, candidate) || rng.pick(content.places);
+  const life = buildLife({
+    content,
+    rng,
+    year,
+    firstName: candidate.firstName,
+    surname: candidate.lastName,
+    originEntry: originEntry || {
+      name: candidate.originName,
+      id: candidate.originId,
+      category: "town",
+      tags: ["rural"],
+    },
+    isFirstLife: false,
+    bornAt: atMs,
+  });
+  return life;
+}
+
+function buildLife({ content, rng, year, firstName, surname, originEntry, isFirstLife, bornAt }) {
+  const resolvedOrigin = enrichOrigin(originEntry);
+  const life = {
+    id: crypto.randomUUID(),
+    firstName,
+    surname,
     birthYear: year,
-    origin: originEntry?.name || "Unknown",
-    originCategory: originEntry?.category || "town",
-    originTags: originEntry?.tags?.length ? originEntry.tags : ["rural"],
-    bornAt: Date.now(),
+    origin: resolvedOrigin.name || "Unknown",
+    originCategory: resolvedOrigin.category || "town",
+    originTags: resolvedOrigin.tags?.length ? [...resolvedOrigin.tags] : ["rural"],
+    bornAt: bornAt ?? Date.now(),
     currentAge: 0,
     status: "active",
     events: [],
@@ -179,6 +250,7 @@ export function createLife(content, rng, { isFirstLife = false } = {}) {
     lastEventGeneratedAt: null,
     nextEventScheduledAt: null,
   };
+  initLifePlaceFields(life, resolvedOrigin);
   if (isFirstLife) assignFirstLifeMortality(life, rng);
   return life;
 }
@@ -219,7 +291,7 @@ export function generateEvent(life, content, rng, { forceDeath = false } = {}) {
 
   if (forceDeath || shouldDie(life, rng)) {
     const deaths = eligible(content.deaths, age, used);
-    const death = weightedPick(deaths, rng);
+    const death = pickTemplate(deaths, life, age, rng);
     if (death) {
       return {
         template: death,
@@ -244,10 +316,10 @@ export function generateEvent(life, content, rng, { forceDeath = false } = {}) {
 
   const cat = pickCategory(rng);
   let pool = eligible(poolForCategory(cat, age, content), age, used);
-  let template = weightedPick(pool, rng);
+  let template = pickTemplate(pool, life, age, rng);
   if (!template) {
     const all = eligible(content.allEvents, age, used);
-    template = weightedPick(all, rng);
+    template = pickTemplate(all, life, age, rng);
   }
   if (!template) return null;
 
@@ -305,13 +377,48 @@ export function createScar(eventId, x, y, rng) {
   };
 }
 
+function normEvents(list, defaultCategory) {
+  return (list || []).map((t) => normalizeEventTemplate(t, defaultCategory));
+}
+
+function splitPlaceTyped(placeTyped) {
+  const deaths = [];
+  const placeEvents = [];
+  const observations = [];
+  const thoughts = [];
+  const atmosphere = [];
+  const other = [];
+  for (const t of placeTyped) {
+    switch (t.category) {
+      case "death":
+        deaths.push(t);
+        break;
+      case "place":
+        placeEvents.push(t);
+        break;
+      case "thought":
+        thoughts.push(t);
+        break;
+      case "atmosphere":
+        atmosphere.push(t);
+        break;
+      case "observation":
+        observations.push(t);
+        break;
+      default:
+        other.push(t);
+    }
+  }
+  return { deaths, placeEvents, observations, thoughts, atmosphere, other };
+}
+
 export async function loadContent() {
   const files = [
     "first_names", "surnames", "origins", "places", "objects",
     "observations", "thoughts", "atmosphere_events",
     "childhood_events", "teen_events", "adult_events", "old_age_events",
     "strange_events", "places_events", "death_events", "memory_callbacks",
-    "banned_phrases",
+    "place_typed_events", "banned_phrases",
   ];
   const base = new URL("/evol/data/", window.location.origin);
   const entries = await Promise.all(
@@ -321,34 +428,59 @@ export async function loadContent() {
     })
   );
   const data = Object.fromEntries(entries);
+  const placeTyped = normEvents(data.place_typed_events, "observation");
+  const placeSplit = splitPlaceTyped(placeTyped);
+
+  const observations = normEvents(data.observations, "observation");
+  const thoughts = normEvents(data.thoughts, "thought");
+  const atmosphere = normEvents(data.atmosphere_events, "atmosphere");
+  const childhood = normEvents(data.childhood_events, "observation");
+  const teen = normEvents(data.teen_events, "observation");
+  const adult = normEvents(data.adult_events, "observation");
+  const oldAge = normEvents(data.old_age_events, "observation");
+  const strange = normEvents(data.strange_events, "strange");
+  const placeEvents = normEvents(data.places_events, "place");
+  const deaths = normEvents(data.death_events, "death");
+  const memoryCallbacks = normEvents(data.memory_callbacks, "memory_callback");
+
+  observations.push(...placeSplit.observations);
+  thoughts.push(...placeSplit.thoughts);
+  atmosphere.push(...placeSplit.atmosphere);
+  placeEvents.push(...placeSplit.placeEvents);
+  deaths.push(...placeSplit.deaths);
+
   const allEvents = [
-    ...data.observations,
-    ...data.thoughts,
-    ...data.atmosphere_events,
-    ...data.childhood_events,
-    ...data.teen_events,
-    ...data.adult_events,
-    ...data.old_age_events,
-    ...data.strange_events,
-    ...data.places_events,
+    ...observations,
+    ...thoughts,
+    ...atmosphere,
+    ...childhood,
+    ...teen,
+    ...adult,
+    ...oldAge,
+    ...strange,
+    ...placeEvents,
+    ...placeSplit.other,
   ];
+
+  const origins = (data.origins || []).map(enrichOrigin);
+
   return {
     firstNames: data.first_names,
     surnames: data.surnames,
-    origins: data.origins,
+    origins,
     places: data.places,
     objects: data.objects,
-    observations: data.observations,
-    thoughts: data.thoughts,
-    atmosphere: data.atmosphere_events,
-    childhood: data.childhood_events,
-    teen: data.teen_events,
-    adult: data.adult_events,
-    oldAge: data.old_age_events,
-    strange: data.strange_events,
-    placeEvents: data.places_events,
-    deaths: data.death_events,
-    memoryCallbacks: data.memory_callbacks,
+    observations,
+    thoughts,
+    atmosphere,
+    childhood,
+    teen,
+    adult,
+    oldAge,
+    strange,
+    placeEvents,
+    deaths,
+    memoryCallbacks,
     bannedPhrases: data.banned_phrases,
     allEvents,
   };

@@ -190,7 +190,11 @@ async function playOpeningSequence() {
   if (openingPlayed || save.hasBegun) return;
   openingPlayed = true;
   els.btnBegin.hidden = true;
-  await playFragment("opening");
+  try {
+    await playFragment("opening");
+  } catch (err) {
+    console.warn("EVOL: opening fragment skipped", err);
+  }
   els.btnBegin.hidden = false;
 }
 
@@ -938,4 +942,7 @@ async function init() {
   }
 }
 
-init().catch(console.error);
+init().catch((err) => {
+  console.error("EVOL init failed", err);
+  if (els.btnBegin) els.btnBegin.hidden = false;
+});

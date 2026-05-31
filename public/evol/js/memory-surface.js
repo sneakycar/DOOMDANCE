@@ -5,6 +5,9 @@ const CLUSTER_MS = 4 * 60 * 1000;
 const THEME_TAGS = new Set([
   "iceland", "cornfield", "bird", "train", "water", "warehouse",
   "fluorescent", "pharmacy", "river", "salvage", "motel", "snow", "highway",
+  "cold", "volcanic", "nordic", "coastal", "farmland", "tractor", "grain_elevator",
+  "drainage_ditch", "county_road", "church_basement", "storm", "urban", "industrial",
+  "railroad", "rowhouse", "philadelphia", "vacant_lot", "weather", "isolation",
 ]);
 
 export function computeMemoryWeight(template, category, text) {
@@ -113,11 +116,22 @@ function tickChance(currentAge, poolSize, dev) {
 
 function pickMemoryRecord(records, life, rng, clusterTags) {
   const currentAge = life.currentAge;
+  const originTags = life.originTags || [];
+  const lifeTags = life.lifeTags || [];
   const weights = records.map((record) => {
     let w = Math.max(1, record.memoryWeight ?? 5);
-    const diff = currentAge - eventAge(record);
+    const ageYears = eventAge(record);
+    const diff = currentAge - ageYears;
 
     if (diff >= 8 && diff <= 40) w *= 1.08;
+    if (currentAge >= 66 && ageYears <= 15) w *= 1.35;
+
+    const originOverlap = record.tags?.filter((t) => originTags.includes(t)).length || 0;
+    if (originOverlap) w *= 1 + originOverlap * 0.12;
+
+    const lifeOverlap = record.tags?.filter((t) => lifeTags.includes(t)).length || 0;
+    if (lifeOverlap) w *= 1 + lifeOverlap * 0.15;
+
     if (clusterTags?.length && record.tags?.some((t) => clusterTags.includes(t))) {
       w *= 1.65;
     }
