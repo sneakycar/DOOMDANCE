@@ -71,7 +71,8 @@ html, body {
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background: #2e2a26;
+  background: #000;
+  touch-action: none;
 }
 
 #field-canvas,
@@ -404,7 +405,7 @@ html, body {
 #bio-name {
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(1.35rem, 5.5vw, 1.75rem);
+  font-size: clamp(0.95rem, 4.2vw, 1.15rem);
   font-weight: 900;
   letter-spacing: 0.04em;
   line-height: 1.05;
@@ -426,8 +427,8 @@ html, body {
 
 .mute-btn {
   flex-shrink: 0;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.85rem;
+  height: 1.85rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -438,6 +439,10 @@ html, body {
   padding: 0;
   backdrop-filter: blur(4px);
   -webkit-tap-highlight-color: transparent;
+}
+
+.mute-btn svg[hidden] {
+  display: none !important;
 }
 
 .mute-btn--fixed {
@@ -588,7 +593,7 @@ html, body {
   position: absolute;
   right: 0.65rem;
   bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
-  z-index: 40;
+  z-index: 45;
   display: flex;
   flex-direction: column;
   gap: 0.28rem;
@@ -599,6 +604,7 @@ html, body {
   font-family: var(--font-mono);
   font-size: 0.5rem;
   max-width: 7.5rem;
+  pointer-events: auto;
 }
 
 .dev-divider {
@@ -613,8 +619,11 @@ html, body {
   border: none;
   color: var(--text-dim);
   text-align: left;
-  padding: 0.12rem 0;
+  padding: 0.35rem 0;
   white-space: nowrap;
+  pointer-events: auto;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 #dev-sim-next,

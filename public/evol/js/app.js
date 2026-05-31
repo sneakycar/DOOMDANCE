@@ -76,6 +76,7 @@ let fragmentEngine;
 let fragmentSurface;
 let fragmentData;
 let openingPlayed = false;
+let ageTickTimer = null;
 
 const SELECTION_FADE_MS = 550;
 const SELECTION_REDRAW_MS = 450;
@@ -301,6 +302,7 @@ function activateSelectedLife(candidate, atMs = Date.now()) {
   writeSave(save);
   renderStatus();
   startScheduleLoop();
+  startAgeTick();
   memorySurface?.resetSession();
   memorySurface?.start();
   selectingLife = false;
@@ -359,6 +361,7 @@ function stopScheduleLoop() {
   if (!scheduleTimer) return;
   clearInterval(scheduleTimer);
   scheduleTimer = null;
+  stopAgeTick();
 }
 
 function memoryIsBlocked() {
@@ -408,6 +411,7 @@ async function beginSession() {
   if (isSelectionVisible()) return;
 
   startScheduleLoop();
+  startAgeTick();
   memorySurface.start();
 }
 
@@ -421,6 +425,53 @@ function formatBornDate(ms) {
     month: "long",
     day: "numeric",
   });
+}
+
+function unitLabel(value, singular) {
+  return `${value} ${singular}${value === 1 ? "" : "s"}`;
+}
+
+function calendarRemainder(fromMs, toMs) {
+  const from = new Date(fromMs);
+  const to = new Date(toMs);
+  let months =
+    (to.getFullYear() - from.getFullYear()) * 12 + (to.getMonth() - from.getMonth());
+  let days = to.getDate() - from.getDate();
+  if (days < 0) {
+    months -= 1;
+    days += new Date(to.getFullYear(), to.getMonth(), 0).getDate();
+  }
+  if (months < 0) months = 0;
+  if (days < 0) days = 0;
+  return { months, days };
+}
+
+function formatAgeLine(life, atMs = Date.now()) {
+  const bornAt = life.bornAt || atMs;
+  const years = life.currentAge || 0;
+
+  if (years <= 0) {
+    const { months, days } = calendarRemainder(bornAt, atMs);
+    return `Age: ${unitLabel(months, "month")}, ${unitLabel(days, "day")}`;
+  }
+
+  const afterYears = new Date(bornAt);
+  afterYears.setFullYear(afterYears.getFullYear() + years);
+  const { months, days } = calendarRemainder(afterYears.getTime(), atMs);
+  return `Age: ${unitLabel(years, "year")}, ${unitLabel(months, "month")}, ${unitLabel(days, "day")}`;
+}
+
+function startAgeTick() {
+  stopAgeTick();
+  ageTickTimer = setInterval(() => {
+    if (save.activeLife?.status === "active") renderStatus();
+  }, 60000);
+}
+
+function stopAgeTick() {
+  if (!ageTickTimer) return;
+  clearInterval(ageTickTimer);
+  ageTickTimer = null;
 }
 
 function displayName(life) {
@@ -564,9 +615,9 @@ function renderStatus() {
   migrateLife(life);
 
   els.bioName.textContent = displayName(life).toUpperCase();
-  els.bioAge.textContent = `Age ${life.currentAge}`;
-  els.bioBorn.textContent = `Born ${formatBornDate(life.bornAt)}`;
-  els.bioOrigin.textContent = `Origin ${life.origin}`;
+  els.bioAge.textContent = formatAgeLine(life);
+  els.bioBorn.textContent = `Born: ${formatBornDate(life.bornAt)}`;
+  els.bioOrigin.textContent = `Origin: ${life.origin}`;
 
   bg.setAgeBlend(ageBlendFor(life));
   bg.setSeed(life.mapSeed);
@@ -672,6 +723,7 @@ async function startNewLife(atMs = Date.now()) {
   }
   writeSave(save);
   renderStatus();
+  startAgeTick();
 }
 
 async function processSchedule({
@@ -736,13 +788,11 @@ async function simToNext() {
     const life = save.activeLife;
     if (life.status !== "active") return;
     const now = Date.now();
-    if (!life.nextEventScheduledAt) {
-      life.nextEventScheduledAt = nextEventTime(now, rng, DEV);
-      writeSave(save);
-    }
+    life.nextEventScheduledAt = now;
+    writeSave(save);
     await processSchedule({
       allowLive: true,
-      asOfMs: Math.max(now, life.nextEventScheduledAt),
+      asOfMs: now,
       useDevSchedule: DEV,
     });
   } finally {
@@ -807,7 +857,11 @@ function primeAudio() {
 function startSoundtrack() {
   if (audioMuted) return;
   primeAudio();
-  els.soundtrack.play().catch(() => {});
+  const playAttempt = els.soundtrack.play();
+  if (playAttempt?.catch) {
+    playAttempt.catch(() => syncMuteIconWithPlayback());
+  }
+  syncMuteIconWithPlayback();
 }
 
 function updateMuteUi() {
@@ -815,6 +869,15 @@ function updateMuteUi() {
   els.btnMute.setAttribute("aria-label", audioMuted ? "Unmute soundtrack" : "Mute soundtrack");
   els.iconSpeaker.hidden = audioMuted;
   els.iconMuted.hidden = !audioMuted;
+}
+
+function syncMuteIconWithPlayback() {
+  if (audioMuted) {
+    updateMuteUi();
+    return;
+  }
+  els.iconSpeaker.hidden = false;
+  els.iconMuted.hidden = true;
 }
 
 function toggleMute() {
@@ -855,6 +918,8 @@ async function init() {
 
   migrateSave();
   updateMuteUi();
+  els.soundtrack.addEventListener("playing", syncMuteIconWithPlayback);
+  els.soundtrack.addEventListener("pause", syncMuteIconWithPlayback);
   initMemorySurface();
 
   els.eventsToggle.addEventListener("click", () => setEventsExpanded(!eventsExpanded));
@@ -878,6 +943,7 @@ async function init() {
     startSoundtrack();
     if (!isSelectionVisible()) {
       startScheduleLoop();
+      startAgeTick();
       memorySurface.start();
     }
   } else {
@@ -896,25 +962,22 @@ async function init() {
     els.devSim7d.addEventListener("click", () => simDays(7));
     els.devSim30d.addEventListener("click", () => simDays(30));
     els.devEvent.addEventListener("click", async () => {
-      if (save.activeLife?.status === "active") {
-        const record = generateOne(save.activeLife);
-        if (record) {
-          await settleEvent(save.activeLife, record, { live: true });
-          writeSave(save);
-          renderStatus();
-        }
+      if (!save.activeLife || save.activeLife.status !== "active") return;
+      const record = generateOne(save.activeLife);
+      if (record) {
+        await settleEvent(save.activeLife, record, { live: true });
+        writeSave(save);
+        renderStatus();
       }
     });
     els.devKill.addEventListener("click", async () => {
-      if (save.activeLife?.status === "active") {
-        const record = generateOne(save.activeLife, { forceDeath: true });
-        if (record) {
-          await settleEvent(save.activeLife, record, { live: true });
-          writeSave(save);
-          renderStatus();
-          scheduleAfterDeath(Date.now(), { showLive: true });
-        }
-      }
+      if (!save.activeLife || save.activeLife.status !== "active") return;
+      const record = generateOne(save.activeLife, { forceDeath: true });
+      if (!record) return;
+      await settleEvent(save.activeLife, record, { live: true });
+      writeSave(save);
+      renderStatus();
+      scheduleAfterDeath(Date.now(), { showLive: true });
     });
     els.devReset.addEventListener("click", () => {
       stopScheduleLoop();

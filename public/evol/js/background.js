@@ -1,11 +1,11 @@
-import { TextureField } from "./texture-field.js";
+import { ImageTextureField } from "./image-texture-field.js";
 
 export class MemoryBackground {
   constructor(fieldCanvas, pulseCanvas, scarsCanvas) {
     this.fieldCanvas = fieldCanvas;
     this.pulseCanvas = pulseCanvas;
     this.scarsCanvas = scarsCanvas;
-    this.field = new TextureField(fieldCanvas);
+    this.field = new ImageTextureField(fieldCanvas);
     this.pulseCtx = pulseCanvas.getContext("2d");
     this.scarsCtx = scarsCanvas.getContext("2d");
     this.scars = [];
