@@ -41,12 +41,14 @@ import { playTitleSequence } from "./title-sequence.js";
 
 const DEV =
   new URLSearchParams(location.search).has("dev") ||
+  location.hash.includes("dev") ||
   localStorage.getItem("doomdance_dev") === "1" ||
   localStorage.getItem("evol_dev") === "1";
 
-if (new URLSearchParams(location.search).has("dev")) {
+if (new URLSearchParams(location.search).has("dev") || location.hash.includes("dev")) {
   localStorage.setItem("doomdance_dev", "1");
 }
+const OPENING_VERSION = 1;
 const MAX_AGE = 99;
 const LIVE_PRESENT_MS = 4800;
 const DAY_MS = 86400000;
@@ -160,12 +162,26 @@ function migrateSave() {
   if (save.hasBegun == null) {
     save.hasBegun = !!(save.activeLife || save.obituaries?.length);
   }
+  if ((save.openingVersion || 0) < OPENING_VERSION) {
+    save.openingVersion = OPENING_VERSION;
+    save.openingCompleted = false;
+    save.hasBegun = false;
+    save.activeLife = null;
+    writeSave(save);
+  }
+  if (save.openingCompleted == null) {
+    save.openingCompleted = save.hasBegun;
+  }
   if (save.activeLife?.status === "ended") {
     save.activeLife = null;
   }
   if (!save.activeLife) return;
 
   migrateLife(save.activeLife);
+}
+
+function needsOpening() {
+  return !save.openingCompleted;
 }
 
 function needsLifeSelection() {
@@ -223,7 +239,7 @@ function prepareLifeSelectionSession() {
 }
 
 async function playOpeningSequence() {
-  if (openingPlayed || save.hasBegun) return;
+  if (openingPlayed || save.openingCompleted) return;
   openingPlayed = true;
   titleSequencePlaying = true;
   try {
@@ -231,6 +247,8 @@ async function playOpeningSequence() {
       screenEl: els.beginScreen,
       wordEl: els.titleWord,
     });
+    save.openingCompleted = true;
+    writeSave(save);
     showLifeSelection({ mode: "choose", fadeIn: true });
   } finally {
     titleSequencePlaying = false;
@@ -470,9 +488,9 @@ function showBeginScreen() {
   syncBackgroundMotion();
 }
 
-function hideBeginScreen() {
+function hideBeginScreen({ showGameUi = false } = {}) {
   els.beginScreen.hidden = true;
-  els.gameUi.hidden = false;
+  els.gameUi.hidden = !showGameUi;
 }
 
 function startScheduleLoop() {
@@ -921,7 +939,7 @@ function bindDevButton(el, handler) {
     }, 350);
     Promise.resolve(handler()).catch(console.error);
   };
-  el.addEventListener("pointerup", run);
+  el.addEventListener("click", run);
 }
 
 async function simToNext() {
@@ -1065,8 +1083,20 @@ async function init() {
     els.btnShowOthers.addEventListener("click", () => handleLifeSelectionRedraw());
   }
 
-  if (save.hasBegun) {
+  if (needsOpening()) {
+    showBeginScreen();
+    if (save.activeLife) {
+      save.activeLife = null;
+      writeSave(save);
+    }
+    await playOpeningSequence();
+    syncBackgroundMotion();
+  } else if (!save.hasBegun) {
     hideBeginScreen();
+    showLifeSelection({ mode: "choose", fadeIn: false });
+    syncBackgroundMotion();
+  } else if (save.hasBegun) {
+    hideBeginScreen({ showGameUi: true });
     if (needsLifeSelection()) {
       showLifeSelection({ mode: "choose" });
     } else if (!save.activeLife) {
@@ -1083,14 +1113,6 @@ async function init() {
       startXpTracker();
       memorySurface.start();
     }
-  } else {
-    showBeginScreen();
-    if (save.activeLife) {
-      save.activeLife = null;
-      writeSave(save);
-    }
-    await playOpeningSequence();
-    syncBackgroundMotion();
   }
 
   if (DEV) {
@@ -1132,6 +1154,8 @@ async function init() {
         rng,
       });
       openingPlayed = false;
+      save.openingCompleted = false;
+      save.hasBegun = false;
       bg.setSeed(save.globalMapSeed);
       bg.setScars([]);
       showBeginScreen();

@@ -677,9 +677,8 @@ html, body {
 #dev-panel {
   position: absolute;
   right: 0.65rem;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 45;
+  bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+  z-index: 50;
   display: flex;
   flex-direction: column;
   gap: 0.28rem;
@@ -691,6 +690,7 @@ html, body {
   font-size: 0.5rem;
   max-width: 7.5rem;
   pointer-events: auto;
+  touch-action: manipulation;
 }
 
 .dev-divider {

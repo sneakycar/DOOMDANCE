@@ -30,6 +30,8 @@ export function clearSave() {
 export function freshSave() {
   return {
     version: 1,
+    openingVersion: 1,
+    openingCompleted: false,
     activeLife: null,
     obituaries: [],
     timeline: [],

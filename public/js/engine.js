@@ -405,6 +405,20 @@ function splitPlaceTyped(placeTyped) {
   return { deaths, placeEvents, observations, thoughts, atmosphere, other };
 }
 
+async function fetchDataJson(name, base) {
+  try {
+    const res = await fetch(new URL(`${name}.json`, base));
+    if (!res.ok) {
+      console.warn(`DOOM DANCE: missing data/${name}.json (${res.status})`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    console.warn(`DOOM DANCE: failed to load data/${name}.json`, err);
+    return null;
+  }
+}
+
 export async function loadContent() {
   const files = [
     "first_names", "surnames", "origins", "places", "objects",
@@ -415,13 +429,13 @@ export async function loadContent() {
   ];
   const base = new URL("/data/", window.location.origin);
   const entries = await Promise.all(
-    files.map(async (name) => {
-      const res = await fetch(new URL(`${name}.json`, base));
-      return [name, await res.json()];
-    })
+    files.map(async (name) => [name, await fetchDataJson(name, base)])
   );
   const data = Object.fromEntries(entries);
-  const placeTyped = normEvents(data.place_typed_events, "observation");
+  if (!data.first_names?.length || !data.surnames?.length || !data.origins?.length) {
+    throw new Error("DOOM DANCE: core name/origin data failed to load");
+  }
+  const placeTyped = normEvents(data.place_typed_events || [], "observation");
   const placeSplit = splitPlaceTyped(placeTyped);
 
   const observations = normEvents(data.observations, "observation");
