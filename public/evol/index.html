@@ -124,11 +124,6 @@
   </style>
 </head>
 <body>
-  <div id="rotate-gate" hidden>
-    <p>EVOL</p>
-    <p class="sub">Portrait only. Rotate your device.</p>
-  </div>
-
   <audio
     id="soundtrack"
     preload="auto"
@@ -148,9 +143,22 @@
 
     <div id="event-float-layer" aria-live="polite"></div>
     <div id="memory-overlay-layer" aria-live="polite"></div>
+    <div id="fragment-layer" hidden aria-live="polite"></div>
 
     <div id="begin-screen">
-      <button type="button" id="btn-begin">BEGIN</button>
+      <button type="button" id="btn-begin" hidden>BEGIN</button>
+    </div>
+
+    <div id="life-selection" hidden>
+      <div class="life-selection-inner">
+        <header class="life-selection-header">
+          <h2 id="life-selection-title" class="life-selection-title">CHOOSE A LIFE</h2>
+          <p id="life-selection-sub-a" class="life-selection-sub" hidden></p>
+          <p id="life-selection-sub-b" class="life-selection-sub" hidden></p>
+        </header>
+        <div id="life-selection-options" class="life-selection-options"></div>
+        <button type="button" id="btn-show-others" class="life-selection-redraw">SHOW THREE OTHERS</button>
+      </div>
     </div>
 
     <button type="button" id="btn-mute" class="mute-btn mute-btn--fixed" aria-label="Mute soundtrack" aria-pressed="false">

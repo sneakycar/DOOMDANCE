@@ -3,6 +3,8 @@ import { loadSave, writeSave, clearSave, freshSave } from "./storage.js";
 import {
   loadContent,
   createLife,
+  createLifeCandidates,
+  createLifeFromCandidate,
   generateEvent,
   nextEventTime,
   catchUpCount,
@@ -12,6 +14,9 @@ import {
 } from "./engine.js";
 import { MemoryBackground } from "./background.js";
 import { MemorySurface, computeMemoryWeight, estimateMemoryWeight } from "./memory-surface.js";
+import { applyPlaceEffects, migrateLifePlaceFields } from "./place-influence.js";
+import { FragmentEngine, loadFragmentData } from "./fragment-engine.js";
+import { FragmentSurface } from "./fragment-surface.js";
 
 const DEV = new URLSearchParams(location.search).has("dev");
 const MAX_AGE = 99;
@@ -45,6 +50,13 @@ const els = {
   devEvent: document.getElementById("dev-event"),
   devKill: document.getElementById("dev-kill"),
   devReset: document.getElementById("dev-reset"),
+  lifeSelection: document.getElementById("life-selection"),
+  lifeSelectionTitle: document.getElementById("life-selection-title"),
+  lifeSelectionSubA: document.getElementById("life-selection-sub-a"),
+  lifeSelectionSubB: document.getElementById("life-selection-sub-b"),
+  lifeSelectionOptions: document.getElementById("life-selection-options"),
+  btnShowOthers: document.getElementById("btn-show-others"),
+  fragmentLayer: document.getElementById("fragment-layer"),
 };
 
 let save = loadSave() || freshSave();
@@ -58,6 +70,15 @@ let presentingLive = false;
 let simulating = false;
 let scheduleTimer = null;
 let memorySurface;
+let selectionSession = null;
+let selectingLife = false;
+let fragmentEngine;
+let fragmentSurface;
+let fragmentData;
+let openingPlayed = false;
+
+const SELECTION_FADE_MS = 550;
+const SELECTION_REDRAW_MS = 450;
 
 function migrateEvent(record) {
   if (record.ageYears == null) record.ageYears = record.age ?? 0;
@@ -84,6 +105,7 @@ function migrateLife(life) {
   if (!life.originTags?.length) {
     life.originTags = ["rural"];
   }
+  if (content) migrateLifePlaceFields(life, content);
   for (const record of life.events || []) {
     migrateEvent(record);
   }
@@ -95,6 +117,9 @@ function migrateSave() {
   }
   if (save.hasBegun == null) {
     save.hasBegun = !!(save.activeLife || save.obituaries?.length);
+  }
+  if (save.activeLife?.status === "ended") {
+    save.activeLife = null;
   }
   if (!save.activeLife) return;
 
@@ -112,9 +137,204 @@ function migrateSave() {
   }
 }
 
+function needsLifeSelection() {
+  return save.hasCompletedFirstLife && !save.activeLife;
+}
+
+function isSelectionVisible() {
+  return els.lifeSelection && !els.lifeSelection.hidden;
+}
+
+function setLifeSelectionHeader(mode) {
+  if (!els.lifeSelectionTitle) return;
+  if (mode === "obituary") {
+    els.lifeSelectionTitle.textContent = "A LIFE HAS ENDED";
+    if (els.lifeSelectionSubA) {
+      els.lifeSelectionSubA.textContent = "The archive remains.";
+      els.lifeSelectionSubA.hidden = false;
+    }
+    if (els.lifeSelectionSubB) {
+      els.lifeSelectionSubB.textContent = "Choose the next life.";
+      els.lifeSelectionSubB.hidden = false;
+    }
+    return;
+  }
+  els.lifeSelectionTitle.textContent = "CHOOSE A LIFE";
+  if (els.lifeSelectionSubA) els.lifeSelectionSubA.hidden = true;
+  if (els.lifeSelectionSubB) els.lifeSelectionSubB.hidden = true;
+}
+
+function prepareLifeSelectionSession() {
+  selectionSession = {
+    candidates: createLifeCandidates(content, rng, 3),
+    redrawUsed: false,
+  };
+  selectingLife = false;
+}
+
+async function playFragment(kind, opts = {}) {
+  if (!fragmentEngine || !fragmentSurface) return;
+  let text;
+  if (kind === "opening") {
+    text = fragmentEngine.pickOpening();
+  } else if (kind === "birth") {
+    text = fragmentEngine.birthFragment(opts.firstName, opts.lastName);
+  } else {
+    text = fragmentEngine.pick(kind);
+  }
+  if (!text) return;
+  await fragmentSurface.play(text, { dev: DEV });
+}
+
+async function playOpeningSequence() {
+  if (openingPlayed || save.hasBegun) return;
+  openingPlayed = true;
+  els.btnBegin.hidden = true;
+  await playFragment("opening");
+  els.btnBegin.hidden = false;
+}
+
+function showLifeSelection({ mode = "choose" } = {}) {
+  if (!content || !els.lifeSelection) return;
+  stopScheduleLoop();
+  memorySurface?.stop();
+  prepareLifeSelectionSession();
+  hideBeginScreen();
+  els.gameUi.hidden = true;
+  els.lifeSelection.hidden = false;
+  els.lifeSelectionOptions.hidden = false;
+  els.btnShowOthers.hidden = false;
+  setLifeSelectionHeader(mode);
+  renderLifeSelection();
+  bg.setScars([]);
+  bg.setAgeBlend(0);
+}
+
+async function showLifeSelectionAfterDeath({ showLive = false } = {}) {
+  if (!content || !els.lifeSelection) return;
+  stopScheduleLoop();
+  memorySurface?.stop();
+  prepareLifeSelectionSession();
+  hideBeginScreen();
+  els.gameUi.hidden = true;
+  els.lifeSelection.hidden = false;
+  els.lifeSelectionOptions.hidden = true;
+  els.btnShowOthers.hidden = true;
+  setLifeSelectionHeader("obituary");
+  bg.setScars([]);
+  bg.setAgeBlend(0);
+
+  if (showLive) await waitMs(LIVE_PRESENT_MS);
+  await playFragment("death");
+  await waitMs(DEV ? 700 : 1800);
+  await playFragment("transition");
+
+  setLifeSelectionHeader("choose");
+  els.lifeSelectionOptions.hidden = false;
+  els.btnShowOthers.hidden = false;
+  renderLifeSelection();
+}
+
+function hideLifeSelection() {
+  if (els.lifeSelection) els.lifeSelection.hidden = true;
+  selectionSession = null;
+  selectingLife = false;
+}
+
+function renderLifeSelection() {
+  if (!selectionSession || !els.lifeSelectionOptions) return;
+
+  els.btnShowOthers.hidden = selectionSession.redrawUsed;
+  els.lifeSelectionOptions.className = "life-selection-options is-visible";
+  els.lifeSelectionOptions.innerHTML = selectionSession.candidates
+    .map(
+      (c) => `
+      <button type="button" class="life-candidate" data-id="${escapeHtml(c.id)}">
+        <p class="life-candidate-name">${escapeHtml(`${c.firstName} ${c.lastName}`.toUpperCase())}</p>
+        <p class="life-candidate-origin">${escapeHtml(c.originName)}</p>
+      </button>`
+    )
+    .join("");
+
+  for (const btn of els.lifeSelectionOptions.querySelectorAll(".life-candidate")) {
+    btn.addEventListener("click", () => {
+      const candidate = selectionSession?.candidates.find((c) => c.id === btn.dataset.id);
+      if (candidate) chooseCandidate(candidate, btn);
+    });
+  }
+}
+
+function waitMs(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function chooseCandidate(candidate, btnEl) {
+  if (selectingLife || !selectionSession) return;
+  selectingLife = true;
+
+  for (const el of els.lifeSelectionOptions.querySelectorAll(".life-candidate")) {
+    if (el !== btnEl) el.classList.add("is-fading");
+  }
+  btnEl.classList.add("is-chosen");
+  els.btnShowOthers.hidden = true;
+
+  await waitMs(SELECTION_FADE_MS);
+  selectionSession = null;
+  els.lifeSelection.hidden = true;
+  await playFragment("birth", {
+    firstName: candidate.firstName,
+    lastName: candidate.lastName,
+  });
+  activateSelectedLife(candidate);
+}
+
+function activateSelectedLife(candidate, atMs = Date.now()) {
+  save.activeLife = createLifeFromCandidate(content, rng, candidate, atMs);
+  save.activeLife.nextEventScheduledAt = nextEventTime(atMs, rng, DEV);
+  hideLifeSelection();
+  els.gameUi.hidden = false;
+  setEventsExpanded(false);
+  writeSave(save);
+  renderStatus();
+  startScheduleLoop();
+  memorySurface?.resetSession();
+  memorySurface?.start();
+  selectingLife = false;
+}
+
+async function handleLifeSelectionRedraw() {
+  if (!selectionSession || selectionSession.redrawUsed || selectingLife) return;
+
+  selectionSession.redrawUsed = true;
+  els.btnShowOthers.hidden = true;
+  els.lifeSelectionOptions.classList.remove("is-visible");
+  els.lifeSelectionOptions.classList.add("is-transitioning");
+
+  await waitMs(SELECTION_REDRAW_MS);
+  await playFragment("reroll");
+
+  selectionSession.candidates = createLifeCandidates(content, rng, 3);
+  renderLifeSelection();
+  els.lifeSelectionOptions.classList.remove("is-transitioning");
+  void els.lifeSelectionOptions.offsetWidth;
+  els.lifeSelectionOptions.classList.add("is-visible");
+}
+
+function scheduleAfterDeath(atMs, { showLive = false } = {}) {
+  save.activeLife = null;
+  writeSave(save);
+  stopScheduleLoop();
+  memorySurface?.stop();
+  showLifeSelectionAfterDeath({ showLive });
+}
+
 function showBeginScreen() {
   els.beginScreen.hidden = false;
   els.gameUi.hidden = true;
+  if (els.lifeSelection) els.lifeSelection.hidden = true;
+  if (!save.hasBegun) {
+    els.btnBegin.hidden = true;
+  }
   memorySurface?.stop();
 }
 
@@ -141,8 +361,10 @@ function memoryIsBlocked() {
   return (
     presentingLive ||
     document.hidden ||
+    fragmentSurface?.isPlaying() ||
     !save.hasBegun ||
     !els.beginScreen.hidden ||
+    isSelectionVisible() ||
     save.activeLife?.status !== "active"
   );
 }
@@ -160,18 +382,27 @@ function initMemorySurface() {
 
 async function beginSession() {
   save.hasBegun = true;
+  els.btnBegin.hidden = true;
   hideBeginScreen();
   primeAudio();
   startSoundtrack();
 
-  if (!save.activeLife) startNewLife();
-  else {
+  if (!save.activeLife) {
+    if (needsLifeSelection()) {
+      showLifeSelection({ mode: "choose" });
+    } else {
+      await startNewLife();
+    }
+  } else {
     migrateLife(save.activeLife);
     await processSchedule({ allowLive: false });
     renderStatus();
   }
 
   writeSave(save);
+
+  if (isSelectionVisible()) return;
+
   startScheduleLoop();
   memorySurface.start();
 }
@@ -378,6 +609,10 @@ function generateOne(life, { forceDeath = false, atMs = Date.now() } = {}) {
   life.memories.push(...result.memories);
   life.lastEventGeneratedAt = atMs;
 
+  if (!result.isDeath) {
+    applyPlaceEffects(life, result.template, record.memoryWeight);
+  }
+
   if (result.isDeath) {
     life.status = "ended";
     life.deathCause = result.template.cause || null;
@@ -413,11 +648,21 @@ async function settleEvent(life, record, { live = false } = {}) {
   finalizeEvent(life, record);
 }
 
-function startNewLife(atMs = Date.now()) {
+async function startNewLife(atMs = Date.now()) {
   const isFirstLife = !save.hasCompletedFirstLife;
-  save.activeLife = createLife(content, rng, { isFirstLife });
+  if (!isFirstLife) {
+    showLifeSelection({ mode: "choose" });
+    return;
+  }
+  save.activeLife = createLife(content, rng, { isFirstLife: true });
   save.activeLife.nextEventScheduledAt = nextEventTime(atMs, rng, DEV);
   memorySurface?.resetSession();
+  els.gameUi.hidden = true;
+  await playFragment("birth", {
+    firstName: save.activeLife.firstName,
+    lastName: save.activeLife.surname,
+  });
+  els.gameUi.hidden = false;
   if (save.hasBegun && save.activeLife.status === "active") {
     memorySurface?.start();
   }
@@ -457,9 +702,9 @@ async function processSchedule({
       writeSave(save);
       renderStatus();
       if (onDeath) {
-        onDeath(asOfMs);
+        onDeath(asOfMs, { showLive });
       } else {
-        setTimeout(() => startNewLife(), showLive ? LIVE_PRESENT_MS + 800 : 2000);
+        scheduleAfterDeath(asOfMs, { showLive });
       }
       return true;
     }
@@ -514,7 +759,11 @@ async function simDays(days) {
       if (!life) break;
 
       if (life.status !== "active") {
-        startNewLife(simNow);
+        if (needsLifeSelection()) {
+          showLifeSelection({ mode: "choose" });
+        } else {
+          await startNewLife(simNow);
+        }
         continue;
       }
 
@@ -529,7 +778,7 @@ async function simDays(days) {
           allowLive: false,
           asOfMs: simNow,
           useDevSchedule: false,
-          onDeath: (atMs) => startNewLife(atMs),
+          onDeath: (atMs, { showLive }) => scheduleAfterDeath(atMs, { showLive }),
         });
         if (died) continue;
         simNow = save.activeLife?.nextEventScheduledAt || end;
@@ -581,6 +830,18 @@ async function init() {
   }
 
   content = await loadContent();
+  const loadedFragments = await loadFragmentData();
+  fragmentData = loadedFragments;
+  fragmentEngine = new FragmentEngine(fragmentData.fragments, rng, {
+    subjects: fragmentData.subjects,
+    verbs: fragmentData.verbs,
+    endings: fragmentData.endings,
+  });
+  fragmentSurface = new FragmentSurface({
+    layer: els.fragmentLayer,
+    rng,
+  });
+
   bg = new MemoryBackground(
     document.getElementById("field-canvas"),
     document.getElementById("pulse-canvas"),
@@ -595,24 +856,33 @@ async function init() {
   els.eventsToggle.addEventListener("click", () => setEventsExpanded(!eventsExpanded));
   els.btnMute.addEventListener("click", toggleMute);
   els.btnBegin.addEventListener("click", () => beginSession());
+  if (els.btnShowOthers) {
+    els.btnShowOthers.addEventListener("click", () => handleLifeSelectionRedraw());
+  }
 
   if (save.hasBegun) {
     hideBeginScreen();
-    if (!save.activeLife) startNewLife();
-    else {
+    if (needsLifeSelection()) {
+      showLifeSelection({ mode: "choose" });
+    } else if (!save.activeLife) {
+      await startNewLife();
+    } else {
       migrateLife(save.activeLife);
       await processSchedule({ allowLive: false });
       renderStatus();
     }
     startSoundtrack();
-    startScheduleLoop();
-    memorySurface.start();
+    if (!isSelectionVisible()) {
+      startScheduleLoop();
+      memorySurface.start();
+    }
   } else {
     showBeginScreen();
     if (save.activeLife) {
       save.activeLife = null;
       writeSave(save);
     }
+    await playOpeningSequence();
   }
 
   if (DEV) {
@@ -638,20 +908,32 @@ async function init() {
           await settleEvent(save.activeLife, record, { live: true });
           writeSave(save);
           renderStatus();
-          setTimeout(startNewLife, LIVE_PRESENT_MS + 800);
+          scheduleAfterDeath(Date.now(), { showLive: true });
         }
       }
     });
     els.devReset.addEventListener("click", () => {
       stopScheduleLoop();
       memorySurface?.stop();
+      hideLifeSelection();
       clearSave();
       save = freshSave();
       rng = new SeededRNG(Date.now());
+      fragmentEngine = new FragmentEngine(fragmentData.fragments, rng, {
+        subjects: fragmentData.subjects,
+        verbs: fragmentData.verbs,
+        endings: fragmentData.endings,
+      });
+      fragmentSurface = new FragmentSurface({
+        layer: els.fragmentLayer,
+        rng,
+      });
+      openingPlayed = false;
       bg.setSeed(save.globalMapSeed);
       bg.setScars([]);
       showBeginScreen();
       writeSave(save);
+      playOpeningSequence();
     });
   }
 }
